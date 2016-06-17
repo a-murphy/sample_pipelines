@@ -63,3 +63,9 @@ jobs:
    #   - GET: deploy-service-7
       - GET: myEcsParams
    #   - GET: myOtherEcsParams
+
+ 
+  - name: CI
+    type: runCI
+    steps:
+      - GET: myEcsParams
