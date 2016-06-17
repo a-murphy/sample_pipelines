@@ -13,6 +13,14 @@ jobs:
 #      - GET: deploy-service
 #      - GET: myOtherDockerOptions
 
+  - name: generate-manifest
+    type: manifest
+    steps:
+      - GET: mongo-image
+#      - GET: myReplicas
+#      - GET: deploy-service
+#      - GET: myOtherDockerOptions
+
  # - name: deploy-service
 #    type: ecsDeploy
 #    steps:
