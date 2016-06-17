@@ -64,7 +64,7 @@ jobs:
       - GET: myEcsParams
    #   - GET: myOtherEcsParams
 
-  - name: CI
+  - name: CI-project
     type: runCI
     steps:
       - GET: myEcsParams
