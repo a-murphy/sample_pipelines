@@ -68,4 +68,4 @@ jobs:
     type: runCI
     steps:
       - GET: myEcsParams
-      - GET: projectToTrigger
+  #    - GET: projectToTrigger
