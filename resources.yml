@@ -55,8 +55,8 @@ resources:
     source:
       name : "DockerCloudCluster"
       
-  - name: CI
-    type: runCI
+  - name: projectToTrigger
+    type: gitRepo
     integration: github
     source:
-      name : "name"
+      name : "a-murphy/sample_node_postgres"
