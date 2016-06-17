@@ -33,7 +33,7 @@ jobs:
       - GET: generate-manifest
       - GET: myDclCluster
       - GET: myEcsParams
- #     - GET: myOtherEcsParams
+      - GET: myOtherEcsParams
 
   - name: deploy-7
     type: dclDeploy
