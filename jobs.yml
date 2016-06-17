@@ -67,5 +67,5 @@ jobs:
   - name: CI-project
     type: runCI
     steps:
-     # - GET: myEcsParams
+      - GET: myEcsParams
       - GET: projectToTrigger
