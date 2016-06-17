@@ -30,7 +30,7 @@ jobs:
   - name: deploy-service-7
     type: dclDeploy
     steps:
-      - GET: generate-mongo-image-manifest-6
+      - GET: generate-manifest
       - GET: myDclCluster
       - GET: myEcsParams
  #     - GET: myOtherEcsParams
