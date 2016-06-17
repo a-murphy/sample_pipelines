@@ -54,3 +54,9 @@ resources:
     integration: DockerCloud
     source:
       name : "DockerCloudCluster"
+      
+  - name: CI
+    type: runCI
+    integration: github
+    source:
+      name : "name"
