@@ -60,3 +60,4 @@ resources:
     integration: github
     source:
       name : "a-murphy/sample_node_postgres"
+      branch: "master"
