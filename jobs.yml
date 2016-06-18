@@ -67,6 +67,6 @@ jobs:
   - name: CI-project
     type: runCI
     steps:
-      - GET: myEcsParams
+     # - GET: myEcsParams
       - PUT: mongo-image
       - GET: projectToTrigger
