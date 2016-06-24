@@ -65,7 +65,7 @@ jobs:
           - mongo-image
       - GET: myOtherEcsParams
         applyTo:
-          - third-image
+          - mongo-image
  
   - name: deploy-service-10
     type: ecsDeploy
