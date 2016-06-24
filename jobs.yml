@@ -12,7 +12,7 @@ jobs:
       - GET: generate-manifest
       - GET: myEcsParams
         applyTo:
-          - other-image
+          - image
       
       - GET: myOtherEcsParams
 #      - GET: deploy-service
