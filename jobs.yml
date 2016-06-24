@@ -11,13 +11,12 @@ jobs:
       - GET: mongo-image
       - GET: myEcsParams
         applyTo:
-          - mongo-image
+          - other-image
       - GET: myOtherEcsParams
 #      - GET: deploy-service
       - GET: myOtherDockerOptions
         applyTo:
-          - image1
-          - image2
+          - mongo-image
 
   - name: generate-manifest
     type: manifest
