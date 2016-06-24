@@ -10,6 +10,7 @@ jobs:
     steps:
       - GET: mongo-image
       - GET: myEcsParams
+      - GET: myOtherEcsParams
 #      - GET: deploy-service
       - GET: myOtherDockerOptions
         targets:
