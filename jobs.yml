@@ -14,7 +14,6 @@ jobs:
       - GET: myOtherDockerOptions
         targets:
           - image1
-          - image2
 
   - name: generate-manifest
     type: manifest
