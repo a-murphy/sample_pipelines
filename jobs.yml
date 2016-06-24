@@ -13,7 +13,6 @@ jobs:
       - GET: myEcsParams
         applyTo:
           - image
-          - other-image
       
       - GET: myOtherEcsParams
 #      - GET: deploy-service
