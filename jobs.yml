@@ -9,7 +9,7 @@ jobs:
     type: manifest
     steps:
       - GET: mongo-image
-      - GET: myEcsParams
+ #     - GET: myEcsParams
 #      - GET: deploy-service
       - GET: myOtherDockerOptions
         targets:
