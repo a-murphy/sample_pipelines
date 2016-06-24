@@ -41,6 +41,8 @@ jobs:
       - GET: generate-manifest
       - GET: myDclCluster
       - GET: myEcsParams
+        applyTo:
+          - other
       - GET: myOtherEcsParams
 
   - name: deploy-7
