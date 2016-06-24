@@ -43,7 +43,7 @@ jobs:
       - GET: myEcsParams
         applyTo:
           - other
-   #   - GET: myOtherEcsParams
+      - GET: myOtherEcsParams
 
   - name: deploy-7
     type: dclDeploy
