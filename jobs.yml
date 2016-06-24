@@ -13,6 +13,8 @@ jobs:
       - GET: myEcsParams
         applyTo:
           - other-image
+          - third-image
+      
       - GET: myOtherEcsParams
 #      - GET: deploy-service
  #     - GET: myOtherDockerOptions
