@@ -16,7 +16,7 @@ jobs:
       
       - GET: myOtherEcsParams
 #      - GET: deploy-service
-   #   - GET: myOtherDockerOptions
+      - GET: myOtherDockerOptions
         applyTo:
           - mongo-image
 
