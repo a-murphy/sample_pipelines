@@ -61,7 +61,7 @@ jobs:
 #      - GET: deploy-service-7
       - GET: myEcsParams
         applyTo:
-          - mongo-image
+          - other-image
       - GET: myOtherEcsParams
         applyTo:
           - mongo-image
