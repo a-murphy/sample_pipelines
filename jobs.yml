@@ -8,10 +8,10 @@ jobs:
   - name: foo
     type: release
     options:
-      action: major
+      action: patch
     steps:
       - GET: version-resource-2
-#      - GET: generate-manifest
+      - GET: generate-manifest
 
   - name: generate-mongo-image-manifest-6
     type: manifest
