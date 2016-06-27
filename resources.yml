@@ -65,4 +65,4 @@ resources:
   - name: version-resource
     type: version
     source: 
-      base: "1.0.123"
+      base: "1.0.1"
