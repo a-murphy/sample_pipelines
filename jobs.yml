@@ -10,7 +10,7 @@ jobs:
     options:
       action: all
     steps:
-      - GET: version-resource
+      - GET: version-resource-2
 
   - name: generate-mongo-image-manifest-6
     type: manifest
