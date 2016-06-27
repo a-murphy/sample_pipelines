@@ -8,7 +8,7 @@ jobs:
   - name: foo
     type: release
     options:
-      action: none
+      action: all
     steps:
       - GET: version-resource
 
