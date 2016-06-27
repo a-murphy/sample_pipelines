@@ -5,6 +5,13 @@ jobs:
  #     - GET: mongo-image
   #    - GET: myEcsParams
 
+  - name: foo
+    type: release
+    options:
+      action: none
+    steps:
+      - GET: version-resource
+
   - name: generate-mongo-image-manifest-6
     type: manifest
     steps:
