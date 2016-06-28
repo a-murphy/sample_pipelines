@@ -10,7 +10,7 @@ jobs:
     options:
       action: patch
     steps:
-      - GET: version-resource-3
+      - GET: version-resource
       - GET: generate-manifest
 
   - name: generate-mongo-image-manifest-6
