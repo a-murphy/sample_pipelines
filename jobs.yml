@@ -10,7 +10,7 @@ jobs:
     options:
       action: alpha
     steps:
-      - GET: version-resource-3
+      - GET: version-resource-2
       #- GET: generate-manifest
 
   - name: generate-mongo-image-manifest-6
