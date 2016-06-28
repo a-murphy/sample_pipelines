@@ -12,6 +12,7 @@ jobs:
     steps:
       - GET: version-resource
       - GET: generate-manifest
+      - GET: myEcsParams
 
   - name: generate-mongo-image-manifest-6
     type: manifest
