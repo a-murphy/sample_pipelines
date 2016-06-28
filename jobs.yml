@@ -10,7 +10,7 @@ jobs:
     options:
       action: patch
     steps:
-      - GET: version-resource
+      - GET: version-resource-2
       - GET: generate-manifest
       - GET: myOtherEcsParams
 
