@@ -70,4 +70,4 @@ resources:
   - name: version-resource-3
     type: version
     source: 
-      base: "1.0.1.beta"
+      base: "1.0.3.beta.2"
