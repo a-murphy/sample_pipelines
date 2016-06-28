@@ -66,3 +66,8 @@ resources:
     type: version
     source: 
       base: "1.0.1"
+
+  - name: version-resource-3
+    type: version
+    source: 
+      base: "1.0.1.beta"
