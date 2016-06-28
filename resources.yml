@@ -62,7 +62,7 @@ resources:
       name : "a-murphy/sample_node_postgres"
       branch: "master"
 
-  - name: version-resource
+  - name: version-resource-2
     type: version
     source: 
       base: "1.0.2"
