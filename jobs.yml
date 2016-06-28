@@ -8,7 +8,7 @@ jobs:
   - name: foo
     type: release
     options:
-      action: alpha
+      action: beta
     steps:
       - GET: version-resource-3
       #- GET: generate-manifest
