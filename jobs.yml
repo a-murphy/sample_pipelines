@@ -8,9 +8,9 @@ jobs:
   - name: foo
     type: release
     options:
-      action: beta
+      action: alpha
     steps:
-      - GET: version-resource-2
+      - GET: version-resource-3
       #- GET: generate-manifest
 
   - name: generate-mongo-image-manifest-6
