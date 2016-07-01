@@ -76,6 +76,7 @@ resources:
   - name: version-resource-5
     type: version
     source: 
+      test: "test"
       base: "1.0.3-beta.2.alpha"
       
 
