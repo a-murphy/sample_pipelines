@@ -72,4 +72,9 @@ resources:
     type: params
     source: 
       base: "1.0.3-beta.2.alpha"
+      
+  - name: version-resource-5
+    type: params
+    source: 
+      base: "1.0.3-beta.2.alpha"
 
