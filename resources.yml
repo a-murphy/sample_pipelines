@@ -70,9 +70,9 @@ resources:
       base: "1.0.1"
 
   - name: version-resource-4
-    type: params
+    type: version
     source: 
-      base: "1.0.3-beta.2.alpha"
+      base: "1.0.3-beta.2"
       
       
 
