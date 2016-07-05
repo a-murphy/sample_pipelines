@@ -74,5 +74,10 @@ resources:
     source: 
       base: "1.0.3-beta"
       
+  - name: version-resource-4
+    type: version
+    source: 
+      base: "1.0.4"
+      
       
 
