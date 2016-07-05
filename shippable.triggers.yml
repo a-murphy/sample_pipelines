@@ -4,7 +4,7 @@ triggers:
     source:
       count: I
       
-  - name: triggerTwo
+  - name: triggerThree
     type: trigger
     source:
       count: IV
