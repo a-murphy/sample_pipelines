@@ -1,0 +1,11 @@
+triggers:
+  - name: triggerOne
+    type: trigger
+    integration: DockerHub
+    source:
+      count: I
+      
+  - name: triggerTwo
+    type: trigger
+    source:
+      count: I
