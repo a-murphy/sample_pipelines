@@ -1,7 +1,6 @@
 triggers:
   - name: triggerOne
     type: trigger
-    integration: DockerHub
     source:
       count: I
       
