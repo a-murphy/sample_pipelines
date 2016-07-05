@@ -9,3 +9,8 @@ triggers:
     type: trigger
     source:
       count: I
+      
+  - name: triggerThree
+    type: trigger
+    source:
+      count: I
