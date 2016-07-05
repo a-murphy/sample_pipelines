@@ -24,7 +24,7 @@ jobs:
         applyTo:
           - image
       
-      - GET: myOtherEcsParams
+ #     - GET: myOtherEcsParams
 #      - GET: deploy-service
       - GET: myOtherDockerOptions
         applyTo:
