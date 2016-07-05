@@ -20,7 +20,6 @@ resources:
     integration: AWS
     source:
       params:
-        four: 4
         five: 5
         three: 3
         two: 2
