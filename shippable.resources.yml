@@ -22,7 +22,6 @@ resources:
       params:
         five: 5
         three: 3
-        seven: 7
         
     
   - name: myOtherDockerOptions
