@@ -20,9 +20,9 @@ jobs:
     steps:
       - GET: mongo-image
       - GET: generate-manifest
-      - GET: myEcsParams
-        applyTo:
-          - image
+  #    - GET: myEcsParams
+  #      applyTo:
+  #        - image
       
  #     - GET: myOtherEcsParams
 #      - GET: deploy-service
