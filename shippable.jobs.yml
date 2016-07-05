@@ -11,6 +11,7 @@ jobs:
       action: none
     steps:
       - GET: version-resource-3
+      - PUT: fakeResource
       #- GET: generate-manifest
 
   - name: generate-mongo-image-manifest-6
