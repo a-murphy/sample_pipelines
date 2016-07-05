@@ -12,7 +12,7 @@ jobs:
     steps:
       - GET: version-resource-3
       - GET: myEcsParams
-     # - PUT: fakeResource
+      - PUT: fakeResource
       #- GET: generate-manifest
 
   - name: generate-mongo-image-manifest-6
@@ -26,7 +26,7 @@ jobs:
       
       - GET: myOtherEcsParams
 #      - GET: deploy-service
-#      - GET: myOtherDockerOptions
+      - GET: myOtherDockerOptions
         applyTo:
           - mongo-image
 
