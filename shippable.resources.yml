@@ -23,6 +23,7 @@ resources:
         five: 5
         three: 3
         two: 2
+        seven: 7
         
     
   - name: myOtherDockerOptions
