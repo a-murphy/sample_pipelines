@@ -11,7 +11,7 @@ jobs:
       action: none
     steps:
       - GET: version-resource-3
-      - GET: myEcsParams
+    #  - GET: myEcsParams
       - GET: version-resource-5
       #- GET: generate-manifest
 
