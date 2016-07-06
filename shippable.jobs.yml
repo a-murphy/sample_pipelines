@@ -12,7 +12,7 @@ jobs:
     steps:
       - GET: version-resource-3
      # - GET: myEcsParams
-     # - GET: version-resource-5
+      - GET: version-resource-4
       #- GET: generate-manifest
 
   - name: generate-mongo-image-manifest-6
