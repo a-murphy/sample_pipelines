@@ -1,6 +1,7 @@
 triggers:
   - name: triggerOne
     type: trigger
+    integration: invalid
     source:
       count: III
       
