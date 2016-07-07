@@ -30,7 +30,6 @@ jobs:
     type: manifest
     steps:
       - GET: mongo-image
-      - GET: triggerOne
   #    - GET: generate-manifest
   #    - GET: myEcsParams
   #      applyTo:
