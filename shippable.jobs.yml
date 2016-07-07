@@ -20,8 +20,6 @@ jobs:
     type: release
     options:
       action: none
-    steps:
-      - GET: version-resource-5
 
   - name: generate-mongo-image-manifest-6
     type: manifest
