@@ -74,6 +74,7 @@ resources:
       
   - name: version-resource-4
     type: version
+    integration: invalid
     source: 
       base: "1.0.4-beta"
   
