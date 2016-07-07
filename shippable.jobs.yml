@@ -25,6 +25,7 @@ jobs:
       
             
   - name: foo4
+    type: release
 
   - name: generate-mongo-image-manifest-6
     type: manifest
