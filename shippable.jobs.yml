@@ -17,6 +17,7 @@ jobs:
       
   - name: foo2
     type: release
+    integration: invalid
     options:
       action: none
     steps:
