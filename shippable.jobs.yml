@@ -24,8 +24,7 @@ jobs:
       - GET: version-resource-3
       
             
-  - name: foo4
-    type: release
+  - type: release
 
   - name: generate-mongo-image-manifest-6
     type: manifest
