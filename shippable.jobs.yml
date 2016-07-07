@@ -21,7 +21,7 @@ jobs:
     options:
       action: none
     steps:
-      - 'GET version-resource-3'
+      GET: version-resource-3
       
             
   - type: release
