@@ -17,7 +17,6 @@ jobs:
       - GET: triggerOne
       
   - name: foo3
-    type: release
     options:
       action: none
     steps:
