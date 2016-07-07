@@ -16,8 +16,7 @@ jobs:
       #- GET: generate-manifest
       
   - name: foo2
-    type: release
-    integration: invalid
+    type: manifest
     options:
       action: none
     steps:
