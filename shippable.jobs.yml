@@ -15,7 +15,7 @@ jobs:
       - GET: version-resource-5
       #- GET: generate-manifest
       
-  - name: foo2
+  - name: foo3
     type: release
     options:
       action: none
