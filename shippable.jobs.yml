@@ -16,7 +16,7 @@ jobs:
       #- GET: generate-manifest
       
   - name: foo2
-    type: manifest
+    type: release
     options:
       action: none
     steps:
