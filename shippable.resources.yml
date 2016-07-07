@@ -63,7 +63,7 @@ resources:
       branch: "master"
 
   - name: version-resource-1
-    type: params
+    type: version
     source: 
       base: "1.0.1"
 
