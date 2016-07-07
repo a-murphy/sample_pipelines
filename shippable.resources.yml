@@ -70,7 +70,7 @@ resources:
   - name: version-resource-3
     type: version
     source: 
-      base: "1.0.3-alpha"
+      base: "1.0.3"
   
   - name: version-resource-4
     type: version
