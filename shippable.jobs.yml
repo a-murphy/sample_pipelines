@@ -21,7 +21,7 @@ jobs:
     options:
       action: none
     steps:
-      - GET: version-resource-7
+      - GET: version-resource-6
       
             
   - type: release
