@@ -67,7 +67,7 @@ resources:
       base: "1.0.1"
 
   - name: version-resource-3
-    type: version
+    type: params
     source: 
       base: "1.0.3"
       
