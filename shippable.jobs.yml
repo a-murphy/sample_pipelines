@@ -13,7 +13,7 @@ jobs:
       - GET: version-resource-3
      # - GET: myEcsParams
      # - GET: version-resource-5
-      #- GET: generate-manifest
+      - GET: generate-manifest
       - GET: triggerOne
       
   - name: foo4
