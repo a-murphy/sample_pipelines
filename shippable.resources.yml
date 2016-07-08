@@ -74,4 +74,4 @@ resources:
   - name: version-resource-4
     type: version
     source: 
-      base: "1.0.5"
+      base: "1.0.6"
