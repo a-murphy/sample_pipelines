@@ -22,7 +22,6 @@ resources:
       params:
         five: 5
         three: 3
-        two: 2
     
   - name: myOtherDockerOptions
     type: dockerOptions
