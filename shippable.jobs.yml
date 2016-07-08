@@ -14,7 +14,6 @@ jobs:
      # - GET: myEcsParams
      # - GET: version-resource-5
       - GET: generate-manifest
-      - GET: triggerOne
       
   - name: foo4
     type: release
@@ -48,6 +47,7 @@ jobs:
     steps:
       - GET: mongo-image
       - GET: myReplicas
+      - GET: triggerOne
 #      - GET: deploy-service
     #  - GET: myOtherDockerOptions
 
