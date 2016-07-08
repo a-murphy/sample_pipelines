@@ -16,12 +16,12 @@ jobs:
       #- GET: generate-manifest
       - GET: triggerOne
       
-  - name: foo3
+  - name: foo4
     type: release
     options:
       action: none
     steps:
-      - GET: version-resource-3
+      - GET: version-resource-7
       
             
   - type: release
