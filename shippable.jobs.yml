@@ -23,7 +23,7 @@ jobs:
     steps:
       - GET: version-resource-4
       - GET: version-resource-3
-      - GET: version-resource-5
+      - GET: triggerOne
       
             
   - type: release
