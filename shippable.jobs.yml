@@ -18,7 +18,7 @@ jobs:
   - name: foo4
     type: release
     options:
-      action: none
+      action: minor
     steps:
       - GET: version-resource-4
       - GET: version-resource-3
