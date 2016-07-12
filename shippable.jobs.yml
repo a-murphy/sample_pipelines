@@ -65,7 +65,7 @@ jobs:
           - other
       - GET: myOtherEcsParams
 
-  - name: deploy-7
+  - name: deploy-dcl
     type: dclDeploy
     steps:
       - GET: triggerTwo
