@@ -2,7 +2,7 @@ triggers:
   - name: triggerOne
     type: trigger
     source:
-      count: XXVI
+      count: XXVII
       
   - name: triggerTwo
     type: trigger
