@@ -7,4 +7,4 @@ triggers:
   - name: triggerTwo
     type: trigger
     source:
-      count: XV
+      count: XVI
