@@ -34,18 +34,18 @@ jobs:
   #      applyTo:
   #        - image
       
-      - GET: myOtherEcsParams
+  #    - GET: myOtherEcsParams
 #      - GET: deploy-service
-      - GET: myOtherDockerOptions
-        applyTo:
-          - mongo-image
+  #    - GET: myOtherDockerOptions
+  #      applyTo:
+  #        - mongo-image
 
   - name: generate-manifest
     type: manifest
     steps:
       - GET: mongo-image
       - GET: myReplicas
-      - GET: triggerOne
+  #    - GET: triggerOne
 #      - GET: deploy-service
     #  - GET: myOtherDockerOptions
 
