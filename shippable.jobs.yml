@@ -45,9 +45,9 @@ jobs:
     steps:
       - GET: mongo-image
       - GET: myReplicas
-  #    - GET: triggerOne
+      - GET: triggerOne
 #      - GET: deploy-service
-    #  - GET: myOtherDockerOptions
+      - GET: myOtherDockerOptions
 
  # - name: deploy-service
 #    type: ecsDeploy
@@ -69,7 +69,7 @@ jobs:
     type: dclDeploy
     steps:
       - GET: triggerTwo
-      - GET: generate-mongo-image-manifest-6
+      - GET: generate-manifest
       - GET: myDclCluster
       - GET: myEcsParams
       - GET: myOtherEcsParams
