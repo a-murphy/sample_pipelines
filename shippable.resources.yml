@@ -28,6 +28,7 @@ resources:
     integration: AWS
     source:
       memory: 64
+      cpuShares: 1
         
   - name: myReplicas
     type: replicas
