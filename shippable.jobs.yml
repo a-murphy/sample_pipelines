@@ -97,7 +97,7 @@ jobs:
    #   - GET: myEcsCluster
       - GET: myOtherDockerOptions
    #   - GET: myReplicas
-   #   - GET: deploy-service-7
+      - GET: deploy-service-7
       - GET: myEcsParams
    #   - GET: myOtherEcsParams
 
