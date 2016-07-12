@@ -68,7 +68,6 @@ jobs:
   - name: deploy-dcl
     type: dclDeploy
     steps:
-      - GET: triggerTwo
       - GET: generate-manifest
       - GET: myDclCluster
       - GET: myEcsParams
@@ -79,6 +78,7 @@ jobs:
     options:
       deployMethod: upgrade
     steps:
+      - GET: triggerTwo
       - GET: generate-mongo-image-manifest-6
       - GET: myEcsCluster
      # - GET: myReplicas
