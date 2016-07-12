@@ -27,8 +27,8 @@ resources:
     type: dockerOptions
     integration: AWS
     source:
-      memory: 48
-      cpuShares: 4
+      memory: 52
+      cpuShares: 5
         
   - name: myReplicas
     type: replicas
