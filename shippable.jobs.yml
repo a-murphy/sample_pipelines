@@ -88,17 +88,17 @@ jobs:
         applyTo:
           - mongo-image
  
-  - name: deploy-service-10
-    type: ecsDeploy
-    steps:
-      - GET: generate-mongo-image-manifest-6
-   #   - GET: myEcsCluster
-      - GET: myOtherDockerOptions
-   #   - GET: myReplicas
-      - GET: deploy-service-7
-      - GET: myEcsParams
-      - GET: triggerTwo
-   #   - GET: myOtherEcsParams
+  #- name: deploy-service-10
+  #  type: ecsDeploy
+  #  steps:
+  #    - GET: generate-mongo-image-manifest-6
+  # #   - GET: myEcsCluster
+  #    - GET: myOtherDockerOptions
+  # #   - GET: myReplicas
+  #    - GET: deploy-service-7
+  #    - GET: myEcsParams
+  #    - GET: triggerTwo
+  # #   - GET: myOtherEcsParams
 
   - name: CI-project
     type: runCI
