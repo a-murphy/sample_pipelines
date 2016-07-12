@@ -29,6 +29,7 @@ jobs:
     steps:
       - GET: triggerOne
       - GET: mongo-image
+      - GET: myOtherDockerOptions
   #    - GET: generate-manifest
   #    - GET: myEcsParams
   #      applyTo:
