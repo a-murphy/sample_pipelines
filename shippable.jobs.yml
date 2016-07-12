@@ -85,7 +85,7 @@ jobs:
       - GET: myEcsParams
         applyTo:
           - other-image
-      - GET: triggerOne
+      - GET: triggerTwo
       - GET: myOtherEcsParams
         applyTo:
           - mongo-image
