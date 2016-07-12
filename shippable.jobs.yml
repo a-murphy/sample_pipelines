@@ -77,7 +77,7 @@ jobs:
   - name: deploy-service-8
     type: ecsDeploy
     options:
-      - deployMethod: upgrade
+       deployMethod: upgrade
     steps:
       - GET: generate-mongo-image-manifest-6
       - GET: myEcsCluster
