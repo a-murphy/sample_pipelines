@@ -27,6 +27,7 @@ jobs:
   - name: generate-mongo-image-manifest-6
     type: manifest
     steps:
+      - GET: triggerOne
       - GET: mongo-image
   #    - GET: generate-manifest
   #    - GET: myEcsParams
