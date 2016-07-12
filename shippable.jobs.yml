@@ -73,7 +73,7 @@ jobs:
       - GET: myEcsParams
       - GET: myOtherEcsParams
  
-  - name: deploy-service-8
+  - name: ecs-deploy
     type: ecsDeploy
     options:
       deployMethod: upgrade
