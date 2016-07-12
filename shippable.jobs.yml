@@ -23,9 +23,6 @@ jobs:
       - GET: version-resource-4
       - GET: version-resource-3
       - GET: triggerOne
-      
-            
-  - type: release
 
   - name: generate-mongo-image-manifest-6
     type: manifest
@@ -99,6 +96,7 @@ jobs:
    #   - GET: myReplicas
       - GET: deploy-service-7
       - GET: myEcsParams
+      - GET: triggerTwo
    #   - GET: myOtherEcsParams
 
   - name: CI-project
