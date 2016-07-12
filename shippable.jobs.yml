@@ -22,14 +22,13 @@ jobs:
     steps:
       - GET: version-resource-4
       - GET: version-resource-3
-      - GET: triggerOne
 
   - name: generate-mongo-image-manifest-6
     type: manifest
     steps:
       - GET: triggerOne
       - GET: mongo-image
-      - GET: myOtherDockerOptions
+     # - GET: myOtherDockerOptions
   #    - GET: generate-manifest
   #    - GET: myEcsParams
   #      applyTo:
@@ -69,6 +68,7 @@ jobs:
   - name: deploy-7
     type: dclDeploy
     steps:
+      - GET: triggerTwo
       - GET: generate-mongo-image-manifest-6
       - GET: myDclCluster
       - GET: myEcsParams
@@ -86,7 +86,6 @@ jobs:
       - GET: myEcsParams
         applyTo:
           - other-image
-      - GET: triggerTwo
       - GET: myOtherEcsParams
         applyTo:
           - mongo-image
