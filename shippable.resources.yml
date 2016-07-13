@@ -6,7 +6,7 @@ resources:
       name: "library/mongo"
       isPull: false
     initialVersion:
-      versionName: "latest"
+      versionName: "1.2.3"
 
   - name: myEcsParams
     type: params
