@@ -2,7 +2,7 @@ triggers:
   - name: triggerOne
     type: trigger
     source:
-      count: LIV
+      count: LV
       
   - name: triggerTwo
     type: trigger
