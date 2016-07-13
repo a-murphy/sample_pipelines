@@ -21,6 +21,7 @@ resources:
     source:
       params:
         five: 5
+        four: 4
     initialVersion:
       one: 1
     
@@ -65,7 +66,6 @@ resources:
     source:
       name : "a-murphy/sample_node_postgres"
       branch: "master"
-      test: test
     initialVersion:
       three: 3
 
