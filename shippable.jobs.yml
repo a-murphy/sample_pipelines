@@ -10,7 +10,7 @@ jobs:
     options:
       action: patch
     steps:
-      - GET: triggerOne
+     # - GET: triggerOne
       - GET: version-resource-1
      # - GET: myEcsParams
      # - GET: version-resource-5
@@ -104,6 +104,7 @@ jobs:
   - name: CI-project
     type: runCI
     steps:
+      - GET: triggerOne
       - GET: myEcsParams
       - PUT: mongo-image
       - GET: projectToTrigger
