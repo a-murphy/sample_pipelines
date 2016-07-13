@@ -23,7 +23,6 @@ resources:
         five: 5
     initialVersion:
       one: 1
-      three: 3
     
   - name: myOtherDockerOptions
     type: dockerOptions
