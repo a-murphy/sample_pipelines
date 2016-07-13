@@ -22,6 +22,8 @@ resources:
       params:
         five: 5
         three: 3
+    initialVersion:
+      one: 1
     
   - name: myOtherDockerOptions
     type: dockerOptions
@@ -34,6 +36,9 @@ resources:
     type: replicas
     source:
       count: 4
+    initialVersion:
+      versionName: 4
+      two: 2
 
   - name: myEcsCluster
     type: ecsCluster
