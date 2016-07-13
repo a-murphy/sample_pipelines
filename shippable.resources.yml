@@ -71,8 +71,10 @@ resources:
 
   - name: version-resource-1
     type: version
+    initialVersion:
+      versionName: "1.0.1"
     source: 
-      base: "1.0.1"
+      base: "1.0.1-alpha"
 
   - name: version-resource-3
     type: params
