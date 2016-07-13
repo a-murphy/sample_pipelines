@@ -21,7 +21,6 @@ resources:
     source:
       params:
         five: 5
-        three: 3
     initialVersion:
       one: 1
       three: 3
@@ -36,7 +35,7 @@ resources:
   - name: myReplicas
     type: replicas
     source:
-      count: 4
+      count: 3
     initialVersion:
       versionName: 4
       two: 2
