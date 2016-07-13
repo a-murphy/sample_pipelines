@@ -35,7 +35,7 @@ resources:
   - name: myReplicas
     type: replicas
     source:
-      count: 3
+      count: 2
     initialVersion:
       versionName: 4
       two: 2
