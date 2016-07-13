@@ -8,9 +8,10 @@ jobs:
   - name: foo
     type: release
     options:
-      action: none
+      action: patch
     steps:
-      - GET: version-resource-3
+      - GET: triggerOne
+      - GET: version-resource-1
      # - GET: myEcsParams
      # - GET: version-resource-5
       - GET: generate-manifest
@@ -26,7 +27,7 @@ jobs:
   - name: generate-mongo-image-manifest-6
     type: manifest
     steps:
-      - GET: triggerOne
+   #   - GET: triggerOne
       - GET: mongo-image
      # - GET: myOtherDockerOptions
   #    - GET: generate-manifest
@@ -45,7 +46,7 @@ jobs:
     steps:
       - GET: mongo-image
       - GET: myReplicas
-      - GET: triggerOne
+   #   - GET: triggerOne
 #      - GET: deploy-service
       - GET: myOtherDockerOptions
 
