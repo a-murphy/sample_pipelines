@@ -66,6 +66,7 @@ resources:
     source:
       name : "a-murphy/sample_node_postgres"
       branch: "master"
+      test: test
     initialVersion:
       three: 3
 
