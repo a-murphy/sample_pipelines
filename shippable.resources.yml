@@ -2,8 +2,8 @@ resources:
   - name: mongo-image
     type: image
     integration: DockerHub
-    source:
-      name: "library/mongo"
+    pointer:
+      sourceName: "library/mongo"
       isPull: false
     initialVersion:
       versionName: "1.2.4"
@@ -11,7 +11,7 @@ resources:
   - name: myEcsParams
     type: params
     integration: AWS
-    source:
+    pointer:
       params:
         foo: bar
         four: 16
@@ -19,7 +19,7 @@ resources:
   - name: myOtherEcsParams
     type: params
     integration: AWS
-    source:
+    pointer:
       params:
         five: 5
         four: 4
@@ -29,13 +29,13 @@ resources:
   - name: myOtherDockerOptions
     type: dockerOptions
     integration: AWS
-    source:
+    pointer:
       memory: 72
       cpuShares: 7
         
   - name: myReplicas
     type: replicas
-    source:
+    pointer:
       count: 2
     initialVersion:
       versionName: 4
@@ -44,28 +44,28 @@ resources:
   - name: myEcsCluster
     type: ecsCluster
     integration: AWS
-    source:
-      name : "test-cluster" #name of the cluster we are deploying
+    pointer:
+      sourceName : "test-cluster" #name of the cluster we are deploying
       region: "us-west-2"
 
   - name: myOtherEcsCluster
     type: ecsCluster
     integration: AWS
-    source:
-      name : "Cluster"
+    pointer:
+      sourceName : "Cluster"
       region: "us-west-2"
 
   - name: myDclCluster
     type: dclCluster
     integration: DockerCloud
-    source:
-      name : "DockerCloudCluster"
+    pointer:
+      sourceName : "DockerCloudCluster"
       
   - name: projectToTrigger
     type: gitRepo
     integration: github
-    source:
-      name : "a-murphy/sample_node_postgres"
+    pointer:
+      sourceName : "a-murphy/sample_node_postgres"
       branch: "master"
     initialVersion:
       three: 3
@@ -74,11 +74,11 @@ resources:
     type: version
     initialVersion:
       versionName: "1.0.5"
-    source: 
+    pointer: 
       base: "1.0.2"
 
   - name: version-resource-3
     type: params
-    source: 
+    pointer: 
       base: "1.0.3"
 
