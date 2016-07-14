@@ -6,7 +6,7 @@ resources:
       sourceName: "library/mongo2"
       isPull: false
     seed:
-      versionName: "1.2.3"
+      versionName: "1.2.4"
 
   - name: myEcsParams
     type: params
