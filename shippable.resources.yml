@@ -1,7 +1,7 @@
 resources:
   - name: mongo-image
     type: image
-    integration: DockerHub
+    integration: DockerHub2
     pointer:
       sourceName: "library/mongo"
       isPull: false
