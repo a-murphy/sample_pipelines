@@ -8,7 +8,7 @@ jobs:
   - name: foo
     type: release
     options:
-      action: beta
+      action: patch
     steps:
      # - GET: triggerOne
       - GET: version-resource-1
