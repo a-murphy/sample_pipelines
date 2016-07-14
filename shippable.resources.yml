@@ -5,7 +5,7 @@ resources:
     pointer:
       sourceName: "library/mongo2"
       isPull: false
-    initialVersion:
+    seed:
       versionName: "1.2.3"
 
   - name: myEcsParams
@@ -23,7 +23,7 @@ resources:
       params:
         five: 5
         four: 4
-    initialVersion:
+    seed:
       one: 1
     
   - name: myOtherDockerOptions
@@ -37,7 +37,7 @@ resources:
     type: replicas
     pointer:
       count: 2
-    initialVersion:
+    seed:
       versionName: 4
       two: 2
 
@@ -67,12 +67,12 @@ resources:
     pointer:
       sourceName : "a-murphy/sample_node_postgres"
       branch: "master"
-    initialVersion:
+    seed:
       three: 3
 
   - name: version-resource-1
     type: version
-    initialVersion:
+    seed:
       versionName: "1.0.5"
     pointer: 
       base: "1.0.2"
