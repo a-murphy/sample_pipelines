@@ -6,7 +6,7 @@ resources:
       sourceName: "library/mongo2"
       isPull: false
     initialVersion:
-      versionName: "1.2.4"
+      versionName: "1.2.3"
 
   - name: myEcsParams
     type: params
@@ -15,7 +15,6 @@ resources:
       params:
         foo: bar
         four: 16
-        test: test
   
   - name: myOtherEcsParams
     type: params
