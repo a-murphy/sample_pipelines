@@ -4,7 +4,7 @@ resources:
     integration: DockerHub
     pointer:
       sourceName: "library/mongo2"
-      isPull: false
+      isPull: true
     initialVersion:
       versionName: "1.2.4"
 
