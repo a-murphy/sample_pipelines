@@ -59,6 +59,7 @@ resources:
     pointer:
       sourceName : "Cluster"
       region: "us-west-2"
+      test: test
 
   - name: myDclCluster
     type: dclCluster
