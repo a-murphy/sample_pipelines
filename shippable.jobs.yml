@@ -79,7 +79,7 @@ jobs:
     options:
       deployMethod: upgrade
     steps:
-    #  - GET: triggerTwo
+      - GET: triggerTwo
       - GET: generate-mongo-image-manifest-6
       - GET: myEcsCluster
      # - GET: myReplicas
