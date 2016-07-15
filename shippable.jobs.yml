@@ -106,5 +106,6 @@ jobs:
     steps:
       - GET: triggerOne
       - GET: myEcsParams
+      - TASK: managed
       - PUT: mongo-image
       - GET: projectToTrigger
