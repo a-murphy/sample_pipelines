@@ -13,7 +13,7 @@ resources:
     integration: AWS
     pointer:
       test: test
-    version
+    version:
       params:
         foo: bar
         four: 16
