@@ -12,6 +12,8 @@ resources:
     type: params
     integration: AWS
     pointer:
+      test: test
+    version
       params:
         foo: bar
         four: 16
@@ -20,6 +22,8 @@ resources:
     type: params
     integration: AWS
     pointer:
+      test: test
+    version:
       params:
         five: 5
         four: 4
