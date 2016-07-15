@@ -1,10 +1,10 @@
 triggers:
   - name: triggerOne
     type: trigger
-    pointer:
+    version:
       count: LXV
       
   - name: triggerTwo
     type: trigger
-    pointer:
-      count: XXXV
+    version:
+      count: XXXVI
