@@ -40,7 +40,7 @@ resources:
         
   - name: myReplicas
     type: replicas
-    pointer:
+    version:
       count: 2
     seed:
       versionName: 4
