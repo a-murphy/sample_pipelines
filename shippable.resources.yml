@@ -17,6 +17,7 @@ resources:
       params:
         foo: bar
         four: 16
+        three: 9
   
   - name: myOtherEcsParams
     type: params
