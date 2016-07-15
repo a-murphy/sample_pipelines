@@ -47,7 +47,7 @@ jobs:
     steps:
       - GET: mongo-image
       - GET: myReplicas
-      - GET: triggerOne
+  #    - GET: triggerOne
 #      - GET: deploy-service
       - GET: myOtherDockerOptions
 
