@@ -10,7 +10,7 @@ jobs:
     options:
       action: test
     steps:
-      - GET: triggerTwo
+     # - GET: triggerTwo
       - GET: version-resource-1
      # - GET: myEcsParams
      # - GET: version-resource-5
@@ -21,7 +21,7 @@ jobs:
     options:
       action: minor
     steps:
-      - GET: version-resource-4
+     # - GET: version-resource-4
       - GET: version-resource-3
 
   - name: generate-mongo-image-manifest-6
@@ -29,7 +29,7 @@ jobs:
     steps:
    #   - GET: triggerOne
       - GET: mongo-image
-     # - GET: myOtherDockerOptions
+      - GET: myOtherDockerOptions
   #    - GET: generate-manifest
   #    - GET: myEcsParams
   #      applyTo:
