@@ -73,6 +73,7 @@ jobs:
         applyTo:
           - other
       - IN: myOtherEcsParams
+      - IN: foo4
       - TASK: managed
 
   - name: deploy-dcl
