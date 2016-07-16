@@ -48,10 +48,10 @@ jobs:
     type: manifest
     steps:
       - GET: mongo-image
-      - GET: myReplicas
+  #    - GET: myReplicas
       - GET: triggerOne
 #      - GET: deploy-service
-      - GET: myOtherDockerOptions
+  #    - GET: myOtherDockerOptions
       - TASK: managed
 
  # - name: deploy-service
