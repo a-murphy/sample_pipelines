@@ -48,13 +48,13 @@ jobs:
   - name: generate-manifest
     type: manifest
     steps:
-      - GET: triggerOne
       - GET: mongo-image
         pull: false
   #    - GET: myReplicas
 #      - GET: deploy-service
   #    - GET: myOtherDockerOptions
       - TASK: managed
+      - GET: triggerOne
 
  # - name: deploy-service
 #    type: ecsDeploy
