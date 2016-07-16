@@ -23,15 +23,15 @@ jobs:
       action: minor
     steps:
      # - GET: version-resource-4
-      - GET: version-resource-3
+      - IN: version-resource-3
       - TASK: managed
 
   - name: generate-mongo-image-manifest-6
     type: manifest
     steps:
    #   - GET: triggerOne
-      - GET: myOtherDockerOptions
-      - GET: mongo-image
+      - IN: myOtherDockerOptions
+      - IN: mongo-image
         pull: false
   #    - GET: generate-manifest
   #    - GET: myEcsParams
@@ -48,8 +48,8 @@ jobs:
   - name: generate-manifest
     type: manifest
     steps:
-      - GET: mongo-image
-      - GET: triggerOne
+      - IN: mongo-image
+      - IN: triggerOne
   #    - GET: myReplicas
 #      - GET: deploy-service
   #    - GET: myOtherDockerOptions
@@ -65,32 +65,32 @@ jobs:
   - name: deploy-service-7
     type: dclDeploy
     steps:
-      - GET: generate-manifest
-      - GET: myDclCluster
-      - GET: myEcsParams
+      - IN: generate-manifest
+      - IN: myDclCluster
+      - IN: myEcsParams
         applyTo:
           - other
-      - GET: myOtherEcsParams
+      - IN: myOtherEcsParams
       - TASK: managed
 
   - name: deploy-dcl
     type: dclDeploy
     steps:
-      - GET: generate-manifest
-      - GET: myDclCluster
-      - GET: myEcsParams
-      - GET: myOtherEcsParams
+      - IN: generate-manifest
+      - IN: myDclCluster
+      - IN: myEcsParams
+      - IN: myOtherEcsParams
  
   - name: ecs-deploy
     type: ecsDeploy
     steps:
-      - GET: triggerTwo
-      - GET: generate-mongo-image-manifest-6
-      - GET: myEcsCluster
-      - GET: myReplicas
+      - IN: triggerTwo
+      - IN: generate-mongo-image-manifest-6
+      - IN: myEcsCluster
+      - IN: myReplicas
 #      - GET: deploy-service-7
 #      - GET: myEcsParams
-      - GET: myOtherDockerOptions
+      - IN: myOtherDockerOptions
         applyTo:
           - mongo-image
       - TASK: managed
@@ -112,7 +112,7 @@ jobs:
     type: runCI
     steps:
     #  - GET: triggerOne
-      - GET: myEcsParams
+      - IN: myEcsParams
       - TASK: managed
-      - PUT: mongo-image
-      - GET: projectToTrigger
+      - OUT: mongo-image
+      - IN: projectToTrigger
