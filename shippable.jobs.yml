@@ -83,6 +83,8 @@ jobs:
       - IN: myDclCluster
       - IN: myEcsParams
       - IN: myOtherEcsParams
+      - TASK: managed
+        deployMethod: upgrade
  
   - name: ecs-deploy
     type: ecsDeploy
