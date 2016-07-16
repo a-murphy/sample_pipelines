@@ -83,6 +83,7 @@ jobs:
       - IN: myDclCluster
       - IN: myEcsParams
       - IN: myOtherEcsParams
+      - IN: triggerTwo
       - TASK: managed
         deployMethod: upgrade
  
