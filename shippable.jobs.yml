@@ -11,7 +11,7 @@ jobs:
       action: test
     steps:
       - GET: triggerTwo
-      - GET: version-resource-1
+      - GET: version-resource-3
      # - GET: myEcsParams
      # - GET: version-resource-5
       - GET: generate-manifest
