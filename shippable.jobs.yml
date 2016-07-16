@@ -111,7 +111,7 @@ jobs:
   - name: CI-project
     type: runCI
     steps:
-    #  - GET: triggerOne
+      - IN: triggerOne
       - IN: myEcsParams
       - TASK: managed
       - OUT: mongo-image
