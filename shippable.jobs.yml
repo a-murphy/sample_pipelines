@@ -48,9 +48,10 @@ jobs:
   - name: generate-manifest
     type: manifest
     steps:
-      - GET: mongo-image
-  #    - GET: myReplicas
       - GET: triggerOne
+      - GET: mongo-image
+        pull: false
+  #    - GET: myReplicas
 #      - GET: deploy-service
   #    - GET: myOtherDockerOptions
       - TASK: managed
