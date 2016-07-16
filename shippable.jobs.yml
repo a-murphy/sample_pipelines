@@ -84,8 +84,6 @@ jobs:
  
   - name: ecs-deploy
     type: ecsDeploy
-    options:
-      deployMethod: upgrade
     steps:
       - GET: triggerTwo
       - GET: generate-mongo-image-manifest-6
@@ -97,6 +95,7 @@ jobs:
         applyTo:
           - mongo-image
       - TASK: managed
+        deployMethod: upgrade
  
   #- name: deploy-service-10
   #  type: ecsDeploy
