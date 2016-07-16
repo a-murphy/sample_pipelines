@@ -50,6 +50,7 @@ jobs:
   #    - GET: triggerOne
 #      - GET: deploy-service
       - GET: myOtherDockerOptions
+      - TASK: managed
 
  # - name: deploy-service
 #    type: ecsDeploy
