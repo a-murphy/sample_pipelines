@@ -24,6 +24,7 @@ jobs:
     steps:
      # - GET: version-resource-4
       - GET: version-resource-3
+      - TASK: managed
 
   - name: generate-mongo-image-manifest-6
     type: manifest
@@ -41,6 +42,7 @@ jobs:
   #    - GET: myOtherDockerOptions
   #      applyTo:
   #        - mongo-image
+      - TASK: managed
 
   - name: generate-manifest
     type: manifest
@@ -67,6 +69,7 @@ jobs:
         applyTo:
           - other
       - GET: myOtherEcsParams
+      - TASK: managed
 
   - name: deploy-dcl
     type: dclDeploy
@@ -90,6 +93,7 @@ jobs:
       - GET: myOtherDockerOptions
         applyTo:
           - mongo-image
+      - TASK: managed
  
   #- name: deploy-service-10
   #  type: ecsDeploy
