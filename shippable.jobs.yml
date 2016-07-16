@@ -15,6 +15,7 @@ jobs:
      # - GET: myEcsParams
      # - GET: version-resource-5
       - IN: generate-manifest
+      - IN: sample_pipelines_master_rSync
       - TASK: managed
       
   - name: foo4
@@ -25,6 +26,7 @@ jobs:
      # - GET: version-resource-4
       - IN: version-resource-3
       - TASK: managed
+      - IN: kickStart
 
   - name: generate-mongo-image-manifest-6
     type: manifest
