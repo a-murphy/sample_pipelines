@@ -91,5 +91,5 @@ resources:
   - name: kickstart
     type: kickStart
     version: 
-      count: 0
+      count: 1
 
