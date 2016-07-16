@@ -49,7 +49,6 @@ jobs:
     type: manifest
     steps:
       - GET: mongo-image
-        pull: false
       - GET: triggerOne
   #    - GET: myReplicas
 #      - GET: deploy-service
