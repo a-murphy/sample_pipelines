@@ -88,3 +88,8 @@ resources:
     pointer: 
       base: "1.0.3"
 
+  - name: kickstart
+    type: kickStart
+    version: 
+      count: 0
+
