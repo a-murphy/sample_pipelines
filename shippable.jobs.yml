@@ -30,9 +30,9 @@ jobs:
     type: manifest
     steps:
    #   - GET: triggerOne
+      - GET: myOtherDockerOptions
       - GET: mongo-image
         pull: false
-      - GET: myOtherDockerOptions
   #    - GET: generate-manifest
   #    - GET: myEcsParams
   #      applyTo:
