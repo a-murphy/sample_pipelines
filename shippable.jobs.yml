@@ -49,7 +49,7 @@ jobs:
     steps:
       - GET: mongo-image
       - GET: myReplicas
-  #    - GET: triggerOne
+      - GET: triggerOne
 #      - GET: deploy-service
       - GET: myOtherDockerOptions
       - TASK: managed
@@ -110,7 +110,7 @@ jobs:
   - name: CI-project
     type: runCI
     steps:
-      - GET: triggerOne
+    #  - GET: triggerOne
       - GET: myEcsParams
       - TASK: managed
       - PUT: mongo-image
