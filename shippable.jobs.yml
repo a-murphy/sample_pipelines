@@ -31,7 +31,7 @@ jobs:
   - name: generate-mongo-image-manifest-6
     type: manifest
     steps:
-      - IN: triggerOne
+      - IN: sample_pipelines_master_rSync
       - IN: myOtherDockerOptions
       - IN: mongo-image
         pull: false
