@@ -31,7 +31,7 @@ jobs:
   - name: generate-mongo-image-manifest-6
     type: manifest
     steps:
-   #   - GET: triggerOne
+      - GET: triggerOne
       - IN: myOtherDockerOptions
       - IN: mongo-image
         pull: false
@@ -117,8 +117,8 @@ jobs:
   - name: CI-project
     type: runCI
     steps:
-      - IN: triggerOne
-      - IN: myEcsParams
+     # - IN: triggerOne
+     # - IN: myEcsParams
       - TASK: managed
       - OUT: mongo-image
       - IN: projectToTrigger
