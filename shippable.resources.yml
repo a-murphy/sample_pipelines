@@ -38,8 +38,7 @@ resources:
       memory: 54
       cpuShares: 5
       links:
-        - "containerOne:1"
-        - "containerTwo:2"
+        - "ecs-deploy5260d41a-bb9b-4a14-8e29-8221cac7d689:1"
         
   - name: myReplicas
     type: replicas
