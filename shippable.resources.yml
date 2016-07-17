@@ -34,9 +34,12 @@ resources:
   - name: myOtherDockerOptions
     type: dockerOptions
     integration: AWS
-    pointer:
+    version:
       memory: 54
       cpuShares: 5
+      links:
+        - "containerOne:1"
+        - "containerTwo:2"
         
   - name: myReplicas
     type: replicas
