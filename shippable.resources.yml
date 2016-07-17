@@ -41,7 +41,9 @@ resources:
       #  - "one:1"
       #  - "two:2"
       #privileged: false
-      cmd: mongod
+      cmd:
+        - mongod
+        - test
         
   - name: myReplicas
     type: replicas
