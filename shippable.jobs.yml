@@ -87,7 +87,7 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
  
-  - name: ecs-deploy
+  - name: ecs-deploy2
     type: ecsDeploy
     steps:
       - IN: triggerTwo
