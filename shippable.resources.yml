@@ -43,8 +43,6 @@ resources:
     type: replicas
     version:
       count: 1
-    seed:
-      versionName: 4
 
   - name: myEcsCluster
     type: ecsCluster
