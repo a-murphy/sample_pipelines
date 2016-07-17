@@ -37,6 +37,7 @@ resources:
     version:
       memory: 54
       cpuShares: 5
+      workingDir: /home/shippable
  #     cmd: mongod
         
   - name: myReplicas
