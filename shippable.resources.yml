@@ -40,7 +40,7 @@ resources:
       #links:
       #  - "one:1"
       #  - "two:2"
-    #  privileged: false
+      privileged: false
     #  workingDir: /home/shippable
       cmd: mongod
         
