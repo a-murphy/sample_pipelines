@@ -37,8 +37,8 @@ resources:
     version:
       memory: 54
       #cpuShares: 5
-    #  links:
-    #    - "one:1"
+      links:
+        - "one:1"
     #  privileged: false
     #  workingDir: /home/shippable
       cmd: mongod
