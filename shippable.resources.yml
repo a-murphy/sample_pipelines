@@ -36,7 +36,7 @@ resources:
     integration: AWS
     version:
       memory: 54
-      cpuShares: 5
+      #cpuShares: 5
       privileged: true
     #  workingDir: /home/shippable
  #     cmd: mongod
