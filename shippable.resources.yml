@@ -35,11 +35,11 @@ resources:
     type: dockerOptions
     integration: AWS
     version:
-      memory: 54
+      #memory: 48
       #cpuShares: 5
-      links:
-        - "one:1"
-        - "two:2"
+      #links:
+      #  - "one:1"
+      #  - "two:2"
     #  privileged: false
     #  workingDir: /home/shippable
       cmd: mongod
