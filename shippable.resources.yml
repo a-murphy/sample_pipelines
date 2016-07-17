@@ -37,6 +37,7 @@ resources:
     version:
       memory: 54
       cpuShares: 5
+      entryPoint: "echo 'Hello'"
         
   - name: myReplicas
     type: replicas
