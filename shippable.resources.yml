@@ -41,7 +41,7 @@ resources:
       #  - "one:1"
       #  - "two:2"
       #privileged: false
-      workingDir: /home/shippabletest
+      workingDir: /home/shippable
       cmd: mongod
         
   - name: myReplicas
