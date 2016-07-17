@@ -37,9 +37,7 @@ resources:
     version:
       memory: 54
       cpuShares: 5
-      cmd:
-        - /bin/bash
-        - mongod
+      cmd: mongod
         
   - name: myReplicas
     type: replicas
