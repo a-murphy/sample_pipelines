@@ -41,7 +41,7 @@ resources:
         - "one:1"
     #  privileged: false
     #  workingDir: /home/shippable
- #     cmd: mongod
+      cmd: mongod
         
   - name: myReplicas
     type: replicas
