@@ -51,7 +51,7 @@ resources:
           soft: 4
           hard: 10
         - name: test2
-          hard: 5
+          hard: 4
      # labels:
     #    labelone: valueOne
      #   labeltwo: valueTwo
