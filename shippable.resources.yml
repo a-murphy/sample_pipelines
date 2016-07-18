@@ -43,6 +43,7 @@ resources:
       cmd: mongo
       privileged: false
       logConfig:
+        type: "json-file"
         options:
           test2key: test2value
           test: test
