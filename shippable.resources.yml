@@ -44,6 +44,12 @@ resources:
      # cmd: mongo
       privileged: false
       user: testuser
+      dnsServers:
+        - serverOne
+        - serverTwo
+      dnsSearch:
+        - searchOne
+        - searchTwo
     #  logConfig:
     #    type: "json-file"
       #  options:
