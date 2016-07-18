@@ -47,12 +47,6 @@ resources:
         options:
           test: test
       ulimits:
-        - name: core
-          soft: 4
-          hard: 10
-        - name: cpu
-          hard: 5
-          soft: 3
         - name: cpu
           hard: 5
      # labels:
