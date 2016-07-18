@@ -47,8 +47,8 @@ resources:
         options:
           test: test
       labels:
-        labelOne: valueOne
-        labelTwo: valueTwo
+        labelone: valueOne
+        labeltwo: valueTwo
         
   - name: myReplicas
     type: replicas
