@@ -47,9 +47,11 @@ resources:
         options:
           test: test
       ulimits:
-        name: test
-        soft: 4
-        hard: 10
+        - name: test
+          soft: 4
+          hard: 10
+        - name: test2
+          hard: 5
      # labels:
     #    labelone: valueOne
      #   labeltwo: valueTwo
