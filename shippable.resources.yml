@@ -52,14 +52,14 @@ resources:
       count: 1
 
   - name: myEcsCluster
-    type: ecsCluster
+    type: cluster
     integration: AWS
     pointer:
       sourceName : "test-cluster" #name of the cluster we are deploying
       region: "us-west-2"
 
   - name: myOtherEcsCluster
-    type: ecsCluster
+    type: cluster
     integration: AWS
     pointer:
       sourceName : "Cluster"
@@ -67,7 +67,7 @@ resources:
       test: test
 
   - name: myDclCluster
-    type: dclCluster
+    type: cluster
     integration: DockerCloud
     pointer:
       sourceName : "DockerCloudCluster"
