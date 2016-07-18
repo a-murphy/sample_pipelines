@@ -41,6 +41,7 @@ resources:
       #  - "one:1"
      #   - "two:2"
       cmd: mongo
+      privileged: false
         
   - name: myReplicas
     type: replicas
