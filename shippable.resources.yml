@@ -43,7 +43,7 @@ resources:
      
      # cmd: mongo
       privileged: false
- #     user: testuser
+      user: testuser
       dnsServers:
         - "127.0.0.1"
    #     - "8.8.8.8"
