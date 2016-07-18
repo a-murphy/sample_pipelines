@@ -52,6 +52,8 @@ resources:
      # labels:
     #    labelone: valueOne
      #   labeltwo: valueTwo
+      volumesFrom:
+        test: test
         
   - name: myReplicas
     type: replicas
