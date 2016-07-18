@@ -43,10 +43,10 @@ resources:
      
      # cmd: mongo
       privileged: false
-    #  logConfig:
-    #    type: "json"
-    #    options:
-    #      test: test
+      logConfig:
+        type: "json-file"
+        options:
+          test: test
     #  ulimits:
     #    - name: cpu
     #      hard: 5
