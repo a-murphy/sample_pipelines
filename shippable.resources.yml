@@ -53,7 +53,7 @@ resources:
     #    labelone: valueOne
      #   labeltwo: valueTwo
       volumesFrom:
-        - "ecs-deploy24348d91d-2568-4bc4-a3e9-2b3f2ee1bee1"
+        - "mongo"
         
   - name: myReplicas
     type: replicas
