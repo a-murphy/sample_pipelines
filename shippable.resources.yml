@@ -47,13 +47,13 @@ resources:
     #    type: "json-file"
       #  options:
      #     test: test
-      ulimits:
-        - name: cpu
-          hard: 5
-          soft: 3
-        - name: core
-          hard: 10
-          soft: 5
+    #  ulimits:
+    #    - name: cpu
+    #      hard: 5
+    #      soft: 3
+    #    - name: core
+    #      hard: 10
+    #      soft: 5
       labels:
         labelone: valueOne
         labeltwo: valueTwo
