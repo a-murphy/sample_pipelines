@@ -43,8 +43,8 @@ resources:
      
      # cmd: mongo
       privileged: false
-      logConfig:
-        type: "json-file"
+    #  logConfig:
+    #    type: "json-file"
       #  options:
      #     test: test
       ulimits:
