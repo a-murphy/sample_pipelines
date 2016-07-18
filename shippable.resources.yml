@@ -46,6 +46,9 @@ resources:
         type: "json"
         options:
           test: test
+      labels:
+        labelOne: valueOne
+        labelTwo: valueTwo
         
   - name: myReplicas
     type: replicas
