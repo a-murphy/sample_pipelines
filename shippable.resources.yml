@@ -42,7 +42,6 @@ resources:
      #   - "two:2"
       workingDir: /home/shippable
       cmd: mongo
-      entryPoint: mongo
         
   - name: myReplicas
     type: replicas
