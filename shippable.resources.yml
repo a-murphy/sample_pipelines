@@ -40,20 +40,21 @@ resources:
       #links:
       #  - "one:1"
      #   - "two:2"
-      cmd: mongo
+     
+     # cmd: mongo
       privileged: false
-      logConfig:
-        type: "json"
-        options:
-          test: test
-      ulimits:
-        - name: cpu
-          hard: 5
+    #  logConfig:
+    #    type: "json"
+    #    options:
+    #      test: test
+    #  ulimits:
+    #    - name: cpu
+    #      hard: 5
      # labels:
     #    labelone: valueOne
      #   labeltwo: valueTwo
    #   volumesFrom:
-  #      - "mongo"
+  #      - "nginx"
         
   - name: myReplicas
     type: replicas
