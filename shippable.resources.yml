@@ -46,6 +46,7 @@ resources:
  #     user: testuser
       dnsServers:
         - "127.0.0.1"
+        - "8.8.8.8"
       dnsSearch:
         - "127.0.0.1"
    #     - "8.8.8.8"
