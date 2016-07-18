@@ -53,8 +53,8 @@ resources:
      # labels:
     #    labelone: valueOne
      #   labeltwo: valueTwo
-   #   volumesFrom:
-  #      - "nginx"
+      volumesFrom:
+        - "nginx"
         
   - name: myReplicas
     type: replicas
