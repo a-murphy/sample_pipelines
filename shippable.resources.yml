@@ -52,6 +52,9 @@ resources:
           hard: 10
         - name: cpu
           hard: 5
+          soft: 3
+        - name: cpu
+          hard: 5
      # labels:
     #    labelone: valueOne
      #   labeltwo: valueTwo
