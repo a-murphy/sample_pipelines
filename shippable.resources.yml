@@ -44,7 +44,7 @@ resources:
       privileged: false
       logConfig:
         options:
-          test2key:test2value
+          test2key: test2value
           test: test
         
   - name: myReplicas
