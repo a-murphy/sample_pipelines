@@ -45,11 +45,12 @@ resources:
       privileged: false
       logConfig:
         type: "json-file"
-        options:
-          test: test
+      #  options:
+     #     test: test
       ulimits:
         - name: cpu
           hard: 5
+          soft: 3
       labels:
         labelone: valueOne
         labeltwo: valueTwo
