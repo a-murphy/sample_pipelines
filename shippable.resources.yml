@@ -43,7 +43,7 @@ resources:
       cmd: mongo
       privileged: false
       logConfig:
-        type: "json-file"
+        type: "json"
         
   - name: myReplicas
     type: replicas
