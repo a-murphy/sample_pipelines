@@ -47,12 +47,12 @@ resources:
         type: "json-file"
         options:
           test: test
-    #  ulimits:
-    #    - name: cpu
-    #      hard: 5
-     # labels:
-    #    labelone: valueOne
-     #   labeltwo: valueTwo
+      ulimits:
+        - name: cpu
+          hard: 5
+      labels:
+        labelone: valueOne
+       labeltwo: valueTwo
      # volumesFrom:
     #    - "nginx"
     #    - "mongo:ro"
