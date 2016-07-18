@@ -52,7 +52,7 @@ resources:
           hard: 5
       labels:
         labelone: valueOne
-       labeltwo: valueTwo
+        labeltwo: valueTwo
      # volumesFrom:
     #    - "nginx"
     #    - "mongo:ro"
