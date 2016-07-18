@@ -54,8 +54,8 @@ resources:
     #    labelone: valueOne
      #   labeltwo: valueTwo
       volumesFrom:
-        - "nginx"
-        - "mongo:ro"
+        "nginx"
+        "mongo:ro"
         
   - name: myReplicas
     type: replicas
