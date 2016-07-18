@@ -44,6 +44,8 @@ resources:
       privileged: false
       logConfig:
         type: "json"
+        options:
+          test: test
         
   - name: myReplicas
     type: replicas
