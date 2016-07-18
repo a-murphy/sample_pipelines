@@ -45,7 +45,7 @@ resources:
       logConfig:
         type: "json-file"
         options:
-          test2key: test2value
+          test2: test2value
           test: test
         
   - name: myReplicas
