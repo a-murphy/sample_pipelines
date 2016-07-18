@@ -46,6 +46,10 @@ resources:
         type: "json"
         options:
           test: test
+      ulimits:
+        name: test
+        soft: 4
+        hard: 10
      # labels:
     #    labelone: valueOne
      #   labeltwo: valueTwo
