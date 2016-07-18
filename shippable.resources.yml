@@ -53,8 +53,7 @@ resources:
     #    labelone: valueOne
      #   labeltwo: valueTwo
       volumesFrom:
-        - "ecs-deploy2ce878e7-c0ed-4597-be7e-6bd49a66f61e:ro"
-        - "ecs-deploy2ce878e7-c0ed-4597-be7e-6bd49a66f61e"
+        - "ecs-deploy24348d91d-2568-4bc4-a3e9-2b3f2ee1bee1"
         
   - name: myReplicas
     type: replicas
