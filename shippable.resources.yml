@@ -47,10 +47,10 @@ resources:
         options:
           test: test
       ulimits:
-        - name: test
+        - name: core
           soft: 4
           hard: 10
-        - name: test2
+        - name: cpu
           hard: 5
      # labels:
     #    labelone: valueOne
