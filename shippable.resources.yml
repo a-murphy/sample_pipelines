@@ -54,9 +54,9 @@ resources:
     #    - name: core
     #      hard: 10
     #      soft: 5
-      labels:
-        labelone: valueOne
-        labeltwo: valueTwo
+      #labels:
+      #  labelone: valueOne
+      #  labeltwo: valueTwo
      # volumesFrom:
     #    - "nginx"
     #    - "mongo:ro"
