@@ -45,11 +45,11 @@ resources:
       privileged: false
       user: testuser
       dnsServers:
-        - serverOne
-        - serverTwo
+        - "127.0.0.1"
+        - "127.0.0.1"
       dnsSearch:
-        - searchOne
-        - searchTwo
+        - "127.0.0.1"
+        - "127.0.0.1"
     #  logConfig:
     #    type: "json-file"
       #  options:
