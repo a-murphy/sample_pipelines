@@ -42,6 +42,9 @@ resources:
      #   - "two:2"
       cmd: mongo
       privileged: false
+      logConfig:
+        options:
+          test: test
         
   - name: myReplicas
     type: replicas
