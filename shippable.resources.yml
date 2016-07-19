@@ -41,7 +41,7 @@ resources:
       #  - "one:1"
      #   - "two:2"
      
-     # cmd: mongo
+      cmd: mongod
       privileged: true
      # user: 0
       workingDir: "/home/shippable"
