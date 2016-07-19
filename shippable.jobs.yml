@@ -31,7 +31,6 @@ jobs:
   - name: generate-mongo-image-manifest-6
     type: manifest
     steps:
-      - IN: sample_pipelines_master_rSync
       - IN: myOtherDockerOptions
       - IN: mongo-image
         pull: false
@@ -105,6 +104,7 @@ jobs:
   - name: gke-deploy
     type: gkeDeploy
     steps:
+      - IN: sample_pipelines_master_rSync
       - IN: generate-mongo-image-manifest-6
       - IN: myGKECluster
       - IN: myOtherDockerOptions
