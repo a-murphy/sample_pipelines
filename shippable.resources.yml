@@ -45,13 +45,13 @@ resources:
       privileged: false
       user: testuser
       workingDir: "/home/shippable"
-#      volumes:
- #       - "/host/path-1:/container/path:rw"
-  #      - "/host/path:/container/path2:rw"
-   #     - "/host/path2:/container/path3:ro"
-    #    - "/host/path..2:/container/path4:rw"
-     #   - "/host/path..3:/container/path5:ro"
-      #  - "/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz:/container/path6:ro"
+      volumes:
+        - "/host/path:/container/path:rw"
+        - "/host/path:/container/path2:rw"
+        - "/host/path:/container/path3:ro"
+        - "/host/path2:/container/path4:rw"
+        - "/host/path.2:/container/path5:ro"
+        - "/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz:/container/path6:ro"
     #  dnsServers:
     #    - "127.0.0.1"
    #     - "8.8.8.8"
