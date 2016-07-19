@@ -44,6 +44,10 @@ resources:
      # cmd: mongo
       privileged: false
       user: testuser
+      volumes:
+        - "/host/path:/container/path:rw"
+        - "/host/path:/container/path2:rw"
+        - "/host/path2:/container/path3:ro"
     #  dnsServers:
     #    - "127.0.0.1"
    #     - "8.8.8.8"
