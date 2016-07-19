@@ -2,7 +2,7 @@ triggers:
   - name: triggerOne
     type: trigger
     version:
-      count: VIIIC
+      count: VIIC
       
   - name: triggerTwo
     type: trigger
