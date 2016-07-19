@@ -101,6 +101,17 @@ jobs:
           - mongo-image
       - TASK: managed
         deployMethod: upgrade
+        
+  - name: gke-deploy
+    type: gkeDeploy
+    steps:
+      - IN: generate-mongo-image-manifest-6
+      - IN: myGKECluster
+      - IN: myOtherDockerOptions
+        applyTo:
+          - mongo-image
+      - TASK: managed
+        deployMethod: upgrade
  
   #- name: deploy-service-10
   #  type: ecsDeploy
