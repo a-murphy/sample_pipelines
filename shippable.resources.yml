@@ -3,7 +3,7 @@ resources:
     type: image
     integration: DockerHub
     pointer:
-      sourceName: "library/mongo2"
+      sourceName: "library/mongo"
       isPull: false
     seed:
       versionName: "1.2.4"
