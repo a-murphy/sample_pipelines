@@ -92,6 +92,13 @@ resources:
       region: "us-west-2"
       test: test
 
+  - name: myGKECluster
+    type: cluster
+    integration: GKE
+    pointer:
+      sourceName : "cluster-1"
+      region: "us-east1-c"
+
   - name: myDclCluster
     type: cluster
     integration: DockerCloud
