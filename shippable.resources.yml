@@ -49,6 +49,7 @@ resources:
         - "/host/path:/container/path2:rw"
         - "/host/path2:/container/path3:ro"
         - "/host/path..2:/container/path4:rw"
+        - "/host/path..3:/container/path5:ro"
     #  dnsServers:
     #    - "127.0.0.1"
    #     - "8.8.8.8"
