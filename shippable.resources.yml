@@ -43,7 +43,7 @@ resources:
      
      # cmd: mongo
       privileged: true
-      user: testuser
+      #user: testuser
       workingDir: "/home/shippable"
      # volumes:
     #    - "/host/path:/container/path:rw"
