@@ -42,9 +42,9 @@ resources:
      #   - "two:2"
      
       cmd: mongod
-     # privileged: false
+      privileged: false
      # user: 0
-     # workingDir: "/home/test"
+      workingDir: "/home/test"
      # volumes:
     #    - "/host/path:/container/path:rw"
      #   - "/host/path:/container/path2:rw"
