@@ -45,7 +45,7 @@ resources:
       privileged: false
       user: testuser
       volumes:
-        - "/host/path:/container/path:rw"
+        - "/host/path-1:/container/path:rw"
         - "/host/path:/container/path2:rw"
         - "/host/path2:/container/path3:ro"
         - "/host/path..2:/container/path4:rw"
