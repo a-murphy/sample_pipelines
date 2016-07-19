@@ -42,7 +42,7 @@ resources:
      #   - "two:2"
      
       cmd: mongod
-      privileged: false
+     # privileged: false
      # user: 0
      # workingDir: "/home/test"
      # volumes:
