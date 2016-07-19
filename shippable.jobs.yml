@@ -31,7 +31,7 @@ jobs:
   - name: generate-mongo-image-manifest-6
     type: manifest
     steps:
-      - IN: myOtherDockerOptions
+    #  - IN: myOtherDockerOptions
       - IN: triggerOne
       - IN: mongo-image
         pull: false
