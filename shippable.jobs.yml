@@ -110,7 +110,7 @@ jobs:
       - IN: myGKECluster
       - IN: myOtherDockerOptions
       - TASK: managed
-        deployMethod: upgrade
+        deployMethod: blueGreen
  
   #- name: deploy-service-10
   #  type: ecsDeploy
