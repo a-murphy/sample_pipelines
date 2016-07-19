@@ -44,6 +44,7 @@ resources:
      # cmd: mongo
       privileged: false
       user: testuser
+      workingDir: "/home/shippable"
       volumes:
         - "/host/path-1:/container/path:rw"
         - "/host/path:/container/path2:rw"
