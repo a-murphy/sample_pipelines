@@ -42,7 +42,7 @@ resources:
      #   - "two:2"
      
      # cmd: mongo
-      privileged: false
+      privileged: true
       user: testuser
       workingDir: "/home/shippable"
       volumes:
