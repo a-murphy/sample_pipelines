@@ -41,9 +41,7 @@ resources:
       #  - "one:1"
      #   - "two:2"
      
-      cmd:
-        - "echo true"
-        - mongod
+      cmd: "true"
     #  privileged: false
     #  user: 0
       workingDir: "/home/test"
