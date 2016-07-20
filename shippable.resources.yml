@@ -54,7 +54,7 @@ resources:
         - "/host/path:/container/path2:rw"
         - "/host/path:/container/path3:ro"
         - "/host/path2:/container/path4:rw"
-        - "/host/path.2:/container/path5:ro"
+       # - "/host/path.2:/container/path5:ro"
         - 123
         #- "/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz:/container/path6:ro"
     #  dnsServers:
