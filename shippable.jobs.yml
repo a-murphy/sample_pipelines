@@ -115,7 +115,7 @@ jobs:
         applyTo:
           - nginx-image
       - TASK: managed
-        deployMethod: blueGreen
+        deployMethod: upgrade
  
   #- name: deploy-service-10
   #  type: ecsDeploy
