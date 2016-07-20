@@ -27,9 +27,6 @@ resources:
     version:
       params:
         five: 5
-        four: 4
-    seed:
-      one: 1
     
   - name: myOtherDockerOptions
     type: dockerOptions
