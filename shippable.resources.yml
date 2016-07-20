@@ -76,6 +76,7 @@ resources:
       labels:
         labelone: valueOne
         labeltwo: valueTwo
+        labelthree: valueThree
         
   - name: myReplicas
     type: replicas
