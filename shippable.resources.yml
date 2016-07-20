@@ -78,6 +78,14 @@ resources:
         labeltwo: valueTwo
         labelthree: valueThree
         
+  - name: myThirdDockerOptions
+    type: dockerOptions
+    integration: AWS
+    version:
+      labels:
+        one: One
+        labeltwo: Two
+        
   - name: myReplicas
     type: replicas
     version:
