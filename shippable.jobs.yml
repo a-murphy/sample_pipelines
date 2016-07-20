@@ -107,6 +107,7 @@ jobs:
     steps:
       - IN: triggerTwo
       - IN: sample_pipelines_master_rSync
+      - IN: generate-manifest
       - IN: myEcsCluster
       - TASK: managed
         deployMethod: upgrade
