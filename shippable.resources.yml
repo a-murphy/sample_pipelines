@@ -42,6 +42,7 @@ resources:
      #   - "two:2"
      
       cmd: "true"
+      entryPoint: "mongod"
     #  privileged: false
     #  user: 0
       workingDir: "/home/test"
