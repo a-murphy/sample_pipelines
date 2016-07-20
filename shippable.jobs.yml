@@ -109,6 +109,9 @@ jobs:
       - IN: generate-mongo-image-manifest-6
       - IN: myGKECluster
       - IN: myOtherDockerOptions
+      - IN: myThirdDockerOptions
+        applyTo:
+          - nginx-image
       - TASK: managed
         deployMethod: upgrade
  
