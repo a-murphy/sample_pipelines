@@ -51,7 +51,7 @@ resources:
     #  workingDir: "/home/test"
       volumes:
         - "/host/path:/container/path:rw"
-    #    - "/host/path:/container/path2:rw"
+        - "/host/path:/container/path2:rw"
         - "/host/path:/container/path3:ro"
         - "/host/path2:/container/path4:rw"
         - "/host/path.2:/container/path5:ro"
