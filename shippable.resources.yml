@@ -41,12 +41,11 @@ resources:
       #  - "one:1"
      #   - "two:2"
      
-      cmd:
-        - "pwd"
-        - "true"
+    #  cmd:
+    #    - "pwd"
+    #    - "true"
       entryPoint:
         - "mongod"
-        - "test"
     #  privileged: false
     #  user: 0
       workingDir: "/home/test"
