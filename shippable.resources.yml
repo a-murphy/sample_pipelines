@@ -43,7 +43,7 @@ resources:
      
       cmd: mongod
       privileged: false
-      user: 0
+    #  user: 0
       workingDir: "/home/test"
      # volumes:
     #    - "/host/path:/container/path:rw"
