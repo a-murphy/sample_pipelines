@@ -92,7 +92,7 @@ resources:
     type: cluster
     integration: AWS
     pointer:
-      sourceName : "test-cluster" #name of the cluster we are deploying
+      sourceName : "test-cluster-rename" #name of the cluster we are deploying
       region: "us-west-2"
 
   - name: myOtherEcsCluster
