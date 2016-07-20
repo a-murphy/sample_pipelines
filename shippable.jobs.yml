@@ -109,6 +109,8 @@ jobs:
       - IN: generate-mongo-image-manifest-6
       - IN: myGKECluster
       - IN: myOtherDockerOptions
+        applyTo:
+          - mongo-image
       - IN: myThirdDockerOptions
         applyTo:
           - nginx-image
