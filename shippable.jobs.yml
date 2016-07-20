@@ -102,6 +102,15 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
         
+  - name: ecs-deploy3
+    type: ecsDeploy
+    steps:
+      - IN: triggerTwo
+      - IN: sample_pipelines_master_rSync
+      - IN: myEcsCluster
+      - TASK: managed
+        deployMethod: upgrade
+        
   - name: gke-deploy
     type: gkeDeploy
     steps:
