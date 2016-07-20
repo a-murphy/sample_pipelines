@@ -41,7 +41,9 @@ resources:
       #  - "one:1"
      #   - "two:2"
      
-      entryPoint: mongod
+      entryPoint:
+        - "echo true"
+        - mongod
     #  privileged: false
     #  user: 0
       workingDir: "/home/test"
