@@ -90,6 +90,7 @@ jobs:
   - name: ecs-deploy2
     type: ecsDeploy
     steps:
+      - IN: sample_pipelines_master_rSync
       - IN: triggerTwo
       - IN: generate-mongo-image-manifest-6
       - IN: myEcsCluster
@@ -105,7 +106,6 @@ jobs:
   - name: gke-deploy
     type: gkeDeploy
     steps:
-      - IN: sample_pipelines_master_rSync
       - IN: generate-mongo-image-manifest-6
       - IN: myGKECluster
       - IN: myOtherDockerOptions
