@@ -111,9 +111,9 @@ jobs:
       - IN: myOtherDockerOptions
         applyTo:
           - mongo-image
-      - IN: myThirdDockerOptions
-        applyTo:
-          - nginx-image
+ #     - IN: myThirdDockerOptions
+ #       applyTo:
+ #         - nginx-image
       - TASK: managed
         deployMethod: upgrade
  
