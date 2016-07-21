@@ -32,7 +32,7 @@ resources:
     type: dockerOptions
     integration: AWS
     version:
-      #memory: 48
+      memory: 48
       #cpuShares: 5
       #links:
       #  - "one:1"
