@@ -91,7 +91,7 @@ jobs:
     type: ecsDeploy
     steps:
       - IN: sample_pipelines_master_rSync
-      - IN: triggerTwo
+   #   - IN: triggerTwo
       - IN: generate-mongo-image-manifest-6
       - IN: myEcsCluster
       - IN: myReplicas
