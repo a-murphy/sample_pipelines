@@ -70,10 +70,10 @@ resources:
     #    - name: core
     #      hard: 10
     #      soft: 5
-      labels:
-        labelone: valueOne
-        labeltwo: valueTwo
-        labelthree: valueThree
+    #  labels:
+    #    labelone: valueOne
+    #    labeltwo: valueTwo
+    #    labelthree: valueThree
         
   - name: myThirdDockerOptions
     type: dockerOptions
