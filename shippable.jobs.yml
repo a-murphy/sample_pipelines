@@ -9,7 +9,8 @@ jobs:
     type: release
     options:
       action: test
-    on_start: emailMe
+    on_start:
+      - emailMe
     steps:
       - IN: triggerTwo
       - IN: version-resource-1
@@ -21,7 +22,7 @@ jobs:
     on_success:
        - NOTIFY: notifyMe
     on_failure:
-      test: test
+       - test: test
       
   - name: foo4
     type: release
