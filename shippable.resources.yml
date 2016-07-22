@@ -11,7 +11,8 @@ resources:
   - name: notifyMe
     type: notification
     pointer:
-      sourceName: "name"
+      recipients:
+        - "aidans-test-channel"
 
   - name: myEcsParams
     type: params
