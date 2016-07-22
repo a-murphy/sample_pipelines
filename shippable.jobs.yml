@@ -23,6 +23,7 @@ jobs:
        - NOTIFY: notifyMe
     on_failure:
        - test: test
+       - NOTIFY: emailMe
       
   - name: foo4
     type: release
