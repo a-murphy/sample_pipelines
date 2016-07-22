@@ -7,6 +7,11 @@ resources:
       isPull: false
     seed:
       versionName: "latest"
+      
+  - name: notifyMe
+    type: notification
+    pointer:
+      sourceName: "name"
 
   - name: myEcsParams
     type: params
