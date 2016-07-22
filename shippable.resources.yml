@@ -14,6 +14,11 @@ resources:
       recipients:
         - "aidans-test-channel"
 
+  - name: emailMe
+    type: notification
+    pointer:
+      recipients: none
+
   - name: myEcsParams
     type: params
     integration: AWS
