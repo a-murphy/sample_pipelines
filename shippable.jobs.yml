@@ -9,8 +9,7 @@ jobs:
     type: release
     options:
       action: test
-    on_start:
-      emailMe
+    on_start: emailMe
     steps:
       - IN: triggerTwo
       - IN: version-resource-1
