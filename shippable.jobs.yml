@@ -9,6 +9,8 @@ jobs:
     type: release
     options:
       action: test
+    on_start:
+      NOTIFY: emailMe
     steps:
       - IN: triggerTwo
       - IN: version-resource-1
@@ -17,6 +19,8 @@ jobs:
       - IN: generate-manifest
       - IN: sample_pipelines_master_rSync
       - TASK: managed
+     on_success:
+       - NOTIFY: notifyMe
       
   - name: foo4
     type: release
