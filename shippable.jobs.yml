@@ -18,8 +18,10 @@ jobs:
       - IN: generate-manifest
       - IN: sample_pipelines_master_rSync
       - TASK: managed
-     on_success:
+    on_success:
        - NOTIFY: notifyMe
+    on_failure:
+      test: test
       
   - name: foo4
     type: release
