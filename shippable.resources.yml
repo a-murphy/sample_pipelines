@@ -43,7 +43,7 @@ resources:
     #    - "true"
     #  entryPoint:
     #    - "mongod"
-    #  privileged: false
+      privileged: false
     #  user: 0
    #   workingDir: "/home/test"
     #  volumes:
