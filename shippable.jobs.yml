@@ -21,7 +21,6 @@ jobs:
       - TASK: managed
     on_success:
        - NOTIFY: notifyMe
-       - test
     on_failure:
        - test: test
        - NOTIFY: notifyMe
