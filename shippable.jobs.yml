@@ -16,11 +16,12 @@ jobs:
       - IN: version-resource-1
      # - GET: myEcsParams
      # - GET: version-resource-5
-      - IN: generate-manifest
+     # - IN: generate-manifest
       - IN: sample_pipelines_master_rSync
       - TASK: managed
     on_success:
        - NOTIFY: notifyMe
+       - test
     on_failure:
        - test: test
        - NOTIFY: notifyMe
