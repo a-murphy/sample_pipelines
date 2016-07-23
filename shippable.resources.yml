@@ -8,20 +8,20 @@ resources:
     seed:
       versionName: "latest"
   
-  #- name: notifyMe
-  #  type: notification
-  #  integration: slack
-  #  pointer:
-  #    recipients:
-  #      - "aidans-test-channel"
+  - name: notifyMe
+    type: notification
+    integration: slack
+    pointer:
+      recipients:
+        - "aidans-test-channel"
 
-  #- name: emailMe
-  #  type: notification
-  #  integration: email
-  #  pointer:
-  #    recipients:
-  #      - "aidan@shippable.com"
-  #      - "test"
+  - name: emailMe
+    type: notification
+    integration: email
+    pointer:
+      recipients:
+        - "aidan@shippable.com"
+        - "test"
 
   - name: myEcsParams
     type: params
