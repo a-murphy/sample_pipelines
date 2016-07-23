@@ -16,6 +16,7 @@ resources:
 
   - name: emailMe
     type: notification
+    integration: email
     pointer:
       recipients:
         - "aidan@shippable.com"
