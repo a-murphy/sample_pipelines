@@ -9,6 +9,7 @@ resources:
       versionName: "latest"
   
   - name: notifyMe
+    type: notification
     pointer:
       recipients:
         - "aidans-test-channel"
