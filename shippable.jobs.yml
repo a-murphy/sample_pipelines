@@ -10,7 +10,7 @@ jobs:
     options:
       action: test
     on_start:
-      - emailMe
+      - NOTIFY: emailMe
     steps:
       - IN: triggerTwo
       - IN: version-resource-1
