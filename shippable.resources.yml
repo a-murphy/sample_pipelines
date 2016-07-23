@@ -20,6 +20,7 @@ resources:
     pointer:
       recipients:
         - "aidan@shippable.com"
+        - "test"
 
   - name: myEcsParams
     type: params
