@@ -1,7 +1,7 @@
 jobs:
 #  - name: generate-mongo-image-manifest-3
 #    type: manifest
-   - steps:
+  - steps:
       - GET: mongo-image
       - GET: myEcsParams
 
