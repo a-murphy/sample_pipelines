@@ -20,6 +20,8 @@ jobs:
       - IN: sample_pipelines_master_rSync
       - TASK: managed
     on_success:
+       - test1
+       - test2
        - NOTIFY: notifyMe
     #   - NOTIFY: emailMe
     on_failure:
