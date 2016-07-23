@@ -7,11 +7,8 @@ resources:
       isPull: false
     seed:
       versionName: "latest"
-      
-  - type: notification
   
   - name: notifyMe
-    type: notification
     pointer:
       recipients:
         - "aidans-test-channel"
