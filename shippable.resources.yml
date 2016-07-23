@@ -10,6 +10,7 @@ resources:
   
   - name: notifyMe
     type: notification
+    integration: slack
     pointer:
       recipients:
         - "aidans-test-channel"
