@@ -24,6 +24,7 @@ jobs:
        - test
     on_failure:
        - test: test
+       - NOTIFY: notifyMe
        - NOTIFY: emailMe
       
   - name: foo4
