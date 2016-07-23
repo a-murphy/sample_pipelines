@@ -24,7 +24,7 @@ jobs:
        - test1
        - test2
        - NOTIFY: notifyMe
-    #   - NOTIFY: emailMe
+       - NOTIFY: emailMe
     on_failure:
        - test
        - NOTIFY: notifyMe
