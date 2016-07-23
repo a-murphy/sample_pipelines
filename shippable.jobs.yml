@@ -87,6 +87,10 @@ jobs:
       - IN: myOtherEcsParams
       - IN: foo4
       - TASK: managed
+    on_failure:
+      - test
+      - NOTIFY: notifyMe
+      - NOTIFY: emailMe
 
   - name: deploy-dcl
     type: dclDeploy
