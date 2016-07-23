@@ -106,7 +106,7 @@ jobs:
   - name: ecs-deploy2
     type: ecsDeploy
     steps:
-   #   - IN: triggerTwo
+      - IN: triggerTwo
       - IN: generate-mongo-image-manifest-6
       - IN: myEcsCluster
 #      - IN: myReplicas
