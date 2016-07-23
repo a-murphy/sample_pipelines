@@ -30,7 +30,7 @@ jobs:
        - NOTIFY: emailMe
       
       
-  - name: foo3
+  - name: foo5
     type: release
     steps:
     #  - IN: triggerTwo
