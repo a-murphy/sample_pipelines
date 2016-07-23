@@ -34,7 +34,7 @@ jobs:
      # - GET: version-resource-4
       - IN: version-resource-3
       - TASK: managed
-      - IN: kickStart
+    #  - IN: kickStart
 
   - name: generate-mongo-image-manifest-6
     type: manifest
