@@ -1,13 +1,15 @@
 resources:
   - name: mongo-image
     type: image
-    integration: invalid
+    integration: DockerHub
     pointer:
       sourceName: "library/mongo"
       isPull: false
     seed:
       versionName: "latest"
       
+  - type: notification
+  
   - name: notifyMe
     type: notification
     pointer:
