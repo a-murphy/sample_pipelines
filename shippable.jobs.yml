@@ -11,6 +11,7 @@ jobs:
       action: test
     on_start:
       - NOTIFY: emailMe
+      - NOTIFY: notifyMe
     steps:
     #  - IN: triggerTwo
       - IN: version-resource-1
