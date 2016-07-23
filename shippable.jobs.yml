@@ -21,9 +21,9 @@ jobs:
       - TASK: managed
     on_success:
        - NOTIFY: notifyMe
-       - NOTIFY: emailMe
+    #   - NOTIFY: emailMe
     on_failure:
-       - test: test
+       - test
        - NOTIFY: notifyMe
        - NOTIFY: emailMe
       
