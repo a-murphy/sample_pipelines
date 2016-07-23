@@ -6,7 +6,7 @@ jobs:
   #    - GET: myEcsParams
 
   - name: foo
-    type: release
+    type: manifest
     options:
       action: test
     on_start:
