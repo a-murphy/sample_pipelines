@@ -10,8 +10,8 @@ jobs:
     options:
       action: test
     on_start:
-      - NOTIFY: emailMe
       - NOTIFY: notifyMe
+      - NOTIFY: emailMe
     steps:
     #  - IN: triggerTwo
       - IN: version-resource-1
@@ -98,10 +98,6 @@ jobs:
       - IN: myOtherEcsParams
       - IN: foo4
       - TASK: managed
-    on_failure:
-      - test
-      - NOTIFY: notifyMe
-      - NOTIFY: emailMe
 
   - name: deploy-dcl
     type: dclDeploy
@@ -128,10 +124,6 @@ jobs:
           - mongo-image
       - TASK: managed
         deployMethod: upgrade
-    on_failure:
-      - test
-      - NOTIFY: notifyMe
-      - NOTIFY: emailMe
         
   - name: gke-deploy
     type: gkeDeploy
