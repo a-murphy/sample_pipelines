@@ -17,7 +17,8 @@ resources:
   - name: emailMe
     type: notification
     pointer:
-      recipients: none
+      recipients:
+        - "aidan@shippable.com"
 
   - name: myEcsParams
     type: params
