@@ -32,7 +32,7 @@ jobs:
       action: minor
     steps:
      # - GET: version-resource-4
-      - IN: version-resource-3
+      - IN: version-resource-5
       - TASK: managed
     #  - IN: kickStart
 
