@@ -9,14 +9,14 @@ resources:
       versionName: "latest"
   
   - name: notifyMe
-    type: notification
+#    type: notification
     integration: slack
     pointer:
       recipients:
         - "aidans-test-channel"
 
   - name: emailMe
-    type: notification
+ #   type: notification
     integration: email
     pointer:
       recipients:
