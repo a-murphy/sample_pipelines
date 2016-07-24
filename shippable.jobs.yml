@@ -10,8 +10,8 @@ jobs:
     options:
       action: test
     on_start:
-      - NOTIFY: notifyMe
       - NOTIFY: emailMe
+      - NOTIFY: notifyMe
     steps:
     #  - IN: triggerTwo
       - IN: version-resource-1
@@ -33,7 +33,7 @@ jobs:
   - name: foo5
     type: release
     steps:
-    #  - IN: triggerTwo
+      - IN: triggerTwo
       - IN: version-resource-1
      # - GET: myEcsParams
      # - GET: version-resource-5
