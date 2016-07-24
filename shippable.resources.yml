@@ -105,7 +105,7 @@ resources:
     type: cluster
     integration: AWS
     pointer:
-      sourceName : "not-test-cluster" #name of the cluster to which we are deploying
+      sourceName : "test-cluster" #name of the cluster to which we are deploying
       region: "us-west-2"
 
   - name: myOtherEcsCluster
