@@ -114,7 +114,7 @@ jobs:
     type: ecsDeploy
     steps:
       - IN: triggerTwo
-      - IN: generate-mongo-image-manifest-6
+      - IN: generate-manifest
       - IN: myEcsCluster
 #      - IN: myReplicas
 #      - GET: deploy-service-7
