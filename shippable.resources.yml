@@ -129,14 +129,14 @@ resources:
     pointer:
       sourceName : "DockerCloudCluster"
       
-  - name: projectToTrigger
-    type: gitRepo
-    integration: github
-    pointer:
-      sourceName : "a-murphy/sample_node_postgres"
-      branch: "master"
-    seed:
-      three: 3
+#  - name: projectToTrigger
+#    type: gitRepo
+#    integration: github
+#    pointer:
+#      sourceName : "a-murphy/sample_node_postgres"
+#      branch: "master"
+#    seed:
+#      three: 3
 
   - name: version-resource-1
     type: version
