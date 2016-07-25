@@ -33,7 +33,6 @@ jobs:
   - name: foo5
     type: release
     steps:
-      - IN: triggerTwo
       - IN: version-resource-1
      # - GET: myEcsParams
      # - GET: version-resource-5
@@ -106,14 +105,27 @@ jobs:
       - IN: myDclCluster
       - IN: myEcsParams
       - IN: myOtherEcsParams
-      - IN: triggerTwo
       - TASK: managed
         deployMethod: upgrade
  
+  - name: new-ecs-deploy
+    type: deploy
+    steps:
+      - IN: triggerTwo
+      - IN: generate-manifest
+      - IN: myEcsCluster
+#      - IN: myReplicas
+#      - GET: deploy-service-7
+#      - GET: myEcsParams
+      - IN: myOtherDockerOptions
+        applyTo:
+          - mongo-image
+      - TASK: managed
+        deployMethod: upgrade
+
   - name: ecs-deploy2
     type: ecsDeploy
     steps:
-      - IN: triggerTwo
       - IN: generate-manifest
       - IN: myEcsCluster
 #      - IN: myReplicas
