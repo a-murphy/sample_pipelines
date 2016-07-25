@@ -75,7 +75,7 @@ jobs:
       - IN: triggerOne
   #    - GET: myReplicas
 #      - GET: deploy-service
-      - IN: myOtherDockerOptions
+    #  - IN: myOtherDockerOptions
       - TASK: managed
    
 
@@ -115,11 +115,11 @@ jobs:
 #      - IN: myReplicas
 #      - GET: deploy-service-7
 #      - GET: myEcsParams
-      - IN: myOtherDockerOptions
-        applyTo:
-          - mongo-image
+    #  - IN: myOtherDockerOptions
+    #    applyTo:
+    #      - mongo-image
       - TASK: managed
-        deployMethod: upgrade
+        deployMethod: blueGreen
 
   - name: ecs-deploy2
     type: ecsDeploy
