@@ -76,7 +76,7 @@ jobs:
       - IN: triggerOne
   #    - GET: myReplicas
 #      - GET: deploy-service
-  #    - GET: myOtherDockerOptions
+      - IN: myOtherDockerOptions
       - TASK: managed
    
 
