@@ -127,12 +127,12 @@ jobs:
     steps:
       - IN: generate-manifest
       - IN: myEcsCluster
-#      - IN: myReplicas
+      - IN: myReplicas
 #      - GET: deploy-service-7
 #      - GET: myEcsParams
-      - IN: myOtherDockerOptions
-        applyTo:
-          - mongo-image
+  #    - IN: myOtherDockerOptions
+  #      applyTo:
+  #        - mongo-image
       - TASK: managed
         deployMethod: upgrade
         
