@@ -110,9 +110,10 @@ jobs:
   - name: new-ecs-deploy
     type: deploy
     steps:
+      - IN: sample_pipelines_master_rSync
       - IN: generate-manifest
       - IN: myEcsCluster
-#      - IN: myReplicas
+      - IN: myReplicas
 #      - GET: deploy-service-7
 #      - GET: myEcsParams
     #  - IN: myOtherDockerOptions
@@ -138,7 +139,6 @@ jobs:
   - name: gke-deploy
     type: gkeDeploy
     steps:
-      - IN: sample_pipelines_master_rSync
       - IN: generate-mongo-image-manifest-6
       - IN: myGKECluster
       - IN: myOtherDockerOptions
