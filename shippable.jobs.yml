@@ -29,15 +29,15 @@ jobs:
        - NOTIFY: emailMe
       
       
-  - name: foo5
-    type: release
-    steps:
-      - IN: version-resource-1
-     # - GET: myEcsParams
-     # - GET: version-resource-5
-     # - IN: generate-manifest
-      - IN: sample_pipelines_master_rSync
-      - TASK: managed
+ # - name: foo5
+#    type: release
+#    steps:
+#      - IN: version-resource-1
+#     # - GET: myEcsParams
+#     # - GET: version-resource-5
+#     # - IN: generate-manifest
+#      - IN: sample_pipelines_master_rSync
+#      - TASK: managed
       
   - name: foo4
     type: release
