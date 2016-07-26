@@ -110,7 +110,6 @@ jobs:
   - name: new-ecs-deploy
     type: deploy
     steps:
-      - IN: sample_pipelines_master_rSync
       - IN: generate-manifest
       - IN: myEcsCluster
       - IN: myReplicas
