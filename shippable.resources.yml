@@ -8,12 +8,12 @@ resources:
     seed:
       versionName: "latest"
   
-  - name: notifyMe
-    type: notification
-    integration: slack
-    pointer:
-      recipients:
-        - "aidans-test-channel"
+#  - name: notifyMe
+#    type: notification
+#    integration: slack
+#    pointer:
+#      recipients:
+#        - "aidans-test-channel"
 
   - name: emailMe
     type: notification
