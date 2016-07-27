@@ -170,11 +170,11 @@ jobs:
   #    - GET: triggerTwo
   # #   - GET: myOtherEcsParams
 
-  - name: CI-project
-    type: runCI
-    steps:
-     # - IN: triggerOne
-     # - IN: myEcsParams
-      - TASK: managed
-      - OUT: mongo-image
-      - IN: projectToTrigger
+#  - name: CI-project
+#    type: runCI
+#    steps:
+#     # - IN: triggerOne
+#     # - IN: myEcsParams
+#      - TASK: managed
+#      - OUT: mongo-image
+#      - IN: projectToTrigger
