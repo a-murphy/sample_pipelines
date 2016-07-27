@@ -50,7 +50,7 @@ resources:
       #cpuShares: 5
       links:
         - "one:1"
-     #   - "two:2"
+        - "two:2"
      
     #  cmd:
     #    - "pwd"
