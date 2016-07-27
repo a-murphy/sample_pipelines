@@ -122,6 +122,14 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
 
+  - name: new-ecs-deploy-again
+    type: deploy
+    steps:
+      - IN: new-ecs-deploy
+      - IN: myEcsCluster
+      - TASK: managed
+        deployMethod: upgrade
+
   - name: ecs-deploy2
     type: ecsDeploy
     steps:
