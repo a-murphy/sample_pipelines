@@ -99,13 +99,13 @@ resources:
   - name: myReplicas
     type: replicas
     version:
-      count: 2
+      count: 3
 
   - name: myEcsCluster
     type: cluster
     integration: AWS
     pointer:
-      sourceName : "test-cluster" #name of the cluster to which we are deploying
+      sourceName : "not-test-cluster" #name of the cluster to which we are deploying
       region: "us-west-2"
 
   - name: myOtherEcsCluster
