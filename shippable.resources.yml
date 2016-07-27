@@ -99,7 +99,7 @@ resources:
   - name: myReplicas
     type: replicas
     version:
-      count: 3
+      count: 2
 
   - name: myEcsCluster
     type: cluster
