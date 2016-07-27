@@ -47,7 +47,7 @@ resources:
     integration: AWS
     version:
       memory: 48
-      cpuShares: 5
+      cpuShares: 10
     #  links:
     #    - "one:1"
     #    - "two:2"
