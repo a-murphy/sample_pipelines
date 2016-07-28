@@ -138,7 +138,7 @@ resources:
 #    seed:
 #      three: 3
 
-  - name: projectToTrigger
+  - name: projectToSync
     type: syncRepo
     integration: github
     pointer:
