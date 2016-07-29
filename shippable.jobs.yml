@@ -90,6 +90,7 @@ jobs:
     type: dclDeploy
     steps:
       - IN: generate-manifest
+        switch: off
       - IN: myDclCluster
       - IN: myEcsParams
         applyTo:
@@ -102,6 +103,7 @@ jobs:
     type: dclDeploy
     steps:
       - IN: generate-manifest
+        switch: on
       - IN: myDclCluster
       - IN: myEcsParams
       - IN: myOtherEcsParams
