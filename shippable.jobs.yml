@@ -86,7 +86,7 @@ jobs:
 #      - GET: generate-mongo-image-manifest-3
 #      - GET: myEcsCluster
 
-  - name: delete #deploy-service-7
+  - name: deploy-service-7
     type: deploy
     steps:
       - IN: generate-manifest
@@ -99,7 +99,7 @@ jobs:
       - IN: foo4
       - TASK: managed
 
-  - name: delete #deploy-dcl
+  - name: deploy-dcl
     type: deploy
     steps:
       - IN: generate-manifest
@@ -133,7 +133,7 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
 
-  - name: delete #ecs-deploy2
+  - name: ecs-deploy2
     type: deploy
     steps:
       - IN: generate-manifest
@@ -147,7 +147,7 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
         
-  - name: delete #gke-deploy
+  - name: gke-deploy
     type: deploy
     steps:
       - IN: generate-mongo-image-manifest-6
