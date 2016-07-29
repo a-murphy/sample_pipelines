@@ -87,7 +87,7 @@ jobs:
 #      - GET: myEcsCluster
 
   - name: deploy-service-7
-    type: dclDeploy
+    type: deploy
     steps:
       - IN: generate-manifest
         switch: off
@@ -100,7 +100,7 @@ jobs:
       - TASK: managed
 
   - name: deploy-dcl
-    type: dclDeploy
+    type: deploy
     steps:
       - IN: generate-manifest
         switch: on
@@ -133,7 +133,7 @@ jobs:
         deployMethod: upgrade
 
   - name: ecs-deploy2
-    type: ecsDeploy
+    type: deploy
     steps:
       - IN: generate-manifest
       - IN: myEcsCluster
@@ -147,7 +147,7 @@ jobs:
         deployMethod: upgrade
         
   - name: gke-deploy
-    type: gkeDeploy
+    type: deploy
     steps:
       - IN: generate-mongo-image-manifest-6
       - IN: myGKECluster
@@ -161,7 +161,7 @@ jobs:
         deployMethod: blueGreen
  
   #- name: deploy-service-10
-  #  type: ecsDeploy
+  #  type: deploy
   #  steps:
   #    - GET: generate-mongo-image-manifest-6
   # #   - GET: myEcsCluster
