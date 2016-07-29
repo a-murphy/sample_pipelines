@@ -69,15 +69,15 @@ jobs:
   #        - mongo-image
       - TASK: managed
 
-  - name: generate-manifest
-    type: manifest
-    steps:
-      - IN: mongo-image
-      - IN: triggerOne
+#  - name: generate-manifest
+ #   type: manifest
+  #  steps:
+   #   - IN: mongo-image
+    #  - IN: triggerOne
   #    - GET: myReplicas
 #      - GET: deploy-service
     #  - IN: myOtherDockerOptions
-      - TASK: managed
+     # - TASK: managed
    
 
  # - name: deploy-service
@@ -86,18 +86,18 @@ jobs:
 #      - GET: generate-mongo-image-manifest-3
 #      - GET: myEcsCluster
 
-  - name: deploy-service-7
-    type: deploy
-    steps:
-      - IN: generate-manifest
-        switch: off
-      - IN: myDclCluster
-      - IN: myEcsParams
-        applyTo:
-          - other
-      - IN: myOtherEcsParams
-      - IN: foo4
-      - TASK: managed
+#  - name: deploy-service-7
+#    type: deploy
+#    steps:
+#      - IN: generate-manifest
+#        switch: off
+#      - IN: myDclCluster
+#      - IN: myEcsParams
+#        applyTo:
+#          - other
+#      - IN: myOtherEcsParams
+#      - IN: foo4
+#      - TASK: managed
 
   - name: deploy-dcl
     type: deploy
