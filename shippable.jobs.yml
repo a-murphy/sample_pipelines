@@ -73,9 +73,9 @@ jobs:
     type: manifest
     steps:
       - IN: mongo-image
-      - IN: triggerOne
-      - GET: myReplicas
-      - GET: deploy-service
+   #   - IN: triggerOne
+  #    - GET: myReplicas
+  #    - GET: deploy-service
       - IN: myOtherDockerOptions
       - TASK: managed
    
