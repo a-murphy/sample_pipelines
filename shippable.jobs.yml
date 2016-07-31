@@ -46,7 +46,7 @@ jobs:
       action: minor
     steps:
      # - GET: version-resource-4
-      - IN: generate-manifest
+      - IN: deploy-dcl
       - IN: version-resource-1
       - TASK: managed
 
