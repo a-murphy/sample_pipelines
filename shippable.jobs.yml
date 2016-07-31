@@ -114,7 +114,7 @@ jobs:
     type: deploy
     steps:
       - IN: foo4
-      - IN: generate-manifest
+      - IN: generate-mongo-image-manifest-6
       - IN: myEcsCluster
       - IN: myReplicas
 #      - GET: deploy-service-7
