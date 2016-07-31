@@ -1,19 +1,19 @@
 resources:
-#  - name: mongo-image
-#    type: image
-#    integration: DockerHub
-#    pointer:
-#      sourceName: "library/mongo"
-#      isPull: false
-#    seed:
-#      versionName: "latest"
-  
-#  - name: notifyMe
-#    type: notification
-#    integration: slack
-#    pointer:
-#      recipients:
-#        - "aidans-test-channel"
+  - name: mongo-image
+    type: image
+    integration: DockerHub
+    pointer:
+      sourceName: "library/mongo"
+      isPull: false
+    seed:
+      versionName: "latest"
+
+  - name: notifyMe
+    type: notification
+    integration: slack
+    pointer:
+      recipients:
+        - "aidans-test-channel"
 
   - name: emailMe
     type: notification
