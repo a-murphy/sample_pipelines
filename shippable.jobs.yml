@@ -115,7 +115,7 @@ jobs:
     steps:
       - IN: foo4
       - IN: generate-mongo-image-manifest-6
-      - IN: dclDeploy
+      - IN: deploy-dcl
       - IN: myEcsCluster
       - IN: myReplicas
 #      - GET: deploy-service-7
