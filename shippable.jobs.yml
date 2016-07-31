@@ -46,9 +46,9 @@ jobs:
       action: minor
     steps:
      # - GET: version-resource-4
+      - IN: generate-manifest
       - IN: version-resource-1
       - TASK: managed
-      - IN: new-ecs-deploy
 
   - name: generate-mongo-image-manifest-6
     type: manifest
@@ -113,7 +113,8 @@ jobs:
   - name: new-ecs-deploy
     type: deploy
     steps:
-      - IN: generate-manifest
+      - IN: foo4
+   #   - IN: generate-manifest
       - IN: myEcsCluster
       - IN: myReplicas
 #      - GET: deploy-service-7
