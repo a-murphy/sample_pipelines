@@ -116,6 +116,7 @@ jobs:
     #  - IN: foo4
     #  - IN: generate-mongo-image-manifest-6
       - IN: ecs-deploy2
+      - IN: generate-mongo-image-manifest-6
       - IN: myEcsCluster
       - IN: myReplicas
 #      - GET: deploy-service-7
