@@ -149,7 +149,7 @@ resources:
     type: gitRepo
     integration: bitbucket
     pointer:
-      sourceName : "a-murphy/sample-ruby-mysql-cache"
+      sourceName : "a-murphy/sample_node_postgres"
       branch: "master"
 
   - name: version-resource-1
