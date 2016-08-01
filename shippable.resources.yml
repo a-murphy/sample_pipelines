@@ -149,7 +149,7 @@ resources:
     type: gitRepo
     integration: bitbucket
     pointer:
-      sourceName : "a-murphy/sample_node_postgres"
+      sourceName : "a-murphy/sample_java_postgresql"
       branch: "master"
 
   - name: version-resource-1
