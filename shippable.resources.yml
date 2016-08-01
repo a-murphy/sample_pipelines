@@ -149,7 +149,7 @@ resources:
     type: gitRepo
     integration: bitbucket
     pointer:
-      sourceName : "a-murphy/sample_java_postgresql"
+      sourceName : "a-murphy/sample-ruby-mysql-cache"
       branch: "master"
 
   - name: version-resource-1
@@ -162,7 +162,7 @@ resources:
   - name: version-resource-3
     type: params
     pointer: 
-      base: "1.0.3"
+      base: "1.0.1"
 
 #  - name: kickstart
 #    type: kickStart
