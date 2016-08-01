@@ -162,7 +162,7 @@ resources:
   - name: version-resource-3
     type: params
     pointer: 
-      base: "1.0.1"
+      base: "1.0.0"
 
 #  - name: kickstart
 #    type: kickStart
