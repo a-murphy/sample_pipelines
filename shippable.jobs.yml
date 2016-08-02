@@ -142,7 +142,7 @@ jobs:
       - IN: generate-manifest
       - IN: myEcsCluster
      # - IN: foo4
-   #   - IN: myReplicas
+      - IN: myReplicas
 #      - GET: deploy-service-7
 #      - GET: myEcsParams
  #     - IN: myOtherDockerOptions
