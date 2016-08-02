@@ -30,13 +30,13 @@ jobs:
        - NOTIFY: emailMe
       
       
- # - name: foo5
-#    type: release
-#    steps:
+  - name: foo5
+    type: release
+    steps:
 #      - IN: version-resource-1
 #     # - GET: myEcsParams
 #     # - GET: version-resource-5
-#     # - IN: generate-manifest
+       - IN: generate-manifest
 #      - IN: sample_pipelines_master_rSync
 #      - TASK: managed
       
@@ -46,7 +46,7 @@ jobs:
       action: minor
     steps:
      # - GET: version-resource-4
-  #    - IN: deploy-dcl
+      - IN: deploy-dcl
       - IN: myReplicas
   #    - IN: version-resource-1
       - TASK: managed
