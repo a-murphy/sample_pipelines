@@ -105,9 +105,9 @@ jobs:
     steps:
       - IN: generate-manifest
         switch: on
-      - IN: notMyDclCluster
+      - IN: myDclCluster
    #   - IN: myEcsParams
-   #   - IN: myOtherEcsParams
+      - IN: myOtherEcsParams
       - TASK: managed
         deployMethod: upgrade
  
