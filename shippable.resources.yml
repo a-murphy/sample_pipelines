@@ -6,7 +6,7 @@ resources:
       sourceName: "library/mongo"
       isPull: false
     seed:
-      versionName: "123"
+      versionName: "latest"
 
   - name: notifyMe
     type: notification
