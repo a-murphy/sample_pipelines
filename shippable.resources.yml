@@ -154,9 +154,9 @@ resources:
       
   - name: projectTwo
     type: gitRepo
-    integration: github
+    integration: bitbucket
     pointer:
-      sourceName : "a-murphy/sample-ruby-mysql-cache"
+      sourceName : "a-murphy/sample_java_postgresql"
       branch: "master"
 
   - name: version-resource-1
