@@ -40,7 +40,7 @@ resources:
       test: test
     version:
       params:
-        five: 5
+        five: 25
     
   - name: myOtherDockerOptions
     type: dockerOptions
