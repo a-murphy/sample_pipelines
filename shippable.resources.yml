@@ -156,7 +156,7 @@ resources:
     type: gitRepo
     integration: github
     pointer:
-      sourceName : "a-murphy/sample_node_postgres"
+      sourceName : "a-murphy/sample-ruby-mysql-cache"
       branch: "master"
 
   - name: version-resource-1
