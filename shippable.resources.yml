@@ -156,7 +156,7 @@ resources:
     type: gitRepo
     integration: github
     pointer:
-      sourceName : "a-murphy/testprivate"
+      sourceName : "a-murphy/sample_node_postgres"
       branch: "master"
 
   - name: version-resource-1
