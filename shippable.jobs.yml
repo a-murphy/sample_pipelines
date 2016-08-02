@@ -87,18 +87,18 @@ jobs:
 #      - GET: generate-mongo-image-manifest-3
 #      - GET: myEcsCluster
 
-#  - name: deploy-service-7
-#    type: deploy
-#    steps:
-#      - IN: generate-manifest
-#        switch: off
-#      - IN: myDclCluster
-#      - IN: myEcsParams
-#        applyTo:
-#          - other
-#      - IN: myOtherEcsParams
-#      - IN: foo4
-#      - TASK: managed
+  - name: deploy-service-7
+    type: deploy
+    steps:
+      - IN: generate-manifest
+        switch: off
+      - IN: myDclCluster
+      - IN: myEcsParams
+        applyTo:
+          - other
+      - IN: myOtherEcsParams
+      - IN: foo4
+      - TASK: managed
 
   - name: deploy-dcl
     type: deploy
