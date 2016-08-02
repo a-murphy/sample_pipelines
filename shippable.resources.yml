@@ -127,6 +127,12 @@ resources:
     type: cluster
     integration: DockerCloud
     pointer:
+      sourceName : "DockerCloudCluster"
+    
+  - name: notMyDclCluster
+    type: cluster
+    integration: DockerCloud
+    pointer:
     sourceName : "DockerCloudCluster"
       
 #  - name: projectToTrigger
