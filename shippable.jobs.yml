@@ -107,7 +107,7 @@ jobs:
         switch: on
       - IN: notMyDclCluster
    #   - IN: myEcsParams
-      - IN: myOtherEcsParams
+   #   - IN: myOtherEcsParams
       - TASK: managed
         deployMethod: upgrade
  
