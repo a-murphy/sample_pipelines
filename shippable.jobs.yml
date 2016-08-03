@@ -111,21 +111,21 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
  
-  - name: new-ecs-deploy
-    type: deploy
-    steps:
+ # - name: new-ecs-deploy
+#    type: deploy
+#    steps:
     #  - IN: foo4
     #  - IN: generate-mongo-image-manifest-6
-      - IN: ecs-deploy2
-      - IN: myEcsCluster
+#      - IN: ecs-deploy2
+#      - IN: myEcsCluster
     #  - IN: myReplicas
 #      - GET: deploy-service-7
 #      - GET: myEcsParams
    #   - IN: myOtherDockerOptions
-        applyTo:
-          - mongo-image
-      - TASK: managed
-        deployMethod: upgrade
+#        applyTo:
+#          - mongo-image
+#      - TASK: managed
+#        deployMethod: upgrade
 
   - name: new-ecs-deploy-again
     type: deploy
@@ -136,20 +136,20 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
 
-  - name: ecs-deploy2
-    type: deploy
-    steps:
-      - IN: generate-manifest
-      - IN: myEcsCluster
-     # - IN: foo4
-    #  - IN: myReplicas
-#      - GET: deploy-service-7
+ # - name: ecs-deploy2
+#    type: deploy
+#    steps:
+#      - IN: generate-manifest
+#      - IN: myEcsCluster
+#     # - IN: foo4
+#    #  - IN: myReplicas
+##      - GET: deploy-service-7
 #      - GET: myEcsParams
  #     - IN: myOtherDockerOptions
 #        applyTo:
 #          - mongo-image
-      - TASK: managed
-        deployMethod: upgrade
+#      - TASK: managed
+#        deployMethod: upgrade
         
   - name: gke-deploy
     type: deploy
