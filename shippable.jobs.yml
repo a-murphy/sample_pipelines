@@ -145,10 +145,10 @@ jobs:
      # - IN: foo4
     #  - IN: myReplicas
 #      - GET: deploy-service-7
-      - GET: myEcsParams
+    #  - GET: myEcsParams
  #     - IN: myOtherDockerOptions
-        applyTo:
-          - mongo-image
+     #   applyTo:
+      #    - mongo-image
       - TASK: managed
         deployMethod: upgrade
         
