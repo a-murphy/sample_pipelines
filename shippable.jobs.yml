@@ -119,14 +119,14 @@ jobs:
       - IN: generate-manifest
 #      - IN: ecs-deploy2
       - IN: myEcsCluster
-    #  - IN: myReplicas
+      - IN: myReplicas
 #      - GET: deploy-service-7
 #      - GET: myEcsParams
    #   - IN: myOtherDockerOptions
 #        applyTo:
 #          - mongo-image
       - TASK: managed
-        deployMethod: upgrade
+        deployMethod: blueGreen
 
   - name: new-ecs-deploy-again
     type: deploy
