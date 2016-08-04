@@ -135,6 +135,7 @@ jobs:
     steps:
       - IN: new-ecs-deploy
         switch: off
+      - OUT: mongo-image
       - IN: myEcsCluster
       - TASK: managed
         deployMethod: upgrade
