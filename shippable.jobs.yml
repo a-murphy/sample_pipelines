@@ -183,4 +183,4 @@ jobs:
      # - IN: myEcsParams
       - TASK: managed
       - OUT: mongo-image
-      - IN: projectToTrigger
+      - IN: projectOne
