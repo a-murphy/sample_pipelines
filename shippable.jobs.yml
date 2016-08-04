@@ -171,7 +171,7 @@ jobs:
     type: runSh
     steps:
       - OUT: mongo-image
-      - TASK
+      - TASK:
         - script: "touch /build/state/mongo-image.env"
         - script: "echo "versionName=latest" >>  /build/state/mongo-image.env
         - script: "echo "anotherProperty=foo" >>  /build/state/mongo-image.env
