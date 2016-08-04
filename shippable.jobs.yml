@@ -59,6 +59,7 @@ jobs:
       - IN: mongo-image
         pull: false
         switch: off
+      - IN: generate-manifest
   #    - GET: generate-manifest
   #    - GET: myEcsParams
   #      applyTo:
