@@ -176,11 +176,11 @@ jobs:
         - script: "echo 'versionName=latest' >>  /build/state/mongo-image.env"
         - script: "echo 'anotherProperty=foo' >>  /build/state/mongo-image.env"
  
-#  - name: CI-project
-#    type: runCI
-#    steps:
-#     # - IN: triggerOne
-#     # - IN: myEcsParams
-#      - TASK: managed
-#      - OUT: mongo-image
-#      - IN: projectToTrigger
+  - name: CI-project
+    type: runCI
+    steps:
+     # - IN: triggerOne
+     # - IN: myEcsParams
+      - TASK: managed
+      - OUT: mongo-image
+      - IN: projectToTrigger
