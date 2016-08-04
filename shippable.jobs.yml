@@ -173,8 +173,8 @@ jobs:
       - OUT: mongo-image
       - TASK:
         - script: "touch /build/state/mongo-image.env"
-        - script: "echo "versionName=latest" >>  /build/state/mongo-image.env
-        - script: "echo "anotherProperty=foo" >>  /build/state/mongo-image.env
+        - script: "echo 'versionName=latest' >>  /build/state/mongo-image.env"
+        - script: "echo 'anotherProperty=foo' >>  /build/state/mongo-image.env"
  
 #  - name: CI-project
 #    type: runCI
