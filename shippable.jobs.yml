@@ -172,12 +172,12 @@ jobs:
   - name: custom
     type: runSh
     steps:
-      - OUT: mongo-image
       - TASK:
         - script: "touch /build/state/mongo-image.env"
         - script: "echo 'versionName=latest' >>  /build/state/mongo-image.env"
         - script: "echo 'anotherProperty=foo' >>  /build/state/mongo-image.env"
- 
+      - OUT: mongo-image
+
   - name: CI-project
     type: runCI
     steps:
