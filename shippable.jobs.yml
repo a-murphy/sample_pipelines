@@ -181,6 +181,6 @@ jobs:
     steps:
      # - IN: triggerOne
      # - IN: myEcsParams
+      - IN: projectOne
       - TASK: managed
       - OUT: mongo-image
-      - IN: projectOne
