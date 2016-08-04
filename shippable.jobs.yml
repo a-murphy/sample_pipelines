@@ -58,6 +58,7 @@ jobs:
       - IN: triggerOne
       - IN: mongo-image
         pull: false
+        switch: off
   #    - GET: generate-manifest
   #    - GET: myEcsParams
   #      applyTo:
@@ -74,6 +75,7 @@ jobs:
     type: manifest
     steps:
       - IN: mongo-image
+        switch: off
    #   - OUT: triggerOne
   #    - GET: myReplicas
   #    - GET: deploy-service
