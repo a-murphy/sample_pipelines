@@ -127,6 +127,7 @@ jobs:
             port: 27017
 #      - IN: ecs-deploy2
       - IN: myEcsCluster
+      - IN: new-ecs-deploy-again
       - IN: myReplicas
 #      - GET: deploy-service-7
 #      - GET: myEcsParams
