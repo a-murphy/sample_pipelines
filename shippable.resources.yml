@@ -22,6 +22,11 @@ resources:
       recipients:
         - "aidan@shippable.com"
 
+  - name: myLoadBalancer
+    type: loadBalancer
+    pointer:
+      sourceName: loadBalancer
+
   - name: myEcsParams
     type: params
     integration: AWS
