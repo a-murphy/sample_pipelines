@@ -124,6 +124,7 @@ jobs:
         applyTo:
           - manifest: generate-manifest
             image: mongo-image
+            port: 27017
 #      - IN: ecs-deploy2
       - IN: myEcsCluster
       - IN: myReplicas
