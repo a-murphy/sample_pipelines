@@ -118,7 +118,7 @@ jobs:
     type: deploy
     steps:
     #  - IN: foo4
-      - IN: generate-mongo-image-manifest-6
+     # - IN: generate-mongo-image-manifest-6
       - IN: generate-manifest
       - IN: myLoadBalancer
 #      - IN: ecs-deploy2
