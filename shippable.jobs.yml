@@ -150,6 +150,7 @@ jobs:
     steps:
       - IN: generate-manifest
       - IN: myEcsCluster
+      - IN: new-ecs-deploy-again
      # - IN: foo4
      # - IN: myReplicas
 #      - GET: deploy-service-7
@@ -164,6 +165,7 @@ jobs:
     type: deploy
     steps:
       - IN: generate-mongo-image-manifest-6
+      - OUT: mongo-image
       - IN: myGKECluster
       - IN: myOtherDockerOptions
         applyTo:
@@ -173,8 +175,7 @@ jobs:
  #         - nginx-image
       - TASK: managed
         deployMethod: blueGreen
-        
-                
+
   - name: custom
     type: runSh
     steps:
