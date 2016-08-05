@@ -130,7 +130,7 @@ jobs:
 #        applyTo:
 #          - mongo-image
       - TASK: managed
-        deployMethod: blueGreen
+        deployMethod: upgrade
 
   - name: new-ecs-deploy-again
     type: deploy
