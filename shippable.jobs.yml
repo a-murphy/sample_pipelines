@@ -77,7 +77,6 @@ jobs:
     steps:
       - IN: mongo-image
         switch: off
-      - IN: new-ecs-deploy-again
    #   - OUT: triggerOne
   #    - GET: myReplicas
   #    - GET: deploy-service
@@ -121,6 +120,7 @@ jobs:
     #  - IN: foo4
       - IN: generate-mongo-image-manifest-6
       - IN: generate-manifest
+      - IN: myLoadBalancer
 #      - IN: ecs-deploy2
       - IN: myEcsCluster
       - IN: myReplicas
@@ -137,7 +137,6 @@ jobs:
     steps:
       - IN: new-ecs-deploy
         switch: off
-      - OUT: mongo-image
       - IN: myEcsCluster
       - TASK: managed
         deployMethod: upgrade
