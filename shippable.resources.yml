@@ -53,6 +53,8 @@ resources:
     version:
       memory: 48
       cpuShares: 10
+      portMappings:
+        - 27017:27017
     #  links:
      #   - "one:1"
     #    - "two:2"
