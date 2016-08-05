@@ -76,6 +76,7 @@ jobs:
   - name: generate-manifest
     type: manifest
     steps:
+      - IN: kickstart
       - IN: mongo-image
         switch: off
    #   - OUT: triggerOne
