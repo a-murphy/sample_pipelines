@@ -129,7 +129,7 @@ jobs:
       - IN: myReplicas
 #      - GET: deploy-service-7
 #      - GET: myEcsParams
-   #   - IN: myOtherDockerOptions
+      - IN: myOtherDockerOptions
 #        applyTo:
 #          - mongo-image
       - TASK: managed
