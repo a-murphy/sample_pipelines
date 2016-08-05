@@ -169,7 +169,7 @@ resources:
     type: gitRepo
     integration: github
     pointer:
-  #    sourceName : "a-murphy/testprivate"
+      sourceName : "a-murphy/testprivate"
       branch: "master"
 
   - name: version-resource-1
@@ -179,13 +179,18 @@ resources:
     pointer: 
       base: "1.0.2"
 
+  - name: version-resource-2
+    type: params
+    pointer: 
+      base: "1.0.2"
+
   - name: version-resource-3
     type: params
     pointer: 
       base: "1.0.0"
 
-#  - name: kickstart
-#    type: kickStart
-#    version: 
-#      count: 1
+  - name: kickstart
+    type: kickStart
+    version: 
+      count: 1
 
