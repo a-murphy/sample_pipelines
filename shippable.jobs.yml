@@ -121,6 +121,9 @@ jobs:
      # - IN: generate-mongo-image-manifest-6
       - IN: generate-manifest
       - IN: myLoadBalancer
+        applyTo:
+          manifest: generate-manifest
+          image: mongo-image
 #      - IN: ecs-deploy2
       - IN: myEcsCluster
       - IN: myReplicas
