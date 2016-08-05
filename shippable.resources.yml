@@ -46,7 +46,6 @@ resources:
     version:
       params:
         five: 25
-        eight: 64
     
   - name: myOtherDockerOptions
     type: dockerOptions
