@@ -77,7 +77,7 @@ jobs:
     steps:
       - IN: mongo-image
         switch: off
-      - IN: ecs-deploy2
+      - IN: ecs-deploy-again
    #   - OUT: triggerOne
   #    - GET: myReplicas
   #    - GET: deploy-service
