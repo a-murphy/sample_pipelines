@@ -75,7 +75,6 @@ jobs:
 
   - name: generate-manifest
     type: manifest
-      - IN: newEcsDeploy
       - IN: mongo-image
         switch: off
    #   - OUT: triggerOne
