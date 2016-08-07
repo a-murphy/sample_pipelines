@@ -171,6 +171,13 @@ resources:
     pointer:
       sourceName : "a-murphy/testprivate"
       branch: "master"
+      
+  - name: projectThree
+    type: gitRepo
+    integration: bitbucket
+    pointer:
+      sourceName : "a-murphy-testing/sample_php"
+      branch: "master"
 
   - name: version-resource-1
     type: version
