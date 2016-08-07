@@ -172,12 +172,12 @@ resources:
   #    sourceName : "a-murphy/testprivate"
   #    branch: "master"
       
-  - name: projectThree
-    type: gitRepo
-    integration: github
-    pointer:
-      sourceName: "a-murphy/sample-node-rethinkdb" #"a-murphy-testing/sample_php"
-      branch: "master"
+  #- name: projectThree
+  #  type: gitRepo
+  #  integration: github
+  #  pointer:
+  #    sourceName: "a-murphy/sample-node-rethinkdb" #"a-murphy-testing/sample_php"
+  #    branch: "master"
 
   - name: version-resource-1
     type: version
