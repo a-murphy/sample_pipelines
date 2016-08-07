@@ -189,8 +189,6 @@ jobs:
     steps:
      # - IN: triggerOne
      # - IN: myEcsParams
-      - IN: sample_pipelines_master_rSync
-        switch: off
       - IN: projectOne
       - TASK: managed
       - OUT: mongo-image
