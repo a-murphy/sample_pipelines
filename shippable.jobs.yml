@@ -177,7 +177,6 @@ jobs:
   - name: custom
     type: runSh
     steps:
-      - IN: sample_pipelines_master_rSync
       - TASK:
         - script: "mkdir -p /build/state/"
        # - script: "touch /build/state/mongo-image.env"
@@ -190,6 +189,8 @@ jobs:
     steps:
      # - IN: triggerOne
      # - IN: myEcsParams
+      - IN: sample_pipelines_master_rSync
+        switch: off
       - IN: projectOne
       - TASK: managed
       - OUT: mongo-image
