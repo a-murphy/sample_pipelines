@@ -131,7 +131,6 @@ jobs:
             port: 27017
 #      - IN: ecs-deploy2
       - IN: myEcsCluster
-      - IN: new-ecs-deploy-again
       - IN: myReplicas
 #      - GET: deploy-service-7
 #      - GET: myEcsParams
@@ -170,7 +169,6 @@ jobs:
     type: deploy
     steps:
       - IN: generate-mongo-image-manifest-6
-      - OUT: mongo-image
       - IN: myGKECluster
       - IN: myOtherDockerOptions
         applyTo:
