@@ -121,7 +121,6 @@ jobs:
     #  - IN: foo4
      # - IN: generate-mongo-image-manifest-6
       - IN: generate-manifest
-      - OUT: kickstart
       - IN: myLoadBalancer
         applyTo:
           - manifest: generate-manifest
