@@ -177,6 +177,7 @@ jobs:
   - name: custom
     type: runSh
     steps:
+      - IN: sample_pipelines_master_rSync
       - TASK:
         - script: "mkdir -p /build/state/"
        # - script: "touch /build/state/mongo-image.env"
