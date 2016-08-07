@@ -174,9 +174,9 @@ resources:
       
   - name: projectThree
     type: gitRepo
-    integration: bitbucket
+    integration: github
     pointer:
-      sourceName: "a-murphy/sample_java_postgresql" #"a-murphy-testing/sample_php"
+      sourceName: "a-murphy/sample-node-rethinkdb" #"a-murphy-testing/sample_php"
       branch: "master"
 
   - name: version-resource-1
