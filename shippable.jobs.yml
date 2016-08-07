@@ -16,7 +16,6 @@ jobs:
     #  - IN: triggerTwo
       - IN: version-resource-1
       - IN: new-ecs-deploy
-      - IN: kickstart
      # - GET: myEcsParams
      # - GET: version-resource-5
      # - IN: generate-manifest
@@ -56,6 +55,7 @@ jobs:
     type: manifest
     steps:
     #  - IN: myOtherDockerOptions
+      - IN: foo
       - IN: triggerOne
       - IN: mongo-image
         pull: false
