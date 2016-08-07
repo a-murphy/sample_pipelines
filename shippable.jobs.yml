@@ -180,7 +180,7 @@ jobs:
       - TASK:
         - script: "mkdir -p /build/state/"
         - script: "touch /build/state/mongo-image.env"
-        - script: "echo 'versionName=latest' >>  /build/state/mongo-image.env"
+        - script: "echo 'versionName=test' >>  /build/state/mongo-image.env"
        # - script: "echo 'anotherProperty=foo' >>  /build/state/mongo-image.env"
       - OUT: mongo-image
 
