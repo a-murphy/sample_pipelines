@@ -191,7 +191,7 @@ jobs:
     steps:
       - IN: custom
       - TASK:
-        - script: "cat /build/custom/runShSteps/mongo-image.env"
+        - script: "cat /build/IN/custom/runShSteps/mongo-image.env"
 
   - name: CI-project
     type: runCI
