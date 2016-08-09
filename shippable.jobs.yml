@@ -184,7 +184,6 @@ jobs:
         - script: "echo 'versionName=latest' >>  /build/state/mongo-image.env"
         - script: "echo 'anotherProperty=foo' >>  /build/state/mongo-image.env"
         - script: "echo 'anotherProperty2=foo2' >>  /build/state/mongo-image.env"
-        - script: "echo 'anotherProperty3=foo3' >>  /build/state/mongo-image.env"
       - OUT: mongo-image
       
   - name: custom2
