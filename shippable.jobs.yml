@@ -55,6 +55,7 @@ jobs:
     type: manifest
     steps:
     #  - IN: myOtherDockerOptions
+      - IN: custom
       - IN: foo
       - IN: triggerOne
       - IN: mongo-image
@@ -185,6 +186,13 @@ jobs:
         - script: "echo 'anotherProperty2=foo2' >>  /build/state/mongo-image.env"
         - script: "echo 'anotherProperty3=foo3' >>  /build/state/mongo-image.env"
       - OUT: mongo-image
+      
+  - name: custom2
+    type: runSh
+    steps:
+      - IN: custom
+      - TASK:
+        - script: "cat /build/custom/runSh/mongo-image.env"
 
   - name: CI-project
     type: runCI
