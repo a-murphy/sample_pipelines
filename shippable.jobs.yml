@@ -87,7 +87,7 @@ jobs:
    
 
   - name: deploy-service
-    type: ecsDeploy
+    type: deploy
     steps:
       - IN: generate-mongo-image-manifest-3
       - IN: myEcsCluster
@@ -155,7 +155,7 @@ jobs:
      # - IN: myReplicas
 #      - GET: deploy-service-7
     #  - GET: myEcsParams
- #     - IN: myOtherDockerOptions
+      - IN: myOtherDockerOptions
      #   applyTo:
       #    - mongo-image
       - TASK: managed
