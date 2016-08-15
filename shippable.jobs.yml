@@ -80,7 +80,8 @@ jobs:
       - IN: mongo-image
         switch: off
    #   - OUT: triggerOne
-      - GET: myReplicas
+   
+   #   - GET: myReplicas
   #    - GET: deploy-service
       - IN: myOtherDockerOptions
       - TASK: managed
