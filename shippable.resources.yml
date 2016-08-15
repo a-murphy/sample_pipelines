@@ -200,4 +200,9 @@ resources:
     type: kickStart
     version: 
       count: 1
+      
+  - name: timeTrigger
+    type: time
+    seed:
+      interval: "*/12 * * * *"
 
