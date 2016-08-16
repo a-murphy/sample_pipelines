@@ -127,6 +127,7 @@ jobs:
     steps:
     #  - IN: foo4
      # - IN: generate-mongo-image-manifest-6
+      - IN: foo
       - IN: generate-manifest
       - IN: myLoadBalancer
         applyTo:
