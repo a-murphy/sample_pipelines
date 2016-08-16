@@ -8,6 +8,7 @@ jobs:
   - name: yetAnotherRelease
     type: release
     steps:
+      - IN: generate-manifest
       - TASK: managed
 
   - name: foo
