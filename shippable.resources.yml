@@ -15,7 +15,7 @@ resources:
       sourceName: "library/busybox"
       isPull: false
     seed:
-      versionName: "latest"
+      versionName: "ubuntu"
 
   - name: notifyMe
     type: notification
