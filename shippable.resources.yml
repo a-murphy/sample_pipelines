@@ -8,6 +8,15 @@ resources:
     seed:
       versionName: "latest"
       
+  - name: nginx-image
+    type: image
+    integration: DockerHub
+    pointer:
+      sourceName: "library/nginx"
+      isPull: false
+    seed:
+      versionName: "latest"
+      
   - name: busybox-image
     type: image
     integration: DockerHub
