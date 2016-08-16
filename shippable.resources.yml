@@ -37,6 +37,7 @@ resources:
         foo: bar
         four: 16
         three: 9
+        two: 4
   
   - name: myOtherEcsParams
     type: params
@@ -165,12 +166,12 @@ resources:
       sourceName : "a-murphy/sample_node_postgres"
       branch: "master"
       
-  #- name: projectTwo
-  #  type: gitRepo
-  #  integration: github
-  #  pointer:
-  #    sourceName : "a-murphy/testprivate"
-  #    branch: "master"
+  - name: projectTwo
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName : "a-murphy/testprivate"
+      branch: "master"
       
   #- name: projectThree
   #  type: gitRepo
