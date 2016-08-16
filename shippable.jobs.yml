@@ -87,11 +87,11 @@ jobs:
       - TASK: managed
    
 
-  - name: deploy-service
-    type: deploy
-    steps:
-      - IN: generate-mongo-image-manifest-6
-      - IN: myEcsCluster
+ # - name: deploy-service
+#    type: deploy
+#    steps:
+#      - IN: generate-mongo-image-manifest-6
+#      - IN: myEcsCluster
 
   - name: deploy-service-7
     type: deploy
