@@ -5,7 +5,7 @@ jobs:
   #    - GET: mongo-image
   #    - GET: myEcsParams
   
-  - name: anotherRelease
+  - name: yetAnotherRelease
     type: release
     steps:
       - TASK: managed
