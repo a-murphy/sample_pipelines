@@ -10,7 +10,7 @@ jobs:
 #    steps:
 #      - IN: generate-manifest
 #      - TASK: managed
-
+#
   - name: foo
     type: release
     options:
