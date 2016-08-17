@@ -87,7 +87,7 @@ jobs:
    
    #   - GET: myReplicas
   #    - GET: deploy-service
-      - IN: myOtherDockerOptions
+    #  - IN: myOtherDockerOptions
       - TASK: managed
    
 
