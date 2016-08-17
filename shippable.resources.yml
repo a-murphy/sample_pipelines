@@ -207,18 +207,18 @@ resources:
 
   - name: version-resource-2
     type: params
-    pointer: 
+    version: 
       base: "1.0.2"
 
   - name: version-resource-3
     type: params
-    pointer: 
+    version: 
       base: "1.0.0"
 
-  - name: kickstart
-    type: kickStart
-    version: 
-      count: 1
+#  - name: kickstart
+#    type: kickStart
+#    version: 
+#      count: 1
       
   - name: timeTrigger
     type: time
