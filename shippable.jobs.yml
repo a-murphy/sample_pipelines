@@ -62,7 +62,6 @@ jobs:
     steps:
     #  - IN: myOtherDockerOptions
       - IN: custom
-      - IN: foo
  #     - IN: triggerOne
       - IN: mongo-image
         pull: false
