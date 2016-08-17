@@ -5,12 +5,12 @@ jobs:
   #    - GET: mongo-image
   #    - GET: myEcsParams
   
- # - name: thirdExtraRelease
-#    type: release
-#    steps:
-#      - IN: generate-manifest
-#      - TASK: managed
-#
+  - name: thirdExtraRelease
+    type: release
+    steps:
+      - IN: generate-manifest
+      - TASK: managed
+
   - name: foo
     type: release
     options:
