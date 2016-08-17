@@ -21,7 +21,6 @@ jobs:
     steps:
     #  - IN: triggerTwo
       - IN: version-resource-1
-      - IN: new-ecs-deploy
      # - GET: myEcsParams
      # - GET: version-resource-5
      # - IN: generate-manifest
