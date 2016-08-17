@@ -5,7 +5,7 @@ jobs:
   #    - GET: mongo-image
   #    - GET: myEcsParams
   
-  - name: yetAnotherRelease
+  - name: thirdExtraRelease
     type: release
     steps:
       - IN: generate-manifest
