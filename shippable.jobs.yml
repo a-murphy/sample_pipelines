@@ -53,8 +53,8 @@ jobs:
      # - GET: version-resource-4
       - IN: deploy-dcl
     #  - IN: myReplicas
-  #    - IN: version-resource-1
-  #    - TASK: managed
+      - IN: version-resource-1
+      - TASK: managed
 
   - name: generate-mongo-image-manifest-6
     type: manifest
