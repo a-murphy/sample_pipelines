@@ -23,7 +23,7 @@ jobs:
       - IN: version-resource-1
      # - GET: myEcsParams
      # - GET: version-resource-5
-     # - IN: generate-manifest
+      - IN: generate-manifest
       - TASK: managed
     on_success:
        - test1
