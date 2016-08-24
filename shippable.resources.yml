@@ -125,7 +125,7 @@ resources:
   - name: myReplicas
     type: replicas
     version:
-      count: 2
+      count: 3
 
   - name: myEcsCluster
     type: cluster
