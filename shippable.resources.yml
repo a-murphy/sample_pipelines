@@ -197,6 +197,13 @@ resources:
 #    pointer:
 #      sourceName : "a-murphy/testprivate"
 #      branch: "master"
+
+  - name: privateProject
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName : "a-murphy/testprivate"
+      branch: "master"
       
   #- name: projectThree
   #  type: gitRepo
