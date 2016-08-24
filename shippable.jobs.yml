@@ -189,7 +189,7 @@ jobs:
     steps:
       - IN: myEcsCluster
       - IN: foo
-      - OUT: nginx-image
+      - OUT: gke-deploy
      # - IN: myReplicas
 #      - GET: deploy-service-7
     #  - GET: myEcsParams
