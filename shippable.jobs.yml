@@ -218,6 +218,9 @@ jobs:
         
   - name: empty-deploy
     type: deploy
+    
+  - name: new-empty-deploy
+    type: deploy
 
   - name: custom
     type: runSh
