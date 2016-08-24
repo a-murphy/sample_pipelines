@@ -49,7 +49,7 @@ jobs:
   - name: foo4
     type: release
     options:
-      action: minor
+      action: patch
     steps:
      # - GET: version-resource-4
       - IN: deploy-dcl
