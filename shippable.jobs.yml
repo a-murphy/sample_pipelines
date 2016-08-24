@@ -156,7 +156,7 @@ jobs:
      # - IN: generate-mongo-image-manifest-6
     #  - IN: foo
       - IN: generate-manifest
-    #  - IN: nginx-and-busybox-manifest
+      - IN: nginx-and-busybox-manifest
      # - IN: new-manifest
       - IN: myLoadBalancer
         applyTo:
@@ -166,7 +166,6 @@ jobs:
 #      - IN: ecs-deploy2
       - IN: myEcsCluster
       - IN: myReplicas
-      - OUT: nginx-image
 #      - GET: deploy-service-7
 #      - GET: myEcsParams
       - IN: myOtherDockerOptions
@@ -190,6 +189,7 @@ jobs:
     steps:
       - IN: myEcsCluster
       - IN: foo
+      - OUT: nginx-image
      # - IN: myReplicas
 #      - GET: deploy-service-7
     #  - GET: myEcsParams
