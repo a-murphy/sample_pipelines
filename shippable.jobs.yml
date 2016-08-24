@@ -112,6 +112,12 @@ jobs:
       - IN: nginx-manifest
       - IN: busybox-manifest
       - TASK: managed
+   
+  - name: new-manifest
+    type: manifest
+    steps:
+      - IN: mongo-manifest
+      - TASK: managed
 
  # - name: deploy-service
 #    type: deploy
