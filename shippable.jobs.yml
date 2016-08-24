@@ -193,6 +193,12 @@ jobs:
         - script: "echo 'anotherProperty2=foo2' >>  /build/state/mongo-image.env"
       - OUT: mongo-image
       
+  - name: custom3
+    type: runSh
+    steps:
+      - TASK:
+        - script: "ls /build/IN/custom"
+      
   - name: custom2
     type: runSh
     steps:
