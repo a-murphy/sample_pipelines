@@ -196,6 +196,7 @@ jobs:
   - name: custom3
     type: runSh
     steps:
+      - IN: custom
       - TASK:
         - script: "ls /build/IN/custom"
       
