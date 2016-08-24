@@ -148,6 +148,7 @@ jobs:
       - IN: myDclCluster
    #   - IN: myEcsParams
       - IN: myOtherEcsParams
+      - IN: myOtherDockerOptions
       - TASK: managed
         deployMethod: upgrade
  
