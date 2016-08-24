@@ -150,7 +150,7 @@ jobs:
      # - IN: generate-mongo-image-manifest-6
     #  - IN: foo
       - IN: generate-manifest
-      - IN: not-nginx-and-busybox-manifest
+      - IN: nginx-and-busybox-manifest
       - IN: myLoadBalancer
         applyTo:
           - manifest: generate-manifest
@@ -158,7 +158,7 @@ jobs:
             port: 27017
 #      - IN: ecs-deploy2
       - IN: myEcsCluster
-      - IN: myReplicas
+ #     - IN: myReplicas
 #      - GET: deploy-service-7
 #      - GET: myEcsParams
       - IN: myOtherDockerOptions
