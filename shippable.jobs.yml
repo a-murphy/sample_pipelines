@@ -150,7 +150,7 @@ jobs:
      # - IN: generate-mongo-image-manifest-6
     #  - IN: foo
       - IN: generate-manifest
-      - IN: nginx-and-busybox-manifest
+      - IN: not-nginx-and-busybox-manifest
       - IN: myLoadBalancer
         applyTo:
           - manifest: generate-manifest
