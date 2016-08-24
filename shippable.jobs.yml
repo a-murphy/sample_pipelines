@@ -42,6 +42,7 @@ jobs:
 #     # - GET: myEcsParams
 #     # - GET: version-resource-5
        - IN: generate-manifest
+         switch: off
          versionNumber: x
 #      - IN: sample_pipelines_master_rSync
        - TASK: managed
@@ -67,6 +68,7 @@ jobs:
         pull: false
         switch: off
       - IN: generate-manifest
+        switch: off
   #    - GET: generate-manifest
   #    - GET: myEcsParams
   #      applyTo:
