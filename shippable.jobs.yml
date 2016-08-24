@@ -218,9 +218,6 @@ jobs:
         
   - name: empty-deploy
     type: deploy
-    steps:
-      - TASK: managed
-        deployMethod: upgrade
 
   - name: custom
     type: runSh
