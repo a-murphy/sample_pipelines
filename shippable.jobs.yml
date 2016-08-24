@@ -91,6 +91,27 @@ jobs:
     #  - IN: myOtherDockerOptions
       - TASK: managed
    
+  - name: nginx-manifest
+    type: manifest
+    steps:
+      - IN: nginx-image
+        switch: off
+      - TASK: managed
+      
+     
+  - name: busybox-manifest
+    type: manifest
+    steps:
+      - IN: busybox-image
+        switch: off
+      - TASK: managed
+   
+  - name: nginx-and-busybox-manifest
+    type: manifest
+    steps:
+      - IN: nginx-manifest
+      - IN: busybox-manifest
+      - TASK: managed
 
  # - name: deploy-service
 #    type: deploy
@@ -129,6 +150,7 @@ jobs:
      # - IN: generate-mongo-image-manifest-6
     #  - IN: foo
       - IN: generate-manifest
+      - IN: nginx-and-busybox-manifest
       - IN: myLoadBalancer
         applyTo:
           - manifest: generate-manifest
@@ -140,8 +162,8 @@ jobs:
 #      - GET: deploy-service-7
 #      - GET: myEcsParams
       - IN: myOtherDockerOptions
-#        applyTo:
-#          - mongo-image
+        applyTo:
+          - mongo-image
       - TASK: managed
         deployMethod: upgrade
 
