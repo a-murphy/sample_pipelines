@@ -215,6 +215,12 @@ jobs:
  #         - nginx-image
       - TASK: managed
         deployMethod: blueGreen
+        
+  - name: empty-deploy
+    type: deploy
+    steps:
+      - TASK: managed
+        deployMethod: upgrade
 
   - name: custom
     type: runSh
