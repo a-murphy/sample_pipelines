@@ -151,7 +151,8 @@ jobs:
     #  - IN: foo
       - IN: generate-manifest
       - IN: nginx-and-busybox-manifest
-      - IN: notMyLoadBalancer
+      - IN: new-manifest
+      - IN: myLoadBalancer
         applyTo:
           - manifest: generate-manifest
             image: mongo-image
