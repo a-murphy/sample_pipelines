@@ -66,6 +66,13 @@ resources:
       params:
         five: 25
     
+  - name: myDockerOptions
+    type: dockerOptions
+    integration: AWS
+    version:
+      memory: 36
+      cpuShares: 5
+
   - name: myOtherDockerOptions
     type: dockerOptions
     integration: AWS
