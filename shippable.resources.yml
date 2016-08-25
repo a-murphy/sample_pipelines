@@ -1,11 +1,11 @@
 resources:
-  - name: mongo-image
-    type: image
-    pointer:
-      sourceName: "library/mongo"
-      isPull: false
-    seed:
-      versionName: "latest"
+  #- name: mongo-image
+  #  type: image
+  #  pointer:
+  #    sourceName: "library/mongo"
+  #    isPull: false
+  #  seed:
+  #    versionName: "latest"
       
   - name: nginx-image
     type: image
