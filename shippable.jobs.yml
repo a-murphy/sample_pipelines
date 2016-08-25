@@ -64,7 +64,7 @@ jobs:
     #  - IN: myOtherDockerOptions
       - IN: custom
  #     - IN: triggerOne
-      - IN: mongo-image
+      - IN: new-mongo-image
         pull: false
         switch: off
       - IN: generate-manifest
