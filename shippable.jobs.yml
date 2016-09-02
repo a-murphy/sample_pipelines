@@ -20,17 +20,17 @@ jobs:
       - NOTIFY: notifyMe
     steps:
     #  - IN: triggerTwo
-      - IN: version-resource-1
+    #  - IN: version-resource-1
      # - GET: myEcsParams
      # - GET: version-resource-5
       - IN: generate-manifest
       - TASK: managed
     on_success:
-       - test1
-       - test2
+   #    - test1
+  #     - test2
        - NOTIFY: notifyMe
-    on_failure:
-       - test
+  #  on_failure:
+  #     - test
     #   - NOTIFY: notifyMe
     #   - NOTIFY: emailMe
       
