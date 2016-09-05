@@ -62,7 +62,7 @@ jobs:
     type: manifest
     steps:
     #  - IN: myOtherDockerOptions
-      - IN: custom
+    #  - IN: custom
  #     - IN: triggerOne
       - IN: new-mongo-image
         pull: false
