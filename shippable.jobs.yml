@@ -140,7 +140,7 @@ jobs:
       - IN: foo4
       - TASK: managed
 
-  - name: deploy-dcl
+  - name: deploy-dcl-2
     type: deploy
     steps:
       - IN: generate-manifest
