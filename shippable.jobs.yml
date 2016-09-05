@@ -53,7 +53,7 @@ jobs:
       action: patch
     steps:
      # - GET: version-resource-4
-      - IN: deploy-dcl
+      - IN: deploy-dcl-2
     #  - IN: myReplicas
       - IN: version-resource-1
       - TASK: managed
