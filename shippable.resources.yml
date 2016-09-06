@@ -231,7 +231,7 @@ resources:
 #    version: 
 #      count: 1
       
-  - name: timeTrigger
+  - name: time
     type: time
     seed:
       interval: "*/2 * * * *"
