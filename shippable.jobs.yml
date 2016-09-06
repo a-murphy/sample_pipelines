@@ -195,7 +195,7 @@ jobs:
     steps:
       - IN: myEcsCluster
       - IN: foo
-      - OUT: gke-deploy
+    #  - OUT: gke-deploy
      # - IN: myReplicas
 #      - GET: deploy-service-7
     #  - GET: myEcsParams
@@ -203,7 +203,7 @@ jobs:
      #   applyTo:
       #    - mongo-image
       - TASK: managed
-        deployMethod: blueGreen
+        deployMethod: upgrade
         
   - name: gke-deploy
     type: deploy
