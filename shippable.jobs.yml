@@ -190,7 +190,7 @@ jobs:
 #      - TASK: managed
 #        deployMethod: upgrade
 
-  - name: ecs-deploy
+  - name: ecs-deploy2
     type: deploy
     steps:
       - IN: myEcsCluster
