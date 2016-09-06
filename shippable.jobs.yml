@@ -205,7 +205,7 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
         
-  - name: gke-deploy
+  - name: gke-deploy2
     type: deploy
     steps:
       - IN: generate-mongo-image-manifest-6
