@@ -208,7 +208,7 @@ jobs:
   - name: gke-deploy
     type: deploy
     steps:
-      - IN: new-ecs-deploy-again
+      - IN: generate-mongo-image-manifest-6
       - IN: myGKECluster
       - IN: myOtherDockerOptions
         applyTo:
