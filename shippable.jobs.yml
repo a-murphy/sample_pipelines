@@ -64,7 +64,7 @@ jobs:
     type: manifest
     steps:
     #  - IN: myOtherDockerOptions
-      - IN: custom
+      - IN: customImage
  #     - IN: triggerOne
       - IN: new-mongo-image
         pull: false
@@ -225,7 +225,7 @@ jobs:
   - name: new-empty-deploy
     type: deploy
 
-  - name: custom
+  - name: customImage
     type: runSh
     steps:
       - TASK:
@@ -239,16 +239,16 @@ jobs:
   - name: custom3
     type: runSh
     steps:
-      - IN: custom
+      - IN: customImage
       - TASK:
-        - script: "ls /build/IN/custom"
+        - script: "ls /build/IN/customImage"
       
   - name: custom2
     type: runSh
     steps:
-      - IN: custom
+      - IN: customImage
       - TASK:
-        - script: "cat /build/IN/custom/runShSteps/mongo-image.env"
+        - script: "cat /build/IN/customImage/runShSteps/mongo-image.env"
 
   - name: CI-project
     type: runCI
