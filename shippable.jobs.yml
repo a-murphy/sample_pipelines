@@ -20,8 +20,8 @@ jobs:
       - NOTIFY: notifyMe
     steps:
     #  - IN: triggerTwo
-      - IN: sample_pipelines_master_rSync
-      - IN: time
+    #  - IN: sample_pipelines_master_rSync
+    #  - IN: time
       - IN: version-resource-1
      # - GET: myEcsParams
      # - GET: version-resource-5
