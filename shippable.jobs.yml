@@ -25,7 +25,7 @@ jobs:
       - IN: version-resource-1
      # - GET: myEcsParams
      # - GET: version-resource-5
-      - IN: generate-manifest
+#      - IN: generate-manifest
       - TASK: managed
     on_success:
    #    - test1
@@ -43,7 +43,7 @@ jobs:
 #      - IN: version-resource-1
 #     # - GET: myEcsParams
 #     # - GET: version-resource-5
-       - IN: generate-manifest
+#       - IN: generate-manifest
          switch: off
          versionNumber: x
 #      - IN: sample_pipelines_master_rSync
@@ -69,7 +69,7 @@ jobs:
       - IN: new-mongo-image
         pull: false
         switch: off
-      - IN: generate-manifest
+#      - IN: generate-manifest
         switch: off
   #    - GET: generate-manifest
   #    - GET: myEcsParams
@@ -132,7 +132,7 @@ jobs:
   - name: deploy-service-7
     type: deploy
     steps:
-      - IN: generate-manifest
+#      - IN: generate-manifest
         switch: off
       - IN: myDclCluster
       - IN: myEcsParams
@@ -145,7 +145,7 @@ jobs:
   - name: deploy-dcl-2
     type: deploy
     steps:
-      - IN: generate-manifest
+ #     - IN: generate-manifest
         switch: on
       - IN: myDclCluster
    #   - IN: myEcsParams
@@ -160,7 +160,7 @@ jobs:
     #  - IN: foo4
      # - IN: generate-mongo-image-manifest-6
     #  - IN: foo
-      - IN: generate-manifest
+ #     - IN: generate-manifest
       - IN: nginx-image
      # - IN: nginx-and-busybox-manifest
      # - IN: new-manifest
