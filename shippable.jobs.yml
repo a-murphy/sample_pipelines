@@ -70,7 +70,7 @@ jobs:
         pull: false
         switch: off
 #      - IN: generate-manifest
-        switch: off
+#        switch: off
   #    - GET: generate-manifest
   #    - GET: myEcsParams
   #      applyTo:
