@@ -140,7 +140,7 @@ jobs:
           - other
       - IN: myOtherEcsParams
       - IN: foo4
-     - TASK: managed
+      - TASK: managed
 
   - name: deploy-dcl-2
     type: deploy
