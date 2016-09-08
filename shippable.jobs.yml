@@ -133,7 +133,7 @@ jobs:
     type: deploy
     steps:
 #      - IN: generate-manifest
-        switch: off
+#        switch: off
       - IN: myDclCluster
       - IN: myEcsParams
         applyTo:
@@ -146,7 +146,7 @@ jobs:
     type: deploy
     steps:
  #     - IN: generate-manifest
-        switch: on
+ #       switch: on
       - IN: myDclCluster
    #   - IN: myEcsParams
       - IN: myOtherEcsParams
