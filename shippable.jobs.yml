@@ -26,7 +26,7 @@ jobs:
      # - GET: myEcsParams
      # - GET: version-resource-5
 #      - IN: generate-manifest
-      - TASK: managed
+#      - TASK: managed
     on_success:
    #    - test1
   #     - test2
@@ -140,7 +140,7 @@ jobs:
           - other
       - IN: myOtherEcsParams
       - IN: foo4
-      - TASK: managed
+ #     - TASK: managed
 
   - name: deploy-dcl-2
     type: deploy
@@ -149,7 +149,7 @@ jobs:
  #       switch: on
       - IN: myDclCluster
    #   - IN: myEcsParams
-      - IN: myOtherEcsParams
+#      - IN: myOtherEcsParams
       - IN: myOtherDockerOptions
       - TASK: managed
         deployMethod: upgrade
