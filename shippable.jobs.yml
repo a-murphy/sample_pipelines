@@ -83,17 +83,17 @@ jobs:
   #        - mongo-image
       - TASK: managed
 
-  - name: generate-manifest
-    type: manifest
-    steps:
-      - IN: mongo-image
-        switch: off
+#  - name: generate-manifest
+#    type: manifest
+#    steps:
+#      - IN: mongo-image
+#        switch: off
    #   - OUT: triggerOne
    
    #   - GET: myReplicas
   #    - GET: deploy-service
-      - IN: myDockerOptions
-      - TASK: managed
+#      - IN: myDockerOptions
+#      - TASK: managed
    
   - name: nginx-manifest
     type: manifest
