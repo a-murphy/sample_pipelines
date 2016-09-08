@@ -194,7 +194,7 @@ jobs:
     type: deploy
     steps:
       - IN: myEcsCluster
-      - IN: foo
+      - IN: generate-manifest
     #  - OUT: gke-deploy
      # - IN: myReplicas
 #      - GET: deploy-service-7
