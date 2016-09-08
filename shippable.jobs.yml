@@ -11,26 +11,26 @@ jobs:
   #    - IN: generate-manifest
   #    - TASK: managed
 
-  - name: foo
-    type: release
-    options:
-      action: test
-    on_start:
-      - NOTIFY: emailMe
-      - NOTIFY: notifyMe
-    steps:
+#  - name: foo
+#    type: release
+#    options:
+#      action: test
+#    on_start:
+#      - NOTIFY: emailMe
+#      - NOTIFY: notifyMe
+#    steps:
     #  - IN: triggerTwo
     #  - IN: sample_pipelines_master_rSync
     #  - IN: time
-      - IN: version-resource-1
+#      - IN: version-resource-1
      # - GET: myEcsParams
      # - GET: version-resource-5
 #      - IN: generate-manifest
 #      - TASK: managed
-    on_success:
+#    on_success:
    #    - test1
   #     - test2
-       - NOTIFY: notifyMe
+#       - NOTIFY: notifyMe
   #  on_failure:
   #     - test
     #   - NOTIFY: notifyMe
@@ -55,7 +55,7 @@ jobs:
       action: patch
     steps:
      # - GET: version-resource-4
-      - IN: deploy-dcl-2
+#      - IN: deploy-dcl-2
     #  - IN: myReplicas
       - IN: version-resource-1
       - TASK: managed
@@ -129,30 +129,30 @@ jobs:
 #      - IN: generate-mongo-image-manifest-6
 #      - IN: myEcsCluster
 
-  - name: deploy-service-7
-    type: deploy
-    steps:
+#  - name: deploy-service-7
+#    type: deploy
+#    steps:
 #      - IN: generate-manifest
 #        switch: off
-      - IN: myDclCluster
-      - IN: myEcsParams
-        applyTo:
-          - other
-      - IN: myOtherEcsParams
-      - IN: foo4
+#      - IN: myDclCluster
+#      - IN: myEcsParams
+#        applyTo:
+#          - other
+#      - IN: myOtherEcsParams
+#      - IN: foo4
  #     - TASK: managed
 
-  - name: deploy-dcl-2
-    type: deploy
-    steps:
+#  - name: deploy-dcl-2
+#    type: deploy
+#    steps:
  #     - IN: generate-manifest
  #       switch: on
-      - IN: myDclCluster
+#      - IN: myDclCluster
    #   - IN: myEcsParams
 #      - IN: myOtherEcsParams
-      - IN: myOtherDockerOptions
-      - TASK: managed
-        deployMethod: upgrade
+#      - IN: myOtherDockerOptions
+#      - TASK: managed
+#        deployMethod: upgrade
  
   - name: new-ecs-deploy
     type: deploy
@@ -194,7 +194,7 @@ jobs:
     type: deploy
     steps:
       - IN: myEcsCluster
-      - IN: foo
+#      - IN: foo
     #  - OUT: gke-deploy
      # - IN: myReplicas
 #      - GET: deploy-service-7
