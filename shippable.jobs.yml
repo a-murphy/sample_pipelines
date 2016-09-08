@@ -11,26 +11,26 @@ jobs:
   #    - IN: generate-manifest
   #    - TASK: managed
 
-#  - name: foo
-#    type: release
-#    options:
-#      action: test
-#    on_start:
-#      - NOTIFY: emailMe
-#      - NOTIFY: notifyMe
-#    steps:
+  - name: foo
+    type: release
+    options:
+      action: test
+    on_start:
+      - NOTIFY: emailMe
+      - NOTIFY: notifyMe
+    steps:
     #  - IN: triggerTwo
     #  - IN: sample_pipelines_master_rSync
     #  - IN: time
-#      - IN: version-resource-1
+      - IN: version-resource-1
      # - GET: myEcsParams
      # - GET: version-resource-5
-#      - IN: generate-manifest
-#      - TASK: managed
-#    on_success:
+      - IN: generate-manifest
+      - TASK: managed
+    on_success:
    #    - test1
   #     - test2
-#       - NOTIFY: notifyMe
+       - NOTIFY: notifyMe
   #  on_failure:
   #     - test
     #   - NOTIFY: notifyMe
@@ -43,9 +43,9 @@ jobs:
 #      - IN: version-resource-1
 #     # - GET: myEcsParams
 #     # - GET: version-resource-5
-#       - IN: generate-manifest
-#         switch: off
-#         versionNumber: x
+       - IN: generate-manifest
+         switch: off
+         versionNumber: x
 #      - IN: sample_pipelines_master_rSync
        - TASK: managed
       
@@ -55,7 +55,7 @@ jobs:
       action: patch
     steps:
      # - GET: version-resource-4
-#      - IN: deploy-dcl-2
+      - IN: deploy-dcl-2
     #  - IN: myReplicas
       - IN: version-resource-1
       - TASK: managed
@@ -69,8 +69,8 @@ jobs:
       - IN: new-mongo-image
         pull: false
         switch: off
-#      - IN: generate-manifest
-#        switch: off
+      - IN: generate-manifest
+        switch: off
   #    - GET: generate-manifest
   #    - GET: myEcsParams
   #      applyTo:
@@ -83,17 +83,17 @@ jobs:
   #        - mongo-image
       - TASK: managed
 
-#  - name: generate-manifest
-#    type: manifest
-#    steps:
-#      - IN: mongo-image
-#        switch: off
+  - name: generate-manifest
+    type: manifest
+    steps:
+      - IN: mongo-image
+        switch: off
    #   - OUT: triggerOne
    
    #   - GET: myReplicas
   #    - GET: deploy-service
-#      - IN: myDockerOptions
-#      - TASK: managed
+      - IN: myDockerOptions
+      - TASK: managed
    
   - name: nginx-manifest
     type: manifest
@@ -129,30 +129,30 @@ jobs:
 #      - IN: generate-mongo-image-manifest-6
 #      - IN: myEcsCluster
 
-#  - name: deploy-service-7
-#    type: deploy
-#    steps:
-#      - IN: generate-manifest
-#        switch: off
-#      - IN: myDclCluster
-#      - IN: myEcsParams
-#        applyTo:
-#          - other
-#      - IN: myOtherEcsParams
-#      - IN: foo4
- #     - TASK: managed
+  - name: deploy-service-7
+    type: deploy
+    steps:
+      - IN: generate-manifest
+        switch: off
+      - IN: myDclCluster
+      - IN: myEcsParams
+        applyTo:
+          - other
+      - IN: myOtherEcsParams
+      - IN: foo4
+     - TASK: managed
 
-#  - name: deploy-dcl-2
-#    type: deploy
-#    steps:
+  - name: deploy-dcl-2
+    type: deploy
+    steps:
  #     - IN: generate-manifest
  #       switch: on
-#      - IN: myDclCluster
-   #   - IN: myEcsParams
-#      - IN: myOtherEcsParams
-#      - IN: myOtherDockerOptions
-#      - TASK: managed
-#        deployMethod: upgrade
+      - IN: myDclCluster
+  #   - IN: myEcsParams
+      - IN: myOtherEcsParams
+      - IN: myOtherDockerOptions
+      - TASK: managed
+        deployMethod: upgrade
  
   - name: new-ecs-deploy
     type: deploy
@@ -160,7 +160,7 @@ jobs:
     #  - IN: foo4
      # - IN: generate-mongo-image-manifest-6
     #  - IN: foo
- #     - IN: generate-manifest
+      - IN: generate-manifest
       - IN: nginx-image
      # - IN: nginx-and-busybox-manifest
      # - IN: new-manifest
@@ -169,7 +169,7 @@ jobs:
           - manifest: generate-manifest
             image: mongo-image
             port: 27017
-#      - IN: ecs-deploy2
+      - IN: ecs-deploy2
       - IN: myEcsCluster
       - IN: myReplicas
 #      - GET: deploy-service-7
@@ -194,7 +194,7 @@ jobs:
     type: deploy
     steps:
       - IN: myEcsCluster
-#      - IN: foo
+      - IN: foo
     #  - OUT: gke-deploy
      # - IN: myReplicas
 #      - GET: deploy-service-7
