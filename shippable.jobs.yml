@@ -121,6 +121,7 @@ jobs:
     type: manifest
     steps:
       - IN: mongo-manifest
+      - IN: busybox-manifest
       - TASK: managed
 
  # - name: deploy-service
