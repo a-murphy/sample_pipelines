@@ -56,7 +56,7 @@ jobs:
     steps:
      # - GET: version-resource-4
       - IN: deploy-dcl-2
-    #  - IN: myReplicas
+      - IN: myReplicas
       - IN: version-resource-1
       - TASK: managed
 
@@ -135,9 +135,9 @@ jobs:
       - IN: generate-manifest
         switch: off
       - IN: myDclCluster
-      - IN: myEcsParams
-        applyTo:
-          - other
+ #     - IN: myEcsParams
+#        applyTo:
+#          - other
       - IN: myOtherEcsParams
       - IN: foo4
       - TASK: managed
