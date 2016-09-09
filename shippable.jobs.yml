@@ -221,6 +221,8 @@ jobs:
         
   - name: empty-deploy
     type: deploy
+    steps:
+      - IN: customImage
     
   - name: new-empty-deploy
     type: deploy
