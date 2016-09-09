@@ -19,7 +19,7 @@ jobs:
       - NOTIFY: emailMe
       - NOTIFY: notifyMe
     steps:
-    #  - IN: triggerTwo
+      - IN: triggerTwo
     #  - IN: sample_pipelines_master_rSync
     #  - IN: time
       - IN: version-resource-1
@@ -56,16 +56,7 @@ jobs:
     steps:
      # - GET: version-resource-4
       - IN: deploy-dcl-2
-      - IN: myReplicas
-      - IN: version-resource-1
-      - TASK: managed
-
-  - name: foo7
-    type: release
-    options:
-      action: patch
-    steps:
-     # - GET: version-resource-4
+     # - IN: myReplicas
       - IN: version-resource-1
       - TASK: managed
 
