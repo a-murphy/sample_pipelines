@@ -60,6 +60,15 @@ jobs:
       - IN: version-resource-1
       - TASK: managed
 
+  - name: foo7
+    type: release
+    options:
+      action: patch
+    steps:
+     # - GET: version-resource-4
+      - IN: version-resource-1
+      - TASK: managed
+
   - name: generate-mongo-image-manifest-6
     type: manifest
     steps:
