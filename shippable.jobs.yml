@@ -65,6 +65,7 @@ jobs:
     steps:
     #  - IN: myOtherDockerOptions
       - IN: customImage
+        switch: off
  #     - IN: triggerOne
       - IN: new-mongo-image
         pull: false
