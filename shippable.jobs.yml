@@ -181,7 +181,7 @@ jobs:
           - mongo-image
      #     - nginx-image
       - TASK: managed
-        deployMethod: upgrade
+     #   deployMethod: upgrade
 
   - name: new-ecs-deploy-again
     type: deploy
