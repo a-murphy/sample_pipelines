@@ -199,6 +199,14 @@ jobs:
           - mongo-image
       - TASK: managed
         deployMethod: replace
+        
+  - name: replace-ecs-deploy
+    type: deploy
+    steps:
+      - IN: generate-manifest
+      - IN: tritonCluster
+      - TASK: managed
+        deployMethod: replace
 
   - name: new-ecs-deploy-again
     type: deploy
