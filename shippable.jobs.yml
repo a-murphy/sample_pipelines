@@ -200,7 +200,7 @@ jobs:
       - TASK: managed
         deployMethod: replace
         
-  - name: replace-ecs-deploy
+  - name: replace-triton-deploy
     type: deploy
     steps:
       - IN: generate-manifest
