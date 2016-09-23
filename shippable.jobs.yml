@@ -183,6 +183,20 @@ jobs:
       - TASK: managed
      #   deployMethod: upgrade
 
+- name: replace-ecs-deploy
+    type: deploy
+    steps:
+      - IN: generate-manifest
+      - IN: nginx-image
+      - IN: myLoadBalancer
+        applyTo:
+          - manifest: generate-manifest
+            image: mongo-image
+            port: 27017
+      - IN: myEcsCluster
+      - TASK: managed
+        deployMethod: replace
+
   - name: new-ecs-deploy-again
     type: deploy
     steps:
