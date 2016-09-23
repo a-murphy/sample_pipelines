@@ -188,15 +188,15 @@ jobs:
     steps:
       - IN: generate-manifest
       - IN: nginx-image
-  #    - IN: myLoadBalancer
-  #      applyTo:
-  #        - manifest: generate-manifest
-  #          image: mongo-image
-  #          port: 27017
+      - IN: myLoadBalancer
+        applyTo:
+          - manifest: generate-manifest
+            image: mongo-image
+            port: 27017
       - IN: myEcsCluster
-  #    - IN: myOtherDockerOptions
-  #      applyTo:
-  #        - mongo-image
+      - IN: myOtherDockerOptions
+        applyTo:
+          - mongo-image
       - TASK: managed
         deployMethod: replace
 
