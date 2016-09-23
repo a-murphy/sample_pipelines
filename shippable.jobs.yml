@@ -194,6 +194,9 @@ jobs:
             image: mongo-image
             port: 27017
       - IN: myEcsCluster
+      - IN: myOtherDockerOptions
+        applyTo:
+          - mongo-image
       - TASK: managed
         deployMethod: replace
 
