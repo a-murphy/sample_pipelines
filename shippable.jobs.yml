@@ -183,7 +183,7 @@ jobs:
       - TASK: managed
      #   deployMethod: upgrade
 
-- name: replace-ecs-deploy
+  - name: replace-ecs-deploy
     type: deploy
     steps:
       - IN: generate-manifest
