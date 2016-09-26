@@ -107,6 +107,7 @@ jobs:
   - name: busybox-manifest
     type: manifest
     steps:
+      - IN: branchlessProject3
       - IN: busybox-image
         switch: off
       - TASK: managed
@@ -204,7 +205,7 @@ jobs:
     type: deploy
     steps:
       - IN: generate-manifest
-      - IN: tritonCluster
+    #  - IN: tritonCluster
       - IN: myReplicas
       - TASK: managed
         deployMethod: replace
