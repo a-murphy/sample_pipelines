@@ -117,7 +117,7 @@ jobs:
     steps:
       - IN: nginx-manifest
       - IN: busybox-manifest
-      - IN: bitbucketProject
+      - IN: bitbucketProject2
       - TASK: managed
    
   - name: new-manifest
