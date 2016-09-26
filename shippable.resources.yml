@@ -231,6 +231,20 @@ resources:
         except:
           - test
       
+  - name: branchlessProject3
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: "a-murphy/sample_node_postgres"
+      buildOnCommit: false
+      buildOnPullRequest: true
+      buildOnTagPush: true
+      branches:
+        except:
+          - test
+        only:
+          - test*
+      
  # - name: projectTwo
 #    type: gitRepo
 #    integration: github
