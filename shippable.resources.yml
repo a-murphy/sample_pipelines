@@ -195,8 +195,16 @@ resources:
     type: gitRepo
     integration: github
     pointer:
-      sourceName : "a-murphy/sample_node_postgres"
+      sourceName: "a-murphy/sample_node_postgres"
       branch: "master"
+      
+  
+  - name: branchlessProject
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: "a-murphy/sample_node_postgres"
+      buildOnCommit: false
       
  # - name: projectTwo
 #    type: gitRepo
