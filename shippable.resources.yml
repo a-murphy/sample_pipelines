@@ -241,7 +241,7 @@ resources:
       buildOnTagPush: true
       branches:
         except:
-          - test
+          - master
         only:
           - m*
       
