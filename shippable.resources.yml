@@ -214,6 +214,7 @@ resources:
       branches:
         except:
           - test
+          - other
         only:
           - test
           
