@@ -201,12 +201,12 @@ resources:
         except:
           - test
           
- # - name: projectTwo
- #   type: gitRepo
- #   integration: github
- #   pointer:
- #     sourceName: "a-murphy/sample_node_postgres"
- #     branch: "master"
+  - name: projectTwo
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: "a-murphy/sample_node_postgres"
+      branch: "master"
  #     branches:
  #       except:
  #         - test
