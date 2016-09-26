@@ -205,6 +205,10 @@ resources:
     pointer:
       sourceName: "a-murphy/sample_node_postgres"
       buildOnCommit: false
+      buildOnPullRequest: true
+      branches:
+        except:
+          - test
       
  # - name: projectTwo
 #    type: gitRepo
