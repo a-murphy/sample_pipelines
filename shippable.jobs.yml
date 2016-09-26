@@ -276,6 +276,7 @@ jobs:
     type: runSh
     steps:
       - IN: customImage
+      - IN: branchlessProject
       - TASK:
         - script: "cat /build/IN/customImage/runShSteps/mongo-image.env"
 
