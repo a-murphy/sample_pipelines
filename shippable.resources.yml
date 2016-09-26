@@ -250,8 +250,6 @@ resources:
       buildOnPullRequest: true
       buildOnTagPush: true
       branches:
-        except:
-          - master
         only:
           - m*
       
