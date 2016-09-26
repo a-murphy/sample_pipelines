@@ -215,7 +215,7 @@ resources:
         except:
           - test
           
-   - name: branchlessProject2
+  - name: branchlessProject2
     type: gitRepo
     integration: github
     pointer:
