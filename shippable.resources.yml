@@ -207,11 +207,11 @@ resources:
     integration: github
     pointer:
       sourceName: "a-murphy/sample_node_postgres"
-      buildOnCommit: false
-      buildOnPullRequest: true
+      buildOnCommit: 0
+      buildOnPullRequest: 1
       branches:
         except:
-          - test
+          - test: 2
       
  # - name: projectTwo
 #    type: gitRepo
