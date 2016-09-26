@@ -275,10 +275,9 @@ jobs:
   - name: custom2
     type: runSh
     steps:
-      - IN: customImage
-      - IN: branchlessProject
+      - IN: branchlessProject3
       - TASK:
-        - script: "cat /build/IN/customImage/runShSteps/mongo-image.env"
+        - script: "ls -al /build/IN/branchlessProject3/gitRepo"
 
   - name: CI-project
     type: runCI
