@@ -252,7 +252,13 @@ resources:
       branches:
         only:
           - m*
-      
+          
+  - name: bitbucketProject
+    type: gitRepo
+    integration: bitbucket
+    pointer:
+      sourceName: "a-murphy/sample_ubuntu1204_go"
+   
  # - name: projectTwo
 #    type: gitRepo
 #    integration: github
