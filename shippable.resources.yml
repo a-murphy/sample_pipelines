@@ -253,7 +253,7 @@ resources:
         only:
           - m*
           
-  - name: bitbucketProject
+  - name: bitbucketProject2
     type: gitRepo
     integration: bitbucket
     pointer:
