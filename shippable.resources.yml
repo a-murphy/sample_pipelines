@@ -197,6 +197,9 @@ resources:
     pointer:
       sourceName: "a-murphy/sample_node_postgres"
       branch: "master"
+      branches:
+        except:
+          - test
       
   
   - name: branchlessProject
