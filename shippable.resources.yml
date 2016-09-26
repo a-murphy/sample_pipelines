@@ -213,7 +213,7 @@ resources:
       buildOnRelease: false
       branches:
         except:
-          - test
+          test
           
   - name: branchlessProject2
     type: gitRepo
@@ -226,7 +226,7 @@ resources:
       buildOnRelease: false
       branches:
         except:
-          - test
+          - test: 2
       
  # - name: projectTwo
 #    type: gitRepo
