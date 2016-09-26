@@ -211,7 +211,7 @@ resources:
       buildOnPullRequest: 1
       branches:
         except:
-          - test: 2
+          - test
       
  # - name: projectTwo
 #    type: gitRepo
