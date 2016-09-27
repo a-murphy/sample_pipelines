@@ -246,9 +246,6 @@ resources:
       buildOnRelease: false
       buildOnPullRequest: true
       buildOnTagPush: true
-      branches:
-        only:
-          - m*
           
   - name: bitbucketProject2
     type: gitRepo
