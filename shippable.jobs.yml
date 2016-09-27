@@ -280,7 +280,7 @@ jobs:
   - name: custom2
     type: runSh
     steps:
-      - IN: bitbucketProject
+      - IN: bitbucketProject2
       - TASK:
         - script: "ls -al /build/IN/bitbucketProject/gitRepo"
 
