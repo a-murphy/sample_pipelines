@@ -101,6 +101,7 @@ jobs:
     steps:
       - IN: nginx-image
         switch: off
+      - IN: gitlabProject
       - TASK: managed
       
      
@@ -116,7 +117,9 @@ jobs:
     type: manifest
     steps:
       - IN: nginx-manifest
+        switch: off
       - IN: busybox-manifest
+        switch: off
       - IN: bitbucketProject2
       - TASK: managed
    
