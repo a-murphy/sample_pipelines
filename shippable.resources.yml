@@ -206,10 +206,6 @@ resources:
     integration: github
     pointer:
       sourceName: "a-murphy/sample_node_postgres"
-      branch: "master"
- #     branches:
- #       except:
- #         - test
       
   
   - name: branchlessProject
@@ -247,6 +243,7 @@ resources:
     pointer:
       sourceName: "a-murphy/sample_node_postgres"
       buildOnCommit: false
+      buildOnRelease: false
       buildOnPullRequest: true
       buildOnTagPush: true
       branches:
