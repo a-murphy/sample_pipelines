@@ -281,8 +281,9 @@ jobs:
     type: runSh
     steps:
       - IN: gitlabProject
+        versionNumber: 4
       - TASK:
-        - script: "ls -al /build/IN/bitbucketProject/gitRepo"
+        - script: "ls -al /build/IN/gitlabProject/gitRepo"
 
   - name: CI-project
     type: runCI
