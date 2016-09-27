@@ -301,8 +301,8 @@ resources:
 #    version: 
 #      count: 1
       
-#  - name: time
-#    type: time
-#    seed:
-#      interval: "*/2 * * * *"
+  - name: time
+    type: time
+    seed:
+      interval: "* * * 2 *"
 
