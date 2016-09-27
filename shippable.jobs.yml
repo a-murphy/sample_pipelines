@@ -281,6 +281,7 @@ jobs:
     type: runSh
     steps:
       - IN: bitbucketProject2
+        versionNumber: 4
       - TASK:
         - script: "ls -al /build/IN/bitbucketProject/gitRepo"
 
