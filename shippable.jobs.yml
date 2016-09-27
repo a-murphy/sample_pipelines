@@ -282,6 +282,7 @@ jobs:
     steps:
       - IN: gitlabProject
         versionNumber: 4
+      - IN: time
       - TASK:
         - script: "ls -al /build/IN/gitlabProject/gitRepo"
 
