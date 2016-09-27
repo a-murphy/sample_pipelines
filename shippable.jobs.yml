@@ -280,9 +280,9 @@ jobs:
   - name: custom2
     type: runSh
     steps:
-      - IN: branchlessProject3
+      - IN: bitbucketProject
       - TASK:
-        - script: "ls -al /build/IN/branchlessProject3/gitRepo"
+        - script: "ls -al /build/IN/bitbucketProject/gitRepo"
 
   - name: CI-project
     type: runCI
