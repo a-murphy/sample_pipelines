@@ -294,6 +294,13 @@ jobs:
       - IN: time
       - TASK:
         - script: "ls -al /build/IN/gitlabProject/gitRepo"
+        
+  - name: custom4
+    type: runSh
+    steps:
+      - IN: privateProject
+      - TASK:
+        - script: "ls -al /build/IN/privateProject/gitRepo"
 
   - name: CI-project
     type: runCI
