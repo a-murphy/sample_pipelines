@@ -269,7 +269,7 @@ resources:
 #      sourceName : "a-murphy/testprivate"
 #      branch: "master"
 
-  - name: privateProject
+  - name: privateProject2
     type: gitRepo
     integration: github
     pointer:
