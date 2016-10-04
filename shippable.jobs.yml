@@ -261,12 +261,12 @@ jobs:
       - TASK: managed
         deployMethod: blueGreen
         
-  - name: empty-deploy
-    type: deploy
-    steps:
+ # - name: empty-deploy
+ #   type: deploy
+ #   steps:
     
-  - name: new-empty-deploy
-    type: deploy
+ # - name: new-empty-deploy
+ #   type: deploy
 
   - name: customImage
     type: runSh
