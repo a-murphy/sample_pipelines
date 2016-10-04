@@ -298,7 +298,7 @@ jobs:
   - name: custom4
     type: runSh
     steps:
-      - IN: privateProject
+      - IN: privateProject2
       - TASK:
         - script: "ls -al /build/IN/privateProject/gitRepo"
 
