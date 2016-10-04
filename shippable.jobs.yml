@@ -300,7 +300,7 @@ jobs:
     steps:
       - IN: privateProject3
       - TASK:
-        - script: "ls -al /build/IN/privateProject/gitRepo"
+        - script: "ls -al /build/IN/privateProject3/gitRepo"
 
  # - name: CI-project
  #   type: runCI
