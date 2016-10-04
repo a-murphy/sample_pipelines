@@ -265,9 +265,9 @@ resources:
 
   - name: privateProject2
     type: gitRepo
-    integration: github
+    integration: bitbucket
     pointer:
-      sourceName : "a-murphy/testprivate"
+      sourceName : "a-murphy/sample_ubuntu1204_go"
       branch: "master"
       
   #- name: projectThree
