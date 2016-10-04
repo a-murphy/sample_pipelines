@@ -302,12 +302,12 @@ jobs:
       - TASK:
         - script: "ls -al /build/IN/privateProject/gitRepo"
 
-  - name: CI-project
-    type: runCI
-    steps:
-     # - IN: triggerOne
-     # - IN: myEcsParams
-      - IN: projectOne
-      - TASK: managed
-      - OUT: mongo-image
+ # - name: CI-project
+ #   type: runCI
+ #   steps:
+ #    # - IN: triggerOne
+ #    # - IN: myEcsParams
+ #     - IN: projectOne
+ #     - TASK: managed
+ #     - OUT: mongo-image
 
