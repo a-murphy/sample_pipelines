@@ -168,12 +168,6 @@ resources:
     integration: DockerCloud
     pointer:
       sourceName : "DockerCloudCluster"
-    
-  - name: notMyDclCluster
-    type: cluster
-    integration: DockerCloud
-    pointer:
-    sourceName : "DockerCloudCluster"
       
 #  - name: projectToTrigger
 #    type: gitRepo
@@ -232,7 +226,7 @@ resources:
       buildOnCommit: false
       buildOnPullRequest: true
       buildOnTagPush: true
-      buildOnRelease: 3
+      buildOnRelease: false
       branches:
         except:
           - test
