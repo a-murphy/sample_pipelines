@@ -35,7 +35,7 @@ resources:
       
   - name: ecr-image
     type: image
-    integration: ECR
+    integration: AWS
     pointer:
       sourceName: 544102397216.dkr.ecr.us-west-2.amazonaws.com/test/repository
     seed:
