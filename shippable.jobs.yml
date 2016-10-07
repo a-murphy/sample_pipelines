@@ -308,6 +308,7 @@ jobs:
     type: runSh
     steps:
       - IN: privateProject3
+      - OUT: pipelines-dv-image
       - TASK:
         - script: "ls -al /build/IN/privateProject3/gitRepo"
 
