@@ -292,6 +292,7 @@ jobs:
     type: runSh
     steps:
       - IN: customImage
+      - IN: pipelines-dv-image
       - TASK:
         - script: "ls /build/IN/customImage"
       
