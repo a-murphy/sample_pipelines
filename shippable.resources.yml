@@ -32,6 +32,14 @@ resources:
       isPull: false
     seed:
       versionName: "latest"
+      
+  - name: ecr-image
+    type: image
+    integration: ECR
+    pointer:
+      sourceName: 544102397216.dkr.ecr.us-west-2.amazonaws.com/test/repository
+    seed:
+      versionName: "latest"
 
   - name: notifyMe
     type: notification
