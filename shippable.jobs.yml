@@ -95,6 +95,14 @@ jobs:
   #    - GET: deploy-service
       - IN: myDockerOptions
       - TASK: managed
+      
+  - name: ecr-manifest
+    type: manifest
+    steps:
+      - IN: ecr-image
+        switch: off
+      - IN: myDockerOptions
+      - TASK: managed
    
   - name: nginx-manifest
     type: manifest
@@ -217,8 +225,9 @@ jobs:
   - name: replace-triton-deploy
     type: deploy
     steps:
-      - IN: generate-manifest
-    #  - IN: tritonCluster
+      - IN: ecr-manifest
+        switch: off
+      - IN: tritonCluster
       - IN: myReplicas
       - TASK: managed
         deployMethod: replace
