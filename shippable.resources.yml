@@ -96,12 +96,13 @@ resources:
       cpuShares: 10
       portMappings:
         - 27017:27017
-    #  links:
-     #   - "one:1"
-    #    - "two:2"
+        - 8000:8000
+      links:
+        - "one:1"
+        - "two:2"
      
-    #  cmd:
-    #    - "pwd"
+      cmd:
+        - "pwd"
     #    - "true"
     #  entryPoint:
     #    - "mongod"
@@ -118,8 +119,8 @@ resources:
     #  dnsServers:
     #    - "127.0.0.1"
    #     - "8.8.8.8"
-    #  dnsSearch:
-    #    - "127.0.0.1"
+      dnsSearch:
+        - "127.0.0.1"
     #    - "8.8.8.8"
     #  logConfig:
     #    type: "json-file"
@@ -132,10 +133,10 @@ resources:
     #    - name: core
     #      hard: 10
     #      soft: 5
-    #  labels:
-    #    labelone: valueOne
-    #    labeltwo: valueTwo
-    #    labelthree: valueThree
+      labels:
+        labelone: valueOne
+        labeltwo: valueTwo
+        labelthree: valueThree
         
   - name: myThirdDockerOptions
     type: dockerOptions
@@ -292,11 +293,11 @@ resources:
     pointer: 
       base: "1.0.2"
 
-#  - name: tritonCluster
-#    type: cluster
-#    integration: Triton
-#    pointer:
-#      region: "us-east-1"
+  - name: tritonCluster
+    type: cluster
+    integration: Triton
+    pointer:
+      region: "us-east-1"
 
 #  - name: kickstart
 #    type: kickStart
