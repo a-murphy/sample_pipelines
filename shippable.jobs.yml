@@ -315,11 +315,12 @@ jobs:
         - script: 'curl -s "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"'
         - script: "unzip awscli-bundle.zip"
         - script: "./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws"
+        - script: "cp /build/IN/ecr-image/integration.env ~/.aws/credentials"
         - script: "chmod +x /build/IN/ecr-image/integration.env"
         - script: ". /build/IN/ecr-image/integration.env"
         - script: "export AWS_ACCESS_KEY=$aws_access_key_id"
         - script: "export AWS_SECRET_ACCESS_KEY=$aws_secret_access_key"
-        - script: "echo $AWS_ACCESS_KEY $AWS_SECRET_ACCESS_KEY"
+        - script: "echo $aws_access_key_id $aws_secret_access_key $AWS_ACCESS_KEY $AWS_SECRET_ACCESS_KEY"
         - script: "aws ecr get-login --region us-west-2"
         
   - name: custom4
