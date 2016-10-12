@@ -315,7 +315,9 @@ jobs:
         - script: 'curl -s "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"'
         - script: "unzip awscli-bundle.zip"
         - scipt: "./awscli-bundle/install"
-        - script: "cat /build/IN/ecr-image/integration.env"
+        - script: "chmod +x /build/IN/ecr-image/integration.env"
+        - script: ". /build/IN/ecr-image/integration.env"
+        - script: "echo $aws_access_key_id"
         
   - name: custom4
     type: runSh
