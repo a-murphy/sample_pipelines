@@ -319,8 +319,7 @@ jobs:
         - script: ". /build/IN/ecr-image/integration.env"
         - script: "AWS_ACCESS_KEY_ID=$aws_access_key_id"
         - script: "AWS_SECRET_ACCESS_KEY=$aws_secret_access_key"
-        - script: "AWS_DEFAULT_REGION=us-west-2"
-        - script: "aws ecr get-login"
+        - script: "aws ecr get-login --region us-west-2"
         
   - name: custom4
     type: runSh
