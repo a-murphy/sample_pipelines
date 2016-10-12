@@ -317,7 +317,8 @@ jobs:
         - script: "./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws"
         - script: "chmod +x /build/IN/ecr-image/integration.env"
         - script: ". /build/IN/ecr-image/integration.env"
-        - script: "AWS_ACCESS_KEY_ID=$aws_access_key_id AWS_SECRET_ACCESS_KEY=$aws_secret_access_key aws ecr get-login --region us-west-2"
+        - script: "dockerLogin=$(AWS_ACCESS_KEY_ID=$aws_access_key_id AWS_SECRET_ACCESS_KEY=$aws_secret_access_key aws ecr get-login --region us-west-2)"
+        - script: "echo $dockerLogin
         
   - name: custom4
     type: runSh
