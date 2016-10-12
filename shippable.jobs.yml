@@ -311,7 +311,7 @@ jobs:
     steps:
       - IN: ecr-image
       - TASK:
-        - script: "ls /build/IN/ecr-image/integration.env"
+        - script: "pip install awscli"
         - script: "cat /build/IN/ecr-image/integration.env"
         
   - name: custom4
