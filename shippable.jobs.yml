@@ -318,7 +318,7 @@ jobs:
         - script: "chmod +x /build/IN/ecr-image/integration.env"
         - script: ". /build/IN/ecr-image/integration.env"
         - script: "AWS_ACCESS_KEY=$aws_access_key_id AWS_SECRET_ACCESS_KEY=$aws_secret_access_key echo $AWS_ACCESS_KEY $AWS_SECRET_ACCESS_KEY"
-        - script: "AWS_ACCESS_KEY=$aws_access_key_id AWS_SECRET_ACCESS_KEY=$aws_secret_access_key aws ecr get-login --region us-west-2"
+       # - script: "AWS_ACCESS_KEY=$aws_access_key_id AWS_SECRET_ACCESS_KEY=$aws_secret_access_key aws ecr get-login --region us-west-2"
         
   - name: custom4
     type: runSh
