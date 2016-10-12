@@ -306,6 +306,14 @@ jobs:
       - TASK:
         - script: "ls -al /build/IN/gitlabProject/gitRepo"
         
+  - name: custom5
+    type: runSh
+    steps:
+      - IN: ecr-image
+      - TASK:
+        - script: "ls /build/IN/ecr-image/integration.env"
+        - script: "cat /build/IN/ecr-image/integration.env"
+        
   - name: custom4
     type: runSh
     steps:
