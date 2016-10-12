@@ -317,7 +317,7 @@ jobs:
         - script: "./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws"
         - script: "chmod +x /build/IN/ecr-image/integration.env"
         - script: ". /build/IN/ecr-image/integration.env"
-        - script: "aws ecr get-login"
+        - script: "aws ecr get-login --region us-west-2"
         - script: "echo $aws_access_key_id"
         
   - name: custom4
