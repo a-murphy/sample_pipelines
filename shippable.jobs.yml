@@ -311,7 +311,9 @@ jobs:
     steps:
       - IN: ecr-image
       - TASK:
-        - script: "pip install awscli"
+        - script: 'curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"'
+        - script: "unzip awscli-bundle.zip"
+        - scipt: "./awscli-bundle/install"
         - script: "cat /build/IN/ecr-image/integration.env"
         
   - name: custom4
