@@ -320,7 +320,7 @@ jobs:
         - script: "dockerLogin=$(AWS_ACCESS_KEY_ID=$aws_access_key_id AWS_SECRET_ACCESS_KEY=$aws_secret_access_key aws ecr get-login --region us-west-2)"
         - script: "$dockerLogin"
         - script: "cat /build/IN/ecr-image/version.json"
-        - script: "docker pull $(cat /build/IN/ecr-image/version.json | jq '.sourceName'):$(cat /build/IN/ecr-image/version.json | jq '.version.versionName')
+        - script: "docker pull $(cat /build/IN/ecr-image/version.json | jq '.sourceName'):$(cat /build/IN/ecr-image/version.json | jq '.version.versionName')"
         
   - name: custom4
     type: runSh
