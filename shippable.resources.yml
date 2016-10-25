@@ -245,10 +245,6 @@ resources:
     integration: github
     pointer:
       sourceName: "a-murphy/sample_node_postgres"
-      buildOnCommit: false
-      buildOnRelease: false
-      buildOnPullRequest: true
-      buildOnTagPush: true
           
   - name: bitbucketProject2
     type: gitRepo
