@@ -250,7 +250,8 @@ jobs:
     #  - OUT: gke-deploy
      # - IN: myReplicas
 #      - GET: deploy-service-7
-    #  - GET: myEcsParams
+      - IN: myEcsParams
+      - IN: myDockerOptions
       - IN: myOtherDockerOptions
      #   applyTo:
       #    - mongo-image
