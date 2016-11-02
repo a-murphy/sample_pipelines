@@ -64,7 +64,7 @@ resources:
     type: loadBalancer
     pointer:
       sourceName: 
-arn:aws:elasticloadbalancing:us-west-2:544102397216:targetgroup/MyApplicationLoadTargetGroup/fc66cb6c0880162e
+"arn:aws:elasticloadbalancing:us-west-2:544102397216:targetgroup/MyApplicationLoadTargetGroup/fc66cb6c0880162e"
       method: application
       
 
