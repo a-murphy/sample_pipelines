@@ -97,18 +97,18 @@ resources:
       portMappings:
         - 27017:27017
         - 8000:8000
-      links:
-        - "one:1"
-        - "two:2"
+    #  links:
+    #    - "one:1"
+    #    - "two:2"
      
-      cmd:
-        - "pwd"
+    #  cmd:
+    #    - "pwd"
     #    - "true"
     #  entryPoint:
     #    - "mongod"
-      privileged: false
+    #  privileged: false
     #  user: 0
-      workingDir: "/home/test"
+    #  workingDir: "/home/test"
     #  volumes:
     #    - "/host/path:/container/path:rw"
     #    - "/host/path:/container/path2:rw"
@@ -119,8 +119,8 @@ resources:
     #  dnsServers:
     #    - "127.0.0.1"
    #     - "8.8.8.8"
-      dnsSearch:
-        - "127.0.0.1"
+    #  dnsSearch:
+    #    - "127.0.0.1"
     #    - "8.8.8.8"
     #  logConfig:
     #    type: "json-file"
