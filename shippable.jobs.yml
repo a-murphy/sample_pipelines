@@ -251,9 +251,9 @@ jobs:
     #  - OUT: gke-deploy
      # - IN: myReplicas
 #      - GET: deploy-service-7
-      - IN: myEcsParams
+  #    - IN: myEcsParams
       - IN: myDockerOptions
-      - IN: myOtherDockerOptions
+   #   - IN: myOtherDockerOptions
       - IN: myLoadBalancer
         applyTo:
           - manifest: generate-manifest
