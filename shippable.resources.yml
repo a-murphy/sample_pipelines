@@ -59,6 +59,13 @@ resources:
     type: loadBalancer
     pointer:
       sourceName: LoadBalancer
+  
+  - name: myApplicationLoadBalancer
+    type: loadBalancer
+    pointer:
+      sourceName: myApplicationLoadBalancer
+      method: application
+      
 
   - name: myEcsParams
     type: params
