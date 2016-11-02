@@ -89,6 +89,7 @@ jobs:
     steps:
       - IN: mongo-image
         switch: off
+      - IN: nginx-image
    #   - OUT: triggerOne
    
    #   - GET: myReplicas
@@ -253,6 +254,11 @@ jobs:
       - IN: myEcsParams
       - IN: myDockerOptions
       - IN: myOtherDockerOptions
+      - IN: myLoadBalancer
+        applyTo:
+          - manifest: generate-manifest
+            image: mongo-image
+            port: 27017
      #   applyTo:
       #    - mongo-image
       - TASK: managed
