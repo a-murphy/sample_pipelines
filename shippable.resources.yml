@@ -60,7 +60,7 @@ resources:
     pointer:
       sourceName: LoadBalancer
   
-  - name: myApplicationLoadBalancer
+  - name: myNewApplicationLoadBalancer
     type: loadBalancer
     pointer:
       sourceName: 
