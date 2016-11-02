@@ -260,7 +260,7 @@ jobs:
         applyTo:
           - manifest: generate-manifest
             image: mongo-image
-            port: 27017
+            port: 8000
      #   applyTo:
       #    - mongo-image
       - TASK: managed
