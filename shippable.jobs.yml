@@ -254,6 +254,8 @@ jobs:
   #    - IN: myEcsParams
       - IN: myDockerOptions
       - IN: myOtherDockerOptions
+        applyTo:
+          - mongo-image
       - IN: myLoadBalancer
         applyTo:
           - manifest: generate-manifest
