@@ -256,7 +256,7 @@ jobs:
       - IN: myOtherDockerOptions
         applyTo:
           - mongo-image
-      - IN: myApplicationLoadBalancer
+      - IN: myNewApplicationLoadBalancer
         applyTo:
           - manifest: generate-manifest
             image: mongo-image
