@@ -57,7 +57,7 @@ jobs:
 #      - IN: myReplicas
       - IN: version-resource-1
       - TASK: managed
-        bump: alpha
+        bump: beta
 
   - name: generate-mongo-image-manifest-6
     type: manifest
