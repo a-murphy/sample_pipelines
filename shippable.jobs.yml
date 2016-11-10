@@ -52,10 +52,10 @@ jobs:
   - name: foo4
     type: release
     options:
-      action: patch
+      action: alpha
     steps:
      # - GET: version-resource-4
-      - IN: deploy-dcl-2
+      - IN: generate-manifest
 #      - IN: myReplicas
       - IN: version-resource-1
       - TASK: managed
