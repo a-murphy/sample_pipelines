@@ -54,10 +54,10 @@ jobs:
     steps:
      # - GET: version-resource-4
       - IN: generate-manifest
-        bump: alpha
 #      - IN: myReplicas
       - IN: version-resource-1
       - TASK: managed
+        bump: alpha
 
   - name: generate-mongo-image-manifest-6
     type: manifest
