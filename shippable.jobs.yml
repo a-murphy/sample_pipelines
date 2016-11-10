@@ -51,11 +51,10 @@ jobs:
       
   - name: foo4
     type: release
-    options:
-      action: alpha
     steps:
      # - GET: version-resource-4
       - IN: generate-manifest
+        bump: alpha
 #      - IN: myReplicas
       - IN: version-resource-1
       - TASK: managed
