@@ -293,7 +293,7 @@ resources:
   - name: version-resource-1
     type: version
     seed:
-      versionName: "1.0.5"
+      versionName: "1.0.5-alpha.beta"
     pointer: 
       base: "1.0.2-alpha.beta"
 
