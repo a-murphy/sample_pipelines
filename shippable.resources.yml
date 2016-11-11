@@ -295,7 +295,7 @@ resources:
     seed:
       versionName: "1.0.5"
     pointer: 
-      base: "1.0.2"
+      base: "1.0.2-alpha.beta"
 
   - name: tritonCluster
     type: cluster
