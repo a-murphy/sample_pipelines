@@ -311,5 +311,5 @@ resources:
   - name: time
     type: time
     seed:
-      interval: "*/2 * * 2 *"
+      interval: "1 * * 2 *"
 
