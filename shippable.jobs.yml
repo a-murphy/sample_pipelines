@@ -128,7 +128,7 @@ jobs:
         switch: off
       - IN: busybox-manifest
         switch: off
-      - IN: bitbucketProject2
+    #  - IN: bitbucketProject2
       - TASK: managed
    
   - name: new-manifest
