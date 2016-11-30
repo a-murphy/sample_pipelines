@@ -31,10 +31,10 @@ jobs:
    #    - test1
   #     - test2
        - NOTIFY: notifyMe
-  #  on_failure:
+    on_failure:
   #     - test
     #   - NOTIFY: notifyMe
-    #   - NOTIFY: emailMe
+       - NOTIFY: emailMe
       
       
   - name: foo5
