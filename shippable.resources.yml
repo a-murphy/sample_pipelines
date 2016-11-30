@@ -7,13 +7,13 @@ resources:
     seed:
       versionName: "latest"
       
-  #- name: new-mongo-image
-  #  type: image
-  #  pointer:
-  #    sourceName: "library/mongo"
-  #    isPull: false
-  #  seed:
-  #    versionName: "latest"
+  - name: new-mongo-image
+    type: image
+    pointer:
+      sourceName: "library/mongo"
+      isPull: false
+    seed:
+      versionName: "latest"
       
   - name: nginx-image
     type: image
