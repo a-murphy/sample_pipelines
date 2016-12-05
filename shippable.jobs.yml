@@ -104,12 +104,12 @@ jobs:
       - IN: myDockerOptions
       - TASK: managed
    
-  - name: nginx-manifest
+  - name: nginx-manifest2
     type: manifest
     steps:
       - IN: nginx-image
         switch: off
-      - IN: gitlabProject
+    #  - IN: gitlabProject
       - TASK: managed
       
      
@@ -208,7 +208,7 @@ jobs:
     type: deploy
     steps:
       - IN: generate-manifest
-      - IN: nginx-image
+      - IN: nginx-manifest2
     #  - IN: busybox-manifest2
   #    - IN: myLoadBalancer
   #      applyTo:
