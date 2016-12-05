@@ -113,10 +113,9 @@ jobs:
       - TASK: managed
       
      
-  - name: busybox-manifest
+  - name: busybox-manifest2
     type: manifest
     steps:
-      - IN: branchlessProject3
       - IN: busybox-image
         switch: off
       - TASK: managed
@@ -126,7 +125,7 @@ jobs:
     steps:
       - IN: nginx-manifest
         switch: off
-      - IN: busybox-manifest
+      - IN: busybox-manifest2
         switch: off
     #  - IN: bitbucketProject2
       - TASK: managed
@@ -135,7 +134,7 @@ jobs:
     type: manifest
     steps:
       - IN: mongo-manifest
-      - IN: busybox-manifest
+      - IN: busybox-manifest2
       - TASK: managed
 
  # - name: deploy-service
@@ -210,7 +209,7 @@ jobs:
     steps:
       - IN: generate-manifest
       - IN: nginx-image
-      - IN: busybox-manifest
+      - IN: busybox-manifest2
   #    - IN: myLoadBalancer
   #      applyTo:
   #        - manifest: generate-manifest
