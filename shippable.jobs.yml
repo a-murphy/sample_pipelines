@@ -210,6 +210,7 @@ jobs:
     steps:
       - IN: generate-manifest
       - IN: nginx-image
+      - IN: nginx-manifest
   #    - IN: myLoadBalancer
   #      applyTo:
   #        - manifest: generate-manifest
