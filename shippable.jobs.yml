@@ -204,7 +204,7 @@ jobs:
       - TASK: managed
         deployMethod: replace
 
-  - name: replace-ecs-deploy2
+  - name: replace-ecs-deploy
     type: deploy
     steps:
       - IN: generate-manifest
