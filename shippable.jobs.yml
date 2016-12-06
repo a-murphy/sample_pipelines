@@ -143,10 +143,10 @@ jobs:
 #      - IN: generate-mongo-image-manifest-6
 #      - IN: myEcsCluster
 
-  - name: deploy-service-7
+  - name: DCL-deploy
     type: deploy
     steps:
-      - IN: generate-manifest
+      - IN: nginx-manifest
         switch: off
       - IN: myDclCluster
  #     - IN: myEcsParams
