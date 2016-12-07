@@ -178,7 +178,7 @@ resources:
     integration: GKE
     pointer:
       sourceName : "cluster-1"
-      region: "us-central-b"
+      region: "us-central1-b"
 
   - name: myDclCluster
     type: cluster
