@@ -156,7 +156,7 @@ resources:
   - name: myReplicas
     type: replicas
     version:
-      count: 2
+      count: 3
 
   - name: myEcsCluster
     type: cluster
@@ -179,7 +179,7 @@ resources:
     pointer:
       sourceName : "cluster-1"
       region: "us-central1-b"
-      namespace: myNamespace
+      namespace: myNewNamespace
 
   - name: myDclCluster
     type: cluster
