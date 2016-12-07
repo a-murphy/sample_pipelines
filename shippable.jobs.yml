@@ -270,6 +270,7 @@ jobs:
     steps:
       - IN: nginx-manifest2
       - IN: myGKECluster
+      - IN: myReplicas
   #    - IN: myOtherDockerOptions
   #      applyTo:
   #        - mongo-image
