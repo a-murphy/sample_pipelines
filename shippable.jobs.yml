@@ -265,15 +265,15 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
         
-  - name: gke-deploy
+  - name: gke-deploy2
     type: deploy
     steps:
-      - IN: generate-mongo-image-manifest-6
+      - IN: nginx-manifest2
       - IN: myGKECluster
-      - IN: myOtherDockerOptions
-        applyTo:
-          - mongo-image
-      - IN: myThirdDockerOptions
+  #    - IN: myOtherDockerOptions
+  #      applyTo:
+  #        - mongo-image
+  #    - IN: myThirdDockerOptions
  #       applyTo:
  #         - nginx-image
       - TASK: managed
