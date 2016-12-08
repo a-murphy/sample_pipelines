@@ -280,6 +280,14 @@ jobs:
       - TASK: managed
         deployMethod: replace
         
+  - name: gke-deploy3
+    type: deploy
+    steps:
+      - IN: nginx-manifest2
+      - IN: myGKECluster
+      - TASK: managed
+        deployMethod: replace
+        
  # - name: empty-deploy
  #   type: deploy
  #   steps:
