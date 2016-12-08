@@ -270,7 +270,7 @@ jobs:
     steps:
       - IN: nginx-manifest2
       - IN: myGKECluster
-      - IN: myReplicas
+  #    - IN: myReplicas
   #    - IN: myOtherDockerOptions
   #      applyTo:
   #        - mongo-image
@@ -278,7 +278,7 @@ jobs:
  #       applyTo:
  #         - nginx-image
       - TASK: managed
-        deployMethod: blueGreen
+        deployMethod: replace
         
  # - name: empty-deploy
  #   type: deploy
