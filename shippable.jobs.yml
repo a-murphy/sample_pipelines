@@ -292,7 +292,12 @@ jobs:
   - name: customImage
     type: runSh
     steps:
+      - IN: nginx-image
+      - IN: busybox-image
+      - IN: version-resource-1
+      - IN: myReplicas
       - TASK:
+        - script: printenv
         - script: "mkdir -p /build/state/"
         - script: "touch /build/state/mongo-image.env"
         - script: "echo 'versionName=latest' >>  /build/state/mongo-image.env"
