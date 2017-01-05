@@ -298,6 +298,7 @@ jobs:
       - IN: myReplicas
       - IN: myEcsParams
       - IN: myOtherDockerOptions
+      - IN: projectOne
       - TASK:
         - script: printenv
         - script: "mkdir -p /build/state/"
