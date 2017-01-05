@@ -296,6 +296,8 @@ jobs:
       - IN: busybox-image
       - IN: version-resource-1
       - IN: myReplicas
+      - IN: myEcsParams
+      - IN: myOtherDockerOptions
       - TASK:
         - script: printenv
         - script: "mkdir -p /build/state/"
