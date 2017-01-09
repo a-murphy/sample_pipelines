@@ -79,6 +79,7 @@ resources:
         four: 16
         three: 9
         two: 4
+        secure: gxq+R3wEnolWrWsweAm8KplpS/OoIRUSdMYvOA8vyxQYlQeiJcuakfDzIbYB8mfuj6oIP8atRsbe3PUocV0mdTPD22woiSyJuiIz7p8HwFb5j7OapwsQs0dhDGEalVlma2ho9trG1TIMfpNUsrVh0VJyj15VlSTWgTNFzOiueXB7mPyCYi/QyKL7/cSql/hR/OiI7jisFu/nUMeE03EKNDSGHVijxgQkRB3UgLCOqvZyoTNKn4YaH9lhTG/EpVQPA9omRvmvot5L6+lKbHHBJ5pD3a/SWbIwxoiSPl0Ss8a+43RX3pjn41ubzhf03wOMOJHMLx5sOmOYp1TRy7KuKw== 
   
   - name: myOtherEcsParams
     type: params
