@@ -78,9 +78,9 @@ resources:
         foo: bar
         four: 16
         three: 9
-        two: 4
-        secure: gxq+R3wEnolWrWsweAm8KplpS/OoIRUSdMYvOA8vyxQYlQeiJcuakfDzIbYB8mfuj6oIP8atRsbe3PUocV0mdTPD22woiSyJuiIz7p8HwFb5j7OapwsQs0dhDGEalVlma2ho9trG1TIMfpNUsrVh0VJyj15VlSTWgTNFzOiueXB7mPyCYi/QyKL7/cSql/hR/OiI7jisFu/nUMeE03EKNDSGHVijxgQkRB3UgLCOqvZyoTNKn4YaH9lhTG/EpVQPA9omRvmvot5L6+lKbHHBJ5pD3a/SWbIwxoiSPl0Ss8a+43RX3pjn41ubzhf03wOMOJHMLx5sOmOYp1TRy7KuKw== 
-  
+        two: 4 
+        secure: tqMBKAD1C0xprs5wRuGaUdquE21gTn98d7BEQp54LHpTqyXVGa9Ry2/3i+pf2xLGlveE8SfpO7KsUmBFtBvbbtqbSiR4J3uLtTJL48J3mQ2WFYJdKFK/whEqnDwIXX10qPK4BF5r2Xg/hZv2GgFonRBrvK4dF0/tn8Aj+oZr6siIP41LVg8MQVqASyfLVc+5XmD8jQy4HsBQ7VAVwrUYhHMS2Wt6LehmFDedqdfPZmtYVvzMshhQoYgU8oa8pTwuPov2y8iCtsb6PtRhJBQWfw9iUncQuYEdosUbwtWtaEDH/WuXG+xITHgkk53S/SNuuN8npxbV8PR8WNCgqExW4g==
+
   - name: myOtherEcsParams
     type: params
     integration: AWS
