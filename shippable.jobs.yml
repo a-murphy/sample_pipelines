@@ -301,6 +301,7 @@ jobs:
       - IN: projectOne
       - TASK:
         - script: printenv
+        - script: "echo '\x1b[34m' +  $MYECSPARAMS_PARAMS_EIGHT + '\x1b[0m'"
         - script: "mkdir -p /build/state/"
         - script: "touch /build/state/mongo-image.env"
         - script: "echo 'versionName=latest' >>  /build/state/mongo-image.env"
