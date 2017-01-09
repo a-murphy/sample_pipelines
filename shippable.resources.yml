@@ -79,7 +79,7 @@ resources:
         four: 16
         three: 9
         two: 4 
-        test: "test '"
+        test: "test ' $JOB_TYPE"
         secure: tqMBKAD1C0xprs5wRuGaUdquE21gTn98d7BEQp54LHpTqyXVGa9Ry2/3i+pf2xLGlveE8SfpO7KsUmBFtBvbbtqbSiR4J3uLtTJL48J3mQ2WFYJdKFK/whEqnDwIXX10qPK4BF5r2Xg/hZv2GgFonRBrvK4dF0/tn8Aj+oZr6siIP41LVg8MQVqASyfLVc+5XmD8jQy4HsBQ7VAVwrUYhHMS2Wt6LehmFDedqdfPZmtYVvzMshhQoYgU8oa8pTwuPov2y8iCtsb6PtRhJBQWfw9iUncQuYEdosUbwtWtaEDH/WuXG+xITHgkk53S/SNuuN8npxbV8PR8WNCgqExW4g==
 
   - name: myOtherEcsParams
