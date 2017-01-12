@@ -5,7 +5,7 @@ resources:
     pointer:
       sourceName: "myLoadBalancer"
       method: LoadBalancer
-      namespace: myNamespace
+      namespace: my-namespace
       clusterName: cluster-1
       region: us-central1-c
     version:
