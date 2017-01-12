@@ -11,6 +11,11 @@ jobs:
   #    - IN: generate-manifest
   #    - TASK: managed
 
+  - name: provisionJob
+    type: provision                           
+    steps:
+      - IN: provisionLoadBalancer
+
   - name: foo
     type: release
     options:
