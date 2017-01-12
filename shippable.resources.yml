@@ -1,4 +1,19 @@
 resources:
+  - name: provisionLoadBalancer
+    type: loadBalancer
+    integration: GKE
+    pointer:
+      sourceName: "myLoadBalancer"
+      method: LoadBalancer
+      namespace: myNamespace
+    version:
+      ports:
+        - name: myPort
+          port: 100 
+          targetPort: 30100
+      selector:
+        loadBalancer: myLoadBalancer
+
   - name: mongo-image
     type: image
     pointer:
