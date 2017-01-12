@@ -3,14 +3,14 @@ resources:
     type: loadBalancer
     integration: GKE
     pointer:
-      sourceName: "myLoadBalancer"
+      sourceName: "my-load-balancer"
       method: LoadBalancer
       namespace: my-namespace
       clusterName: cluster-1
       region: us-central1-c
     version:
       ports:
-        - name: myPort
+        - name: my-port
           port: 100 
           targetPort: 30100
       selector:
