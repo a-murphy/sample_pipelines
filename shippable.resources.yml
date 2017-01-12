@@ -6,6 +6,8 @@ resources:
       sourceName: "myLoadBalancer"
       method: LoadBalancer
       namespace: myNamespace
+      clusterName: cluster-1
+      region: us-central1-c
     version:
       ports:
         - name: myPort
