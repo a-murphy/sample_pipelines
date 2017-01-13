@@ -5,7 +5,7 @@ resources:
     pointer:
       sourceName: "my-load-balancer"
       method: ClusterIP
-      namespace: my-namespace
+  #    namespace: my-namespace
       clusterName: cluster-1
       region: us-central1-c
     version:
