@@ -4,7 +4,7 @@ resources:
     integration: GKE
     pointer:
       sourceName: "my-load-balancer"
-      method: ClusterIP
+      method: LoadBalancer
       namespace: my-namespace
       clusterName: cluster-1
       region: us-central1-c
@@ -13,19 +13,20 @@ resources:
         - name: my-port
           port: 100 
           targetPort: 30100
+          nodePort: 3000
         - name: my-other-port
           port: 101
           targetPort: 30101
       selector:
         loadBalancer: myLoadBalancer
         otherSelector: value
-   #   clusterIP: test.1.2.3
-   #   externalIPs:
-   #     - test.1.2.3.4
-   #   sessionAffinity: "testAffinity"
+      clusterIP: test.1.2.3
+      externalIPs:
+        - test.1.2.3.4
+      sessionAffinity: "testAffinity"
       loadBalancerIP: "loadBalancerIP"
-   #   loadBalancerSourceRanges:
-   #     - 127.0.0.1
+      loadBalancerSourceRanges:
+        - 127.0.0.1
       externalName: "myName"
 
   - name: mongo-image
