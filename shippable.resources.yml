@@ -15,7 +15,7 @@ resources:
       #    targetPort: 30100
       #    nodePort: 31000
         - name: my-other-port
-          port: 101
+          port: 100
           targetPort: 30101
       selector:
         loadBalancer: myLoadBalancer
@@ -40,10 +40,7 @@ resources:
       region: us-central1-c
     version:
       ports:
-        - name: port
-          port: 100 
-        - name: other-port
-          port: 101
+        - port: 102
       selector:
         loadBalancer: myLoadBalancer
         otherSelector: value
