@@ -13,7 +13,7 @@ resources:
         - name: my-port
           port: 100 
           targetPort: 30100
-          nodePort: 3000
+          nodePort: 31000
         - name: my-other-port
           port: 101
           targetPort: 30101
