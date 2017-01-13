@@ -4,7 +4,7 @@ resources:
     integration: GKE
     pointer:
       sourceName: "my-load-balancer"
-      method: NodePort
+      method: LoadBalancer
       namespace: my-namespace
       clusterName: cluster-1
       region: us-central1-c
@@ -15,7 +15,7 @@ resources:
       #    targetPort: 30100
       #    nodePort: 31000
         - name: my-other-port
-          port: 100
+          port: 101
           targetPort: 30101
       selector:
         loadBalancer: myLoadBalancer
