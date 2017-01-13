@@ -4,7 +4,7 @@ resources:
     integration: GKE
     pointer:
       sourceName: "my-load-balancer"
-#      method: LoadBalancer
+      method: ClusterIP
       namespace: my-namespace
       clusterName: cluster-1
       region: us-central1-c
@@ -20,7 +20,7 @@ resources:
       selector:
         loadBalancer: myLoadBalancer
         otherSelector: value
-      clusterIP: test.1.2.3
+ #     clusterIP: test.1.2.3
  #     externalIPs:
  #       - test.1.2.3.4
  #     sessionAffinity: "testAffinity"
