@@ -19,15 +19,15 @@ resources:
           targetPort: 30111
       selector:
         loadBalancer: myLoadBalancer
-        otherSelector: value
-      clusterIP: test.1.2.3
-      externalIPs:
-        - test.1.2.3.4
-      sessionAffinity: "testAffinity"
-      loadBalancerIP: "loadBalancerIP"
-      loadBalancerSourceRanges:
-        - 127.0.0.1
-      externalName: "myName"
+        otherSelector: value2
+  #    clusterIP: test.1.2.3
+  #    externalIPs:
+  #      - test.1.2.3.4
+  #    sessionAffinity: "testAffinity"
+      loadBalancerIP: "loadBalancerIP2"
+  #    loadBalancerSourceRanges:
+  #      - 127.0.0.1
+      externalName: "myName2"
       
   - name: provisionExternalName
     type: loadBalancer
