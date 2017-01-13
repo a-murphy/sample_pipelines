@@ -40,13 +40,10 @@ resources:
       region: us-central1-c
     version:
       ports:
-        - name: my-port
+        - name: port
           port: 100 
-          targetPort: 30100
-          nodePort: 31000
-        - name: my-other-port
+        - name: other-port
           port: 101
-          targetPort: 30101
       selector:
         loadBalancer: myLoadBalancer
         otherSelector: value
