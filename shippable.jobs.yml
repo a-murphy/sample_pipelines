@@ -14,7 +14,7 @@ jobs:
   - name: provisionJob
     type: provision                           
     steps:
-    #  - IN: provisionExternalName
+      - IN: provisionExternalName
       - IN: provisionLoadBalancer
 
   - name: foo
