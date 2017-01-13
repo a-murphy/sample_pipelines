@@ -20,12 +20,12 @@ resources:
         loadBalancer: myLoadBalancer
         otherSelector: value
       clusterIP: test.1.2.3
-      externalIPs:
-        - test.1.2.3.4
-      sessionAffinity: "testAffinity"
+   #   externalIPs:
+   #     - test.1.2.3.4
+   #   sessionAffinity: "testAffinity"
       loadBalancerIP: "loadBalancerIP"
-      loadBalancerSourceRanges:
-        - 127.0.0.1
+   #   loadBalancerSourceRanges:
+   #     - 127.0.0.1
       externalName: "myName"
 
   - name: mongo-image
