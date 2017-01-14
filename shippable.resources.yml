@@ -51,7 +51,7 @@ resources:
     type: image
     pointer:
   #    sourceName: "library/mongo"
-  #    isPull: false
+      isPull: false
     seed:
       versionName: "latest"
       
