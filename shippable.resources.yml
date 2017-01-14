@@ -7,7 +7,7 @@ resources:
   #    method: NodePort
   #    namespace: my-namespace
   #    clusterName: cluster-1
-  #    region: us-central1-c
+      region: us-central1-c
     version:
       ports:
         - name: my-port
