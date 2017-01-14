@@ -16,6 +16,7 @@ jobs:
     steps:
       - IN: provisionExternalName
       - IN: provisionLoadBalancer
+      - OUT: foo
 
   - name: foo
     type: release
