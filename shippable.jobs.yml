@@ -16,7 +16,7 @@ jobs:
     steps:
       - IN: provisionExternalName
       - IN: provisionLoadBalancer
-      - OUT: foo
+      - OUT: mongo-image
 
   - name: foo
     type: release
