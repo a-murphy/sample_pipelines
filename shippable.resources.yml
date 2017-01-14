@@ -3,7 +3,7 @@ resources:
     type: loadBalancer
   #  integration: GKE
     pointer:
-  #    sourceName: "my-load-balancer"
+      sourceName: "my-load-balancer"
   #    method: NodePort
   #    namespace: my-namespace
   #    clusterName: cluster-1
