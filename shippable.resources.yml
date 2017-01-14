@@ -6,7 +6,7 @@ resources:
       sourceName: "my-load-balancer"
   #    method: NodePort
   #    namespace: my-namespace
-  #    clusterName: cluster-1
+      clusterName: cluster-1
       region: us-central1-c
     version:
       ports:
