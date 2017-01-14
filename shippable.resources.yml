@@ -16,18 +16,18 @@ resources:
       #    nodePort: 31000
         - name: my-other-port
           port: 101
-          targetPort: 30111
+          targetPort: 30101
       selector:
         loadBalancer: myLoadBalancer
-        otherSelector: value2
-      clusterIP: test.1.2.3
-      externalIPs:
-        - test.1.2.3.4
-      sessionAffinity: "testAffinity"
-      loadBalancerIP: "loadBalancerIP2"
-      loadBalancerSourceRanges:
-        - 127.0.0.1
-      externalName: "myName2"
+        otherSelector: value
+  #    clusterIP: test.1.2.3
+  #    externalIPs:
+  #      - test.1.2.3.4
+  #    sessionAffinity: "testAffinity"
+  #    loadBalancerIP: "loadBalancerIP2"
+  #    loadBalancerSourceRanges:
+  #      - 127.0.0.1
+      externalName: "myName"
       
   - name: provisionExternalName
     type: loadBalancer
