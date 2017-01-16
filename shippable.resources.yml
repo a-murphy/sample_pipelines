@@ -1,7 +1,7 @@
 resources:
   - name: provisionLoadBalancer
     type: loadBalancer
-    integration: GKE
+  #  integration: GKE
     pointer:
       sourceName: "my-load-balancer"
   #    method: NodePort
