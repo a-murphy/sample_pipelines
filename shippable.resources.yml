@@ -21,8 +21,8 @@ resources:
         loadBalancer: myLoadBalancer
         otherSelector: value
   #    clusterIP: test.1.2.3
-      externalIPs:
-        test.1.2.3.4
+    #  externalIPs:
+    #    - test.1.2.3.4
   #    sessionAffinity: "testAffinity"
   #    loadBalancerIP: "loadBalancerIP2"
   #    loadBalancerSourceRanges:
