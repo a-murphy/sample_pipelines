@@ -18,8 +18,8 @@ resources:
           port: 101
           targetPort: 30101
       selector:
-        loadBalancer: myLoadBalancer
-        otherSelector: value
+       - loadBalancer: myLoadBalancer
+       - otherSelector: value
   #    clusterIP: test.1.2.3
   #    externalIPs:
   #      - test.1.2.3.4
