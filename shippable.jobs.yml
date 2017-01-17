@@ -16,7 +16,6 @@ jobs:
     steps:
       - IN: provisionExternalName
       - IN: provisionLoadBalancer
-      - IN: myGKECluster
 
   - name: foo
     type: release
