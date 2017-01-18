@@ -150,6 +150,10 @@ resources:
     type: dockerOptions
     integration: AWS
     version:
+      service:
+        placementStrategy:
+          - field: "attribute:ecs.availability-zone"
+            type: spread
       memory: 48
       cpuShares: 10
       portMappings:
