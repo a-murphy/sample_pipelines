@@ -50,7 +50,7 @@ resources:
   - name: mongo-image
     type: image
     pointer:
-  #    sourceName: "library/mongo"
+      sourceName: "library/mongo"
       isPull: false
     seed:
       versionName: "latest"
