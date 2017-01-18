@@ -262,11 +262,11 @@ jobs:
       - IN: myOtherDockerOptions
         applyTo:
           - mongo-image
-      - IN: myLoadBalancer
-        applyTo:
-          - manifest: generate-manifest
-            image: mongo-image
-            port: 8000
+   #   - IN: myLoadBalancer
+   #     applyTo:
+   #       - manifest: generate-manifest
+   #         image: mongo-image
+   #         port: 8000
      #   applyTo:
       #    - mongo-image
       - TASK: managed
