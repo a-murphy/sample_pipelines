@@ -256,7 +256,7 @@ jobs:
       - IN: myEcsCluster
       - IN: generate-manifest
     #  - OUT: gke-deploy
-    #  - IN: myReplicas
+      - IN: myReplicas
 #      - GET: deploy-service-7
   #    - IN: myEcsParams
       - IN: myDockerOptions
