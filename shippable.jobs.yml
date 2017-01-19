@@ -255,6 +255,7 @@ jobs:
     steps:
       - IN: myEcsCluster
       - IN: generate-manifest
+      - IN: nginx-manifest2
     #  - OUT: gke-deploy
       - IN: myReplicas
 #      - GET: deploy-service-7
