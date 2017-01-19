@@ -274,7 +274,7 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
         
-  - name: ecs-deploy5
+  - name: ecs-deploy6
     type: deploy
     steps:
       - IN: myEcsCluster
