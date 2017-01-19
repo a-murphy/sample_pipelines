@@ -223,7 +223,8 @@ jobs:
   #          image: mongo-image
   #          port: 27017
       - IN: myEcsCluster
-    #  - IN: myOtherDockerOptions
+      - IN: myDockerOptions
+      - IN: myOtherDockerOptions
     #    applyTo:
     #      - mongo-image
       - TASK: managed
