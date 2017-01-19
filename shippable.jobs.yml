@@ -274,17 +274,14 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
         
-  - name: ecs-deploy4
+  - name: ecs-deploy5
     type: deploy
     steps:
       - IN: myEcsCluster
-    #  - IN: generate-manifest
+      - IN: generate-manifest
       - IN: nginx-manifest2
       - IN: myReplicas
-      - IN: myDockerOptions
       - IN: myOtherDockerOptions
-        applyTo:
-          - mongo-image
       - TASK: managed
         deployMethod: upgrade
         
