@@ -154,6 +154,9 @@ resources:
         placementStrategy:
           - field: "attribute:ecs.availability-zone"
             type: spread
+        deploymentConfiguration: 
+          maximumPercent: 150
+          minimumHealthyPercent: 75
       memory: 48
     #  cpuShares: 10
     #  portMappings:
