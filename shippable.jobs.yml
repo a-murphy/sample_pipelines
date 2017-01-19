@@ -281,7 +281,7 @@ jobs:
       - IN: generate-manifest
       - IN: nginx-manifest2
       - IN: myReplicas
-  #    - IN: myOtherDockerOptions
+      - IN: myOtherDockerOptions
       - TASK: managed
         deployMethod: upgrade
         
