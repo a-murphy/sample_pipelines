@@ -184,12 +184,12 @@ jobs:
       - IN: nginx-image
      # - IN: nginx-and-busybox-manifest
      # - IN: new-manifest
-      - IN: myLoadBalancer
-        applyTo:
-          - manifest: generate-manifest
-            image: mongo-image
-            port: 27017
-            role: betaNewAWSRole
+     # - IN: myLoadBalancer
+     #   applyTo:
+     #     - manifest: generate-manifest
+     #       image: mongo-image
+     #       port: 27017
+     #       role: betaNewAWSRole
    #   - IN: ecs-deploy2
       - IN: myEcsCluster
       - IN: myReplicas
