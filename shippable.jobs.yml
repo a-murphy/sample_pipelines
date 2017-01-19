@@ -306,8 +306,8 @@ jobs:
       - IN: myOtherDockerOptions
       - IN: projectOne
       - TASK:
-        - script: mkdir testdirectory && cd testdirectory && "echo '\x1b[34m' $pwd '\x1b[0m'"
-        - script: echo $pwd
+        - script: mkdir testdirectory && cd testdirectory && pwd
+        - script: pwd
         - script: "echo '\x1b[34m' $MYECSPARAMS_PARAMS_EIGHT '\x1b[0m'"
         - script: "echo '\x1b[33m' $MYECSPARAMS_VERSION_PARAMS '\x1b[0m'"
         - script: "mkdir -p /build/state/"
