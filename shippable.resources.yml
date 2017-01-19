@@ -153,7 +153,7 @@ resources:
       service:
         placementStrategy:
           - field: "attribute:ecs.availability-zone"
-            type: spread
+            type: random
       memory: 48
       cpuShares: 10
       portMappings:
