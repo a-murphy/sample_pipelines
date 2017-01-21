@@ -292,7 +292,7 @@ jobs:
   #    - IN: generate-manifest
       - IN: myGKECluster
   #    - IN: myReplicas
-  #    - IN: myOtherDockerOptions
+      - IN: myOtherDockerOptions
   #      applyTo:
   #        - mongo-image
   #    - IN: myThirdDockerOptions
