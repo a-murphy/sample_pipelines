@@ -14,8 +14,9 @@ jobs:
   - name: provisionJob
     type: provision                           
     steps:
-      - IN: provisionExternalName
-      - IN: provisionLoadBalancer
+ #     - IN: provisionExternalName
+ #     - IN: provisionLoadBalancer
+      - IN: projectTwo
 
   - name: foo
     type: release
