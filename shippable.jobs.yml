@@ -15,7 +15,7 @@ jobs:
     type: provision                           
     steps:
  #     - IN: provisionExternalName
- #     - IN: provisionLoadBalancer
+      - IN: provisionLoadBalancer
       - IN: projectTwo
       - IN: version-resource-1
 
