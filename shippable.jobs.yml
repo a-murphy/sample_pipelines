@@ -17,6 +17,7 @@ jobs:
  #     - IN: provisionExternalName
  #     - IN: provisionLoadBalancer
       - IN: projectTwo
+      - IN: version-resource-1
 
   - name: foo
     type: release
