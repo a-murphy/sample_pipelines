@@ -128,7 +128,8 @@ resources:
         three: 9
         two: 4 
       #  test: "test ' $JOB_TYPE"
-        secure: ca4LTs7zBPxI9wejW/hIuuBEGad49Oo1dM7cbcL/FkrqGXksyVOgaEotn44hiqh0HqDsHEEqWYkl0xVMiEf/Ww344OchvPdVRQ8Cp0tEC/3PtbzPiyBmiQwzdjCWeS1wGs4algU+vCoNwnKRDEjTnxFp3ro/I/dH6J5hunHHegOVio7URVQ4Y1JbRPEi8mOQwDOgTJ1X7JwsbleWyzN6ZVpsoj8ztQXrTIXm/iEjWr3fromZwX1NPYuzuhgada1a8hFeyeqqQYN+6bqyW//fXdU1XmThLX7b6c9NxWKIubvkVDJEtl+ROlhChqyNi/eRRNwWH4Ag7FyV2/uZwXsoBQ==  
+        secure: k4XR8HXlt+mbgkHmVpFhM2WCc3LeWXfyCybFSwL0UiiGG7C8xqPiQbLl05MCmXMH7oNy3iZiXfu3spLD9JGVlPwVMWRUdxNcB+JKkvSZpozNljK/iTszi62TP0izQA79doqZhtPDzxYlLmH0IDo3wPUhU2Mf5gdY7aHlwYAHE3dGRKi8jsbIgDosLhavkU5B1YauUAI/BAI62fthngJ4KqJw/RRAshww0YYEJrd/WKqY+/i2QRJSHRiJYVjcI38B1jCZ/HhXGZPcnYyWTbC92QkSkdZRWU4jLXERI4nvZAOQGhizWcrAjagwofDZViyyCppDcPARctuaGGGLundXGg==
+      # local  secure: ca4LTs7zBPxI9wejW/hIuuBEGad49Oo1dM7cbcL/FkrqGXksyVOgaEotn44hiqh0HqDsHEEqWYkl0xVMiEf/Ww344OchvPdVRQ8Cp0tEC/3PtbzPiyBmiQwzdjCWeS1wGs4algU+vCoNwnKRDEjTnxFp3ro/I/dH6J5hunHHegOVio7URVQ4Y1JbRPEi8mOQwDOgTJ1X7JwsbleWyzN6ZVpsoj8ztQXrTIXm/iEjWr3fromZwX1NPYuzuhgada1a8hFeyeqqQYN+6bqyW//fXdU1XmThLX7b6c9NxWKIubvkVDJEtl+ROlhChqyNi/eRRNwWH4Ag7FyV2/uZwXsoBQ==  
       #  secure: Gk6jWiAktjKz5gIQSXAV9/hDJJj9ZRF4vhMAdmQgVTf7FX9qiLu81aFpflvU//Or5Ydf7D2wjQ5qXSvpRB8WlumJvvOPb4B+hExRNh8oUnyGp6LEAtictPLA20gBSsgU9oQtyoB4haZZd1UzgFa1C3BLMEYBKpKtvFSEVHy/ytb7fy3RMRrJ6XcgZd7OxQ0geRfrjCTVjzU+H7vkBXIUIjmvEipx9D7q/acgYiNdDcarJhh4sbVICNjW8hCpV+rm7cPMbvHKdnRJD+ZVCCpe+/BeTTzQPqz2+4haXYH1An9/FLd3PJq0lYKxOKhxG6Tkqkn6r49MFWScDSUS6S89zQ== 
 
   - name: myOtherEcsParams
