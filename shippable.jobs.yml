@@ -18,7 +18,7 @@ jobs:
       - IN: provisionLoadBalancer
       - IN: projectOne
       - IN: version-resource-1
- #     - IN: myEcsParams
+      - IN: myEcsParams
 
   - name: foo
     type: release
