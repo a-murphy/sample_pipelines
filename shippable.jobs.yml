@@ -218,7 +218,7 @@ jobs:
     type: deploy
     steps:
    #   - IN: generate-manifest
-      - IN: foo
+      - IN: foo4
     #  - IN: busybox-manifest2
   #    - IN: myLoadBalancer
   #      applyTo:
