@@ -16,7 +16,7 @@ jobs:
     steps:
  #     - IN: provisionExternalName
       - IN: provisionLoadBalancer
- #     - IN: projectTwo
+      - IN: projectTwo
  #     - IN: version-resource-1
  #     - IN: myEcsParams
 
