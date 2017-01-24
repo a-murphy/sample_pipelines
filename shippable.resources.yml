@@ -278,7 +278,6 @@ resources:
     integration: github
     pointer:
       sourceName: "a-murphy/sample_node_postgres"
-      other: "!@#"
   
   - name: branchlessProject
     type: gitRepo
@@ -354,15 +353,9 @@ resources:
   - name: version-resource-1
     type: version
     seed:
-      versionName: "1.0.5-alpha.beta#$"
+      versionName: "1.0.5-alpha.beta"
     pointer: 
-      base: "1.0.2-alpha.beta`'"
-    version:
-      test:
-        - one
-        - two
-        - three
-      test2: "[("
+      base: "1.0.2-alpha.beta"
 
   - name: tritonCluster
     type: cluster
