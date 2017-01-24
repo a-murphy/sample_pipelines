@@ -17,7 +17,7 @@ jobs:
  #     - IN: provisionExternalName
       - IN: provisionLoadBalancer
       - IN: projectOne
- #     - IN: version-resource-1
+      - IN: version-resource-1
  #     - IN: myEcsParams
 
   - name: foo
