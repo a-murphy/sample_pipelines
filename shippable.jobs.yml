@@ -16,9 +16,9 @@ jobs:
     steps:
  #     - IN: provisionExternalName
       - IN: provisionLoadBalancer
-      - IN: projectTwo
-      - IN: version-resource-1
-      - IN: myEcsParams
+ #     - IN: projectTwo
+ #     - IN: version-resource-1
+ #     - IN: myEcsParams
 
   - name: foo
     type: release
