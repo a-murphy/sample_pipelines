@@ -303,7 +303,7 @@ resources:
       buildOnCommit: false
       buildOnPullRequest: true
       buildOnTagPush: true
-      buildOnRelease: false
+      buildOnRelease: true
       branches:
         except:
           - test
