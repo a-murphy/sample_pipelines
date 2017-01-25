@@ -15,7 +15,7 @@ jobs:
     type: provision                           
     steps:
   #    - IN: provisionExternalName
-      - IN: projectOne
+      - IN: branchlessProject2
       - IN: version-resource-1
   #    - IN: provisionLoadBalancer
   #    - IN: myEcsParams
