@@ -372,6 +372,13 @@ jobs:
       - TASK:
         - script: "echo true"
 
+  - name: custom7
+    type: runSh
+    steps:
+      - IN: custom6
+      - TASK:
+        - script: "echo two"
+
   - name: custom4
     type: runSh
     steps:
