@@ -370,7 +370,7 @@ jobs:
     steps:
       - IN: ecr-image
       - TASK:
-        - script: "echo Docker"
+        - script: "echo DOCKER"
         - script: "docker --version"
         - script: "which docker"
         - script: "echo AWS"
@@ -379,13 +379,13 @@ jobs:
         - script: "echo EB"
         - script: "eb --version"
         - script: "which eb"
-        - script: "echo gCloud"
+        - script: "echo GCLOUD"
         - script: "gcloud --version"
         - script: "which gcloud"
-        - script: "echo KubeCtl"
-        - script: "kubectl --version"
+        - script: "echo KUBECTL"
+        - script: "kubectl version"
         - script: "which kubectl"
-        - script: "echo jFrog"
+        - script: "echo JFROG"
         - script: "jfrog --version"
         - script: "which jfrog"
 
