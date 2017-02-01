@@ -370,13 +370,19 @@ jobs:
     steps:
       - IN: ecr-image
       - TASK:
-        - script: "echo true"
-        - script: "which aws"
-        - script: "which eb"
-        - script: "which gcloud"
-        - script: "which kubectl"
-        - script: "which jfrog"
+        - script: "echo Docker"
+        - script: "docker --help"
         - script: "which docker"
+        - script: "echo AWS"
+        - script: "which awscli"
+        - script: "echo EB"
+        - script: "which eb"
+        - script: "echo gCloud"
+        - script: "which gcloud"
+        - script: "echo KubeCtl"
+        - script: "which kubectl"
+        - script: "echo jFrog"
+        - script: "which jfrog"
 
   - name: custom7
     type: runSh
