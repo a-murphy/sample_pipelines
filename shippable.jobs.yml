@@ -25,6 +25,8 @@ jobs:
     type: runCLI                           
     steps:
       - IN: cliConfigResource
+      - TASK:
+        - script: "echo true"
 
   - name: foo
     type: release
