@@ -19,6 +19,12 @@ jobs:
       - IN: version-resource-1
   #    - IN: provisionLoadBalancer
   #    - IN: myEcsParams
+  
+  
+  - name: cliJob
+    type: runCLI                           
+    steps:
+      - IN: cliConfigResource
 
   - name: foo
     type: release
