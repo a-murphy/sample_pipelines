@@ -371,7 +371,6 @@ jobs:
       - IN: ecr-image
       - TASK:
         - script: "echo Docker"
-        - script: "docker --help"
         - script: "which docker"
         - script: "echo AWS"
         - script: "which awscli"
