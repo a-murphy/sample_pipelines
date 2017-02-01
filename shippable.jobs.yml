@@ -371,6 +371,12 @@ jobs:
       - IN: ecr-image
       - TASK:
         - script: "echo true"
+        - script: "which aws"
+        - script: "which eb"
+        - script: "which gcloud"
+        - script: "which kubectl"
+        - script: "which jfrog"
+        - script: "which docker"
 
   - name: custom7
     type: runSh
