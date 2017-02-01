@@ -1,7 +1,7 @@
 resources:
   - name: cliConfigResource
     type: cliConfig
-    integration: GKE
+  #  integration: GKE
     pointer:
       sourceName: "my-load-balancer"
       clusterName: cluster-1
