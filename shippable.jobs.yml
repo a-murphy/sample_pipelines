@@ -384,7 +384,7 @@ jobs:
         - script: "which gcloud"
         - script: "echo KUBECTL"
         - script: "kubectl version"
-        - script: "which kubectl"
+    #    - script: "which kubectl"
         - script: "echo JFROG"
         - script: "jfrog --version"
         - script: "which jfrog"
