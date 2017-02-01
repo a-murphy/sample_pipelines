@@ -372,9 +372,9 @@ jobs:
       - TASK:
         - script: "echo Docker"
         - script: "which docker"
-        - script: "echo AWS"
-        - script: "aws --version"
-        - script: "which aws"
+      #  - script: "echo AWS"
+      #  - script: "aws --version"
+      #  - script: "which aws"
         - script: "echo EB"
         - script: "which eb"
         - script: "echo gCloud"
