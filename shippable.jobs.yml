@@ -28,6 +28,7 @@ jobs:
       - TASK:
  #       - script: "gcloud projects list"
         - script: "gcloud container clusters list"
+        - script: "kubectl config view"
         - script: "kubectl get namespaces"
   #      - script: "aws ecs list-container-instances --cluster test-cluster"
   #      - script: eb init "my-application-name" -p "Node.js"
