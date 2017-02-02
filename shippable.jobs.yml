@@ -27,6 +27,8 @@ jobs:
       - IN: cliConfigResource
       - TASK:
         - script: "aws ecs list-container-instances --cluster test-cluster"
+        - script: eb init "my-application-name" -p "Node.js"
+        - script: eb terminate --all --force "my-application-name"
 
   - name: foo
     type: release
