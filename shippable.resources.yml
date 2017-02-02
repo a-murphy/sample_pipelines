@@ -2,7 +2,7 @@ resources:
   - name: cliConfigResource
     type: cliConfig
     integration: GKE
-    pointer:
+   # pointer:
    #   clusterName: cluster-1
    #   region: us-central1-a
  
