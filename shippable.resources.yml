@@ -3,7 +3,7 @@ resources:
     type: cliConfig
     integration: GKE
     pointer:
-   #   clusterName: cluster-1
+      clusterName: cluster-1
       region: us-central1-a
  
   - name: provisionLoadBalancer
