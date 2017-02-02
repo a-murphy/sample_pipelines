@@ -26,6 +26,7 @@ jobs:
     steps:
       - IN: cliConfigResource
       - TASK:
+        - script: "gcloud projects list"
         - script: "gcloud container clusters list"
   #      - script: "aws ecs list-container-instances --cluster test-cluster"
   #      - script: eb init "my-application-name" -p "Node.js"
