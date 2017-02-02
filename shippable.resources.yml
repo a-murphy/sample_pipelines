@@ -3,9 +3,8 @@ resources:
     type: cliConfig
     integration: GKE
     pointer:
-      sourceName: "my-load-balancer"
-      clusterName: cluster-1
-      region: us-central1-a
+   #   clusterName: cluster-1
+   #   region: us-central1-a
  
   - name: provisionLoadBalancer
     type: loadBalancer
