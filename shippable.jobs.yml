@@ -26,7 +26,7 @@ jobs:
     steps:
       - IN: cliConfigResource
       - TASK:
-        - script: "cat $CLICONFIGRESOURCE_PATH/key.json"
+        - script: "gcloud container clusters list"
   #      - script: "aws ecs list-container-instances --cluster test-cluster"
   #      - script: eb init "my-application-name" -p "Node.js"
   #      - script: eb terminate --all --force "my-application-name"
