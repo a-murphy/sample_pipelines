@@ -1,7 +1,7 @@
 resources:
   - name: cliConfigResource
     type: cliConfig
-    integration: DockerHub
+    integration: GCR
     pointer:
       clusterName: cluster-1
       region: us-central1-a
