@@ -1,7 +1,7 @@
 resources:
   - name: cliConfigResource
     type: cliConfig
-    integration: github
+    integration: AWS
     pointer:
       sourceName: "my-load-balancer"
       clusterName: cluster-1
