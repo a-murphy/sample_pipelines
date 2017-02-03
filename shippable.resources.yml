@@ -2,9 +2,9 @@ resources:
   - name: cliConfigResource
     type: cliConfig
     integration: ECR
-  #  pointer:
+    pointer:
   #    clusterName: cluster-1
-  #    region: us-central1-a
+      region: us-west-2
  
   - name: provisionLoadBalancer
     type: loadBalancer
