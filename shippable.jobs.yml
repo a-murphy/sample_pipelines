@@ -27,6 +27,8 @@ jobs:
   #    - IN: gcrConfigResource
       - IN: gkeConfigResource
       - IN: ecrConfigResource
+      - IN: dockerHubConfigResource
+      - IN: awsConfigResource
       - TASK:
         - script: mkdir -p test
         - script: "echo 'This is a test.  ${CLICONFIGRESOURCE_NAME} ${CLICONFIGRESOURCE_VERSIONNUMBER}' > test/test.txt"
