@@ -24,8 +24,9 @@ jobs:
   - name: cliJob
     type: runCLI                           
     steps:
-      - IN: kubeConfigResource
+      - IN: gcrConfigResource
       - IN: gkeConfigResource
+      - IN: ecrConfigResource
       - TASK:
         - script: mkdir -p test
         - script: "echo 'This is a test.  ${CLICONFIGRESOURCE_NAME} ${CLICONFIGRESOURCE_VERSIONNUMBER}' > test/test.txt"
