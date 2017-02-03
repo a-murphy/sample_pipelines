@@ -1,10 +1,10 @@
 resources:
   - name: cliConfigResource
     type: cliConfig
-    integration: GCR
-    pointer:
-      clusterName: cluster-1
-      region: us-central1-a
+    integration: ECR
+  #  pointer:
+  #    clusterName: cluster-1
+  #    region: us-central1-a
  
   - name: provisionLoadBalancer
     type: loadBalancer
