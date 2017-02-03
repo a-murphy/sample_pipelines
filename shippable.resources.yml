@@ -2,9 +2,9 @@ resources:
   - name: gkeConfigResource
     type: cliConfig
     integration: GKE
- ##   pointer:
- #     clusterName: cluster-1
- #     region: us-west-2
+    pointer:
+      clusterName: cluster-1
+      region: us-west-2
  
   - name: awsConfigResource
     type: cliConfig
@@ -22,7 +22,7 @@ resources:
  
   - name: gcrConfigResource
     type: cliConfig
-    integration: GCR
+    integration: OtherGCR
  ##   pointer:
  #     clusterName: cluster-1
  #     region: us-west-2
