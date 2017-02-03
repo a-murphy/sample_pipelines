@@ -24,8 +24,8 @@ jobs:
   - name: cliJob
     type: runCLI                           
     steps:
-      - IN: gkeConfigResource
       - IN: gcrConfigResource
+      - IN: gkeConfigResource
       - TASK:
         - script: mkdir -p test
         - script: "echo 'This is a test.  ${CLICONFIGRESOURCE_NAME} ${CLICONFIGRESOURCE_VERSIONNUMBER}' > test/test.txt"
