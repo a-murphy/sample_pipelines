@@ -5,6 +5,10 @@ resources:
     pointer:
       clusterName: cluster-1
       region: us-central1-a
+      
+  - name: kubeConfigResource
+    type: cliConfig
+    integration: Kubernetes
  
   - name: awsConfigResource
     type: cliConfig
