@@ -27,10 +27,10 @@ jobs:
       - IN: gcrConfigResource
       - IN: gkeConfigResource
       - TASK:
-         - script: mkdir -p test
-         - script: "echo 'This is a test.  ${CLICONFIGRESOURCE_NAME} ${CLICONFIGRESOURCE_VERSIONNUMBER}' > test/test.txt"
-         - script: "echo 'This is another test.  ${CLICONFIGRESOURCE_PATH}' > test2.txt"
-         - script: shippable_replace test/test.txt test2.txt
+        - script: mkdir -p test
+        - script: "echo 'This is a test.  ${CLICONFIGRESOURCE_NAME} ${CLICONFIGRESOURCE_VERSIONNUMBER}' > test/test.txt"
+        - script: "echo 'This is another test.  ${CLICONFIGRESOURCE_PATH}' > test2.txt"
+        - script: shippable_replace test/test.txt test2.txt
   #       - script: cat test/test.txt
   #       - script: cat test2.txt
   #       - script: "docker pull 544102397216.dkr.ecr.us-west-2.amazonaws.com/test/repository:latest"
