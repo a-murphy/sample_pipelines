@@ -26,7 +26,7 @@ jobs:
     steps:
       - IN: cliConfigResource
       - TASK:
-         - script: docker pull gcr.io/molten-method-94423/1204_nodejs:latest
+         - script: "docker pull gcr.io/molten-method-94423/1204_nodejs:latest"
  #       - script: "gcloud projects list"
   #      - script: "gcloud container clusters list"
   #      - script: "kubectl config view"
