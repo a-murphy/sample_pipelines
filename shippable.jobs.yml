@@ -36,7 +36,7 @@ jobs:
   #       - script: "docker pull 544102397216.dkr.ecr.us-west-2.amazonaws.com/test/repository:latest"
   #       - script: "docker pull gcr.io/molten-method-94423/1204_nodejs:latest"
  #       - script: "gcloud projects list"
-        - script: gcloud config set project molten-method-94423
+ #       - script: gcloud config set project molten-method-94423
         - script: "gcloud container clusters list"
   #      - script: "kubectl config view"
         - script: "kubectl get namespaces"
