@@ -3,7 +3,7 @@ resources:
     type: cliConfig
     integration: ECR
     pointer:
-  #    clusterName: cluster-1
+      clusterName: cluster-1
       region: us-west-2
  
   - name: provisionLoadBalancer
