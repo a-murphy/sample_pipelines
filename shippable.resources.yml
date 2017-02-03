@@ -1,7 +1,35 @@
 resources:
-  - name: cliConfigResource
+  - name: gkeConfigResource
     type: cliConfig
     integration: GKE
+ ##   pointer:
+ #     clusterName: cluster-1
+ #     region: us-west-2
+ 
+  - name: awsConfigResource
+    type: cliConfig
+    integration: AWS
+ ##   pointer:
+ #     clusterName: cluster-1
+ #     region: us-west-2
+ 
+  - name: ecrConfigResource
+    type: cliConfig
+    integration: ECR
+ ##   pointer:
+ #     clusterName: cluster-1
+ #     region: us-west-2
+ 
+  - name: gcrConfigResource
+    type: cliConfig
+    integration: GCR
+ ##   pointer:
+ #     clusterName: cluster-1
+ #     region: us-west-2
+ 
+  - name: dockerHubConfigResource
+    type: cliConfig
+    integration: DockerHub
  ##   pointer:
  #     clusterName: cluster-1
  #     region: us-west-2
