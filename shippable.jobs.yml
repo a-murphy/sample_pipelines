@@ -25,7 +25,7 @@ jobs:
     type: runCLI                           
     steps:
   #    - IN: gcrConfigResource
-      - IN: gkeConfigResource
+   #   - IN: gkeConfigResource
       - IN: ecrConfigResource
       - IN: dockerHubConfigResource
       - IN: awsConfigResource
@@ -40,12 +40,13 @@ jobs:
   #       - script: "docker pull gcr.io/molten-method-94423/1204_nodejs:latest"
  #       - script: "gcloud projects list"
  #       - script: gcloud config set project molten-method-94423
-        - script: "gcloud container clusters list"
+  #      - script: "gcloud container clusters list"
   #      - script: "kubectl config view"
-        - script: "kubectl get namespaces"
+  #      - script: "kubectl get namespaces"
   #      - script: "aws ecs list-container-instances --cluster test-cluster"
   #      - script: eb init "my-application-name" -p "Node.js"
   #      - script: eb terminate --all --force "my-application-name"
+      - OUT: customImage
 
   - name: foo
     type: release
