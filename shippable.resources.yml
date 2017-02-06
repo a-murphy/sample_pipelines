@@ -13,6 +13,10 @@ resources:
   - name: jFrogResource
     type: cliConfig
     integration: JFrog
+
+  - name: dockerTrustedRegistryResource
+    type: cliConfig
+    integration: DockerTrustedRegistry
     
   - name: awsConfigResource
     type: cliConfig
