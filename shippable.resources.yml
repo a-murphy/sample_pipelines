@@ -18,6 +18,10 @@ resources:
     type: cliConfig
     integration: DockerTrustedRegistry
     
+  - name: privateDockerRegistryResource
+    type: cliConfig
+    integration: PrivateDockerRegistry
+    
   - name: awsConfigResource
     type: cliConfig
     integration: AWS
