@@ -10,6 +10,10 @@ resources:
     type: cliConfig
     integration: Kubernetes
  
+  - name: jFrogResource
+    type: cliConfig
+    integration: JFrog
+    
   - name: awsConfigResource
     type: cliConfig
     integration: AWS
