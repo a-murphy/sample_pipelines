@@ -30,7 +30,8 @@ jobs:
    #   - IN: dockerHubConfigResource
    #   - IN: awsConfigResource
     #  - IN: jFrogResource
-      - IN: dockerTrustedRegistryResource
+    #  - IN: dockerTrustedRegistryResource
+      - IN: privateDockerRegistryResource
       - TASK:
         - script: mkdir -p test
         - script: "echo 'This is a test.  ${CLICONFIGRESOURCE_NAME} ${CLICONFIGRESOURCE_VERSIONNUMBER}' > test/test.txt"
