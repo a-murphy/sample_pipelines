@@ -15,10 +15,10 @@ jobs:
     type: provision                           
     steps:
   #    - IN: provisionExternalName
-      - IN: branchlessProject2
+      - IN: projectOne
       - IN: version-resource-1
   #    - IN: provisionLoadBalancer
-  #    - IN: myEcsParams
+      - OUT: myEcsParams
   
   
   - name: cliJob
