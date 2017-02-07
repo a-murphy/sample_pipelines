@@ -30,6 +30,7 @@ jobs:
    #   - IN: dockerHubConfigResource
    #   - IN: awsConfigResource
       - IN: jFrogResource
+      - IN: projectOne
     #  - IN: dockerTrustedRegistryResource
     #  - IN: privateDockerRegistryResource
       - TASK:
@@ -39,6 +40,7 @@ jobs:
         - script: shippable_replace test/test.txt test2.txt
         - script: mv test2.txt test_$BUILD_NUMBER.txt
         - script: printenv
+        - script: ls $JFROGRESOURCE_STATE
         - script: ls $JOB_STATE
         - script: ls $JOB_PREVIOUS_STATE
         - script: ls $JOB_MESSAGE        
