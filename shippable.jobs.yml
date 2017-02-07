@@ -17,6 +17,8 @@ jobs:
   #    - IN: provisionExternalName
       - IN: projectOne
       - IN: version-resource-1
+      - IN: myOtherEcsParams
+      - IN: cliJob
   #    - IN: provisionLoadBalancer
       - OUT: mongo-image
   
@@ -31,7 +33,7 @@ jobs:
    #   - IN: awsConfigResource
       - IN: jFrogResource
       - IN: projectOne
-      - IN: myEcsParams
+      - IN: myOtherEcsParams
     #  - IN: dockerTrustedRegistryResource
     #  - IN: privateDockerRegistryResource
       - TASK:
