@@ -31,6 +31,7 @@ jobs:
    #   - IN: awsConfigResource
       - IN: jFrogResource
       - IN: projectOne
+      - IN: myEcsParams
     #  - IN: dockerTrustedRegistryResource
     #  - IN: privateDockerRegistryResource
       - TASK:
