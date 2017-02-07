@@ -40,10 +40,8 @@ jobs:
         - script: shippable_replace test/test.txt test2.txt
         - script: mv test2.txt test_$BUILD_NUMBER.txt
         - script: printenv
-        - script: ls $JFROGRESOURCE_STATE
-        - script: ls $JOB_STATE
-        - script: ls $JOB_PREVIOUS_STATE
-        - script: ls $JOB_MESSAGE        
+        - script: ls -al $JFROGRESOURCE_META
+        - script: ls -R $PROJECTONE_STATE
      #   - script: jfrog rt u test_$BUILD_NUMBER.txt generic-local
   #       - script: cat test/test.txt
   #       - script: cat test2.txt
