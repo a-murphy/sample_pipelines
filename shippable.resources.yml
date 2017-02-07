@@ -212,9 +212,10 @@ resources:
           minimumHealthyPercent: 75
       memory: 48
     #  cpuShares: 10
-    #  portMappings:
-    #    - 27017:27017
-    #    - 8000:8000
+      portMappings:
+        - 27017:27017
+        - 27018:27018
+        - 8000:8000
     #    - 80:80
     #  links:
     #    - "one:1"
