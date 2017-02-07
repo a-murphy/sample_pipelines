@@ -34,6 +34,7 @@ jobs:
       - IN: jFrogResource
       - IN: projectOne
       - IN: myOtherEcsParams
+      - IN: nginx-manifest2
     #  - IN: dockerTrustedRegistryResource
     #  - IN: privateDockerRegistryResource
       - TASK:
@@ -44,6 +45,7 @@ jobs:
         - script: mv test2.txt test_$BUILD_NUMBER.txt
         - script: printenv
         - script: ls -al $MYOTHERECSPARAMS_META
+        - script: ls -al $NGINX-MANIFEST2_META
      #   - script: jfrog rt u test_$BUILD_NUMBER.txt generic-local
   #       - script: cat test/test.txt
   #       - script: cat test2.txt
