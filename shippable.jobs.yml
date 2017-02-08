@@ -21,6 +21,12 @@ jobs:
       - IN: cliJob
   #    - IN: provisionLoadBalancer
       - OUT: mongo-image
+    on_success:
+      - script: echo "Success"
+      - NOTIFY: notifyMe
+    on_failure:
+      - script: echo "Failure"
+      - NOTIFY: notifyMe
   
   
   - name: cliJob
@@ -382,6 +388,12 @@ jobs:
         - script: "echo 'anotherProperty=foo' >>  /build/state/mongo-image.env"
         - script: "echo 'anotherProperty2=foo2' >>  /build/state/mongo-image.env"
       - OUT: mongo-image
+    on_success:
+      - script: echo "Success"
+      - NOTIFY: notifyMe
+    on_failure:
+      - script: echo "Failure"
+      - NOTIFY: notifyMe
       
   - name: custom3
     type: runSh
