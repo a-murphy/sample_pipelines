@@ -28,7 +28,6 @@ jobs:
       - script: echo "Failure"
       - NOTIFY: notifyMe
   
-  
   - name: cliJob
     type: runCLI                           
     steps:
@@ -56,7 +55,10 @@ jobs:
       - script: echo "Success"
       - NOTIFY: notifyMe
     on_failure:
-      - script: echo "Failure"
+      - script: ls Failure
+      - NOTIFY: notifyMe
+    always:
+      - script: echo "Always"
       - NOTIFY: notifyMe
      
      #   - script: jfrog rt u test_$BUILD_NUMBER.txt generic-local
