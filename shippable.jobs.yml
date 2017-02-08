@@ -46,6 +46,13 @@ jobs:
         - script: printenv
         - script: ls -al $MYOTHERECSPARAMS_META
         - script: ls -al $NGINXMANIFEST2_META
+    on_success:
+      - script: echo "Success"
+      - NOTIFY: notifyMe
+    on_failure:
+      - script: echo "Failure"
+      - NOTIFY: notifyMe
+     
      #   - script: jfrog rt u test_$BUILD_NUMBER.txt generic-local
   #       - script: cat test/test.txt
   #       - script: cat test2.txt
