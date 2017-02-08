@@ -50,9 +50,9 @@ jobs:
         - script: mv test2.txt test_$BUILD_NUMBER.txt
         - script: printenv
         - script: ls -al $MYOTHERECSPARAMS_META
-        - script: ls -al $NGINXMANIFEST2_STATE/test
+        - script: ls -al $NGINXMANIFEST2_STATE
     on_success:
-      - script: echo "Success"
+      - script: ls "Success"
       - NOTIFY: notifyMe
     on_failure:
       - script: ls Failure
