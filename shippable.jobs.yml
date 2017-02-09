@@ -25,10 +25,10 @@ jobs:
       - OUT: mongo-image
     on_success:
       - script: echo "Success"
-      - NOTIFY: notifyMe
+ #     - NOTIFY: notifyMe
     on_failure:
       - script: echo "Failure"
-      - NOTIFY: notifyMe
+  #    - NOTIFY: notifyMe
   
   - name: cliJob
     type: runCLI                           
