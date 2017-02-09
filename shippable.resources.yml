@@ -359,6 +359,13 @@ resources:
       branches:
         except:
           - test
+          
+  - name: specialCharactersBranch
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: "a-murphy/sample_pipelines"
+      branch: "test$special`characters"
       
   - name: branchlessProject3
     type: gitRepo
