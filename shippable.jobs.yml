@@ -19,7 +19,7 @@ jobs:
       - IN: version-resource-1
       - IN: myOtherEcsParams
       - IN: cliJob
-      - IN: specialCharactersBranch
+#      - IN: specialCharactersBranch
       - IN: busybox-image
   #    - IN: provisionLoadBalancer
       - OUT: mongo-image
