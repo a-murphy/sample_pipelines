@@ -48,7 +48,7 @@ jobs:
         - script: shippable_replace test/test.txt test2.txt
         - script: mv test2.txt test_$BUILD_NUMBER.txt
         - script: printenv
-        - script: ls -al $MYOTHERECSPARAMS_META
+        - scipt: echo $PROJECTONE_COMMIT_MESSAGE
     on_success:
       - script: ls "Success"
  #     - NOTIFY: notifyMe
