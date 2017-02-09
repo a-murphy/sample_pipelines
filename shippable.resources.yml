@@ -379,8 +379,7 @@ resources:
     pointer:
       sourceName: "a-murphy/sample_ubuntu1204_go"
       buildOnPullRequest: true
-      
-            
+                  
   - name: gitlabProject
     type: gitRepo
     integration: gitlab
@@ -416,11 +415,11 @@ resources:
     pointer: 
       base: "1.0.2-alpha.beta"
 
-  - name: tritonCluster
-    type: cluster
-    integration: Triton
-    pointer:
-      region: "us-east-1"
+#  - name: tritonCluster
+#    type: cluster
+#    integration: Triton
+#    pointer:
+#      region: "us-east-1"
 
 #  - name: kickstart
 #    type: kickStart
