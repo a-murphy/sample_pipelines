@@ -41,7 +41,7 @@ jobs:
       - IN: jFrogResource
       - IN: projectOne
       - IN: myOtherEcsParams
-      - IN: specialCharactersBranch
+   #   - IN: specialCharactersBranch
       - IN: busybox-image
     #  - IN: dockerTrustedRegistryResource
     #  - IN: privateDockerRegistryResource
