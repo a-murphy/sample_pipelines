@@ -40,9 +40,9 @@ jobs:
       - IN: awsConfigResource
    #   - IN: jFrogResource
       - IN: projectOne
-      - IN: myOtherEcsParams
+   #   - IN: myOtherEcsParams
    #   - IN: specialCharactersBranch
-      - IN: busybox-image
+   #   - IN: busybox-image
     #  - IN: dockerTrustedRegistryResource
     #  - IN: privateDockerRegistryResource
       - TASK:
