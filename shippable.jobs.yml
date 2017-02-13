@@ -37,8 +37,8 @@ jobs:
    #   - IN: gkeConfigResource
    #   - IN: ecrConfigResource
    #   - IN: dockerHubConfigResource
-   #   - IN: awsConfigResource
-      - IN: jFrogResource
+      - IN: awsConfigResource
+   #   - IN: jFrogResource
       - IN: projectOne
       - IN: myOtherEcsParams
    #   - IN: specialCharactersBranch
