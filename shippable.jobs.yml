@@ -51,10 +51,10 @@ jobs:
         - script: "echo 'This is another test.  ${CLICONFIGRESOURCE_PATH}' > test2.txt"
    #     - script: shippable_replace test/test.txt test2.txt
         - script: mv test2.txt test_$BUILD_NUMBER.txt
-        - script: which packer
-        - script: packer --version
         - script: which terraform
         - script: terraform --version
+        - script: which packer
+        - script: packer --version
     #    - script: docker login -u $BUSYBOXIMAGE_INTEGRATION_USERNAME -p $BUSYBOXIMAGE_INTEGRATION_PASSWORD -e $BUSYBOXIMAGE_INTEGRATION_EMAIL
     on_success:
       - script: ls "Success"
