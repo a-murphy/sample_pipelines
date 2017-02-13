@@ -54,7 +54,7 @@ jobs:
         - script: which terraform
         - script: terraform --version
         - script: which packer
-        - script: packer --version
+        - script: packer --version version
     #    - script: docker login -u $BUSYBOXIMAGE_INTEGRATION_USERNAME -p $BUSYBOXIMAGE_INTEGRATION_PASSWORD -e $BUSYBOXIMAGE_INTEGRATION_EMAIL
     on_success:
       - script: ls "Success"
