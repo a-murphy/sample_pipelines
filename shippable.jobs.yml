@@ -39,7 +39,7 @@ jobs:
    #   - IN: dockerHubConfigResource
       - IN: awsConfigResource
    #   - IN: jFrogResource
-      - IN: projectOne
+   #   - IN: projectOne
    #   - IN: myOtherEcsParams
    #   - IN: specialCharactersBranch
    #   - IN: busybox-image
