@@ -20,7 +20,7 @@ jobs:
       - IN: myOtherEcsParams
       - IN: cliJob
 #      - IN: specialCharactersBranch
-      - IN: busybox-image
+  #    - IN: busybox-image
   #    - IN: provisionLoadBalancer
   #- OUT: mongo-image
     on_success:
