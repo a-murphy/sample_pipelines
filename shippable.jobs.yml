@@ -17,7 +17,7 @@ jobs:
   #    - IN: provisionExternalName
   #    - IN: projectOne
       - IN: version-resource-1
-      - IN: myOtherEcsParams
+   #   - IN: myOtherEcsParams
       - IN: cliJob
 #      - IN: specialCharactersBranch
   #    - IN: busybox-image
