@@ -180,6 +180,7 @@ jobs:
     steps:
       - IN: nginx-image
         switch: off
+      - IN: sample_java_mysql_runCI
     #  - IN: gitlabProject
       - TASK: managed
       
@@ -188,6 +189,8 @@ jobs:
     type: manifest
     steps:
       - IN: busybox-image
+        switch: off
+      - IN: sample_java_mysql_runCI
         switch: off
       - TASK: managed
    
@@ -462,6 +465,7 @@ jobs:
   - name: custom7
     type: runSh
     steps:
+      - IN: sample_java_mysql_runCI
       - IN: custom6
       - TASK:
         - script: "echo two"
