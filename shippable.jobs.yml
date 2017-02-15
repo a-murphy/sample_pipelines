@@ -34,6 +34,9 @@ jobs:
     type: runCI        
     steps:
       - TASK: managed
+    on_start:
+      - NOTIFY: emailMe
+      - NOTIFY: notifyMe
     on_success:
       - script: echo "Success"
       - NOTIFY: notifyMe
