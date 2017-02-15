@@ -31,7 +31,9 @@ jobs:
   #    - NOTIFY: notifyMe
   
   - name: sample_java_mysql_ciJob
-    type: runCI                           
+    type: runCI        
+    steps:
+      - TASK: managed
     on_success:
       - script: echo "Success"
       - NOTIFY: notifyMe
