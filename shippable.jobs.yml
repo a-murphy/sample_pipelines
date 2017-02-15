@@ -49,7 +49,7 @@ jobs:
   - name: cliJob
     type: runCLI                           
     steps:
-  #    - IN: gcrConfigResource
+      - IN: gcrConfigResource
    #   - IN: gkeConfigResource
    #   - IN: ecrConfigResource
    #   - IN: dockerHubConfigResource
