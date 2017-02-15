@@ -33,6 +33,8 @@ jobs:
   - name: sample_java_mysql_runCI
     type: runCI        
     steps:
+      - IN: provisionJob2
+      - OUT: mongo-image
       - TASK: managed
     on_start:
       - NOTIFY: emailMe
