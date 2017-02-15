@@ -30,7 +30,7 @@ jobs:
       - script: echo "Failure"
   #    - NOTIFY: notifyMe
   
-  - name: sample_java_mysql_ciJob
+  - name: sample_java_mysql_runCI
     type: runCI        
     steps:
       - TASK: managed
