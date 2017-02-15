@@ -31,7 +31,7 @@ jobs:
   #    - NOTIFY: notifyMe
   
   - name: sample_java_mysql_ciJob
-    type: ciJob                           
+    type: runCI                           
     on_success:
       - script: echo "Success"
       - NOTIFY: notifyMe
