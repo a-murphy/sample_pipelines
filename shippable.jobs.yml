@@ -30,6 +30,15 @@ jobs:
       - script: echo "Failure"
   #    - NOTIFY: notifyMe
   
+  - name: sample_java_mysql_ciJob
+    type: ciJob                           
+    on_success:
+      - script: echo "Success"
+      - NOTIFY: notifyMe
+    on_failure:
+      - script: echo "Failure"
+      - NOTIFY: notifyMe
+  
   - name: cliJob
     type: runCLI                           
     steps:
