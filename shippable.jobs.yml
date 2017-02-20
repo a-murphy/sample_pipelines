@@ -62,14 +62,13 @@ jobs:
     #  - IN: dockerTrustedRegistryResource
     #  - IN: privateDockerRegistryResource
       - TASK:
-   #     - script: mkdir -p test
-   #     - script: "echo 'This is a test.  ${CLICONFIGRESOURCE_NAME} ${CLICONFIGRESOURCE_VERSIONNUMBER}' > test/test.txt"
-   #     - script: "echo 'This is another test.  ${CLICONFIGRESOURCE_PATH}' > test2.txt"
-   #     - script: shippable_replace test/test.txt test2.txt
-   #     - script: mv test2.txt test_$BUILD_NUMBER.txt
-        - script: echo "Testing"
-        - script: printenv
-        - script: docker login -u $BUSYBOXIMAGE_INTEGRATION_USERNAME -p $BUSYBOXIMAGE_INTEGRATION_PASSWORD -e $BUSYBOXIMAGE_INTEGRATION_EMAIL
+        - script: mkdir -p test
+        - script: "echo 'This is a test.  ${CLICONFIGRESOURCE_NAME} ${CLICONFIGRESOURCE_VERSIONNUMBER}' > test/test.txt"
+        - script: "echo 'This is another test.  ${CLICONFIGRESOURCE_PATH}' > test2.txt"
+        - script: shippable_replace test/test.txt test2.txt
+        - script: mv test2.txt test_$BUILD_NUMBER.txt
+        - ls -R
+        - script: cat test2.txt
         - script: terraform --version
         - script: which terraform
         - script: which packer
