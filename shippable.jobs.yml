@@ -30,6 +30,31 @@ jobs:
       - script: echo "Failure"
   #    - NOTIFY: notifyMe
   
+  
+  - name: terraformTest
+    type: runSh                           
+    steps:
+  #    - IN: provisionExternalName
+  #    - IN: projectOne
+      - IN: version-resource-1
+   #   - IN: myOtherEcsParams
+      - IN: cliJob
+#      - IN: specialCharactersBranch
+      - IN: busybox-image
+  #    - IN: provisionLoadBalancer
+      - TASK:
+        - script: terraform --version
+        - script: which terraform
+        - script: which packer
+        - script: packer version
+  #- OUT: mongo-image
+    on_success:
+      - script: echo "Success"
+ #     - NOTIFY: notifyMe
+    on_failure:
+      - script: echo "Failure"
+  #    - NOTIFY: notifyMe
+  
   - name: sample_java_mysql_runCI
     type: runCI        
     steps:
