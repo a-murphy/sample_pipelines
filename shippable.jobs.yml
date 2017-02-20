@@ -94,8 +94,7 @@ jobs:
         - script: "echo 'This is another test.  ${CLICONFIGRESOURCE_PATH}' > test2.txt"
         - script: shippable_replace test/test.txt test2.txt
         - script: mv test2.txt test_$BUILD_NUMBER.txt
-        - script: ls -R
-        - script: cat test2.txt
+        - script: cat test_$BUILD_NUMBER.txt
         - script: echo $PATH
         - script: terraform --version
         - script: which terraform
