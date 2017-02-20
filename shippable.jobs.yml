@@ -43,6 +43,7 @@ jobs:
       - IN: busybox-image
   #    - IN: provisionLoadBalancer
       - TASK:
+        - script: echo $PATH
         - script: terraform --version
         - script: which terraform
         - script: which packer
@@ -94,6 +95,7 @@ jobs:
       #  - script: mv test2.txt test_$BUILD_NUMBER.txt
       #  - ls -R
       #  - script: cat test2.txt
+        - script: echo $PATH
         - script: terraform --version
         - script: which terraform
         - script: which packer
