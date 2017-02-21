@@ -78,7 +78,7 @@ jobs:
     type: runCLI                           
     steps:
       - IN: gcrConfigResource
-      - IN: gkeConfigResource
+   #   - IN: gkeConfigResource
       - IN: ecrConfigResource
       - IN: dockerHubConfigResource
       - IN: awsConfigResource
