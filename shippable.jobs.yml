@@ -77,10 +77,10 @@ jobs:
   - name: cliJob
     type: runCLI                           
     steps:
-   #   - IN: gcrConfigResource
-   #   - IN: gkeConfigResource
-   #   - IN: ecrConfigResource
-   #   - IN: dockerHubConfigResource
+      - IN: gcrConfigResource
+      - IN: gkeConfigResource
+      - IN: ecrConfigResource
+      - IN: dockerHubConfigResource
       - IN: awsConfigResource
    #   - IN: jFrogResource
    #   - IN: projectOne
