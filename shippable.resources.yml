@@ -129,8 +129,17 @@ resources:
     pointer:
       sourceName: "library/busybox"
       isPull: false
+      test:
+        test1: 1!
+        test2: 2@
+        test3: 3#
     seed:
       versionName: "latest"
+      seedtest:
+        - 1$
+        - "test'2%": 2
+          test\2.2&: 2.2
+        - 'test"(3)'
       
   - name: ecr-image
     type: image
