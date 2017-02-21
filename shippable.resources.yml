@@ -131,7 +131,11 @@ resources:
       isPull: false
       test:
         test1: 1!
-        test2: 2@
+        test2:
+          - 2!
+          - 2@
+          - 2%
+          - 2`
         test3: 3#
     seed:
       versionName: "latest"
