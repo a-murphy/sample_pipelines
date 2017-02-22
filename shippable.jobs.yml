@@ -41,11 +41,13 @@ jobs:
       - IN: version-resource-1
    #   - IN: myOtherEcsParams
       - IN: cliJob
-#      - IN: specialCharactersBranch
+      - IN: specialCharactersBranch
       - IN: busybox-image
   #    - IN: provisionLoadBalancer
       - TASK:
         - script: echo $PATH
+        - script: echo $SPECIALCHARACTERSBRANCH_HTTPS_URL
+        - script: echo $SPECIALCHARACTERSBRANCH_SSH_URL
         - script: terraform --version
         - script: which terraform
         - script: which packer
@@ -62,6 +64,7 @@ jobs:
     type: runCI        
     steps:
       - IN: gcrConfigResource
+      - IN: specialCharactersBranch
       - OUT: mongo-image
       - TASK: managed
     on_start:
