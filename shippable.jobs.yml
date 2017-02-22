@@ -77,11 +77,11 @@ jobs:
   - name: cliJob
     type: runCLI                           
     steps:
-      - IN: gcrConfigResource
+    #  - IN: gcrConfigResource
    #   - IN: gkeConfigResource
-      - IN: ecrConfigResource
-      - IN: dockerHubConfigResource
-      - IN: awsConfigResource
+    #  - IN: ecrConfigResource
+    #  - IN: dockerHubConfigResource
+    #  - IN: awsConfigResource
    #   - IN: jFrogResource
    #   - IN: projectOne
       - IN: myOtherEcsParams
@@ -98,6 +98,7 @@ jobs:
         - script: mv test2.txt test_$BUILD_NUMBER.txt
         - script: cat test_$BUILD_NUMBER.txt
         - script: echo $PATH
+        - script: printenv
         - script: terraform --version
         - script: which terraform
         - script: which packer
