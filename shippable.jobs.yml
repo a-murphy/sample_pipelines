@@ -63,7 +63,7 @@ jobs:
   - name: sample_java_mysql_runCI
     type: runCI        
     steps:
-      - IN: gcrConfigResource
+  #    - IN: gcrConfigResource
       - IN: specialCharactersBranch
       - OUT: mongo-image
       - TASK: managed
