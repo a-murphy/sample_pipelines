@@ -48,6 +48,7 @@ jobs:
         - script: echo $PATH
         - script: echo $SPECIALCHARACTERSBRANCH_HTTPS_URL
         - script: echo $SPECIALCHARACTERSBRANCH_SSH_URL
+        - script: envsubst < 'SSH: ${SPECIALCHARACTERSBRANCH_SSH_URL} HTTPS: ${SPECIALCHARACTERSBRANCH_HTTPS_URL}'
         - script: terraform --version
         - script: which terraform
         - script: which packer
@@ -95,8 +96,8 @@ jobs:
       - TASK:
         - script: mkdir -p test
         - script: which gettext
-        - script: "echo 'This is a test.  ${AWSCONFIGRESOURCE_NAME} ${AWSCONFIGRESOURCE_VERSIONNUMBER}' > test/test.txt"
-        - script: "echo 'This is another test.  ${AWSCONFIGRESOURCE_PATH}' > test2.txt"
+        - script: "echo 'This is a test.  ${BUILD_NUMBER} ${SPECIALCHARACTERSBRANCH_HTTPS_URL}' > test/test.txt"
+        - script: "echo 'This is another test.  ${SPECIALCHARACTERSBRANCH_SSH_URL}' > test2.txt"
         - script: shippable_replace test/test.txt test2.txt
         - script: mv test2.txt test_$BUILD_NUMBER.txt
         - script: cat test_$BUILD_NUMBER.txt
