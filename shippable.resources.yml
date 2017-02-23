@@ -162,12 +162,12 @@ resources:
 
   - name: emailMe
     type: notification
-    integration: email
+  #  integration: email
     pointer:
       recipients:
         - "aidan@shippable.com"
 
-  - name: myLoadBalancer
+  - name: myLoadBalancer#
     type: loadBalancer
     pointer:
       sourceName: LoadBalancer
