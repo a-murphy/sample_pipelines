@@ -163,6 +163,7 @@ resources:
   - name: emailMe
     type: notification
   #  integration: email
+    method: email
     pointer:
       recipients:
         - "aidan@shippable.com"
