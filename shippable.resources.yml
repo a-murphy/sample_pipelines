@@ -5,22 +5,10 @@ resources:
     pointer:
       clusterName: cluster-1
       region: us-central1-a
-      
-  - name: kubeConfigResource
-    type: cliConfig
-    integration: Kubernetes
  
   - name: jFrogResource
     type: cliConfig
     integration: JFrog
-
-  - name: dockerTrustedRegistryResource
-    type: cliConfig
-    integration: DockerTrustedRegistry
-    
-  - name: privateDockerRegistryResource
-    type: cliConfig
-    integration: PrivateDockerRegistry
     
   - name: awsConfigResource
     type: cliConfig
