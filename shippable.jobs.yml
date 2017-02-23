@@ -64,7 +64,7 @@ jobs:
     type: runCI        
     steps:
   #    - IN: gcrConfigResource
-      - IN: specialCharactersBranch
+  #    - IN: specialCharactersBranch
       - OUT: mongo-image
       - TASK: managed
     on_start:
