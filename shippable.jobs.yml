@@ -48,7 +48,10 @@ jobs:
         - script: echo $PATH
         - script: echo $SPECIALCHARACTERSBRANCH_HTTPS_URL
         - script: echo $SPECIALCHARACTERSBRANCH_SSH_URL
-        - script: "envsubst < 'SSH: ${SPECIALCHARACTERSBRANCH_SSH_URL} HTTPS: ${SPECIALCHARACTERSBRANCH_HTTPS_URL}'"
+        - script: "echo 'SSH: ${SPECIALCHARACTERSBRANCH_SSH_URL} HTTPS: ${SPECIALCHARACTERSBRANCH_HTTPS_URL}' > test.txt"
+        - script: cat test.txt
+        - script: "envsubst < test.txt"
+        - script: cat test.txt
         - script: terraform --version
         - script: which terraform
         - script: which packer
