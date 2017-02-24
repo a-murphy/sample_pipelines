@@ -29,6 +29,7 @@ resources:
     integration: OtherGCR
  ##   pointer:
  #     clusterName: cluster-1
+
  #     region: us-west-2
  
   - name: dockerHubConfigResource
@@ -292,7 +293,7 @@ resources:
     integration: GKE
     pointer:
       sourceName : "cluster-1"
-      region: "us-central1-c"
+      region: "us-central1-a"
    #   namespace: myFifthNamespace
 
   - name: myDclCluster
