@@ -157,10 +157,10 @@ resources:
       recipients:
         - "aidan@shippable.com"
 
-  - name: myLoadBalancer#
+  - name: myLoadBalancer
     type: loadBalancer
     pointer:
-      sourceName: LoadBalancer
+      sourceName: myLoadBalancer
    #   role: betaNewAWSRole
   
   - name: myNewApplicationLoadBalancer
