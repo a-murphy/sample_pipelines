@@ -327,7 +327,7 @@ jobs:
 #      - GET: myEcsParams
       - IN: myOtherDockerOptions
         applyTo:
-          - mongo-image
+          - generate-manifest
      #     - nginx-image
       - TASK: managed
      #   deployMethod: upgrade
