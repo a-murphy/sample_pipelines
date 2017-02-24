@@ -235,7 +235,7 @@ jobs:
     steps:
       - IN: nginx-image
         switch: off
-      - IN: sample_java_mysql_runCI
+    #  - IN: sample_java_mysql_runCI
     #  - IN: gitlabProject
       - TASK: managed
       
