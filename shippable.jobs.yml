@@ -161,7 +161,16 @@ jobs:
   #     - test
     #   - NOTIFY: notifyMe
        - NOTIFY: emailMe
-      
+       
+  - name: test-release
+    type: release
+    options:
+      action: test
+    steps:
+      - IN: version-resource-1
+      - IN: generate-manifest
+      - IN: nginx-manifest
+      - TASK: managed
       
   - name: foo5
     type: release
@@ -303,8 +312,7 @@ jobs:
     #  - IN: foo4
      # - IN: generate-mongo-image-manifest-6
     #  - IN: foo
-      - IN: generate-manifest
-      - IN: nginx-image
+      - IN: test-release
      # - IN: nginx-and-busybox-manifest
      # - IN: new-manifest
       - IN: myLoadBalancer
