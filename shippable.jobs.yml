@@ -322,15 +322,15 @@ jobs:
             port: 27017
    #   - IN: ecs-deploy2
       - IN: myEcsCluster
-      - IN: myReplicas
+ #     - IN: myReplicas
 #      - GET: deploy-service-7
 #      - GET: myEcsParams
       - IN: myOtherDockerOptions
         applyTo:
-          - generate-manifest
+          - mongo-image
      #     - nginx-image
       - TASK: managed
-     #   deployMethod: upgrade
+        deployMethod: upgrade
      
   - name: replace-ecs-deploy2-2
     type: deploy
