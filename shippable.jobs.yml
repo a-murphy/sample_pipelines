@@ -69,6 +69,7 @@ jobs:
     steps:
   #    - IN: gcrConfigResource
   #    - IN: specialCharactersBranch
+      - IN: myEcsParams
       - OUT: mongo-image
       - TASK: managed
     on_start:
