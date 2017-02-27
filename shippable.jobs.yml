@@ -94,7 +94,6 @@ jobs:
    #   - IN: projectOne
       - IN: myOtherEcsParams
       - IN: specialCharactersBranch
-      - IN: busybox-image
       - IN: myEcsParams
     #  - IN: dockerTrustedRegistryResource
     #  - IN: privateDockerRegistryResource
@@ -109,6 +108,7 @@ jobs:
         - script: echo $PATH
         - script: echo $SPECIALCHARACTERSBRANCH_HTTPS_URL
         - script: echo $SPECIALCHARACTERSBRANCH_SSH_URL
+        - script: cat /build/stepExec.sh
         - script: echo $TEST
         - script: terraform --version
         - script: which terraform
