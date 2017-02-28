@@ -82,7 +82,7 @@ jobs:
       - script: echo "Failure"
       - NOTIFY: notifyMe
   
-  - name: cliJob
+  - name: cliJob2
     type: runCLI                           
     steps:
     #  - IN: gcrConfigResource
