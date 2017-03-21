@@ -1,4 +1,26 @@
 jobs:
+  - name: sample_java_mongo_runCI
+    type: runCI
+    steps:
+      - OUT: image-resource
+
+  - name: upgrade-rails-staging
+    type: runSh
+    steps:
+      - IN: image-resource
+      - IN: develop-git-repo-resource-with-script
+        switch: off
+      - TASK:
+        - script: $DEVELOPGITREPORESOURCEWITHSCRIPT_STATE/scripts/upgrade.sh
+
+  - name: upgrade-rails-production
+    type: runSh
+    steps:
+      - IN: master-git-repo-resource-with-script
+        switch: off
+      - TASK:
+        - script: $MASTERGITREPORESOURCEWITHSCRIPT_STATE/scripts/upgrade.sh
+
   #- name: generate-mongo-image-manifest-3
   #  type: manifest
   #  steps:
