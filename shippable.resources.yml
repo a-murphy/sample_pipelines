@@ -1,4 +1,25 @@
 resources:
+  - name: image-resource
+    type: image
+    pointer:
+      sourceName: amurphy/test
+    seed:
+      versionName: latest
+      
+  - name: develop-git-repo-resource-with-script
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: "a-murphy/sample_java_mongo"
+      branch: "test1"
+      
+  - name: master-git-repo-resource-with-script
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: "a-murphy/sample_java_mongo"
+      branch: "test2"
+
   - name: gkeConfigResource
     type: cliConfig
     integration: GKE
