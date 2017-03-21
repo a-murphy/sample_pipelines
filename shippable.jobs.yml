@@ -11,6 +11,7 @@ jobs:
       - IN: develop-git-repo-resource-with-script
         switch: off
       - TASK:
+        - script: ls -R $DEVELOPGITREPORESOURCEWITHSCRIPT_STATE
         - script: chmod +x $DEVELOPGITREPORESOURCEWITHSCRIPT_STATE/scripts/upgrade.sh
         - script: ./$DEVELOPGITREPORESOURCEWITHSCRIPT_STATE/scripts/upgrade.sh
 
