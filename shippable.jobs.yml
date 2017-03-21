@@ -11,7 +11,8 @@ jobs:
       - IN: develop-git-repo-resource-with-script
         switch: off
       - TASK:
-        - script: $DEVELOPGITREPORESOURCEWITHSCRIPT_STATE/scripts/upgrade.sh
+        - script: chmod +x $DEVELOPGITREPORESOURCEWITHSCRIPT_STATE/scripts/upgrade.sh
+        - script: ./$DEVELOPGITREPORESOURCEWITHSCRIPT_STATE/scripts/upgrade.sh
 
   - name: upgrade-rails-production
     type: runSh
