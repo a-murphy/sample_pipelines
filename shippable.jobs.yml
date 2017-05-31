@@ -41,19 +41,19 @@ jobs:
   #    - IN: projectOne
       - IN: version-resource-1
    #   - IN: myOtherEcsParams
-      - IN: cliJob2
+  #    - IN: cliJob2
 #      - IN: specialCharactersBranch
       - IN: busybox-image
-      - IN: myOtherEcsParams
-      - IN: specialCharactersBranch
+  #    - IN: myOtherEcsParams
+  #    - IN: specialCharactersBranch
   #    - IN: provisionLoadBalancer
   #- OUT: mongo-image
     on_success:
       - script: echo "Success"
- #     - NOTIFY: notifyMe
+      - NOTIFY: notifyMe
     on_failure:
       - script: echo "Failure"
-  #    - NOTIFY: notifyMe
+      - NOTIFY: notifyMe
   
   
   - name: terraformTest
