@@ -143,6 +143,8 @@ jobs:
     on_failure:
       - script: ls Failure
  #     - NOTIFY: notifyMe
+    on_cancel:
+      - NOTIFY: notifyMe
     always:
       - script: echo "Always"
  #     - NOTIFY: notifyMe
