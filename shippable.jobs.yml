@@ -257,7 +257,7 @@ jobs:
   #    - GET: deploy-service
       - IN: myDockerOptions
       - TASK: managed
-      
+
   - name: ecr-manifest
     type: manifest
     steps:
@@ -265,7 +265,8 @@ jobs:
         switch: off
       - IN: myDockerOptions
       - TASK: managed
-   
+    on_cancel: always
+
   - name: nginx-manifest2
     type: manifest
     steps:
