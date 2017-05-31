@@ -265,7 +265,8 @@ jobs:
         switch: off
       - IN: myDockerOptions
       - TASK: managed
-    on_cancel: never
+    on_cancel:
+      - NOTIFY: notifyMe
 
   - name: nginx-manifest2
     type: manifest
