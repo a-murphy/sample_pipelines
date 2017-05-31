@@ -86,6 +86,8 @@ jobs:
     on_failure:
       - script: echo "Failure"
   #    - NOTIFY: notifyMe
+    always:
+      - NOTIFY: notifyMe
   
   - name: sample_java_mysql_runCI
     type: runCI        
