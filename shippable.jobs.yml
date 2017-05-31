@@ -117,7 +117,7 @@ jobs:
    #   - IN: projectOne
       - IN: myOtherEcsParams
       - IN: specialCharactersBranch
-      - IN: myEcsParams
+    #  - IN: myEcsParams
     #  - IN: dockerTrustedRegistryResource
     #  - IN: privateDockerRegistryResource
       - TASK:
