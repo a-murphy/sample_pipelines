@@ -144,7 +144,7 @@ jobs:
       - script: ls Failure
  #     - NOTIFY: notifyMe
     on_cancel:
-      - NOTIFY: notifyMe
+      - NOTIFY: notifyMe2
     always:
       - script: echo "Always"
  #     - NOTIFY: notifyMe
