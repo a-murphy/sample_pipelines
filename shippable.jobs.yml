@@ -57,7 +57,9 @@ jobs:
   
   
   - name: terraformTest
-    type: runSh                           
+    type: runSh        
+    flags:
+      - terraform
     steps:
   #    - IN: provisionExternalName
   #    - IN: projectOne
@@ -168,6 +170,8 @@ jobs:
 
   - name: foo
     type: release
+    flags:
+      - notifications
     options:
       action: test
     on_start:
