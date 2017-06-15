@@ -185,6 +185,7 @@ jobs:
      # - GET: myEcsParams
      # - GET: version-resource-5
       - IN: generate-manifest
+      - OUT: image-resource
       - TASK: managed
     on_success:
    #    - test1
