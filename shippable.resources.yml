@@ -407,12 +407,12 @@ resources:
       sourceName: "a-murphy/sample_ubuntu1204_go"
       buildOnPullRequest: true
                   
-  - name: gitlabProject
-    type: gitRepo
-    integration: gitlab
-    pointer:
-      sourceName: "a-murphy/sample_ubuntu1204_go"
-      buildOnPullRequest: true
+ # - name: gitlabProject
+ #   type: gitRepo
+ #   integration: gitlab
+ #   pointer:
+ #     sourceName: "a-murphy/sample_ubuntu1204_go"
+ #     buildOnPullRequest: true
    
  # - name: projectTwo
 #    type: gitRepo
