@@ -292,6 +292,11 @@ resources:
     version:
       count: 2
 
+  - name: threeReplicas
+    type: replicas
+    version:
+      count: 3
+
   - name: myEcsCluster
     type: cluster
     integration: AWS
