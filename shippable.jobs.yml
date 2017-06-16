@@ -34,16 +34,16 @@ jobs:
   #    - IN: generate-manifest
   #    - TASK: managed
 
-  - name: provisionJob
+  - name: provisionJob2
     type: provision                           
     steps:
-  #    - IN: provisionExternalName
+      - IN: provisionExternalName
   #    - IN: projectOne
-      - IN: version-resource-1
+  #    - IN: version-resource-1
    #   - IN: myOtherEcsParams
   #    - IN: cliJob2
 #      - IN: specialCharactersBranch
-      - IN: busybox-image
+   #   - IN: busybox-image
   #    - IN: myOtherEcsParams
   #    - IN: specialCharactersBranch
   #    - IN: provisionLoadBalancer
@@ -366,7 +366,7 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
      
-  - name: replace-ecs-deploy2
+  - name: replace-ecs-deploy2-2
     type: deploy
     steps:
       - IN: generate-manifest
