@@ -120,21 +120,21 @@ jobs:
    #   - IN: jFrogResource
    #   - IN: projectOne
       - IN: myOtherEcsParams
-      - IN: specialCharactersBranch
+   #   - IN: specialCharactersBranch
     #  - IN: myEcsParams
     #  - IN: dockerTrustedRegistryResource
     #  - IN: privateDockerRegistryResource
       - TASK:
         - script: mkdir -p test
         - script: which gettext
-        - script: "echo 'This is a test.  ${BUILD_NUMBER} ${SPECIALCHARACTERSBRANCH_HTTPS_URL}' > test/test.txt"
-        - script: "echo 'This is another test.  ${SPECIALCHARACTERSBRANCH_SSH_URL}' > test2.txt"
+     #   - script: "echo 'This is a test.  ${BUILD_NUMBER} ${SPECIALCHARACTERSBRANCH_HTTPS_URL}' > test/test.txt"
+     #   - script: "echo 'This is another test.  ${SPECIALCHARACTERSBRANCH_SSH_URL}' > test2.txt"
         - script: shippable_replace test/test.txt test2.txt
         - script: mv test2.txt test_$BUILD_NUMBER.txt
         - script: cat test_$BUILD_NUMBER.txt
         - script: echo $PATH
-        - script: echo $SPECIALCHARACTERSBRANCH_HTTPS_URL
-        - script: echo $SPECIALCHARACTERSBRANCH_SSH_URL
+     #   - script: echo $SPECIALCHARACTERSBRANCH_HTTPS_URL
+     #   - script: echo $SPECIALCHARACTERSBRANCH_SSH_URL
         - script: echo $MYECSPARAMS_PARAMS_TEST
         - script: terraform --version
         - script: which terraform
