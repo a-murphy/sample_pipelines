@@ -264,6 +264,7 @@ jobs:
       - IN: mongo-image
         switch: off
       - IN: nginx-image
+      - OUT: test-state
    #   - OUT: triggerOne
    
    #   - GET: myReplicas
