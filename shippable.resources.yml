@@ -108,6 +108,13 @@ resources:
       loadBalancerIP: "loadBalancerIP"
       externalName: "my-name"
 
+  - name: test-state
+    type: state
+    pointer:
+      sourceName: sourceName
+    seed:
+      versionName: "latest"
+
   - name: mongo-image
     type: image
     pointer:
