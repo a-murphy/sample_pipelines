@@ -119,7 +119,7 @@ jobs:
     #  - IN: awsConfigResource
    #   - IN: jFrogResource
    #   - IN: projectOne
-      - IN: myOtherEcsParams
+  #    - IN: myOtherEcsParams
    #   - IN: specialCharactersBranch
     #  - IN: myEcsParams
     #  - IN: dockerTrustedRegistryResource
