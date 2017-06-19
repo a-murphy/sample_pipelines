@@ -78,10 +78,10 @@ jobs:
     #    - script: cat test.txt
     #    - script: "envsubst < test.txt"
     #    - script: cat test.txt
-        - script: terraform --version
-        - script: which terraform
-        - script: which packer
-        - script: packer version
+ #       - script: terraform --version
+ #       - script: which terraform
+ #       - script: which packer
+ #       - script: packer version
         - script: echo "versionName=test.$BUILD_NUMBER" >> $JOB_STATE/my_image.env
   #- OUT: mongo-image
     on_success:
