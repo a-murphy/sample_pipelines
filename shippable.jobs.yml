@@ -70,6 +70,7 @@ jobs:
       - IN: busybox-image
   #    - IN: provisionLoadBalancer
       - OUT: image-resource
+      - OUT: sample_java_mongo
       - TASK:
         - script: echo $PATH
    #     - script: echo $SPECIALCHARACTERSBRANCH_HTTPS_URL
