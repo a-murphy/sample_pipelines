@@ -130,6 +130,7 @@ jobs:
     #  - IN: myEcsParams
     #  - IN: dockerTrustedRegistryResource
     #  - IN: privateDockerRegistryResource
+      - IN: terraformTest
       - TASK:
      #   - script: mkdir -p test
      #   - script: which gettext
