@@ -65,10 +65,11 @@ jobs:
   #    - IN: projectOne
       - IN: version-resource-1
    #   - IN: myOtherEcsParams
-      - IN: cliJob2
+   #   - IN: cliJob2
       - IN: specialCharactersBranch
       - IN: busybox-image
   #    - IN: provisionLoadBalancer
+      - OUT: image-resource
       - TASK:
         - script: echo $PATH
         - script: echo $SPECIALCHARACTERSBRANCH_HTTPS_URL
@@ -81,6 +82,7 @@ jobs:
         - script: which terraform
         - script: which packer
         - script: packer version
+        - script: echo "versionName=test.$BUILD_NUMBER" >> $JOB_STATE/my_image.env
   #- OUT: mongo-image
     on_success:
       - script: echo "Success"
