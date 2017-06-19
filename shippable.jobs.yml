@@ -70,10 +70,10 @@ jobs:
    #   - IN: specialCharactersBranch
       - IN: busybox-image
   #    - IN: provisionLoadBalancer
-      - IN: develop-git-repo-resource-with-script
+     # - IN: develop-git-repo-resource-with-script
       - OUT: image-resource
       - OUT: sample_java_mongo_ciRepo
-      - OUT: test-state
+     # - OUT: test-state
       - TASK:
         - script: echo $PATH
    #     - script: echo $SPECIALCHARACTERSBRANCH_HTTPS_URL
@@ -86,7 +86,7 @@ jobs:
  #       - script: which terraform
  #       - script: which packer
  #       - script: packer version
-        - script: echo "versionName=test6" > /build/state/image-resource.env
+        - script: echo "versionName=test7" > /build/state/image-resource.env
         - cat /build/OUT/image-resource/image-resource.env
   #- OUT: mongo-image
     on_success:
