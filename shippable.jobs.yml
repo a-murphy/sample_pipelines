@@ -142,10 +142,10 @@ jobs:
         - script: packer version
     #    - script: docker login -u $BUSYBOXIMAGE_INTEGRATION_USERNAME -p $BUSYBOXIMAGE_INTEGRATION_PASSWORD -e $BUSYBOXIMAGE_INTEGRATION_EMAIL
     on_success:
-      - script: ls "Success"
+      - script: echo "Success"
  #     - NOTIFY: notifyMe
     on_failure:
-      - script: ls Failure
+      - script: echo Failure
  #     - NOTIFY: notifyMe
     on_cancel:
       - NOTIFY: notifyMe
