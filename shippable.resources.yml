@@ -226,7 +226,7 @@ resources:
     integration: AWS
     version:
       memory: 36
-      cpuShares: 5
+      cpuShares: 4
 
   - name: myOtherDockerOptions
     type: dockerOptions
