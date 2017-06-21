@@ -265,6 +265,7 @@ jobs:
       - IN: mongo-image
         switch: off
       - IN: nginx-image
+      - IN: custom5
       - OUT: test-state
    #   - OUT: triggerOne
    
@@ -491,6 +492,7 @@ jobs:
       - IN: myEcsParams
       - IN: myOtherDockerOptions
       - IN: projectOne
+      - IN: custom5
       - TASK:
         - script: mkdir testdirectory && cd testdirectory && pwd
         - script: pwd
