@@ -265,7 +265,7 @@ jobs:
       - IN: mongo-image
         switch: off
       - IN: nginx-image
-      - IN: custom5
+      - IN: sample_node_mongo_runCI
       - OUT: test-state
    #   - OUT: triggerOne
    
