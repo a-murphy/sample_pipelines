@@ -489,7 +489,7 @@ jobs:
       - IN: busybox-image
       - IN: version-resource-1
       - IN: myReplicas
-      - IN: myEcsParams
+#      - IN: myEcsParams
       - IN: myOtherDockerOptions
       - IN: projectOne
       - IN: custom5
