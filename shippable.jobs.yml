@@ -284,6 +284,7 @@ jobs:
   - name: nginx-manifest2
     type: manifest
     steps:
+      - IN: sample_java_mysql_runCI
       - IN: nginx-image
         switch: off
     #  - IN: sample_java_mysql_runCI
