@@ -386,7 +386,7 @@ jobs:
   - name: replace-ecs-deploy
     type: deploy
     steps:
-   #   - IN: generate-manifest
+      - IN: generate-manifest
       - IN: foo4
     #  - IN: busybox-manifest2
   #    - IN: myLoadBalancer
