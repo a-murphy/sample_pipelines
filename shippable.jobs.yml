@@ -497,7 +497,6 @@ jobs:
 #      - IN: myEcsParams
       - IN: myOtherDockerOptions
       - IN: projectOne
-      - IN: custom5
       - TASK:
         - script: mkdir testdirectory && cd testdirectory && pwd
         - script: pwd
