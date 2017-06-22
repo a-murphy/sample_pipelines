@@ -22,7 +22,12 @@ jobs:
         switch: off
       - TASK:
         - script: $MASTERGITREPORESOURCEWITHSCRIPT_STATE/scripts/upgrade.sh
-
+        
+  - name: no-inputs
+    type: runSh
+    steps:
+      - TASK:
+        - script: "echo true"
   #- name: generate-mongo-image-manifest-3
   #  type: manifest
   #  steps:
