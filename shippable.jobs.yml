@@ -596,3 +596,13 @@ jobs:
  #     - TASK: managed
  #     - OUT: mongo-image
 
+  - name: generate-file-manifest
+    type: manifest
+    steps:
+      - IN: file
+  - name: deploy-node
+    type: deploy
+    steps:
+      - IN: generate-file-manifest
+      - IN: nodeCluster
+
