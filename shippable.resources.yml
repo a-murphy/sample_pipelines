@@ -469,6 +469,7 @@ resources:
 
   - name: file
     type: file
+    integration: Node
     pointer:
       sourceName: https://raw.githubusercontent.com/a-murphy/sample_pipelines/master/README.md
     seed:
