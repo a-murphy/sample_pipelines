@@ -470,7 +470,7 @@ resources:
   - name: file
     type: file
     pointer:
-      sourceName: https://raw.githubusercontent.com/a-murphy/sample_pipelines/master/README.md
+      sourceName: https://raw.githubusercontent.com/a-murphy/sample_pipelines/master/shippable.resources.yml
     seed:
       versionName: initial
       
