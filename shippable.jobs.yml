@@ -605,4 +605,6 @@ jobs:
     steps:
       - IN: generate-file-manifest
       - IN: nodeCluster
+      - TASK:
+        - script: ls /tmp/shippable/generate-file-manifest/file
 
