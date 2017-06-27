@@ -103,7 +103,9 @@ jobs:
       - NOTIFY: notifyMe
   
   - name: sample_java_mysql_runCI
-    type: runCI        
+    type: runCI
+    flags:
+      - terraform
     steps:
   #    - IN: gcrConfigResource
   #    - IN: specialCharactersBranch
