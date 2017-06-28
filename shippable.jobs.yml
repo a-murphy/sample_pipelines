@@ -41,7 +41,8 @@ jobs:
   #    - TASK: managed
 
   - name: provisionJob
-    type: provision                           
+    type: provision         
+    integration: test
     steps:
       - IN: provisionExternalName
   #    - IN: projectOne
