@@ -260,7 +260,7 @@ jobs:
         switch: off
       - IN: generate-manifest
         switch: off
-      - OUT: mongo-image
+      - OUT: image-resource
         replicate: new-mongo-image
   #    - GET: generate-manifest
   #    - GET: myEcsParams
