@@ -479,7 +479,7 @@ resources:
     pointer:
       sourceName: https://raw.githubusercontent.com/a-murphy/sample_pipelines/test/README.md
     seed:
-      versionName: test2
+      versionName: test3
       
   - name: nodeCluster
     type: cluster
