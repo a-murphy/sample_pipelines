@@ -615,7 +615,7 @@ jobs:
    #   - IN: new-mongo-image
    #     switch: off
       - OUT: image-resource
-        replicate: new-mongo-image
+   #     replicate: new-mongo-image
 
   - name: deploy-node
     type: deploy
