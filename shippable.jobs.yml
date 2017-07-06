@@ -608,6 +608,9 @@ jobs:
     type: manifest
     steps:
       - IN: file
+      - OUT: file2
+        replicate: file
+
   - name: deploy-node
     type: deploy
     steps:
@@ -615,4 +618,5 @@ jobs:
       - IN: nodeCluster
       - TASK:
         - script: ls /tmp/shippable/generate-file-manifest/file
+        
 
