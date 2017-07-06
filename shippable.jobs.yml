@@ -80,6 +80,7 @@ jobs:
       - OUT: image-resource
         replicate: busybox-image
       - OUT: sample_java_mongo_ciRepo
+        replicate: version-resource-123
       - OUT: test-state
         replicate: version-resource-123
       - TASK:
