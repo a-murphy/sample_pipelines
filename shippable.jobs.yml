@@ -81,7 +81,7 @@ jobs:
         replicate: busybox-image
       - OUT: sample_java_mongo_ciRepo
       - OUT: test-state
-        replicate: version-resource-1
+        replicate: version-resource-12
       - TASK:
         - script: echo $PATH
    #     - script: echo $SPECIALCHARACTERSBRANCH_HTTPS_URL
