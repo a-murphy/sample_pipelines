@@ -607,9 +607,9 @@ jobs:
   - name: generate-file-manifest
     type: manifest
     steps:
-      - IN: file
-      - OUT: file2
-        replicate: file
+      - IN: file2
+      - OUT: file
+        replicate: file2
 
   - name: deploy-node
     type: deploy
