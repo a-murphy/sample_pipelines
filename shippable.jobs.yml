@@ -95,7 +95,7 @@ jobs:
  #       - script: which terraform
  #       - script: which packer
  #       - script: packer version
-        - script: echo "versionName=test10" > /build/state/image-resource.env
+        - script: echo "versionName=test11" > /build/state/image-resource.env
   #- OUT: mongo-image
     on_success:
       - script: echo "Success"
