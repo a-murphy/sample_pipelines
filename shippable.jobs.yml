@@ -80,11 +80,11 @@ jobs:
    #   - IN: specialCharactersBranch
       - IN: busybox-image
   #    - IN: provisionLoadBalancer
-     # - IN: develop-git-repo-resource-with-script
+      - IN: develop-git-repo-resource-with-script
       - OUT: image-resource
         replicate: busybox-image
       - OUT: sample_java_mongo_ciRepo
- #       replicate: version-resource-1
+        replicate: develop-git-repo-resource-with-script
       - OUT: test-state
         replicate: version-resource-123
       - TASK:
