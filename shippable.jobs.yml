@@ -79,12 +79,12 @@ jobs:
    #   - IN: cliJob2
    #   - IN: specialCharactersBranch
       - IN: busybox-image
+        versionNumber: 1
   #    - IN: provisionLoadBalancer
       - IN: develop-git-repo-resource-with-script
       - OUT: image-resource
         replicate: busybox-image
-      - OUT: sample_java_mongo_ciRepo
-        replicate: develop-git-repo-resource-with-script
+      - IN: sample_java_mongo_ciRepo
       - OUT: test-state
         replicate: version-resource-123
       - TASK:
