@@ -81,7 +81,6 @@ jobs:
       - IN: busybox-image
         versionNumber: 1
   #    - IN: provisionLoadBalancer
-      - IN: develop-git-repo-resource-with-script
       - OUT: image-resource
       - IN: file2
       - TASK:
