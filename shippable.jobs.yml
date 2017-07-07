@@ -82,7 +82,8 @@ jobs:
         versionNumber: 1
   #    - IN: provisionLoadBalancer
       - IN: develop-git-repo-resource-with-script
-      - IN: image-resource
+      - OUT: image-resource
+      - IN: file2
       - TASK:
         - script: echo $PATH
    #     - script: echo $SPECIALCHARACTERSBRANCH_HTTPS_URL
