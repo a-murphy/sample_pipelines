@@ -82,11 +82,7 @@ jobs:
         versionNumber: 1
   #    - IN: provisionLoadBalancer
       - IN: develop-git-repo-resource-with-script
-      - OUT: image-resource
-        replicate: busybox-image
-      - IN: sample_java_mongo_ciRepo
-      - OUT: test-state
-        replicate: version-resource-123
+      - IN: image-resource
       - TASK:
         - script: echo $PATH
    #     - script: echo $SPECIALCHARACTERSBRANCH_HTTPS_URL
