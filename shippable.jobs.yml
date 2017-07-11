@@ -79,7 +79,7 @@ jobs:
    #   - IN: cliJob2
    #   - IN: specialCharactersBranch
       - IN: busybox-image
-        versionNumber: 1
+        versionName: "latest"
   #    - IN: provisionLoadBalancer
       - OUT: image-resource
       - IN: file2
