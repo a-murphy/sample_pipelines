@@ -80,7 +80,7 @@ jobs:
    #   - IN: specialCharactersBranch
       - IN: busybox-image
     #    versionName: "latest"
-         versionNumber: 1
+        versionNumber: 1
   #    - IN: provisionLoadBalancer
       - OUT: image-resource
       - IN: file2
