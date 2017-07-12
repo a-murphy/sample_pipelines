@@ -76,14 +76,14 @@ jobs:
   #    - IN: projectOne
       - IN: version-resource-1
    #   - IN: myOtherEcsParams
-      - IN: cliJob2
+   #   - IN: cliJob2
    #   - IN: specialCharactersBranch
       - IN: busybox-image
         versionName: "latest"
     #    versionNumber: 1
   #    - IN: provisionLoadBalancer
       - OUT: image-resource
-      - IN: file2
+      - IN: file
       - TASK:
         - script: echo $PATH
    #     - script: echo $SPECIALCHARACTERSBRANCH_HTTPS_URL
