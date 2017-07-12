@@ -2,11 +2,9 @@ jobs:
   - name: sample_java_mongo_runCI
     type: runCI
     steps:
-#      - OUT: image-resource
+      - IN: image-resource
       - IN: develop-git-repo-resource-with-script
-        versionNumber: 100
       - TASK: manged
-      - OUT: master-git-repo-resource-with-script
 
   - name: upgrade-rails-staging
     type: runSh
