@@ -4,6 +4,7 @@ jobs:
     steps:
 #      - OUT: image-resource
       - IN: develop-git-repo-resource-with-script
+        versionNumber: 100
       - TASK: manged
       - OUT: master-git-repo-resource-with-script
 
