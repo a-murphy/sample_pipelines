@@ -76,7 +76,7 @@ jobs:
   #    - IN: projectOne
       - IN: version-resource-1
    #   - IN: myOtherEcsParams
-   #   - IN: cliJob2
+      - IN: cliJob2
    #   - IN: specialCharactersBranch
       - IN: busybox-image
         versionName: "latest"
