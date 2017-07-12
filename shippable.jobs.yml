@@ -31,17 +31,6 @@ jobs:
     steps:
       - TASK:
         - script: "echo true"
-  #- name: generate-mongo-image-manifest-3
-  #  type: manifest
-  #  steps:
-  #    - GET: mongo-image
-  #    - GET: myEcsParams
-  
-  #- name: thirdExtraRelease
-  #  type: release
-  #  steps:
-  #    - IN: generate-manifest
-  #    - TASK: managed
 
   - name: provisionJob
     type: provision         
@@ -276,12 +265,7 @@ jobs:
       - IN: mongo-image
         switch: off
       - IN: nginx-image
-      - IN: sample_node_mongo_runCI
-      - OUT: test-state
    #   - OUT: triggerOne
-   
-   #   - GET: myReplicas
-  #    - GET: deploy-service
       - IN: myDockerOptions
       - TASK: managed
 
