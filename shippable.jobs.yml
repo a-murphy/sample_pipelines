@@ -6,6 +6,12 @@ jobs:
       - IN: develop-git-repo-resource-with-script
       - TASK: manged
 
+  - name: sample-node-rethinkdb_runCI
+    type: runCI
+    steps:
+      - IN: develop-git-repo-resource-with-script
+      - TASK: manged
+
   - name: upgrade-rails-staging
     type: runSh
     steps:
