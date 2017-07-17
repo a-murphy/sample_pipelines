@@ -79,6 +79,7 @@ jobs:
   #    - IN: provisionLoadBalancer
       - OUT: image-resource
       - IN: file
+        versionName: test5
       - TASK:
         - script: echo $PATH
    #     - script: echo $SPECIALCHARACTERSBRANCH_HTTPS_URL
