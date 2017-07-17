@@ -605,8 +605,8 @@ jobs:
       - OUT: image-resource
         replicate: new-mongo-image
         
-  - name: update-file
-    type: manifest
+  - name: update-file-runSh
+    type: runSh
     steps:
       - TASK:
         - script: echo "versionName=test5" > /build/state/file.env
