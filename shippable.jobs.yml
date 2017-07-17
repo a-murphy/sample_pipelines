@@ -72,6 +72,7 @@ jobs:
    #   - IN: myOtherEcsParams
    #   - IN: cliJob2
       - IN: generate-file-manifest
+        versionNumber: 25
       - IN: busybox-image
         versionName: "latest"
     #    versionNumber: 1
