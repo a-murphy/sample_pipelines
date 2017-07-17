@@ -604,6 +604,13 @@ jobs:
         switch: off
       - OUT: image-resource
         replicate: new-mongo-image
+        
+  - name: update-file
+    type: manifest
+    steps:
+      - TASK:
+        - script: echo "versionName=test5" > /build/state/file.env
+      - OUT: file
 
   - name: deploy-node
     type: deploy
