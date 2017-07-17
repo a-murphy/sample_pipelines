@@ -4,7 +4,7 @@ jobs:
     steps:
       - IN: image-resource
       - IN: develop-git-repo-resource-with-script
-      - TASK: manged
+      - TASK: managed
 
   - name: sample-node-rethinkdb_runCI
     type: runCI
@@ -71,7 +71,7 @@ jobs:
       - IN: version-resource-1
    #   - IN: myOtherEcsParams
    #   - IN: cliJob2
-   #   - IN: specialCharactersBranch
+      - IN: generate-file-manifest
       - IN: busybox-image
         versionName: "latest"
     #    versionNumber: 1
