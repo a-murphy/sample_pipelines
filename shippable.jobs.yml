@@ -609,7 +609,7 @@ jobs:
     type: runSh
     steps:
       - TASK:
-        - script: echo "versionName=test5" > /build/state/file.env
+        - script: echo "versionName=test" > /build/state/file.env
       - OUT: file
 
   - name: deploy-node
