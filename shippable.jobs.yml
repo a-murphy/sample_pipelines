@@ -72,14 +72,14 @@ jobs:
    #   - IN: myOtherEcsParams
    #   - IN: cliJob2
       - IN: generate-file-manifest
-    #    versionNumber: 34
+        versionNumber: 34
       - IN: busybox-image
         versionName: "latest"
     #    versionNumber: 1
   #    - IN: provisionLoadBalancer
       - OUT: image-resource
       - IN: file
-        versionName: test5
+        versionNumber: 10
       - TASK:
         - script: echo $PATH
    #     - script: echo $SPECIALCHARACTERSBRANCH_HTTPS_URL
