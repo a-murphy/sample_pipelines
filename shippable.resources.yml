@@ -155,7 +155,7 @@ resources:
           - 2`
         test3: 3#
     seed:
-      versionName: "latest3"
+      versionName: "latest"
       seedtest:
         - 1$
         - "test'2%": 2
