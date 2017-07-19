@@ -84,6 +84,7 @@ jobs:
         - script: echo $PATH
         - script: echo $BUSYBOXIMAGE_STATE
         - script: ls $BUSYBOXIMAGE_STATE
+        - script: echo '-------'
         - script: ls $BUSYBOXIMAGE_STATE/../
         - script: cat $BUSYBOXIMAGE_STATE/../version.json
    #     - script: echo $SPECIALCHARACTERSBRANCH_HTTPS_URL
