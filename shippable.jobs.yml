@@ -82,6 +82,8 @@ jobs:
         versionNumber: 10
       - TASK:
         - script: echo $PATH
+        - script: echo $BUSYBOXIMAGE_STATE
+        - script: cat $BUSYBOXIMAGE_STATE/version.json
    #     - script: echo $SPECIALCHARACTERSBRANCH_HTTPS_URL
    #     - script: echo $SPECIALCHARACTERSBRANCH_SSH_URL
    #     - script: "echo 'SSH: ${SPECIALCHARACTERSBRANCH_SSH_URL} HTTPS: ${SPECIALCHARACTERSBRANCH_HTTPS_URL}' > test.txt"
