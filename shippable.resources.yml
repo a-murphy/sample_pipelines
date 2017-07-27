@@ -12,6 +12,8 @@ resources:
     pointer:
       sourceName: "a-murphy/sample_java_mongo"
       branch: "test1"
+    flags:
+      - myTestFlag
       
   - name: master-git-repo-resource-with-script
     type: gitRepo
@@ -19,6 +21,8 @@ resources:
     pointer:
       sourceName: "a-murphy/sample_java_mongo"
       branch: "test2"
+    flags:
+      - myTestFlag
 
   - name: gkeConfigResource
     type: cliConfig
