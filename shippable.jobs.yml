@@ -11,6 +11,8 @@ jobs:
     steps:
       - IN: develop-git-repo-resource-with-script
       - TASK: manged
+    flags:
+      - myTestFlag
 
   - name: upgrade-rails-staging
     type: runSh
@@ -23,9 +25,13 @@ jobs:
       - TASK:
         - script: chmod +x $DEVELOPGITREPORESOURCEWITHSCRIPT_STATE/scripts/upgrade.sh
         - script: cd $DEVELOPGITREPORESOURCEWITHSCRIPT_STATE && ./scripts/upgrade.sh
+    flags:
+      - myTestFlag
 
   - name: upgrade-rails-production
     type: runSh
+    flags:
+      - myTestFlag
     steps:
       - IN: master-git-repo-resource-with-script
         switch: off
