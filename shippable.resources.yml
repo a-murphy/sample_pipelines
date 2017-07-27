@@ -1,6 +1,8 @@
 resources:
   - name: image-resource
     type: image
+    flags:
+      - myTestFlag
     pointer:
       sourceName: amurphy/test
     seed:
