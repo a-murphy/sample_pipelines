@@ -4,6 +4,8 @@ jobs:
     steps:
       - IN: image-resource
       - IN: develop-git-repo-resource-with-script
+      - OUT: sample-ruby-mysql-cache_runCI
+      - NOTIFY: notifyMe
       - TASK: managed
       
   - name: sample-ruby-mysql-cache_runCI
