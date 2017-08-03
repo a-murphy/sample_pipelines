@@ -10,6 +10,7 @@ jobs:
     type: runCI
     steps:
       - IN: file
+        switch: off
       - TASK: managed
 
   - name: sample-node-rethinkdb_runCI
