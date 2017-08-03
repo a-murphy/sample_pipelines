@@ -94,7 +94,7 @@ jobs:
   #    - IN: provisionLoadBalancer
       - OUT: image-resource
       - IN: file
-        versionNumber: 10
+        versionNumber: 12
       - TASK:
         - script: echo $PATH
         - script: echo $BUSYBOXIMAGE_STATE
