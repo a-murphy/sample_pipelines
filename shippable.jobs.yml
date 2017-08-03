@@ -6,7 +6,7 @@ jobs:
       - IN: develop-git-repo-resource-with-script
       - TASK: managed
       
-  - name: sample-ruby-mysql-cache:sample-ruby-mysql-cache_runCI
+  - name: sample-ruby-mysql-cache_runCI
     type: runCI
     steps:
       - IN: file
