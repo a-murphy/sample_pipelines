@@ -150,6 +150,7 @@ jobs:
     #  - IN: dockerTrustedRegistryResource
     #  - IN: privateDockerRegistryResource
       - IN: generate-file-manifest
+      - IN: sample_java_mysql_runCI
       - IN: terraformTest
       - TASK:
      #   - script: mkdir -p test
