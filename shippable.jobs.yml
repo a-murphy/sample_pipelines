@@ -3,9 +3,9 @@ jobs:
     type: runCI
     steps:
       - IN: image-resource
-      - IN: develop-git-repo-resource-with-script
-      - OUT: sample-ruby-mysql-cache_runCI
-      - NOTIFY: notifyMe
+      - IN: upgrade-rails-staging
+      - OUT: sample-node-rethinkdb_runCI
+      - NOTIFY: file
       - TASK: managed
       
   - name: sample-ruby-mysql-cache_runCI
