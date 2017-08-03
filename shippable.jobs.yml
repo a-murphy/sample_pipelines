@@ -5,7 +5,7 @@ jobs:
       - IN: image-resource
       - IN: upgrade-rails-staging
       - OUT: sample-node-rethinkdb_runCI
-      - NOTIFY: file
+      - NOTIFY: notifyMe
       - TASK: managed
       
   - name: sample-ruby-mysql-cache_runCI
