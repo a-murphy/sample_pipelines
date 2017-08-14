@@ -29,6 +29,7 @@ jobs:
     type: runSh
     steps:
       - IN: image-resource
+      - IN: artifactoryConfig
       - IN: develop-git-repo-resource-with-script
         switch: off
       - OUT: master-git-repo-resource-with-script
