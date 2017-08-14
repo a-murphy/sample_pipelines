@@ -37,7 +37,7 @@ jobs:
       - NOTIFY: notifyMe
       - TASK:
         - script: jfrog --version
-        - script: jfrog search test
+        - script: jfrog rt search test/
         - script: chmod +x $DEVELOPGITREPORESOURCEWITHSCRIPT_STATE/scripts/upgrade.sh
         - script: cd $DEVELOPGITREPORESOURCEWITHSCRIPT_STATE && ./scripts/upgrade.sh
     flags:
