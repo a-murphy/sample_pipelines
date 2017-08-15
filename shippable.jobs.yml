@@ -5,8 +5,8 @@ jobs:
       - IN: image-resource
         switch: off
       - IN: upgrade-rails-staging
-      - OUT: sample-node-rethinkdb_runCI
-        replicate: image-resource
+ #     - OUT: sample-node-rethinkdb_runCI
+ #       replicate: image-resource
       - NOTIFY: notifyMe
       - TASK: managed
       
