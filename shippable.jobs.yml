@@ -2,7 +2,6 @@ jobs:
   - name: runsh-job-gitlabrepo
     type: runSh
     allowPublicAccess: false
-    
     steps:
       - IN: gitlab-repo
         showBuildStatus: true
