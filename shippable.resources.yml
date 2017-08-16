@@ -1,4 +1,12 @@
 resources:
+  - name: gitlab-repo
+    type: gitRepo
+    integration: gitlab
+    pointer:
+      sourceName: a-murphy/sample_ubuntu1204_go
+      branch: master
+      buildOnPullRequest: true
+
   - name: image-resource
     type: image
     flags:
