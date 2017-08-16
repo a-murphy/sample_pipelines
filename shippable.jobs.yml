@@ -57,6 +57,7 @@ jobs:
     steps:
       - IN: artifactoryConfig
       - IN: develop-git-repo-resource-with-script
+        showBuildStatus: true
         switch: off
       - TASK:
         - script: jfrog --version
