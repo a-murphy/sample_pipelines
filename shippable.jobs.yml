@@ -1,4 +1,14 @@
 jobs:
+  - name: runsh-job-gitlabrepo
+    type: runSh
+    allowPublicAccess: false
+    
+    steps:
+      - IN: gitlab-repo
+        showBuildStatus: true
+      - TASK:
+        - script: echo test
+
   - name: sample_java_mongo_runCI
     type: runCI
     steps:
