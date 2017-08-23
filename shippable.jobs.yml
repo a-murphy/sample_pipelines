@@ -514,10 +514,11 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
         
-  - name: gke-deploy2
+  - name: gke-deploy
     type: deploy
+    stabilityDuration: 15
     steps:
-      - IN: nginx-manifest2
+      - IN: nginx-manifest
   #    - IN: generate-manifest
       - IN: myGKECluster
   #    - IN: myReplicas
@@ -528,7 +529,7 @@ jobs:
  #       applyTo:
  #         - nginx-image
       - TASK: managed
-        deployMethod: replace
+        deployMethod: blueGreen
         
  # - name: empty-deploy
  #   type: deploy
