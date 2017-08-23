@@ -390,14 +390,14 @@ jobs:
   - name: DCL-deploy
     type: deploy
     steps:
-  #    - IN: nginx-manifest2
+      - IN: nginx-manifest3
   #      switch: off
       - IN: myDclCluster
  #     - IN: myEcsParams
 #        applyTo:
 #          - other
-      - IN: myOtherEcsParams
-      - IN: foo4
+   #   - IN: myOtherEcsParams
+   #   - IN: foo4
       - TASK: managed
 
   - name: deploy-dcl-2
