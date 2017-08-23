@@ -347,7 +347,7 @@ jobs:
     #  - IN: gitlabProject
       - TASK: managed
       
-  - name: nginx-manifest
+  - name: nginx-manifest3
     type: manifest
     steps:
       - IN: nginx-image
@@ -525,7 +525,7 @@ jobs:
     type: deploy
     stabilityDuration: 15
     steps:
-      - IN: nginx-manifest
+      - IN: nginx-manifest3
   #    - IN: generate-manifest
       - IN: myGKECluster
   #    - IN: myReplicas
