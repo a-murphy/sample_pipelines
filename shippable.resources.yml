@@ -39,7 +39,7 @@ resources:
     integration: GKE
     pointer:
       clusterName: cluster-1
-      region: us-central1-a
+      region: us-west1-a
  
  # - name: jFrogResource
  #   type: cliConfig
@@ -344,7 +344,7 @@ resources:
     integration: GKE
     pointer:
       sourceName : "cluster-1"
-      region: "us-central1-a"
+      region: "us-west1-a"
    #   namespace: myFifthNamespace
 
   - name: myDclCluster
