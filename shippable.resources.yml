@@ -39,6 +39,7 @@ resources:
     integration: GKE
     pointer:
       clusterName: cluster-1
+      namespace: testnamespace
       region: us-west1-a
  
  # - name: jFrogResource
