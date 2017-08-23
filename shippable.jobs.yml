@@ -523,7 +523,7 @@ jobs:
         
   - name: gke-deploy2
     type: deploy
-    stabilityDuration: 15
+    stabilityDuration: 450
     steps:
       - IN: nginx-manifest3
   #    - IN: generate-manifest
