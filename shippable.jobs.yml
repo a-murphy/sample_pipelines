@@ -389,6 +389,7 @@ jobs:
 
   - name: DCL-deploy
     type: deploy
+    stabilityDuration: 500
     steps:
       - IN: nginx-manifest3
   #      switch: off
