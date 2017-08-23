@@ -346,7 +346,7 @@ resources:
     pointer:
       sourceName : "cluster-1"
       region: "us-west1-a"
-   #   namespace: myFifthNamespace
+      namespace: myNamespace
 
   - name: myDclCluster
     type: cluster
