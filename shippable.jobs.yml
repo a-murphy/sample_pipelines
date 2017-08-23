@@ -514,7 +514,7 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
         
-  - name: gke-deploy
+  - name: gke-deploy2
     type: deploy
     stabilityDuration: 15
     steps:
