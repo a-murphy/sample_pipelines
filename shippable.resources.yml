@@ -357,6 +357,10 @@ resources:
   - name: myDDCCluster
     type: cluster
     integration: DDC
+    
+  - name: kubernetesCluster
+    type: cluster
+    integration: Kubernetes
       
 #  - name: projectToTrigger
 #    type: gitRepo
