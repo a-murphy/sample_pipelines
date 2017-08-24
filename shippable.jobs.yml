@@ -416,6 +416,14 @@ jobs:
       - IN: nginx-manifest3
       - IN: kubernetesCluster
       - TASK: managed
+      
+  - name: azure-deploy
+    type: deploy
+    stabilityDuration: 300
+    steps:
+      - IN: nginx-manifest3
+      - IN: azureCluster
+      - TASK: managed
 
   - name: deploy-dcl-2
     type: deploy
