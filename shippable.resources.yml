@@ -354,6 +354,10 @@ resources:
     pointer:
       sourceName : "DockerCloudCluster"
       
+  - name: myDDCCluster
+    type: cluster
+    integration: DDC
+      
 #  - name: projectToTrigger
 #    type: gitRepo
 #    integration: github
