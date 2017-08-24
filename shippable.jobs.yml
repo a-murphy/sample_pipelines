@@ -401,6 +401,14 @@ jobs:
    #   - IN: foo4
       - TASK: managed
 
+  - name: DDC-deploy
+    type: deploy
+    stabilityDuration: 30
+    steps:
+      - IN: nginx-manifest3
+      - IN: myDDCCluster
+      - TASK: managed
+
   - name: deploy-dcl-2
     type: deploy
     steps:
