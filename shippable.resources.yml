@@ -364,6 +364,11 @@ resources:
     pointer:
       namespace: my-namespace
       
+ 
+  - name: azureCluster
+    type: cluster
+    integration: DC/OS
+      
 #  - name: projectToTrigger
 #    type: gitRepo
 #    integration: github
