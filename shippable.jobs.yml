@@ -486,6 +486,14 @@ jobs:
       - TASK: managed
         deployMethod: replace
 
+  - name: triton-deploy
+    type: deploy
+    steps:
+      - IN: nginx-manifest3
+      - IN: tritonCluster
+      - IN: myReplicas
+      - TASK: managed
+
   - name: new-ecs-deploy-again
     type: deploy
     steps:
