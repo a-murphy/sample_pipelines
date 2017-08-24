@@ -408,6 +408,14 @@ jobs:
       - IN: nginx-manifest3
       - IN: myDDCCluster
       - TASK: managed
+      
+  - name: Kubernetes-deploy
+    type: deploy
+    stabilityDuration: 30
+    steps:
+      - IN: nginx-manifest3
+      - IN: kubernetesCluster
+      - TASK: managed
 
   - name: deploy-dcl-2
     type: deploy
