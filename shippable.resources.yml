@@ -361,6 +361,8 @@ resources:
   - name: kubernetesCluster
     type: cluster
     integration: Kubernetes
+    pointer:
+      namespace: my-namespace
       
 #  - name: projectToTrigger
 #    type: gitRepo
