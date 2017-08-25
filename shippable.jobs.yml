@@ -406,6 +406,14 @@ jobs:
    #   - IN: myOtherEcsParams
    #   - IN: foo4
       - TASK: managed
+      
+  - name: ECS-deploy
+    type: deploy
+    stabilityDuration: 30
+    steps:
+      - IN: nginx-manifest3
+      - IN: myEcsCluster
+      - TASK: managed
 
   - name: DDC-deploy
     type: deploy
