@@ -360,8 +360,6 @@ jobs:
     steps:
       - IN: busybox-image
         switch: off
-      - IN: sample_java_mysql_runCI
-        switch: off
       - TASK: managed
    
   - name: nginx-and-busybox-manifest
