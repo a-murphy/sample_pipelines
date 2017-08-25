@@ -431,14 +431,14 @@ jobs:
       - IN: kubernetesCluster
       - TASK: managed
       
- # - name: azure-deploy
- #   type: deploy
- #   stabilityDuration: 30
- #   steps:
- #     - IN: nginx-manifest4
+  - name: azure-deploy
+    type: deploy
+    stabilityDuration: 30
+    steps:
+      - IN: nginx-manifest4
    #   - IN: nginx-manifest3
- #     - IN: azureCluster
- #     - TASK: managed
+      - IN: azureCluster
+      - TASK: managed
 
   - name: deploy-dcl-2
     type: deploy
