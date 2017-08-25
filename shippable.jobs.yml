@@ -421,6 +421,7 @@ jobs:
     type: deploy
     stabilityDuration: 300
     steps:
+      - IN: generate-manifest
       - IN: nginx-manifest3
       - IN: azureCluster
       - TASK: managed
