@@ -519,7 +519,7 @@ jobs:
 
   - name: triton-deploy
     type: deploy
-    stabilityDuration: 45
+  #  stabilityDuration: 45
     steps:
       - IN: nginx-manifest3
       - IN: tritonCluster
