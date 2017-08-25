@@ -353,7 +353,14 @@ jobs:
       - IN: nginx-image
         switch: off
       - TASK: managed
-      
+
+  - name: nginx-manifest4
+    type: manifest
+    steps:
+      - IN: nginx-image
+        switch: off
+      - TASK: managed
+         
      
   - name: busybox-manifest2
     type: manifest
@@ -419,7 +426,7 @@ jobs:
     type: deploy
     stabilityDuration: 300
     steps:
-      - IN: busybox-manifest2
+      - IN: nginx-manifest4
       - IN: nginx-manifest3
       - IN: azureCluster
       - TASK: managed
