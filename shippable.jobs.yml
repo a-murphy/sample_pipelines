@@ -425,7 +425,7 @@ jobs:
       
   - name: Kubernetes-deploy
     type: deploy
- #   stabilityDuration: 300
+    stabilityDuration: 30
     steps:
       - IN: nginx-manifest3
       - IN: kubernetesCluster
