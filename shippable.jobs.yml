@@ -359,6 +359,7 @@ jobs:
     steps:
       - IN: nginx-image
         switch: off
+      - IN: mongo-image
       - TASK: managed
          
      
