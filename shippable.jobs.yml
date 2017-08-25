@@ -417,7 +417,7 @@ jobs:
 
   - name: DDC-deploy
     type: deploy
-#    stabilityDuration: 30
+    stabilityDuration: 30
     steps:
       - IN: nginx-manifest3
       - IN: myDDCCluster
