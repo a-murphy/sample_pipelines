@@ -433,7 +433,7 @@ jobs:
       
   - name: azure-deploy
     type: deploy
-#    stabilityDuration: 300
+    stabilityDuration: 30
     steps:
       - IN: nginx-manifest4
    #   - IN: nginx-manifest3
