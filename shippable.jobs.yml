@@ -421,7 +421,7 @@ jobs:
     type: deploy
     stabilityDuration: 300
     steps:
-      - IN: nginx-manifest2
+      - IN: busybox-manifest2
       - IN: nginx-manifest3
       - IN: azureCluster
       - TASK: managed
