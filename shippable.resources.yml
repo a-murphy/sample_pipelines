@@ -315,6 +315,11 @@ resources:
         one: One
         labeltwo: Two
         
+  - name: zeroReplicas
+    type: replicas
+    version:
+      count: 0
+
   - name: myReplicas
     type: replicas
     version:
