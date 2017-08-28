@@ -413,6 +413,7 @@ jobs:
     steps:
       - IN: nginx-manifest3
       - IN: myEcsCluster
+      - IN: zeroReplicas
       - TASK: managed
 
   - name: DDC-deploy
