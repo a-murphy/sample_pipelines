@@ -123,6 +123,9 @@ jobs:
     #    versionNumber: 1
   #    - IN: provisionLoadBalancer
       - OUT: image-resource
+      - IN: test-state
+      - OUT: test-state
+        switch: off
       - IN: file
         versionNumber: 12
       - TASK:
