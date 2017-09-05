@@ -711,6 +711,7 @@ jobs:
     type: manifest
     steps:
       - IN: file2
+      - IN: test-state
       - OUT: file
     #    replicate: file2
       - IN: new-mongo-image
