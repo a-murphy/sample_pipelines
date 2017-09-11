@@ -343,8 +343,14 @@ jobs:
       - IN: myOtherDockerOptions
         applyTo:
           - ecr-image
+      - IN: myEcrParams
+        applyTo:
+          - ecr-image
       - IN: zeroReplicas
       - IN: myDockerOptions
+        applyTo:
+          - nginx-image
+      - IN: myOtherEcrParams
         applyTo:
           - nginx-image
       - TASK: managed
