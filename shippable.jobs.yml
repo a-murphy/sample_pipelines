@@ -339,6 +339,8 @@ jobs:
     steps:
       - IN: ecr-image
         switch: off
+      - IN: nginx-manifest3
+      - IN: zeroReplicas
       - IN: myDockerOptions
       - TASK: managed
 
