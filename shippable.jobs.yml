@@ -340,8 +340,11 @@ jobs:
       - IN: ecr-image
         switch: off
       - IN: nginx-manifest3
+      - IN: myOtherDockerOptions
+        applyTo: ecr-image
       - IN: zeroReplicas
       - IN: myDockerOptions
+        applyTo: nginx-image
       - TASK: managed
 
   - name: nginx-manifest2
