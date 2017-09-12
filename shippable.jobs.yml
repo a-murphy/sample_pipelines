@@ -20,7 +20,7 @@ jobs:
             options: 1     #optional
         - boot:
             imageName: name2
-            tag: tag2
+            test: tag2
     
   - name: runcli-job
     type: runCLI
