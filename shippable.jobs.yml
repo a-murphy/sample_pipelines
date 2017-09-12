@@ -16,8 +16,6 @@ jobs:
         - boot:
             imageName: image
             imageTag: tag
-            pull: false
-            options: true
     
   - name: runcli-job2
     type: runCLI
@@ -27,6 +25,7 @@ jobs:
         - boot:
             imageName: image
             imageTag: tag
+        - boot:
             pull: test
             options: options
  
