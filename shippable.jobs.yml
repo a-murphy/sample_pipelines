@@ -13,14 +13,18 @@ jobs:
     steps:
       - TASK:
         - script: echo test
+        - boot:
+            imageName: trriplejay/simpleserver
+            imageTag: master.58
+            pull: true               #optional
+            options: -m 1g      #optional
     
   - name: runcli-job
     type: runCLI
     steps:
       - TASK:
         - script: echo test
-      - TASK:
-        - script: echo again
+        - boot: string
 
   - name: sample_java_mongo_runCI
     type: runCI
