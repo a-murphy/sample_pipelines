@@ -7,6 +7,20 @@ jobs:
         showBuildStatus: true
       - TASK:
         - script: echo test
+        
+  - name: runsh-job
+    type: runSh
+    steps:
+      - TASK:
+        - script: echo test
+    
+  - name: runcli-job
+    type: runCLI
+    steps:
+      - TASK:
+        - script: echo test
+      - TASK:
+        - script: echo again
 
   - name: sample_java_mongo_runCI
     type: runCI
