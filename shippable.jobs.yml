@@ -8,27 +8,20 @@ jobs:
       - TASK:
         - script: echo test
         
-  - name: runsh-job
+  - name: runsh-job2
     type: runSh
     steps:
       - TASK:
         - script: echo test
-        - boot:
-            imageName: name
-            options: tag2
     
-  - name: runcli-job
+  - name: runcli-job2
     type: runCLI
     steps:
       - TASK:
         - script: echo test
-        - boot:
-            imageTag: 123
-            imageName: test
-            options:
-              test: test
-            pull: five
-
+      - TASK:
+        - script: echo again
+ 
   - name: sample_java_mongo_runCI
     type: runCI
     steps:
