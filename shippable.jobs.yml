@@ -13,14 +13,18 @@ jobs:
     steps:
       - TASK:
         - script: echo test
+        - boot:
+            imageName: image
+            tagName: tag
+            pull: false
+            options: options
     
   - name: runcli-job2
     type: runCLI
     steps:
       - TASK:
         - script: echo test
-      - TASK:
-        - script: echo again
+        - boot: test
  
   - name: sample_java_mongo_runCI
     type: runCI
