@@ -15,7 +15,7 @@ jobs:
         - script: echo test
         - boot:
             imageName: image
-            tagName: tag
+            imageTag: tag
             pull: false
             options: options
     
@@ -24,7 +24,8 @@ jobs:
     steps:
       - TASK:
         - script: echo test
-        - boot: test
+        - boot:
+            imageTag: test
  
   - name: sample_java_mongo_runCI
     type: runCI
