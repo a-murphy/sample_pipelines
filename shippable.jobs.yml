@@ -398,12 +398,12 @@ jobs:
     #  - IN: bitbucketProject2
       - TASK: managed
    
-  - name: new-manifest
-    type: manifest
-    steps:
-      - IN: mongo-manifest
-      - IN: busybox-manifest2
-      - TASK: managed
+#  - name: new-manifest
+#    type: manifest
+#    steps:
+#      - IN: mongo-manifest
+#      - IN: busybox-manifest2
+#      - TASK: managed
 
  # - name: deploy-service
 #    type: deploy
@@ -645,7 +645,7 @@ jobs:
     type: runSh
     steps:
       - IN: customImage
-      - IN: pipelines-dv-image
+ #     - IN: pipelines-dv-image
       - TASK:
         - script: "ls /build/IN/customImage"
       
@@ -709,7 +709,7 @@ jobs:
     type: runSh
     steps:
       - IN: privateProject3
-      - OUT: pipelines-dv-image
+  #    - OUT: pipelines-dv-image
       - TASK:
         - script: "ls -al /build/IN/privateProject3/gitRepo"
 
