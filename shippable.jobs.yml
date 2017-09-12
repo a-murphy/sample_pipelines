@@ -15,11 +15,6 @@ jobs:
         - script: echo test
         - boot:
             imageName: name
-            tag: tag
-            pull: true               #optional
-            options: 1     #optional
-        - boot:
-            imageName: name2
             test: tag2
     
   - name: runcli-job
