@@ -14,7 +14,9 @@ jobs:
       - TASK:
         - script: echo test
         - boot:
-            imageName: trriplejay/simpleserver
+            imageName:
+              test:
+                test
             pull: true               #optional
             options: -m 1g      #optional
     
@@ -24,7 +26,8 @@ jobs:
       - TASK:
         - script: echo test
         - boot:
-            imageTag: master.58
+            imageTag:
+             - test
 
   - name: sample_java_mongo_runCI
     type: runCI
