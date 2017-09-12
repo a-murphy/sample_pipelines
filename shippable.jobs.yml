@@ -14,11 +14,10 @@ jobs:
       - TASK:
         - script: echo test
         - boot:
-            imageName:
-              test:
-                test
+            imageName: name
+            tag: tag
             pull: true               #optional
-            options: -m 1g      #optional
+            options: 1     #optional
     
   - name: runcli-job
     type: runCLI
@@ -26,8 +25,8 @@ jobs:
       - TASK:
         - script: echo test
         - boot:
-            imageTag:
-             - test
+            imageTag: 123
+            imageName: test
 
   - name: sample_java_mongo_runCI
     type: runCI
