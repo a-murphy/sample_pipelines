@@ -18,6 +18,9 @@ jobs:
             tag: tag
             pull: true               #optional
             options: 1     #optional
+        - boot:
+            imageName: name2
+            tag: tag2
     
   - name: runcli-job
     type: runCLI
@@ -27,6 +30,7 @@ jobs:
         - boot:
             imageTag: 123
             imageName: test
+            pull: five
 
   - name: sample_java_mongo_runCI
     type: runCI
