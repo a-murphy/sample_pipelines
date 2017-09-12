@@ -15,7 +15,7 @@ jobs:
         - script: echo test
         - boot:
             imageName: name
-            test: tag2
+            options: tag2
     
   - name: runcli-job
     type: runCLI
@@ -25,6 +25,8 @@ jobs:
         - boot:
             imageTag: 123
             imageName: test
+            options:
+              test: test
             pull: five
 
   - name: sample_java_mongo_runCI
