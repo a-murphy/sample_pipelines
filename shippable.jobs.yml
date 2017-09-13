@@ -26,9 +26,9 @@ jobs:
         - boot:
             imageName: image
             imageTag: tag
-        - boot:
-            pull: test
-            options: options
+  #      - boot:
+  #          pull: test
+  #          options: options
  
   - name: sample_java_mongo_runCI
     type: runCI
