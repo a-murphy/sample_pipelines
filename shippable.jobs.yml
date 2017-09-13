@@ -16,7 +16,7 @@ jobs:
         - boot:
             imageName: image
             imageTag: tag
-    #        test: test
+            test: test
     
   - name: runcli-job2
     type: runCLI
