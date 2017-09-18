@@ -60,11 +60,14 @@ jobs:
     type: runSh
     steps:
       - IN: image-resource
+        agentOnly: false
       - IN: artifactoryConfig
       - IN: develop-git-repo-resource-with-script
         switch: off
+        agentOnly: true
       - OUT: master-git-repo-resource-with-script
         replicate: develop-git-repo-resource-with-script
+        agentOnly: true
       - NOTIFY: notifyMe
       - TASK:
         - script: jfrog --version
