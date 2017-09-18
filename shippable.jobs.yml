@@ -61,9 +61,8 @@ jobs:
     steps:
       - IN: image-resource
         agentOnly: false
-      - IN: upgrade-rails-production
+      - IN: new-image
         agentOnly: true
-      - IN: new-runCLI
       - IN: artifactoryConfig
       - IN: develop-git-repo-resource-with-script
         switch: off
