@@ -61,6 +61,8 @@ jobs:
     steps:
       - IN: image-resource
         agentOnly: false
+      - IN: new-runCLI
+        agentOnly: true
       - IN: artifactoryConfig
       - IN: develop-git-repo-resource-with-script
         switch: off
