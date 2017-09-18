@@ -61,7 +61,7 @@ jobs:
     steps:
       - IN: image-resource
         agentOnly: false
-      - IN: new-image
+      - IN: provisionJob
         agentOnly: true
       - IN: artifactoryConfig
       - IN: develop-git-repo-resource-with-script
