@@ -11,6 +11,7 @@ resources:
     type: image
     flags:
       - myTestFlag
+      - myTestFlag2
     pointer:
       sourceName: amurphy/test
     seed:
