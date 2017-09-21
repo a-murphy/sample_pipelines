@@ -17,6 +17,13 @@ resources:
     seed:
       versionName: latest
       
+  - name: another-image-resource
+    type: notimage
+    pointer:
+      sourceName: amurphy/test
+    seed:
+      versionName: latest
+      
   - name: develop-git-repo-resource-with-script
     type: gitRepo
     integration: github
