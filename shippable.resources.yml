@@ -31,7 +31,7 @@ resources:
     integration: github
     pointer:
       sourceName: "a-murphy/sample_java_mongo"
-      branch: "test1"
+      branch: "master"
     flags:
       - myTestFlag
       
