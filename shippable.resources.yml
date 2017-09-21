@@ -17,6 +17,10 @@ resources:
     seed:
       versionName: latest
       
+  - name: third-new-resource
+    type: cliConfig
+    integration: GKE
+      
   - name: develop-git-repo-resource-with-script
     type: gitRepo
     integration: github
