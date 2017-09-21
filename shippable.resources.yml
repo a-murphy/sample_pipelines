@@ -22,8 +22,6 @@ resources:
     integration: GKE
     seed:
       test: test
-    version:
-      test: test
     pointer:
       test: test
       
