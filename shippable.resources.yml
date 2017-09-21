@@ -33,7 +33,13 @@ resources:
       sourceName: "a-murphy/sample_java_mongo"
       branch: "master"
     flags:
-      - myTestFlag
+      - myTestFlag2
+      
+  - name: develop-git-repo-resource-with-script4
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: "a-murphy/sample_java_mongo"
       
   - name: master-git-repo-resource-with-script
     type: gitRepo
