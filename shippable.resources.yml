@@ -14,7 +14,7 @@ resources:
     pointer:
       sourceName: amurphy/test
     seed:
-      versionName: latest
+      versionName: new
       
   - name: develop-git-repo-resource-with-script
     type: gitRepo
