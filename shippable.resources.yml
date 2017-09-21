@@ -18,7 +18,7 @@ resources:
       versionName: latest
       
   - name: another-image-resource
-    type: notimage
+    type: image
     pointer:
       sourceName: amurphy/test
     seed:
