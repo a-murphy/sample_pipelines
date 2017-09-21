@@ -8,14 +8,14 @@ resources:
       buildOnPullRequest: true
 
   - name: image-resource
-    type: image
+    type: dockerOptions
     flags:
       - myTestFlag
       - myTestFlag2
     pointer:
       sourceName: amurphy/test
     seed:
-      versionName: new
+      versionName: latest
       
   - name: develop-git-repo-resource-with-script
     type: gitRepo
