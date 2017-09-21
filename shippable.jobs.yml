@@ -20,8 +20,6 @@ jobs:
     
   - name: runcli-job2
     type: runCLI
-    flags:
-      - test
     steps:
       - TASK:
         - script: echo test
