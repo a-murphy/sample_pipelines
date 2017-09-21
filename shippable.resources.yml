@@ -48,9 +48,9 @@ resources:
  #   integration: JFrog
  
   
-  - name: artifactoryConfig
-    type: cliConfig
-    integration: Artifactory
+ # - name: artifactoryConfig
+ #   type: cliConfig
+ #   integration: Artifactory
     
   - name: awsConfigResource
     type: cliConfig
