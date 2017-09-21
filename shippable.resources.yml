@@ -16,15 +16,7 @@ resources:
       sourceName: amurphy/test
     seed:
       versionName: latest
-      
-  - name: third-new-resource
-    type: cliConfig
-    integration: GKE
-    seed:
-      test: test
-    pointer:
-      test: test
-      
+
   - name: develop-git-repo-resource-with-script
     type: gitRepo
     integration: github
