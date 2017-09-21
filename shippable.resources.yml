@@ -26,20 +26,12 @@ resources:
     flags:
       - myTestFlag
       
-  - name: develop-git-repo-resource-with-script3
-    type: gitRepo
-    integration: github
-    pointer:
-      sourceName: "a-murphy/sample_java_mongo"
-      branch: "master"
-    flags:
-      - myTestFlag2
-      
   - name: develop-git-repo-resource-with-script4
     type: gitRepo
     integration: github
     pointer:
       sourceName: "a-murphy/sample_java_mongo"
+      branch: "test1"
       
   - name: master-git-repo-resource-with-script
     type: gitRepo
