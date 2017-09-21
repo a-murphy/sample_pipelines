@@ -17,13 +17,6 @@ resources:
     seed:
       versionName: latest
       
-  - name: another-image-resource
-    type: image
-    pointer:
-      sourceName: amurphy/test
-    seed:
-      versionName: latest
-      
   - name: develop-git-repo-resource-with-script
     type: gitRepo
     integration: github
@@ -39,6 +32,8 @@ resources:
     pointer:
       sourceName: "a-murphy/sample_java_mongo"
       branch: "master"
+    seed:
+      test: test
     flags:
       - myTestFlag
       
