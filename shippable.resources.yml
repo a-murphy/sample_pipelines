@@ -26,7 +26,7 @@ resources:
     flags:
       - myTestFlag
       
-  - name: develop-git-repo-resource-with-script
+  - name: develop-git-repo-resource-with-script2
     type: gitRepo
     integration: github
     pointer:
