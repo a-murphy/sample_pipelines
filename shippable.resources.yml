@@ -8,7 +8,7 @@ resources:
       buildOnPullRequest: true
 
   - name: image-resource
-    type: notimage
+    type: image
     flags:
       - myTestFlag
       - myTestFlag2
