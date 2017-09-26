@@ -584,7 +584,8 @@ jobs:
       - IN: myReplicas
       - TASK: managed
         deployMethod: upgrade
-        workflow: parallel
+        deployOptions:
+          - parallel
 
   - name: new-ecs-deploy-again
     type: deploy
