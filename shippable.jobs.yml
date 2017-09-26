@@ -29,7 +29,17 @@ jobs:
   #      - boot:
   #          pull: test
   #          options: options
- 
+
+  - name: testrename2_runCI
+    type: runCI
+    steps:
+      - IN: image-resource
+        switch: off
+      - IN: upgrade-rails-staging
+      - NOTIFY: notifyMe
+      - TASK: managed
+      
+
   - name: sample_java_mongo_runCI
     type: runCI
     steps:
