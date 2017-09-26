@@ -583,7 +583,7 @@ jobs:
       - IN: tritonCluster
       - IN: myReplicas
       - TASK: managed
-        method: upgrade
+        deployMethod: upgrade
 
   - name: new-ecs-deploy-again
     type: deploy
