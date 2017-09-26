@@ -577,13 +577,14 @@ jobs:
     type: deploy
   #  stabilityDuration: 45
  #   method: replace
-    workflow: parallel
+ #   workflow: parallel
     steps:
       - IN: nginx-manifest3
       - IN: tritonCluster
       - IN: myReplicas
       - TASK: managed
         deployMethod: upgrade
+        workflow: parallel
 
   - name: new-ecs-deploy-again
     type: deploy
