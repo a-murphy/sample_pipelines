@@ -583,9 +583,9 @@ jobs:
       - IN: tritonCluster
       - IN: myReplicas
       - TASK: managed
-        deployMethod: upgrade
-        deployOptions:
-          - parallel
+    #    deployMethod: upgrade
+    #    deployOptions:
+    #      - parallel
 
   - name: new-ecs-deploy-again
     type: deploy
