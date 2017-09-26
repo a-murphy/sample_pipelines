@@ -7,8 +7,8 @@ resources:
       branch: master
       buildOnPullRequest: true
       
-  - name: testrename2_runCI
-    type: runCI
+  - name: testrename2_ciRepo
+    type: ciRepo
     version:
       test: test
 
