@@ -576,6 +576,8 @@ jobs:
   - name: triton-deploy
     type: deploy
   #  stabilityDuration: 45
+    method: replace
+    workflow: parallel
     steps:
       - IN: nginx-manifest3
       - IN: tritonCluster
