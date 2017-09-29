@@ -125,6 +125,7 @@ jobs:
     integration: test
     steps:
       - IN: provisionExternalName
+      - IN: deploy-dcl-2
   #    - IN: projectOne
   #    - IN: version-resource-1
    #   - IN: myOtherEcsParams
