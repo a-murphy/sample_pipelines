@@ -435,6 +435,12 @@ resources:
         only:
           - test
           
+  - name: projectC
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: "a-murphy/sample_c"
+
   - name: branchlessProject2
     type: gitRepo
     integration: github
