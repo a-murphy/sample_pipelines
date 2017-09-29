@@ -160,6 +160,7 @@ jobs:
         versionName: "latest"
     #    versionNumber: 1
   #    - IN: provisionLoadBalancer
+      - IN: custom4
       - OUT: image-resource
       - IN: test-state
       - OUT: test-state
