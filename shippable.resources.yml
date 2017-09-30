@@ -440,6 +440,13 @@ resources:
     integration: github
     pointer:
       sourceName: "a-murphy/sample_c"
+      
+   - name: projectC-master
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: "a-murphy/sample_c"
+      branch: master
 
   - name: branchlessProject2
     type: gitRepo
