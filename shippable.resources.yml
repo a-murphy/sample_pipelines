@@ -441,7 +441,7 @@ resources:
     pointer:
       sourceName: "a-murphy/sample_c"
       
-   - name: projectC-master
+  - name: projectC-master
     type: gitRepo
     integration: github
     pointer:
