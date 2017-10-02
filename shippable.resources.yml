@@ -6,11 +6,6 @@ resources:
       sourceName: a-murphy/sample_ubuntu1204_go
       branch: master
       buildOnPullRequest: true
-      
-  - name: testrename2_ciRepo
-    type: ciRepo
-    version:
-      test: test
 
   - name: image-resource
     type: image
