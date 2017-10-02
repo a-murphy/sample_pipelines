@@ -725,6 +725,7 @@ jobs:
     type: runSh
     steps:
       - IN: ecr-image
+      - OUT: sample_c_runCI
       - TASK:
         - script: "echo DOCKER"
         - script: "docker --version"
