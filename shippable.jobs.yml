@@ -30,7 +30,7 @@ jobs:
   #          pull: test
   #          options: options
 
-  - name: testrename5_runCI
+  - name: testRename5_runCI
     type: runCI
     steps:
       - IN: image-resource
