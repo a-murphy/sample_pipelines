@@ -321,7 +321,8 @@ jobs:
       - TASK: managed
       
   - name: foo5
-    type: release
+    type: releaser
+    bump: mino
     steps:
 #      - IN: version-resource-1
 #     # - GET: myEcsParams
@@ -334,7 +335,7 @@ jobs:
       
   - name: foo4
     type: release
-    bump: patch
+    bump: major
     steps:
      # - GET: version-resource-4
       - IN: generate-manifest
