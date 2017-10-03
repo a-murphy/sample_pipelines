@@ -322,7 +322,6 @@ jobs:
       
   - name: foo5
     type: release
-    bump: mino
     steps:
 #      - IN: version-resource-1
 #     # - GET: myEcsParams
@@ -335,7 +334,7 @@ jobs:
       
   - name: foo4
     type: release
-    bump: major
+ #   bump: major
     steps:
      # - GET: version-resource-4
       - IN: generate-manifest
