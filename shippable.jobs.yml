@@ -334,14 +334,14 @@ jobs:
       
   - name: foo4
     type: release
- #   bump: major
+    bump: major
     steps:
      # - GET: version-resource-4
       - IN: generate-manifest
 #      - IN: myReplicas
       - IN: version-resource-1
       - TASK: managed
-#        bump: patch
+        bump: patch
 
   - name: generate-mongo-image-manifest-6
     type: manifest
