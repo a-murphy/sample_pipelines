@@ -334,7 +334,7 @@ jobs:
       
   - name: foo4
     type: release
-    bump: major
+    bump: patch
     steps:
      # - GET: version-resource-4
       - IN: generate-manifest
