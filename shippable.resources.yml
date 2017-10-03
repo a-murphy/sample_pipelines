@@ -68,7 +68,7 @@ resources:
  
   - name: ecrConfigResource
     type: cliConfig
-    integration: ECR
+    integration: NotECR
     pointer:
  #     clusterName: cluster-1
       region: us-west-2
@@ -519,7 +519,7 @@ resources:
 
   - name: tritonCluster
     type: cluster
-    integration: Triton
+ #   integration: Triton
     pointer:
       region: "us-east-1"
 
