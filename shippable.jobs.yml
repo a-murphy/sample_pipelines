@@ -321,7 +321,7 @@ jobs:
       - TASK: managed
       
   - name: foo5
-    type: releaser
+    type: release
     bump: mino
     steps:
 #      - IN: version-resource-1
