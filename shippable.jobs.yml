@@ -153,7 +153,6 @@ jobs:
   #    - IN: provisionExternalName
   #    - IN: projectOne
 #      - IN: version-resource-1
-#      - IN: tritonCluster
    #   - IN: myOtherEcsParams
    #   - IN: cliJob2
 #      - IN: generate-file-manifest
@@ -162,9 +161,7 @@ jobs:
         versionName: "latest"
     #    versionNumber: 1
   #    - IN: provisionLoadBalancer
-#      - IN: projectC-master
-#      - OUT: projectC
-#        replicate: projectC-master
+      - IN: projectC2
 #      - OUT: image-resource
       - IN: test-state
       - OUT: test-state
