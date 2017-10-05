@@ -152,25 +152,25 @@ jobs:
     steps:
   #    - IN: provisionExternalName
   #    - IN: projectOne
-      - IN: version-resource-1
+#      - IN: version-resource-1
       - IN: tritonCluster
    #   - IN: myOtherEcsParams
    #   - IN: cliJob2
-      - IN: generate-file-manifest
-        versionNumber: 34
+#      - IN: generate-file-manifest
+#        versionNumber: 34
       - IN: busybox-image
         versionName: "latest"
     #    versionNumber: 1
   #    - IN: provisionLoadBalancer
-      - IN: projectC-master
-      - OUT: projectC
-        replicate: projectC-master
-      - OUT: image-resource
+#      - IN: projectC-master
+#      - OUT: projectC
+#        replicate: projectC-master
+#      - OUT: image-resource
       - IN: test-state
       - OUT: test-state
         switch: off
-      - IN: file
-        versionNumber: 12
+#      - IN: file
+#        versionNumber: 12
       - TASK:
         - script: echo $PATH
         - script: echo $BUSYBOXIMAGE_STATE
@@ -190,7 +190,7 @@ jobs:
  #       - script: which terraform
  #       - script: which packer
  #       - script: packer version
-        - script: echo "versionName=test11" > /build/state/image-resource.env
+#        - script: echo "versionName=test11" > /build/state/image-resource.env
   #- OUT: mongo-image
     on_success:
       - script: echo "Success"
