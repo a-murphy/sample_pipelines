@@ -197,7 +197,17 @@ jobs:
   #    - NOTIFY: notifyMe
     always:
       - NOTIFY: notifyMe
-  
+
+  - name: test2
+    type: runSh       
+    steps:
+      - IN: projectC2
+      - IN: test-state
+      - OUT: test-state
+        switch: off
+      - TASK:
+        - script: echo $PATH
+
   - name: sample_java_mysql_runCI
     type: runCI
     flags:
