@@ -203,7 +203,7 @@ jobs:
     steps:
       - IN: ecrConfigResource
       - TASK:
-        - script: docker pull 544102397216.dkr.ecr.us-east-1.amazonaws.com/test/repository:latest
+        - script: docker pull https://544102397216.dkr.ecr.us-east-1.amazonaws.com/testrepository:latest
 
   - name: sample_java_mysql_runCI
     type: runCI
