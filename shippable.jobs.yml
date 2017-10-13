@@ -202,6 +202,8 @@ jobs:
     type: runSh       
     steps:
       - IN: ecrConfigResource
+        scopes:
+          - ecr
       - TASK:
         - script: docker pull 544102397216.dkr.ecr.us-east-1.amazonaws.com/testrepository:latest
 
