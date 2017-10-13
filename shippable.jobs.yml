@@ -201,12 +201,9 @@ jobs:
   - name: test2
     type: runSh       
     steps:
-      - IN: projectC2
-      - IN: test-state
-      - OUT: test-state
-        switch: off
+      - IN: ecrConfigResource
       - TASK:
-        - script: echo $PATH
+        - script: docker pull 544102397216.dkr.ecr.us-east-1.amazonaws.com/56a291339b927140b4fb26d4
 
   - name: sample_java_mysql_runCI
     type: runCI
