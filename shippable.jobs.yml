@@ -478,8 +478,8 @@ jobs:
       
   - name: ECS-deploy
     type: deploy
-    method: upgrade
-    stabilityDuration: 30
+    method: blueGreen
+    stabilityDuration: 300
     steps:
       - IN: nginx-manifest3
       - IN: myEcsCluster
