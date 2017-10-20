@@ -390,6 +390,7 @@ jobs:
       - IN: ecr-image
         switch: off
       - IN: nginx-manifest3
+        switch: off
       - IN: myOtherDockerOptions
         applyTo:
           - ecr-image
@@ -466,7 +467,7 @@ jobs:
     stabilityDuration: 30
     steps:
       - IN: nginx-manifest3
-  #      switch: off
+        switch: off
       - IN: myDclCluster
  #     - IN: myEcsParams
 #        applyTo:
@@ -482,7 +483,7 @@ jobs:
     steps:
       - IN: nginx-manifest3
       - IN: myEcsCluster
-    #  - IN: zeroReplicas
+      - IN: zeroReplicas
       - TASK: managed
 
   - name: DDC-deploy
@@ -490,6 +491,7 @@ jobs:
     stabilityDuration: 30
     steps:
       - IN: nginx-manifest3
+        switch: off
       - IN: myDDCCluster
       - TASK: managed
       
@@ -498,6 +500,7 @@ jobs:
     stabilityDuration: 30
     steps:
       - IN: nginx-manifest3
+        switch: off
       - IN: kubernetesCluster
       - TASK: managed
       
@@ -594,6 +597,7 @@ jobs:
  #   workflow: serial
     steps:
       - IN: nginx-manifest3
+        switch: off
       - IN: tritonCluster
       - IN: myReplicas
       - TASK: managed
@@ -650,6 +654,7 @@ jobs:
    # stabilityDuration: 450
     steps:
       - IN: nginx-manifest3
+        switch: off
   #    - IN: generate-manifest
       - IN: myGKECluster
   #    - IN: myReplicas
