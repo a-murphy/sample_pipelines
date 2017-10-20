@@ -326,7 +326,7 @@ resources:
   - name: zeroReplicas
     type: replicas
     version:
-      count: 0
+      count: 1
 
   - name: myReplicas
     type: replicas
