@@ -255,7 +255,6 @@ resources:
     version:
       memory: 36
       cpuShares: 4
-      random: true
 
   - name: myOtherDockerOptions
     type: dockerOptions
