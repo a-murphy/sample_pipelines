@@ -479,7 +479,7 @@ jobs:
   - name: ECS-deploy
     type: deploy
     method: replace
-    stabilityDuration: 30
+ #   stabilityDuration: 30
     steps:
       - IN: nginx-manifest3
   #    - IN: nginx-manifest4
