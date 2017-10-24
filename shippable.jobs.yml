@@ -546,7 +546,8 @@ jobs:
 #      - GET: deploy-service-7
 #      - GET: myEcsParams
       - IN: myOtherDockerOptions
-        applyTo: mongo-image
+        applyTo:
+          - mongo-image
      #     - nginx-image
       - TASK: managed
         deployMethod: upgrade
@@ -574,8 +575,8 @@ jobs:
       - IN: myEcsCluster
       - IN: myDockerOptions
       - IN: myOtherDockerOptions
-    #    applyTo:
-    #      - mongo-image
+        applyTo:
+          - mongo-image
       - TASK: managed
         deployMethod: replace
         
