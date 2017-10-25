@@ -478,7 +478,7 @@ jobs:
       
   - name: ECS-deploy
     type: deploy
-    method: upgrade
+    method: replace
  #   stabilityDuration: 30
     steps:
       - IN: nginx-manifest3
