@@ -586,11 +586,11 @@ jobs:
       - IN: generate-manifest
   #    - IN: foo4
     #  - IN: busybox-manifest2
-   #   - IN: myLoadBalancer
-   #     applyTo:
-   #       - manifest: generate-manifest
-   #         image: mongo-image
-   #         port: 27017
+      - IN: myLoadBalancer
+        applyTo:
+          - manifest: generate-manifest
+            image: mongo-image
+            port: 27017
       - IN: myEcsCluster
       - IN: myDockerOptions
       - IN: myOtherDockerOptions
