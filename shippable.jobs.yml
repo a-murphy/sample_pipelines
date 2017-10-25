@@ -580,6 +580,25 @@ jobs:
       - TASK: managed
         deployMethod: replace
         
+  - name: upgrade-ecs-deploy
+    type: deploy
+    steps:
+      - IN: generate-manifest
+  #    - IN: foo4
+    #  - IN: busybox-manifest2
+   #   - IN: myLoadBalancer
+   #     applyTo:
+   #       - manifest: generate-manifest
+   #         image: mongo-image
+   #         port: 27017
+      - IN: myEcsCluster
+      - IN: myDockerOptions
+      - IN: myOtherDockerOptions
+        applyTo:
+          - mongo-image
+      - TASK: managed
+        deployMethod: upgrade
+   
   - name: replace-triton-deploy
     type: deploy
     steps:
