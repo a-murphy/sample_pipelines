@@ -121,7 +121,7 @@ jobs:
 
   - name: provisionJob
     type: provision         
-    integration: GKE
+#    integration: GKE
     steps:
  #     - IN: provisionExternalName
   #    - IN: projectOne
@@ -132,7 +132,8 @@ jobs:
    #   - IN: busybox-image
   #    - IN: myOtherEcsParams
   #    - IN: specialCharactersBranch
-      - IN: provisionLoadBalancer
+   #   - IN: provisionLoadBalancer
+      - IN: kubernetesLoadBalancer 
   #- OUT: mongo-image
     on_success:
       - script: echo "Success"
