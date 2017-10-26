@@ -93,10 +93,10 @@ resources:
     integration: GKE
     pointer:
       sourceName: "my-load-balancer"
-  #    method: NodePort
+      method: LoadBalancer
   #    namespace: my-namespaceus-central1-c
       clusterName: cluster-1
-      region: us-central1-c
+      region: us-central1-a
     version:
       ports:
         - name: my-port
@@ -116,7 +116,7 @@ resources:
   #    loadBalancerIP: "loadBalancerIP2"
   #    loadBalancerSourceRanges:
   #      - 127.0.0.1
-      externalName: "myName"
+  #    externalName: "myName"
       
   - name: provisionExternalName
     type: loadBalancer
