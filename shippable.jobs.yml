@@ -72,8 +72,6 @@ jobs:
     steps:
       - IN: image-resource
         agentOnly: false
-      - IN: provisionJob
-        agentOnly: true
       - IN: artifactoryConfig
       - IN: develop-git-repo-resource-with-script
         switch: off
@@ -126,7 +124,6 @@ jobs:
     integration: test
     steps:
       - IN: provisionExternalName
-      - IN: deploy-dcl-2
   #    - IN: projectOne
   #    - IN: version-resource-1
    #   - IN: myOtherEcsParams
@@ -135,7 +132,7 @@ jobs:
    #   - IN: busybox-image
   #    - IN: myOtherEcsParams
   #    - IN: specialCharactersBranch
-  #    - IN: provisionLoadBalancer
+      - IN: provisionLoadBalancer
   #- OUT: mongo-image
     on_success:
       - script: echo "Success"
