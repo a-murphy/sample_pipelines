@@ -96,17 +96,18 @@ resources:
       method: LoadBalancer
   #    namespace: my-namespaceus-central1-c
       clusterName: cluster-1
-      region: us-central1-a
+  #    region: us-central1-a
     version:
       ports:
         - name: my-port
           port: 100 
       #    targetPort: 30100
       #    nodePort: 31000
-        - name: my-other-port
-          port: 101
-          targetPort: 30101
+   #     - name: my-other-port
+   #       port: 101
+   #       targetPort: 30101
       selector:
+        shippable.manifestName: vmk-app-def
         loadBalancer: myLoadBalancer
         otherSelector: value
   #    clusterIP: test.1.2.3
