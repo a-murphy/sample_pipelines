@@ -123,7 +123,7 @@ jobs:
     type: provision         
     integration: GKE
     steps:
-      - IN: provisionExternalName
+ #     - IN: provisionExternalName
   #    - IN: projectOne
   #    - IN: version-resource-1
    #   - IN: myOtherEcsParams
