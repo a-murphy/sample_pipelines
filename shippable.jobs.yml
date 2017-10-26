@@ -121,7 +121,7 @@ jobs:
 
   - name: provisionJob
     type: provision         
-    integration: test
+    integration: GKE
     steps:
       - IN: provisionExternalName
   #    - IN: projectOne
