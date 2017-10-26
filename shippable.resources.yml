@@ -119,6 +119,24 @@ resources:
   #      - 127.0.0.1
   #    externalName: "myName"
       
+      
+  - name: kubernetesLoadBalancer
+    type: loadBalancer
+    integration: Kubernetes
+    pointer:
+      sourceName: "my-load-balancer"
+      method: LoadBalancer
+      clusterName: cluster-1
+    version:
+      ports:
+        - name: my-port
+          port: 100
+          protocol: TCP
+      selector:
+        shippable.manifestName: vmk-app-def
+        loadBalancer: myLoadBalancer
+        otherSelector: value
+      
   - name: provisionExternalName
     type: loadBalancer
     integration: GKE
