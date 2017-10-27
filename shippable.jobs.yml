@@ -485,7 +485,7 @@ jobs:
       - IN: zeroReplicas
       - TASK: managed
 
-  - name: new-ECS-deploy3
+  - name: new-ECS-deploy4
     type: deploy
     stabilityDuration: 30
     steps:
@@ -493,7 +493,7 @@ jobs:
   #    - IN: nginx-manifest4
       - IN: myEcsCluster
       - IN: zeroReplicas
-        versionNumber: 1
+        versionNumber: 2
       - TASK: managed
 
   - name: DDC-deploy
