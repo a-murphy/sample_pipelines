@@ -475,9 +475,9 @@ jobs:
       - TASK: managed
       
   - name: ECS-deploy
-    type: deploy
+    type: blueGreen
     method: replace
- #   stabilityDuration: 30
+ #  stabilityDuration: 30
     steps:
       - IN: nginx-manifest3
   #    - IN: nginx-manifest4
@@ -485,10 +485,9 @@ jobs:
       - IN: zeroReplicas
       - TASK: managed
 
-  - name: new-ECS-deploy
+  - name: new-ECS-deploy2
     type: deploy
-    method: replace
- #   stabilityDuration: 30
+    stabilityDuration: 30
     steps:
       - IN: nginx-manifest3
   #    - IN: nginx-manifest4
