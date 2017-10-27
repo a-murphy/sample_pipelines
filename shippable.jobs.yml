@@ -475,8 +475,8 @@ jobs:
       - TASK: managed
       
   - name: ECS-deploy
-    type: blueGreen
-    method: replace
+    type: deploy
+    method: blueGreen
  #  stabilityDuration: 30
     steps:
       - IN: nginx-manifest3
