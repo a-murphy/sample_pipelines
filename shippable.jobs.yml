@@ -480,7 +480,7 @@ jobs:
     stabilityDuration: 30
     steps:
       - IN: nginx-manifest3
-  #    - IN: nginx-manifest4
+      - IN: nginx-manifest4
       - IN: myEcsCluster
       - IN: zeroReplicas
         versionNumber: 1
