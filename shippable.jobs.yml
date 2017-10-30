@@ -1,4 +1,13 @@
 jobs:
+  - name: deploy-awsKeys
+    type: deploy
+    method: upgrade
+    steps:
+      - IN: nginx-manifest3
+      - IN: awsKeysCluster
+      - IN: zeroReplicas
+        versionNumber: 1
+
   - name: runsh-job-gitlabrepo
     type: runSh
     allowPublicAccess: false
