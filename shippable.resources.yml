@@ -362,6 +362,13 @@ resources:
     pointer:
       sourceName : "test-cluster" #name of the cluster to which we are deploying
       region: "us-west-2"
+      
+  - name: awsKeysCluster
+    type: cluster
+    integration: awsKeys
+    pointer:
+      sourceName : "test-cluster"
+      region: "us-west-2"
 
   - name: myOtherEcsCluster
     type: cluster
