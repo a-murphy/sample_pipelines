@@ -13,6 +13,7 @@ resources:
     type: integration
     integration: bitbucket
     flags: shippable-yml
+  - name: test
 
   - name: trigger-shippable-yml
     type: trigger
