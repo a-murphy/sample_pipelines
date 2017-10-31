@@ -19,5 +19,6 @@ jobs:
   - name: runSh-shippable-yml
     type: runSh
     flags: integration
-    TASK:
-      - script: "echo true"
+    steps:
+     - TASK:
+        - script: "echo true"
