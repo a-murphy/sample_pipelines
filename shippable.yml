@@ -13,15 +13,16 @@ resources:
   - name: bitbucket-integration-shippable-yml
     type: integration
     integration: bitbucket
-    flags: integration
+    flags: shippable-yml
+
   - name: trigger-shippable-yml
     type: trigger
-    flags: integration
+    flags: shippable-yml
 
 jobs:
   - name: runSh-shippable-yml
     type: runSh
-    flags: integration
+    flags: shippable-yml
     steps:
      - TASK:
         - script: "echo true"
