@@ -17,6 +17,8 @@ resources:
   - name: trigger-shippable-yml
     type: trigger
     flags: shippable-yml
+    version:
+      count: I
 
 jobs:
   - name: runSh-shippable-yml
