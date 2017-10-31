@@ -9,3 +9,15 @@ build:
   ci:
     - python --version
 
+resources:
+  - name: bitbucket-integration-shippable-yml
+    type: integration
+    integration: bitbucket
+    flags: integration
+
+jobs:
+  - name: runSh-shippable-yml
+    type: runSh
+    flags: integration
+    TASK:
+      - script: "echo true"
