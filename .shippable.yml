@@ -1,1 +1,5 @@
-Testing .shippable.yml
+resources:
+  - name: bitbucket-integration-dot-shippable-yml
+    type: integration
+    integration: bitbucket
+    flags: dot-shippable-yml
