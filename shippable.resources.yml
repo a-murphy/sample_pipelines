@@ -77,89 +77,12 @@ resources:
       #  test: "test ' $JOB_TYPE"
         secure: NBmcGS1+JtjsBUB2j4ZcOhNLeMEXK08yp26POvp83OFbg4/Buo/IM8B4gjH1AzlorpxDFLfZUU4IoJcJqPrecUYveJki7A3wff7Yk4qJuDZATcu1flhc/xrVNP2OV0OnfKBd+455ezF3t9u6ul8FPWLN0z9ATwMNlAS9O1ks4JfaO020o0Tacx9XQ+LswjSvCkE+EIbZvmDEEw1FBASAwQYzj97OSWMX2dXTbrNVHEsH40aqnwIpBlYJW0vIeUcEasXzK5DBxKBq8P9zEK1QhDnwHqZihlBkw8w2Dh9b2SqP7hXlqfe+xkcCoEn4qdiHATNfnWK7j5zZaI6dLuA2zQ== 
 
-  - name: myOtherEcsParams
-    type: params
-    integration: AWS
-    pointer:
-      test: test
-    version:
-      params:
-        five: 25
-    
   - name: myDockerOptions
     type: dockerOptions
     integration: AWS
     version:
       memory: 36
       cpuShares: 4
-
-  - name: myOtherDockerOptions
-    type: dockerOptions
-    integration: AWS
-    version:
-      service:
-        placementStrategy:
-          - field: "attribute:ecs.availability-zone"
-            type: spread
-        deploymentConfiguration: 
-          maximumPercent: 150
-          minimumHealthyPercent: 75
-      memory: 48
-    #  cpuShares: 10
-      portMappings:
-        - 27017:27017
-   #     - 27018:27018
-        - 8000:8000
-    #    - 80:80
-    #  links:
-    #    - "one:1"
-    #    - "two:2"
-     
-    #  cmd:
-    #    - "pwd"
-    #    - "true"
-    #  entryPoint:
-    #    - "mongod"
-    #  privileged: false
-    #  user: 0
-    #  workingDir: "/home/test"
-    #  volumes:
-    #    - "/host/path:/container/path:rw"
-    #    - "/host/path:/container/path2:rw"
-    #    - "/host/path-2:/container/path3:ro"
-    #    - "/host/path2:/container/path4:rw"
-    #    - "/host/path.2:/container/path5:ro"
-    #    - "/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz/abcdefghijklmnopqrstuvwxyz:/container/path6:ro"
-    #  dnsServers:
-    #    - "127.0.0.1"
-   #     - "8.8.8.8"
-    #  dnsSearch:
-    #    - "127.0.0.1"
-    #    - "8.8.8.8"
-    #  logConfig:
-    #    type: "json-file"
-      #  options:
-     #     test: test
-    #  ulimits:
-    #    - name: cpu
-    #      hard: 5
-    #      soft: 3
-    #    - name: core
-    #      hard: 10
-    #      soft: 5
-      labels:
-        labelone: valueOne
-        labeltwo: valueTwo
-        labelthree: valueThree
-        
- 
-  - name: myGKECluster
-    type: cluster
-    integration: GKE
-    pointer:
-      sourceName : "cluster-1"
-      region: "us-west1-a"
-      namespace: myNamespace
     
   - name: kubernetesCluster
     type: cluster
