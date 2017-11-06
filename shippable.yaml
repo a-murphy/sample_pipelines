@@ -1,5 +1,0 @@
-resources:
-  - name: bitbucket-integration-shippable-yaml
-    type: integration
-    integration: bitbucket
-    flags: shippable-yaml
