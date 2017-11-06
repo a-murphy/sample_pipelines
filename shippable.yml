@@ -21,9 +21,9 @@ resources:
     version:
       count: I
       
-  - name: sample_pipelines_master
-    type: syncRepo
-    flags:
+#  - name: sample_pipelines_master
+#    type: syncRepo
+#    flags:
  #     - one
  #     - two
 jobs:
