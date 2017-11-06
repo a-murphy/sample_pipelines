@@ -25,7 +25,7 @@ resources:
     type: syncRepo
     flags:
       - one
-      - two: 2
+      - two
 jobs:
   - name: runSh-shippable-yml
     type: runSh
