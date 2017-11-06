@@ -1,5 +1,0 @@
-resources:
-  - name: bitbucket-integration-subfolder-shippable-yml
-    type: integration
-    integration: bitbucket
-    flags: subfolder-shippable-yml
