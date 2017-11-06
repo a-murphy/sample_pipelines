@@ -20,6 +20,12 @@ resources:
     flags: shippable-yml
     version:
       count: I
+      
+  - name: syncRepo
+    type: syncRepo
+    flags:
+      - one: 1
+      - two: 2
 
 jobs:
   - name: runSh-shippable-yml
