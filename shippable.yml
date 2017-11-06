@@ -23,9 +23,9 @@ resources:
       
   - name: sample_pipelines_master
     type: syncRepo
-   # flags:
-   #   - one
-   #   - two
+    flags:
+      - one
+      - two: 2
 jobs:
   - name: runSh-shippable-yml
     type: runSh
