@@ -21,11 +21,10 @@ resources:
     version:
       count: I
       
-  - name: sample_pipelines_master
+  - name: sample_pipelines_master_test
     type: syncRepo
-    flags:
-      - one
-      - two
+    flags: one
+     # - two
 jobs:
   - name: runSh-shippable-yml
     type: runSh
