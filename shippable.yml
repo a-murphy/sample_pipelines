@@ -21,7 +21,7 @@ resources:
     version:
       count: I
       
-  - name: syncRepo
+  - name: sample_pipelines_master
     type: syncRepo
     flags:
       - one
