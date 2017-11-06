@@ -1,5 +1,0 @@
-resources:
-  - name: bitbucket-integration-test-shippable-yml
-    type: integration
-    integration: bitbucket
-    flags: test-shippable-yml
