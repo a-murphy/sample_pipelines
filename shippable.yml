@@ -20,12 +20,12 @@ resources:
     flags: shippable-yml
     version:
       count: I
-      
-#  - name: sample_pipelines_master
-#    type: syncRepo
-#    flags:
- #     - one
- #     - two
+     
+  - name: sample_pipelines_master
+    type: syncRepo
+    flags:
+      - one
+      - two
 jobs:
   - name: runSh-shippable-yml
     type: runSh
