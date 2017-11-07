@@ -20,9 +20,9 @@ resources:
     version:
       count: I
 
-  - name: sample_pipelines_test-filenames
+  - name: filenames
     type: syncRepo
- #   flags: syncRepoFlag
+    flags: syncRepoFlag
 
 
 jobs:
