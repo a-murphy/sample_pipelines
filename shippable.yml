@@ -20,10 +20,9 @@ resources:
     version:
       count: I
 
-  - name: filenames
+  - name: sample_pipelines_test-filenames
     type: syncRepo
-    flags: syncRepoFlag
-
+#    flags: syncRepoFlag
 
 jobs:
   - name: runSh-shippable-yml
