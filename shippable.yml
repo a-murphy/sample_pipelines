@@ -20,9 +20,9 @@ resources:
     version:
       count: I
 
-#  - name: filenames
-#    type: syncRepo
-#    flags: syncRepoFlag
+  - name: filenames
+    type: syncRepo
+    flags: syncRepoFlag
 
 
 jobs:
