@@ -6,7 +6,7 @@ resources:
       sourceName: a-murphy/sample_ubuntu1204_go
       branch: master
    #   buildOnPullRequest: true
-   #  buildOnPullRequestClose: true
+      buildOnPullRequestClose: true
 
   - name: image-resource
     type: image
