@@ -1,5 +1,5 @@
 resources:
-  - name: gitlab-repo
+  - name: gitlab-repo2
     type: gitRepo
     integration: gitlab
     pointer:
