@@ -485,7 +485,7 @@ jobs:
       
   - name: ECS-deploy
     type: deploy
-    method: replace
+    method: blueGreen
     stabilityDuration: 30
     steps:
       - IN: nginx-manifest3
