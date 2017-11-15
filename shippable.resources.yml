@@ -163,8 +163,6 @@ resources:
 #      isPull: false
     seed:
       versionName: "latest"
-    versionTemplate:
-      versionName: "latest"
       
   - name: new-mongo-image
     type: image
