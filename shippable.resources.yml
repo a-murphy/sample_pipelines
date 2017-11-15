@@ -17,6 +17,8 @@ resources:
       sourceName: amurphy/test
     seed:
       versionName: latest
+    versionTemplate:
+      versionName: 123
 
   - name: develop-git-repo-resource-with-script
     type: gitRepo
