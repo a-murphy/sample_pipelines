@@ -38,11 +38,11 @@ resources:
 
   - name: gkeConfigResource
     type: cliConfig
-    integration: GKE
+    integration: gcloud
     pointer:
       clusterName: cluster-1
       namespace: testnamespace
-      region: us-west1-a
+      region: us-central1-a
  
  # - name: jFrogResource
  #   type: cliConfig
