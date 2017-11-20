@@ -377,7 +377,7 @@ resources:
     integration: gcloud
     pointer:
       sourceName : "cluster-1"
-      region: "us-west1-a"
+      region: "us-central1-a"
       namespace: myNamespace
 
   - name: myDclCluster
