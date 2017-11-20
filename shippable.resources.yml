@@ -374,7 +374,7 @@ resources:
 
   - name: myGKECluster
     type: cluster
-    integration: GKE
+    integration: gcloud
     pointer:
       sourceName : "cluster-1"
       region: "us-west1-a"
