@@ -686,7 +686,7 @@ jobs:
         switch: off
   #    - IN: generate-manifest
       - IN: myGKECluster
-  #    - IN: myReplicas
+      - IN: myReplicas
       - IN: myOtherDockerOptions
   #      applyTo:
   #        - mongo-image
@@ -694,7 +694,7 @@ jobs:
  #       applyTo:
  #         - nginx-image
       - TASK: managed
-        deployMethod: replace
+        deployMethod: blueGreen
         
  # - name: empty-deploy
  #   type: deploy
