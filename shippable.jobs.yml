@@ -683,7 +683,7 @@ jobs:
    # stabilityDuration: 450
     steps:
       - IN: nginx-manifest3
-        switch: off
+  #      switch: off
   #    - IN: generate-manifest
       - IN: myGKECluster
       - IN: myReplicas
