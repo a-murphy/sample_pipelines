@@ -1,4 +1,8 @@
 resources:
+  - name: sshKey
+    type: integration
+    integration: sshKey
+ 
   - name: gitlab-repo2
     type: gitRepo
     integration: gitlab
@@ -376,6 +380,10 @@ resources:
     type: cluster
     integration: gcloud
     pointer:
+      bastionHost:
+        address: "165.227.178.224"
+        user: root
+        keyIntegration: sshKey
       sourceName : "cluster-1"
       region: "us-central1-a"
       namespace: myNamespace
