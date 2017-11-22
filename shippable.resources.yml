@@ -382,7 +382,7 @@ resources:
     pointer:
       bastionHost:
         address: "165.227.178.224"
-        user: root
+        user: shippable
         keyIntegration: sshKey
       sourceName : "cluster-1"
       region: "us-central1-a"
