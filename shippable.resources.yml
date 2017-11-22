@@ -343,7 +343,7 @@ resources:
   - name: myReplicas
     type: replicas
     version:
-      count: 2
+      count: 1
 
   - name: threeReplicas
     type: replicas
