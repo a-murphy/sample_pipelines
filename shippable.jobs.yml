@@ -695,7 +695,7 @@ jobs:
  #       applyTo:
  #         - nginx-image
       - TASK: managed
-        deployMethod: replace
+        deployMethod: upgrade
         
  # - name: empty-deploy
  #   type: deploy
