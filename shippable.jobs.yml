@@ -141,7 +141,7 @@ jobs:
    #   - IN: busybox-image
   #    - IN: myOtherEcsParams
   #    - IN: specialCharactersBranch
-   #   - IN: provisionLoadBalancer
+      - IN: provisionLoadBalancer
   #    - IN: kubernetesLoadBalancer 
   #- OUT: mongo-image
     on_success:
