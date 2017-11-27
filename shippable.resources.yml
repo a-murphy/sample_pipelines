@@ -143,7 +143,11 @@ resources:
       method: ExternalName
       namespace: my-namespace
       clusterName: cluster-1
-      region: us-central1-c
+      region: us-central1-a
+      bastionHost:
+        address: "138.197.25.111"
+        user: shippable
+        keyIntegration: sshKey
     version:
       ports:
         - port: 102
