@@ -695,7 +695,7 @@ jobs:
  #       applyTo:
  #         - nginx-image
       - TASK: managed
-        deployMethod: remove
+        deployMethod: blueGreen
         
  # - name: empty-deploy
  #   type: deploy
