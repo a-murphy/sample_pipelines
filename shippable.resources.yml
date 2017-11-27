@@ -380,10 +380,10 @@ resources:
     type: cluster
     integration: gcloud
     pointer:
-      bastionHost:
-        address: "165.227.178.224"
-        user: shippable
-        keyIntegration: sshKey
+   #   bastionHost:
+   #     address: "165.227.178.224"
+   #     user: shippable
+   #     keyIntegration: sshKey
       sourceName : "cluster-1"
       region: "us-central1-a"
       namespace: myNamespace
