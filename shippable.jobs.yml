@@ -132,7 +132,7 @@ jobs:
     type: provision         
 #    integration: GKE
     steps:
- #     - IN: provisionExternalName
+      - IN: provisionExternalName
   #    - IN: projectOne
   #    - IN: version-resource-1
    #   - IN: myOtherEcsParams
@@ -142,7 +142,7 @@ jobs:
   #    - IN: myOtherEcsParams
   #    - IN: specialCharactersBranch
    #   - IN: provisionLoadBalancer
-      - IN: kubernetesLoadBalancer 
+  #    - IN: kubernetesLoadBalancer 
   #- OUT: mongo-image
     on_success:
       - script: echo "Success"
