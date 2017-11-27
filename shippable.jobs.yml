@@ -132,6 +132,7 @@ jobs:
     type: provision         
 #    integration: GKE
     steps:
+      - IN: sshKey
       - IN: provisionExternalName
   #    - IN: projectOne
   #    - IN: version-resource-1
