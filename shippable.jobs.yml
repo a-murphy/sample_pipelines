@@ -679,18 +679,18 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
         
-#  - name: gke-deploy2
-#    type: deploy
+  - name: gke-deploy2
+    type: deploy
    # stabilityDuration: 450
-#    steps:
-#      - IN: nginx-manifest3
+    steps:
+      - IN: nginx-manifest3
   #      switch: off
   #    - IN: generate-manifest
-#      - IN: sshKey
-#      - IN: myGKECluster
-#      - IN: myReplicas
-#      - TASK: managed
-#        deployMethod: remove
+      - IN: sshKey
+      - IN: myGKECluster
+      - IN: myReplicas
+      - TASK: managed
+        deployMethod: remove
         
  # - name: empty-deploy
  #   type: deploy
