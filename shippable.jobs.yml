@@ -128,19 +128,19 @@ jobs:
       - TASK:
         - script: "echo true"
 
-  - name: provisionJob
-    type: provision
-    steps:
-      - IN: sshKey
-      - IN: provisionExternalName
-      - IN: provisionLoadBalancer
+#  - name: provisionJob
+#    type: provision
+#    steps:
+#      - IN: sshKey
+#      - IN: provisionExternalName
+#      - IN: provisionLoadBalancer
   #    - IN: kubernetesLoadBalancer 
-    on_success:
-      - script: echo "Success"
-      - NOTIFY: notifyMe
-    on_failure:
-      - script: echo "Failure"
-      - NOTIFY: notifyMe 
+#    on_success:
+#      - script: echo "Success"
+#      - NOTIFY: notifyMe
+#    on_failure:
+#      - script: echo "Failure"
+#      - NOTIFY: notifyMe 
   
   - name: terraformTest
     type: runSh        
