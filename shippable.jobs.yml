@@ -128,19 +128,19 @@ jobs:
       - TASK:
         - script: "echo true"
 
-#  - name: provisionJob
-#    type: provision
-#    steps:
-#      - IN: sshKey
-#      - IN: provisionExternalName
-#      - IN: provisionLoadBalancer
+  - name: provisionJob
+    type: provision
+    steps:
+      - IN: sshKey
+      - IN: provisionExternalName
+      - IN: provisionLoadBalancer
   #    - IN: kubernetesLoadBalancer 
-#    on_success:
-#      - script: echo "Success"
-#      - NOTIFY: notifyMe
-#    on_failure:
-#      - script: echo "Failure"
-#      - NOTIFY: notifyMe 
+    on_success:
+      - script: echo "Success"
+      - NOTIFY: notifyMe
+    on_failure:
+      - script: echo "Failure"
+      - NOTIFY: notifyMe 
   
   - name: terraformTest
     type: runSh        
@@ -667,18 +667,18 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
         
-#  - name: gke-deploy2
-#    type: deploy
+  - name: gke-deploy2
+    type: deploy
    # stabilityDuration: 450
-#    steps:
-#      - IN: nginx-manifest3
+    steps:
+      - IN: nginx-manifest3
   #      switch: off
   #    - IN: generate-manifest
-#      - IN: sshKey
-#      - IN: myGKECluster
-#      - IN: myReplicas
-#      - TASK: managed
-#        deployMethod: blueGreen
+      - IN: sshKey
+      - IN: myGKECluster
+      - IN: myReplicas
+      - TASK: managed
+        deployMethod: blueGreen
         
  # - name: empty-deploy
  #   type: deploy
