@@ -92,9 +92,9 @@ resources:
     pointer:
       sourceName: "my-load-balancer"
       method: LoadBalancer
-  #    namespace: my-namespaceus-central1-c
+      namespace: my-namespace-us-central1-a
       clusterName: cluster-1
-  #    region: us-central1-a
+      region: us-central1-a
     version:
       ports:
         - name: my-port
