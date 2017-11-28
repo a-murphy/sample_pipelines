@@ -689,7 +689,7 @@ jobs:
       - IN: myGKECluster
       - IN: myReplicas
       - TASK: managed
-        deployMethod: remove
+        deployMethod: blueGreen
         
  # - name: empty-deploy
  #   type: deploy
