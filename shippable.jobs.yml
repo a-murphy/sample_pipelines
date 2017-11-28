@@ -128,30 +128,19 @@ jobs:
       - TASK:
         - script: "echo true"
 
-  - name: provisionJob
-    type: provision         
-#    integration: GKE
-    steps:
-      - IN: sshKey
-      - IN: provisionExternalName
-  #    - IN: projectOne
-  #    - IN: version-resource-1
-   #   - IN: myOtherEcsParams
-  #    - IN: cliJob2
-#      - IN: specialCharactersBranch
-   #   - IN: busybox-image
-  #    - IN: myOtherEcsParams
-  #    - IN: specialCharactersBranch
-      - IN: provisionLoadBalancer
+#  - name: provisionJob
+#    type: provision
+#    steps:
+#      - IN: sshKey
+#      - IN: provisionExternalName
+#      - IN: provisionLoadBalancer
   #    - IN: kubernetesLoadBalancer 
-  #- OUT: mongo-image
-    on_success:
-      - script: echo "Success"
-      - NOTIFY: notifyMe
-    on_failure:
-      - script: echo "Failure"
-      - NOTIFY: notifyMe
-  
+#    on_success:
+#      - script: echo "Success"
+#      - NOTIFY: notifyMe
+#    on_failure:
+#      - script: echo "Failure"
+#      - NOTIFY: notifyMe 
   
   - name: terraformTest
     type: runSh        
