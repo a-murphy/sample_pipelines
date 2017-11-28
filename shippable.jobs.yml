@@ -128,12 +128,12 @@ jobs:
       - TASK:
         - script: "echo true"
 
-#  - name: provisionJob
-#    type: provision
-#    steps:
-#      - IN: sshKey
+  - name: provisionJob
+    type: provision
+    steps:
+      - IN: sshKey
 #      - IN: provisionExternalName
-#      - IN: provisionLoadBalancer
+      - IN: provisionLoadBalancer
   #    - IN: kubernetesLoadBalancer 
 #    on_success:
 #      - script: echo "Success"
