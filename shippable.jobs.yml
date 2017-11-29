@@ -53,6 +53,27 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
         
+  - name: _KTest123_deploy-blueGreen_
+    type: deploy
+    steps:
+      - IN: _Test-123
+  #      switch: off
+      - IN: sshKey
+      - IN: myKubernetesCluster
+      - IN: myReplicas
+      - TASK: managed
+        deployMethod: upgrade
+        
+  - name: _KTest123_deploy-upgrade_
+    type: deploy
+    steps:
+      - IN: _Test-123
+  #      switch: off
+      - IN: sshKey
+      - IN: myKubernetesCluster
+      - IN: myReplicas
+      - TASK: managed
+        deployMethod: upgrade
 
   - name: runsh-job-gitlabrepo
     type: runSh
