@@ -33,7 +33,7 @@ jobs:
       - IN: myKubernetesCluster
       - IN: myReplicas
       - TASK: managed
-        deployMethod: replace
+        deployMethod: blueGreen
         
 
   - name: runsh-job-gitlabrepo
