@@ -13,7 +13,7 @@ jobs:
     steps:
       - IN: new-mongo-image
       
-  - name: _Test123_deploy-123456789012345678901234567890123456789012345678901234567890
+  - name: _Test123_deploy-12345678901234567890123456789012345678901234567890123456789
     type: deploy
     steps:
       - IN: _Test-123
