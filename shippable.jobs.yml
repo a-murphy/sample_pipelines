@@ -13,7 +13,7 @@ jobs:
     steps:
       - IN: new-mongo-image
       
-  - name: _Test123_deploy-12345678901234567890123456789012345678901234567890123456789
+  - name: _Test123_deploy-1234567890123456789012345678901234567890123456789012345678
     type: deploy
     steps:
       - IN: _Test-123
@@ -22,9 +22,9 @@ jobs:
       - IN: myGKECluster
       - IN: myReplicas
       - TASK: managed
-        deployMethod: blueGreen
+        deployMethod: replace
         
-  - name: _KTest123_deploy-123456789012345678901234567890123456789012345678901234567
+  - name: _KTest123_deploy-12345678901234567890123456789012345678901234567890123456
     type: deploy
     steps:
       - IN: _Test-123
@@ -33,7 +33,7 @@ jobs:
       - IN: myKubernetesCluster
       - IN: myReplicas
       - TASK: managed
-        deployMethod: replace
+        deployMethod: upgrade
         
 
   - name: runsh-job-gitlabrepo
