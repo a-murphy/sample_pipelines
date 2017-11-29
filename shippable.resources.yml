@@ -408,6 +408,12 @@ resources:
     pointer:
       namespace: my-namespace
       
+  - name: myKubernetesCluster
+    type: cluster
+    integration: Kubernetes
+    pointer:
+      namespace: my-namespace
+      
  
   - name: azureCluster
     type: cluster
