@@ -8,15 +8,15 @@ jobs:
  #     - IN: zeroReplicas
  #       versionNumber: 1
  
-  - name: _Test.[]'123()*
+  - name: _Test.'123*
     type: manifest
     steps:
       - IN: new-mongo-image
       
-  - name: _Test./'123*_deploy-
+  - name: _Test.'123*_deploy-
     type: deploy
     steps:
-      - IN: _Test.[]'123()*
+      - IN: _Test.'123*
   #      switch: off
       - IN: sshKey
       - IN: myGKECluster
