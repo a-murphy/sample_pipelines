@@ -390,7 +390,7 @@ resources:
         keyIntegration: sshKey
       sourceName : "cluster-1"
       region: "us-central1-a"
-      namespace: myNamespace
+      namespace: mynamespace
 
   - name: myDclCluster
     type: cluster
