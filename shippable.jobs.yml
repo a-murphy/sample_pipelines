@@ -13,7 +13,7 @@ jobs:
     steps:
       - IN: new-mongo-image
       
-  - name: _Test123_deploy-123456789012345678901234567890123456789012345678901234567
+  - name: _Test123_deploy-blueGreen_
     type: deploy
     steps:
       - IN: _Test-123
@@ -21,8 +21,26 @@ jobs:
       - IN: sshKey
       - IN: myGKECluster
       - IN: myReplicas
-      - TASK: managed
-        deployMethod: replace
+        
+  - name: _Test123_deploy-upgrade
+    type: deploy 
+    deployMethod: upgrade
+    steps:
+      - IN: _Test-123
+  #      switch: off
+      - IN: sshKey
+      - IN: myGKECluster
+      - IN: myReplicas
+        
+  - name: _Test123_deploy-replace
+    type: deploy
+    deployMethod: replace
+    steps:
+      - IN: _Test-123
+  #      switch: off
+      - IN: sshKey
+      - IN: myGKECluster
+      - IN: myReplicas
         
   - name: _KTest123_deploy-12345678901234567890123456789012345678901234567890123456
     type: deploy
