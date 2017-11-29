@@ -22,7 +22,7 @@ jobs:
       - IN: myGKECluster
       - IN: myReplicas
       - TASK: managed
-        deployMethod: blueGreen
+        deployMethod: replace
         
 
   - name: runsh-job-gitlabrepo
