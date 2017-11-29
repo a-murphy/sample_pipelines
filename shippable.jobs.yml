@@ -22,9 +22,9 @@ jobs:
       - IN: myGKECluster
       - IN: myReplicas
         
-  - name: _Test123_deploy-upgrade
+  - name: _Test123_deploy-upgrade_
     type: deploy 
-    deployMethod: upgrade
+    method: upgrade
     steps:
       - IN: _Test-123
   #      switch: off
@@ -32,9 +32,9 @@ jobs:
       - IN: myGKECluster
       - IN: myReplicas
         
-  - name: _Test123_deploy-replace
+  - name: _Test123_deploy-replace_
     type: deploy
-    deployMethod: replace
+    method: replace
     steps:
       - IN: _Test-123
   #      switch: off
