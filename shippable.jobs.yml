@@ -8,6 +8,14 @@ jobs:
  #     - IN: zeroReplicas
  #       versionNumber: 1
  
+  - name: azure_test
+    type: runSh        
+    steps:
+      - IN: azureConfig
+      - TASK:
+        - script: echo $PATH
+        - script: az --version
+
   - name: _Test-123
     type: manifest
     steps:
