@@ -589,3 +589,6 @@ resources:
     type: cluster
     integration: Node
       
+  - name: azureConfig
+    type: cliConfig
+    integration: Azure
