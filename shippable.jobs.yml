@@ -14,7 +14,8 @@ jobs:
       - IN: azureConfig
       - TASK:
         - script: echo $PATH
-        - script: az --version
+        - script: az app list
+        - script: az aks list
 
   - name: _Test-123
     type: manifest
