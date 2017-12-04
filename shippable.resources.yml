@@ -399,7 +399,7 @@ resources:
       sourceName: clusterName
       groupName: groupName
       bastionHost:
-        address: "138.197.25.111"
+        address: "45.55.195.74"
         user: shippable
         keyIntegration: sshKey
 
