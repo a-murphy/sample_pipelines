@@ -16,6 +16,15 @@ jobs:
         - script: echo $PATH
         - script: az role assignment list
         - script: az aks list
+        
+  - name: _Test_Azure_deploy_
+    type: deploy
+    steps:
+      - IN: _Test-123
+  #      switch: off
+      - IN: sshKey
+      - IN: myAzureCluster
+      - IN: myReplicas
 
   - name: _Test-123
     type: manifest
