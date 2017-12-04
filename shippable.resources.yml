@@ -396,6 +396,8 @@ resources:
     type: cluster
     integration: Azure
     pointer:
+      sourceName: clusterName
+      groupName: groupName
       bastionHost:
         address: "138.197.25.111"
         user: shippable
