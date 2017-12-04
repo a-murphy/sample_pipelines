@@ -399,7 +399,7 @@ resources:
       bastionHost:
         address: "138.197.25.111"
         user: shippable
-   #     keyIntegration: sshKey
+        keyIntegration: sshKey
 
   - name: myDclCluster
     type: cluster
