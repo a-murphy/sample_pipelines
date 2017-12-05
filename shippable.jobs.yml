@@ -238,12 +238,12 @@ jobs:
 #      - script: echo "Failure"
 #      - NOTIFY: notifyMe 
   
-  - name: provisionAzure
-    type: provision
-    steps:
-      - IN: sshKey
-      - IN: provisionAzureExternalName
-      - IN: provisionAzureLoadBalancer
+#  - name: provisionAzure
+#    type: provision
+#    steps:
+#      - IN: sshKey
+#      - IN: provisionAzureExternalName
+#      - IN: provisionAzureLoadBalancer
   
   - name: terraformTest
     type: runSh        
