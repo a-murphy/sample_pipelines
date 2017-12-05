@@ -396,12 +396,16 @@ resources:
     type: cluster
     integration: Azure
     pointer:
-      sourceName: Cluster
-      groupName: resourceGroup
+    #  sourceName: Cluster
+    #  groupName: resourceGroup
       bastionHost:
         address: "45.55.195.74"
         user: shippable
         keyIntegration: sshKey
+ 
+ - name: testAzureCluster
+    type: cluster
+    integration: Azure
 
   - name: myDclCluster
     type: cluster
