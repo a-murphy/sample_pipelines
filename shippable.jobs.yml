@@ -35,7 +35,7 @@ jobs:
     type: deploy
     steps:
       - IN: _Test-123
-  #      switch: off
+        switch: off
       - IN: sshKey
       - IN: myGKECluster
       - IN: myReplicas
@@ -45,7 +45,7 @@ jobs:
     method: upgrade
     steps:
       - IN: _Test-123
-  #      switch: off
+        switch: off
       - IN: sshKey
       - IN: myGKECluster
       - IN: myReplicas
@@ -55,7 +55,7 @@ jobs:
     method: replace
     steps:
       - IN: _Test-123
-  #      switch: off
+        switch: off
       - IN: sshKey
       - IN: myGKECluster
       - IN: myReplicas
@@ -64,7 +64,7 @@ jobs:
     type: deploy
     steps:
       - IN: _Test-123
-  #      switch: off
+        switch: off
       - IN: sshKey
       - IN: myKubernetesCluster
       - IN: myReplicas
@@ -75,7 +75,7 @@ jobs:
     type: deploy
     steps:
       - IN: _Test-123
-  #      switch: off
+        switch: off
       - IN: sshKey
       - IN: myKubernetesCluster
       - IN: myReplicas
@@ -86,7 +86,7 @@ jobs:
     type: deploy
     steps:
       - IN: _Test-123
-  #      switch: off
+        switch: off
       - IN: sshKey
       - IN: myKubernetesCluster
       - IN: myReplicas
