@@ -17,7 +17,7 @@ jobs:
         - script: az role assignment list
         - script: az aks list
         
-  - name: _Test_Azure_deploy_
+  - name: Test_Azure_deploy
     type: deploy
     steps:
       - IN: _Test-123
