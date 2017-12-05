@@ -156,6 +156,46 @@ resources:
         otherSelector: value
       loadBalancerIP: "loadBalancerIP"
       externalName: "my-name"
+      
+  - name: provisionAzureLoadBalancer
+    type: loadBalancer
+    integration: azureKeys
+    pointer:
+      sourceName: "my-load-balancer"
+      method: LoadBalancer
+      namespace: my-namespace-2
+      clusterName: Cluster
+      groupName: resourceGroup
+    version:
+      ports:
+        - name: my-port
+          port: 100 
+      selector:
+        shippable.manifestName: vmk-app-def
+        loadBalancer: myLoadBalancer
+        otherSelector: value
+      
+  - name: provisionAzureExternalName
+    type: loadBalancer
+    integration: azureKeys
+    pointer:
+      sourceName: "my-external-name"
+      method: ExternalName
+      namespace: my-namespace
+      clusterName: Cluster
+      groupName: resourceGroup
+      bastionHost:
+        address: "45.55.195.74"
+        user: shippable
+        keyIntegration: sshKey
+    version:
+      ports:
+        - port: 102
+      selector:
+        loadBalancer: myLoadBalancer
+        otherSelector: value
+      loadBalancerIP: "loadBalancerIP"
+      externalName: "my-name"
 
   - name: test-state
     type: state
