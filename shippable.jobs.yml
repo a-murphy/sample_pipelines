@@ -19,7 +19,7 @@ jobs:
         
   - name: Test_Azure_Deploy
     type: deploy
-    method: remove
+    method: upgrade
     steps:
       - IN: _Test-123
   #      switch: off
