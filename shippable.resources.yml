@@ -159,7 +159,7 @@ resources:
       
   - name: provisionAzureLoadBalancer
     type: loadBalancer
-    integration: azureKeys
+    integration: Azure
     pointer:
       sourceName: "my-load-balancer"
       method: LoadBalancer
@@ -177,7 +177,7 @@ resources:
       
   - name: provisionAzureExternalName
     type: loadBalancer
-    integration: azureKeys
+    integration: Azure
     pointer:
       sourceName: "my-external-name"
       method: ExternalName
