@@ -403,7 +403,7 @@ resources:
         user: shippable
         keyIntegration: sshKey
  
- - name: testAzureCluster
+  - name: testAzureCluster
     type: cluster
     integration: Azure
 
