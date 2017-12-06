@@ -278,7 +278,7 @@ resources:
     type: loadBalancer
     pointer:
       sourceName: myLoadBalancer
-   #   role: betaNewAWSRole
+      role: betaNewAWSRole
   
   - name: myNewApplicationLoadBalancer
     type: loadBalancer
