@@ -10,12 +10,12 @@ jobs:
  
   - name: azure_test
     type: runSh        
-    steps:
-      - IN: azureConfig
+    steps
+      - IN: gitlab-repo2
+      - IN: image-resource
       - TASK:
-        - script: echo $PATH
-        - script: az role assignment list
-        - script: az aks list
+        - script: echo $GITLABREPO2_SOURCENAME
+        - script: echo $IMAGERESOURCE_SOURCENAME
         
   - name: Test_Azure_Deploy
     type: deploy
