@@ -313,9 +313,10 @@ resources:
   - name: testDockerOptions
     type: dockerOptions
     version:
-      hostName: testHostName
-      domainName: testDomainName
-      restartPolicy: testRestartPolicy
+      pod:
+        hostName: testHostName
+        domainName: testDomainName
+        restartPolicy: testRestartPolicy
  
   - name: myDockerOptions
     type: dockerOptions
