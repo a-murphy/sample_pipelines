@@ -310,7 +310,14 @@ resources:
       params:
         five: 25
     
-  - name: myDockerOptions
+  - name: testDockerOptions
+    type: dockerOptions
+    version:
+      hostName: testHostName
+      domainName: testDomainName
+      restartPolicy: testRestartPolicy
+ 
+ - name: myDockerOptions
     type: dockerOptions
     integration: AWS
     version:
