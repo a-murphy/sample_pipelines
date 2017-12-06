@@ -13,10 +13,12 @@ jobs:
     steps:
       - IN: gitlab-repo2
       - IN: image-resource
+      - IN: myLoadBalancer
       - TASK:
         - script: echo "GITLABREPO2_PATH $GITLABREPO2_PATH"
         - script: echo "GITLABREPO2_SOURCENAME $GITLABREPO2_SOURCENAME"
         - script: echo "IMAGERESOURCE_SOURCENAME $IMAGERESOURCE_SOURCENAME"
+        - script: echo "MYLOADBALANCER_SOURCENAME $MYLOADBALANCER_SOURCENAME"
 
         
   - name: Test_Azure_Deploy
