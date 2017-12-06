@@ -317,7 +317,7 @@ resources:
       domainName: testDomainName
       restartPolicy: testRestartPolicy
  
- - name: myDockerOptions
+  - name: myDockerOptions
     type: dockerOptions
     integration: AWS
     version:
