@@ -16,6 +16,7 @@ jobs:
       - TASK:
         - script: echo $GITLABREPO2_SOURCENAME
         - script: echo $IMAGERESOURCE_SOURCENAME
+
         
   - name: Test_Azure_Deploy
     type: deploy
