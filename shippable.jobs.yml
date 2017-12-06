@@ -41,6 +41,7 @@ jobs:
     type: manifest
     steps:
       - IN: new-mongo-image
+      - IN: testDockerOptions
       
   - name: _Test123_deploy-blueGreen_
     type: deploy
