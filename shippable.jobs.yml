@@ -10,7 +10,7 @@ jobs:
  
   - name: azure_test
     type: runSh        
-    steps
+    steps:
       - IN: gitlab-repo2
       - IN: image-resource
       - TASK:
