@@ -642,7 +642,7 @@ resources:
   - name: file2
     type: file
     pointer:
-      sourceName: https://raw.githubusercontent.com/a-murphy/sample_pipelines/test/README.md
+      sourceName: https://raw.githubusercontent.com/a-murphy/sample_pipelines/testfailure/README.md
     seed:
       versionName: test4
       
