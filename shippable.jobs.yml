@@ -21,6 +21,7 @@ jobs:
         - script: echo "IMAGERESOURCE_SOURCENAME $IMAGERESOURCE_SOURCENAME"
         - script: echo "MYLOADBALANCER_SOURCENAME $MYLOADBALANCER_SOURCENAME"
         - script: cd /home/shippable/execTemplates/Ubuntu_16.04/resources/file
+        - script: cat init.sh
         - script: ./init.sh file2
 
         
