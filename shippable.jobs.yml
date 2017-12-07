@@ -916,6 +916,7 @@ jobs:
     type: deploy
     steps:
       - IN: generate-file-manifest
+        switch: off
       - IN: nodeCluster
       - TASK:
         - script: ls /tmp/shippable/generate-file-manifest/file
