@@ -15,6 +15,7 @@ jobs:
       - IN: image-resource
       - IN: myLoadBalancer
       - IN: file2
+        pull: true
       - TASK:
         - script: echo "MYAZURECLUSTER_PATH $MYAZURECLUSTER_PATH"
         - script: echo "MYAZURECLUSTER_SOURCENAME $MYAZURECLUSTER_SOURCENAME"
