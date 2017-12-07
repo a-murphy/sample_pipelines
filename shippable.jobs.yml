@@ -14,11 +14,13 @@ jobs:
       - IN: myAzureCluster
       - IN: image-resource
       - IN: myLoadBalancer
+      - IN: file2
       - TASK:
         - script: echo "MYAZURECLUSTER_PATH $MYAZURECLUSTER_PATH"
         - script: echo "MYAZURECLUSTER_SOURCENAME $MYAZURECLUSTER_SOURCENAME"
         - script: echo "IMAGERESOURCE_SOURCENAME $IMAGERESOURCE_SOURCENAME"
         - script: echo "MYLOADBALANCER_SOURCENAME $MYLOADBALANCER_SOURCENAME"
+        - script: ./home/shippable/execTemplates/Ubuntu_16.04/resources/file/init.sh
 
         
   - name: Test_Azure_Deploy
