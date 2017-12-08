@@ -20,6 +20,13 @@ resources:
     flags: shippable-yml
     version:
       count: I
+      
+  - name: gitlab-repo4
+    type: gitRepo
+    integration: gitlab
+    pointer:
+      sourceName: a-murphy/sample_ubuntu1204_go
+      buildOnPullRequestClose: true
      
 #  - name: sample_pipelines_master
 #    type: syncRepo
@@ -33,3 +40,19 @@ jobs:
     steps:
      - TASK:
         - script: "echo true"
+ 
+  - name: azure_test
+    type: runSh        
+    steps:
+      - IN: myAzureCluster
+      - IN: image-resource
+      - IN: myLoadBalancer
+      - IN: gitlab-repo4
+      - IN: sample_pipelines_June-2017
+    #  - IN: file2
+    #    pull: true
+      - TASK:
+        - script: echo "MYAZURECLUSTER_PATH $MYAZURECLUSTER_PATH"
+        - script: echo "MYAZURECLUSTER_SOURCENAME $MYAZURECLUSTER_SOURCENAME"
+        - script: echo "IMAGERESOURCE_SOURCENAME $IMAGERESOURCE_SOURCENAME"
+        - script: echo "MYLOADBALANCER_SOURCENAME $MYLOADBALANCER_SOURCENAME"
