@@ -25,7 +25,7 @@ resources:
     type: gitRepo
     integration: gitlab
     pointer:
-      sourceName: a-murphy/sample_ubuntu1204_go2
+      sourceName: a-murphy/sample_ubuntu1204_go
       sourceUrl: notarealurl
       buildOnPullRequestClose: true
      
