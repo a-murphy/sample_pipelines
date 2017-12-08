@@ -14,8 +14,10 @@ jobs:
       - IN: myAzureCluster
       - IN: image-resource
       - IN: myLoadBalancer
-      - IN: file2
-        pull: true
+      - IN: gitlab-repo3
+      - IN: sample_pipelines_June-2017
+    #  - IN: file2
+    #    pull: true
       - TASK:
         - script: echo "MYAZURECLUSTER_PATH $MYAZURECLUSTER_PATH"
         - script: echo "MYAZURECLUSTER_SOURCENAME $MYAZURECLUSTER_SOURCENAME"
