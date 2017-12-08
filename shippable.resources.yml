@@ -1,7 +1,7 @@
 resources:
   - name: sshKey
     type: integration
-    integration: sshKey
+    integration: Azure
  
   - name: gitlab-repo2
     type: gitRepo
