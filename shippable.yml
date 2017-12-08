@@ -20,7 +20,17 @@ resources:
     flags: shippable-yml
     version:
       count: I
-      
+
+  - name: rename-repo5
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: a-murphy/testRename5
+      branch: master
+  #    sourceUrl: notarealurl
+      buildOnPullRequest: true
+      buildOnPullRequestClose: true
+
   - name: gitlab-repo5
     type: gitRepo
     integration: gitlab
