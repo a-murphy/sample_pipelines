@@ -11,6 +11,15 @@ resources:
       branch: master
    #   buildOnPullRequest: true
       buildOnPullRequestClose: true
+      
+  - name: gitlab-repo3
+    type: gitRepo
+    integration: gitlab
+    pointer:
+      sourceName: a-murphy/sample_ubuntu1204_go
+      branch: master
+   #   buildOnPullRequest: true
+      buildOnPullRequestClose: true
 
   - name: image-resource
     type: image
