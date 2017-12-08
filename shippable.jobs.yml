@@ -7,6 +7,13 @@ jobs:
  #     - IN: awsKeysCluster
  #     - IN: zeroReplicas
  #       versionNumber: 1
+
+  - name: gitlab-repo4
+    type: gitRepo
+    integration: gitlab
+    pointer:
+      sourceName: a-murphy/sample_ubuntu1204_go
+      buildOnPullRequestClose: true
  
   - name: azure_test
     type: runSh        
@@ -14,7 +21,7 @@ jobs:
       - IN: myAzureCluster
       - IN: image-resource
       - IN: myLoadBalancer
-      - IN: gitlab-repo3
+      - IN: gitlab-repo4
       - IN: sample_pipelines_June-2017
     #  - IN: file2
     #    pull: true
