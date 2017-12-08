@@ -26,7 +26,7 @@ resources:
     integration: gitlab
     pointer:
       sourceName: a-murphy/sample_ubuntu1204_go
-      sourceUrl: notarealurl
+  #    sourceUrl: notarealurl
       buildOnPullRequestClose: true
      
 #  - name: sample_pipelines_master
