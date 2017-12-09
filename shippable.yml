@@ -36,7 +36,6 @@ resources:
     pointer:
       sourceName: a-murphy/sample_ubuntu1204_go
   #    sourceUrl: notarealurl
-      showBuildStatus: true
       buildOnPullRequest: true
       buildOnPullRequestClose: true
      
