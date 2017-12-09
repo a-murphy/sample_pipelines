@@ -62,7 +62,7 @@ jobs:
       - IN: gitlab-repo6
         showBuildStatus: true
       - IN: rename-repo5
-      - IN: filenames
+   #   - IN: filenames
       - OUT: testRename5_ciRepo
     #  - IN: file2
     #    pull: true
