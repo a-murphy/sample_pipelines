@@ -61,7 +61,7 @@ jobs:
       - IN: myLoadBalancer
       - IN: gitlab-repo6
       - IN: rename-repo5
-      - IN: sample_pipelines_June-2017
+      - IN: filenames
       - OUT: testRename5_ciRepo
     #  - IN: file2
     #    pull: true
