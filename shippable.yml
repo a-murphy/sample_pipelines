@@ -27,7 +27,7 @@ resources:
     pointer:
       sourceName: a-murphy/testRename5
       branch: master
-  #    sourceUrl: notarealurl
+      sourceUrl: notarealurl
       buildOnPullRequest: true
       buildOnPullRequestClose: true
 
