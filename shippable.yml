@@ -60,6 +60,7 @@ jobs:
       - IN: image-resource
       - IN: myLoadBalancer
       - IN: gitlab-repo5
+      - IN: rename-repo5
       - IN: sample_pipelines_June-2017
       - OUT: testRename5_ciRepo
     #  - IN: file2
