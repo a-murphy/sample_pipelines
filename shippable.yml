@@ -42,7 +42,7 @@ resources:
       buildOnPullRequestClose: true
       buildOnCommit: false
       branches:
-        only:
+        except:
           - master
      
 #  - name: sample_pipelines_master
