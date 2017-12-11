@@ -30,9 +30,7 @@ resources:
       buildOnPullRequest: true
       buildOnPullRequestClose: true
       buildOnCommit: false
-      branches:
-        only:
-          - master
+
 
   - name: gitlab-repo6
     type: gitRepo
@@ -43,6 +41,9 @@ resources:
       buildOnPullRequest: true
       buildOnPullRequestClose: true
       buildOnCommit: false
+      branches:
+        only:
+          - master
      
 #  - name: sample_pipelines_master
 #    type: syncRepo
