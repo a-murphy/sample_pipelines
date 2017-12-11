@@ -64,7 +64,7 @@ jobs:
       - IN: myAzureCluster
       - IN: image-resource
       - IN: myLoadBalancer
-      - IN: gitlab-repo6
+      - IN: gitlab-repo5
         showBuildStatus: true
       - IN: rename-repo5
    #   - IN: filenames
