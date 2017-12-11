@@ -32,7 +32,7 @@ resources:
       buildOnCommit: false
 
 
-  - name: gitlab-repo5
+  - name: gitlab-repo4
     type: gitRepo
     integration: gitlab
     pointer:
@@ -64,7 +64,7 @@ jobs:
       - IN: myAzureCluster
       - IN: image-resource
       - IN: myLoadBalancer
-      - IN: gitlab-repo5
+      - IN: gitlab-repo4
         showBuildStatus: true
       - IN: rename-repo5
    #   - IN: filenames
