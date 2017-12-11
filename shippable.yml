@@ -30,6 +30,9 @@ resources:
       buildOnPullRequest: true
       buildOnPullRequestClose: true
       buildOnCommit: false
+      branches:
+        only:
+          - master
 
   - name: gitlab-repo6
     type: gitRepo
