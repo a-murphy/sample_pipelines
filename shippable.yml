@@ -32,7 +32,7 @@ resources:
       buildOnCommit: false
 
 
-  - name: gitlab-repo6
+  - name: gitlab-repo5
     type: gitRepo
     integration: gitlab
     pointer:
