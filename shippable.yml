@@ -39,6 +39,7 @@ resources:
   #    sourceUrl: notarealurl
       buildOnPullRequest: true
       buildOnPullRequestClose: true
+      buildOnCommit: false
      
 #  - name: sample_pipelines_master
 #    type: syncRepo
