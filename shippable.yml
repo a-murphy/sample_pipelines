@@ -61,11 +61,11 @@ jobs:
   - name: azure_test
     type: runSh        
     steps:
-      - IN: myAzureCluster
-      - IN: image-resource
-      - IN: myLoadBalancer
-      - IN: gitlab-repo8
-        showBuildStatus: true
+   #   - IN: myAzureCluster
+   #   - IN: image-resource
+   #   - IN: myLoadBalancer
+   #   - IN: gitlab-repo8
+   #     showBuildStatus: true
       - IN: rename-repo5
    #   - IN: filenames
       - OUT: testRename5_ciRepo
