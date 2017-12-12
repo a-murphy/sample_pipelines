@@ -40,7 +40,7 @@ resources:
   #    sourceUrl: notarealurl
       buildOnPullRequest: true
       buildOnPullRequestClose: true
-      buildOnCommit: false
+      buildOnCommit: true
       branches:
         except:
           - master
