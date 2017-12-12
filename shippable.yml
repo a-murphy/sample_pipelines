@@ -69,6 +69,7 @@ jobs:
       - IN: rename-repo5
    #   - IN: filenames
       - OUT: testRename5_ciRepo
+        replicate: true
     #  - IN: file2
     #    pull: true
       - TASK:
