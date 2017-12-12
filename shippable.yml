@@ -72,7 +72,6 @@ jobs:
     #  - IN: file2
     #    pull: true
       - TASK:
-        - script: echo "MYAZURECLUSTER_PATH $MYAZURECLUSTER_PATH"
         - script: echo "MYAZURECLUSTER_SOURCENAME $MYAZURECLUSTER_SOURCENAME"
         - script: echo "IMAGERESOURCE_SOURCENAME $IMAGERESOURCE_SOURCENAME"
         - script: echo "MYLOADBALANCER_SOURCENAME $MYLOADBALANCER_SOURCENAME"
