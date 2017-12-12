@@ -69,7 +69,7 @@ jobs:
       - IN: rename-repo5
    #   - IN: filenames
       - OUT: testRename5_ciRepo
-        replicate: true
+        replicate: gitlab-repo8
     #  - IN: file2
     #    pull: true
       - TASK:
