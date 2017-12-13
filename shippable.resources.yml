@@ -221,6 +221,13 @@ resources:
     seed:
       versionName: "latest"
       
+  - name: another-image
+    type: image
+    pointer:
+      sourceName: "library/mongo"
+    seed:
+      versionName: "latest"
+      
   - name: new-mongo-image
     type: image
     pointer:
