@@ -66,11 +66,10 @@ jobs:
    #   - IN: myLoadBalancer
    #     showBuildStatus: true
       - IN: rename-repo5
-      - OUT: gitlab-repo8
-        replicate: rename-repo5
+ #     - OUT: gitlab-repo8
    #   - IN: filenames
       - OUT: testRename5_ciRepo
-    #    replicate: gitlab-repo8
+        replicate: gitlab-repo8
     #  - IN: file2
     #    pull: true
       - TASK:
