@@ -133,6 +133,7 @@ jobs:
       - IN: image-resource
         switch: off
       - IN: sample_pipelines_master 	
+      - OUT: testDockerOptions
       - OUT: gitlab-repo8
         replicate: sample_pipelines_master
 
