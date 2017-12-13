@@ -134,7 +134,7 @@ jobs:
         switch: off
       - IN: sample_pipelines_master 	
       - OUT: gitlab-repo3
-     #   replicate: sample_pipelines_master
+        replicate: sample_pipelines_master
 
   #    - IN: upgrade-rails-staging
   #    - IN: projectC2
