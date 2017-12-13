@@ -133,7 +133,7 @@ jobs:
       - IN: image-resource
         switch: off
       - IN: gitlab-repo3
-      - OUT: sample_pipelines_master
+    #  - OUT: sample_pipelines_master
         replicate: gitlab-repo3
   #    - IN: upgrade-rails-staging
   #    - IN: projectC2
