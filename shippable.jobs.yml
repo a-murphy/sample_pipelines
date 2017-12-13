@@ -132,9 +132,9 @@ jobs:
     steps:
       - IN: image-resource
         switch: off
-      - IN: gitlab-repo3
-      - OUT: sample_pipelines_master
-        replicate: gitlab-repo3
+  #    - IN: gitlab-repo3
+  #    - OUT: sample_pipelines_master
+  #      replicate: gitlab-repo3
       - OUT: mongo-image
         replicate: image-resource
   #    - IN: upgrade-rails-staging
