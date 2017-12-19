@@ -34,7 +34,7 @@ resources:
       test2: $RESOURCE_ID
       test3: $TRIGGERSHIPPABLEYML_VERSIONNUMBER
     version:
-      version: version
+      version: $TRIGGERSHIPPABLEYML_VERSIONID
 
 
   - name: gitlab-repo8
@@ -78,6 +78,7 @@ jobs:
     #  - IN: file2
     #    pull: true
       - TASK:
+        - script: shipctl get_resource_version_key rename-repo5 version
         - script: echo "RENAMEREPO5_POINTER_TEST $RENAMEREPO5_POINTER_TEST"
         - script: echo "RENAMEREPO5_POINTER_TEST2 $RENAMEREPO5_POINTER_TEST2"
         - script: echo "RENAMEREPO5_POINTER_TEST3 $RENAMEREPO5_POINTER_TEST3"
