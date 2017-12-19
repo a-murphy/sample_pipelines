@@ -33,6 +33,8 @@ resources:
       test: $PWD
       test2: $RESOURCE_ID
       test3: $TRIGGERSHIPPABLEYML_VERSIONNUMBER
+    version:
+      version: version
 
 
   - name: gitlab-repo8
