@@ -30,7 +30,7 @@ resources:
       buildOnPullRequest: true
       buildOnPullRequestClose: true
       buildOnCommit: false
-      test: $BUILD_NUMBER
+      test: $PWD
       test2: $RESOURCE_ID
 
 
