@@ -32,6 +32,8 @@ resources:
       buildOnCommit: false
       test: $PWD
       test2: $RESOURCE_ID
+    version:
+      test3: $TRIGGERSHIPPABLEYML_VERSION_COUNT
 
 
   - name: gitlab-repo8
@@ -66,6 +68,7 @@ jobs:
    #   - IN: image-resource
    #   - IN: myLoadBalancer
    #     showBuildStatus: true
+      - IN: trigger-shippable-yml
       - IN: rename-repo5
    #   - IN: gitlab-repo8
    #   - IN: filenames
@@ -74,8 +77,9 @@ jobs:
     #  - IN: file2
     #    pull: true
       - TASK:
-        - script: echo "$RENAMEREPO5_POINTER_TEST"
-        - script: echo "$RENAMEREPO5_POINTER_TEST2"
+        - script: echo "RENAMEREPO5_POINTER_TEST $RENAMEREPO5_POINTER_TEST"
+        - script: echo "RENAMEREPO5_POINTER_TEST2 $RENAMEREPO5_POINTER_TEST2"
+        - script: echo "RENAMEREPO5_VERSION_TEST3 $RENAMEREPO5_VERSION_TEST3"
         - script: echo "MYAZURECLUSTER_SOURCENAME $MYAZURECLUSTER_SOURCENAME"
         - script: echo "IMAGERESOURCE_SOURCENAME $IMAGERESOURCE_SOURCENAME"
         - script: echo "MYLOADBALANCER_SOURCENAME $MYLOADBALANCER_SOURCENAME"
