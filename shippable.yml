@@ -41,8 +41,9 @@ jobs:
  
   - name: azure_test
     type: runSh  
-    architecture: x86_64		
-    os: CentOS_7
+    runtime:
+      architecture: x86_64		
+      os: CentOS_7
     steps:
    #   - IN: image-resource
    #   - IN: myLoadBalancer
