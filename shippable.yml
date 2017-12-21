@@ -9,11 +9,6 @@ build:
     - python --version
 
 resources:
-  - name: bitbucket-integration-shippable-yml
-    type: integration
-    integration: bitbucket
-    flags: shippable-yml
-  - name: test
 
   - name: trigger-shippable-yml
     type: trigger
@@ -36,24 +31,6 @@ resources:
     version:
       version: $TRIGGERSHIPPABLEYML_VERSIONID
 
-
-  - name: gitlab-repo8
-    type: gitRepo
-    integration: gitlab
-    pointer:
-      sourceName: a-murphy/sample_ubuntu1204_go # a-murphy-gitlab-group/group-project # 
-  #    sourceUrl: notarealurl
-      buildOnPullRequest: true
-      buildOnPullRequestClose: true
-      branches:
-        except:
-          - master
-     
-#  - name: sample_pipelines_master
-#    type: syncRepo
-#    flags:
-#      - one
-#      - two
 jobs:
   - name: runSh-shippable-yml
     type: runSh
@@ -65,16 +42,12 @@ jobs:
   - name: azure_test
     type: runSh        
     steps:
-   #   - IN: myAzureCluster
    #   - IN: image-resource
    #   - IN: myLoadBalancer
    #     showBuildStatus: true
       - IN: trigger-shippable-yml
       - IN: rename-repo5
-   #   - IN: gitlab-repo8
-   #   - IN: filenames
       - OUT: testRename5_ciRepo
-   #     replicate: gitlab-repo8
     #  - IN: file2
     #    pull: true
       - TASK:
