@@ -40,7 +40,9 @@ jobs:
         - script: "echo true"
  
   - name: azure_test
-    type: runSh        
+    type: runSh  
+    architecture: x86_64		
+    os: CentOS_7
     steps:
    #   - IN: image-resource
    #   - IN: myLoadBalancer
