@@ -43,7 +43,7 @@ jobs:
     type: runSh  
     runtime:
       architecture: x86_64		
-      os: CentOS_7
+      os: Ubuntu_16.04
     steps:
    #   - IN: image-resource
    #   - IN: myLoadBalancer
