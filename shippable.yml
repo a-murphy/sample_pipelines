@@ -63,7 +63,10 @@ jobs:
         - script: "echo true"
  
   - name: azure_test
-    type: runSh        
+    type: runSh
+    runtime:
+      architecture: x86_64		
+      os: CentOS_7
     steps:
    #   - IN: myAzureCluster
    #   - IN: image-resource
