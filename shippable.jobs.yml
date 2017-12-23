@@ -130,7 +130,7 @@ jobs:
   - name: testRename5_runCI
     type: runCI
     steps:
-      - IN: trigger-shippable-yml
+      - IN: rename-repo5
       - IN: image-resource
         switch: off
   #    - IN: gitlab-repo3
