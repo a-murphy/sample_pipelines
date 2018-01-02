@@ -69,6 +69,16 @@ jobs:
     steps:
      - TASK:
         - script: "echo true"
+        
+  - name: CLI_config_test
+    type: runCLI
+    runtime:
+      architecture: x86_64		
+      os: CentOS_7
+    steps:
+      - IN: gke_Config_Resource
+      - TASK:
+        - script: echo "test"
  
   - name: azure_test
     type: runSh
