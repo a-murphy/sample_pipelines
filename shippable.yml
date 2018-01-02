@@ -48,6 +48,14 @@ resources:
       branches:
         except:
           - master
+          
+  - name: gke_Config_Resource
+    type: cliConfig
+    integration: gcloud
+    pointer:
+      clusterName: cluster-1
+      namespace: testnamespace
+      region: us-central1-a
      
 #  - name: sample_pipelines_master
 #    type: syncRepo
@@ -68,7 +76,7 @@ jobs:
       architecture: x86_64		
       os: CentOS_7
     steps:
-      - IN: gkeConfigResource
+      - IN: gke_Config_Resource
    #   - IN: myAzureCluster
    #   - IN: image-resource
    #   - IN: myLoadBalancer
