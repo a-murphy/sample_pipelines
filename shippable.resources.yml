@@ -2,7 +2,8 @@ resources:
   - name: my-test-params
     type: params
     version:
-      imageTag: testing
+      params:
+        imageTag: testing
       
   - name: my-test-image
     type: image
