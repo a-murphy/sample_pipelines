@@ -9,7 +9,7 @@ resources:
     type: image
     versionTemplate:
       sourceName: busybox
-      versionName: $IMAGETAG
+      versionName: $imageTag
   
   - name: sshKey
     type: integration
