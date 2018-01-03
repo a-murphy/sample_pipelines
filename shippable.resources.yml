@@ -1,4 +1,15 @@
 resources:
+  - name: my-test-params
+    type: params
+    version:
+      imageTag: testing
+      
+  - name: my-test-image
+    type: image
+    versionTemplate:
+      sourceName: busybox
+      versionName: $IMAGETAG
+  
   - name: sshKey
     type: integration
     integration: Azure
