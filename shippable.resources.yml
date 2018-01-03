@@ -1,6 +1,7 @@
 resources:
   - name: my-test-params
     type: params
+    integration: testValue
     version:
       params:
         imageTag: testing
@@ -9,7 +10,7 @@ resources:
     type: image
     versionTemplate:
       sourceName: busybox
-      versionName: $imageTag
+      versionName: $testKey
   
   - name: sshKey
     type: integration
