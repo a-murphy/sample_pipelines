@@ -67,8 +67,7 @@ jobs:
     type: runSh
     flags: shippable-yml
     steps:
-     - IN:  gitlab-repo8
-       versionNumber: 2
+     - IN: repo
      - TASK:
         - script: "echo true"
         
