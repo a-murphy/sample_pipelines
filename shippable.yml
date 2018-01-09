@@ -67,6 +67,7 @@ jobs:
     type: runSh
     flags: shippable-yml
     steps:
+     - IN: projectC2
      - TASK:
         - script: "echo true"
         
