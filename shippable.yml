@@ -91,7 +91,7 @@ jobs:
       os: Ubuntu_16.04
     steps:
      - IN: test-repo2
-       versionNumber: 5
+ #      versionNumber: 5
         
   - name: CLI_config_test
     type: runCLI
