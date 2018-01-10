@@ -77,7 +77,7 @@ jobs:
     flags: shippable-yml
     runtime:
       architecture: x86_64		
-      os: CentOS_7
+      os: Ubuntu_14.04
     steps:
      - IN: test-repo2
        versionNumber: 5
@@ -88,10 +88,10 @@ jobs:
     type: runCI
     runtime:
       architecture: x86_64		
-      os: CentOS_7
+      os: Ubuntu_14.04
     steps:
      - IN: test-repo2
- #      versionNumber: 5
+       versionNumber: 5
         
   - name: CLI_config_test
     type: runCLI
