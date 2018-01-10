@@ -49,10 +49,10 @@ resources:
         except:
           - master
           
-  - name: test-repo
+  - name: test-repo2
     type: gitRepo
     integration: github
-    pointer:
+    versionTemplate:
       sourceName: a-murphy/sample_pipelines
       branches:
         except:
@@ -79,7 +79,7 @@ jobs:
       architecture: x86_64		
       os: Ubuntu_16.04
     steps:
-     - IN: test-repo
+     - IN: test-repo2
      - TASK:
         - script: "echo true"
         
