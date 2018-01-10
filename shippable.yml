@@ -80,6 +80,7 @@ jobs:
       os: Ubuntu_16.04
     steps:
      - IN: test-repo2
+       versionNumber: 5
      - TASK:
         - script: "echo true"
         
