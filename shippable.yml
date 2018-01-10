@@ -49,6 +49,15 @@ resources:
         except:
           - master
           
+  - name: test-repo
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: a-murphy/sample_pipelines
+      branches:
+        except:
+          - master
+          
   - name: gke_Config_Resource
     type: cliConfig
     integration: gcloud
@@ -67,7 +76,7 @@ jobs:
     type: runSh
     flags: shippable-yml
     steps:
-     - IN: repo
+     - IN: test-repo
      - TASK:
         - script: "echo true"
         
