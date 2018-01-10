@@ -75,6 +75,9 @@ jobs:
   - name: runSh-shippable-yml
     type: runSh
     flags: shippable-yml
+    runtime:
+      architecture: x86_64		
+      os: Ubuntu_16.04
     steps:
      - IN: test-repo
      - TASK:
