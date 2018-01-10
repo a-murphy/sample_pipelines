@@ -84,6 +84,15 @@ jobs:
      - TASK:
         - script: "echo true"
         
+  - name: sample_python-1_runCI
+    type: runCI
+    runtime:
+      architecture: x86_64		
+      os: Ubuntu_16.04
+    steps:
+     - IN: test-repo2
+       versionNumber: 5
+        
   - name: CLI_config_test
     type: runCLI
     runtime:
