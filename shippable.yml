@@ -84,6 +84,23 @@ jobs:
       - IN: nodeCluster3
       - TASK:
         - script: echo "test"
+   
+  - name: test-deploy-file
+    type: deploy
+    steps:
+      - IN: file
+      - IN: nodeCluster3
+      - TASK:
+        - script: echo "test"
+        
+  - name: test-deploy-both
+    type: deploy
+    steps:
+      - IN: file
+      - IN: rename-repo5
+      - IN: nodeCluster3
+      - TASK:
+        - script: echo "test"
  
 
   - name: runSh-shippable-yml
