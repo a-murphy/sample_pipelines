@@ -65,7 +65,11 @@ resources:
       clusterName: cluster-1
       namespace: testnamespace
       region: us-central1-a
-     
+      
+  - name: nodeCluster
+    type: cliConfig
+    integration: nodeCluster
+
 #  - name: sample_pipelines_master
 #    type: syncRepo
 #    flags:
