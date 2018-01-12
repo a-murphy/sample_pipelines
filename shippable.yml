@@ -68,7 +68,7 @@ resources:
       
   - name: nodeCluster3
     type: cluster
-    integration: nodeCluster
+    integration: Node
 
 #  - name: sample_pipelines_master
 #    type: syncRepo
