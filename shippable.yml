@@ -74,7 +74,7 @@ resources:
 jobs:
   - name: test-deploy-gitRepo
     type: deploy
-    setps:
+    steps:
       - IN: rename-repo5
 
   - name: runSh-shippable-yml
