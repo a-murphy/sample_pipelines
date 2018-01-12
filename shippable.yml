@@ -66,8 +66,8 @@ resources:
       namespace: testnamespace
       region: us-central1-a
       
-  - name: nodeCluster2
-    type: cliConfig
+  - name: nodeCluster3
+    type: cluster
     integration: nodeCluster
 
 #  - name: sample_pipelines_master
@@ -81,7 +81,7 @@ jobs:
     steps:
       - IN: rename-repo5
       - OUT: test-repo2
-      - IN: nodeCluster2
+      - IN: nodeCluster3
 
   - name: runSh-shippable-yml
     type: runSh
