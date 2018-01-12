@@ -72,6 +72,11 @@ resources:
 #      - one
 #      - two
 jobs:
+  - name: test-deploy-gitRepo
+    type: deploy
+    setps:
+      - IN: rename-repo5
+
   - name: runSh-shippable-yml
     type: runSh
     flags: shippable-yml
