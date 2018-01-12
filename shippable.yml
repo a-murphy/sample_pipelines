@@ -82,6 +82,9 @@ jobs:
       - IN: rename-repo5
       - OUT: test-repo2
       - IN: nodeCluster3
+      - TASK:
+        - script: echo "test"
+ 
 
   - name: runSh-shippable-yml
     type: runSh
