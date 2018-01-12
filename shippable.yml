@@ -76,6 +76,7 @@ jobs:
     type: deploy
     steps:
       - IN: rename-repo5
+      - OUT: test-repo2
       - IN: myEcsCluster
 
   - name: runSh-shippable-yml
