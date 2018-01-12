@@ -88,7 +88,7 @@ jobs:
   - name: test-deploy-file
     type: deploy
     steps:
-      - IN: file
+      - IN: file2
       - IN: nodeCluster3
       - TASK:
         - script: echo "test"
@@ -96,7 +96,7 @@ jobs:
   - name: test-deploy-both
     type: deploy
     steps:
-      - IN: file
+      - IN: file2
       - IN: rename-repo5
       - IN: nodeCluster3
       - TASK:
