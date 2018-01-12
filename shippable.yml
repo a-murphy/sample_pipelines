@@ -76,6 +76,12 @@ resources:
 #      - one
 #      - two
 jobs:
+        
+  - name: file-manifest
+    type: manifest
+    steps:
+      - IN: file2
+ 
   - name: test-deploy-gitRepo
     type: deploy
     steps:
