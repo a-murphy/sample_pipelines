@@ -12,7 +12,7 @@ resources:
   - name: test-image
     type: image
     pointer:
-      sourceName: amurphy/test
+      sourceName: amurphy/test2
     version:
       versionName: versionName
 
