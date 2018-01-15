@@ -5,6 +5,12 @@ resources:
     version:
       params:
         imageTag: testing
+        
+  - name: test-options
+    type: dockerOptions
+    version:
+      service:
+        healthCheckGracePeriodSeconds: 60 
       
   - name: my-test-image
     type: image
