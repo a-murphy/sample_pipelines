@@ -90,6 +90,8 @@ jobs:
       - IN: nodeCluster3
       - TASK:
         - script: echo "test"
+        - script: ls /tmp/shippable
+        - script: cat /tmp/shippable/rename-repo5/gitRepo/shippable.yml
    
   - name: test-deploy-file
     type: deploy
