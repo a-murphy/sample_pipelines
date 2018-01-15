@@ -9,11 +9,17 @@ build:
     - python --version
 
 resources:
+  - name: test-image
+    type: image
+    pointer:
+      sourceName: amurphy/test
+    version:
+      versionName: versionName
+
   - name: bitbucket-integration-shippable-yml
     type: integration
     integration: bitbucket
     flags: shippable-yml
-  - name: test
 
   - name: trigger-shippable-yml
     type: trigger
