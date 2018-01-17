@@ -102,6 +102,7 @@ jobs:
      - IN: 123_numbers
      - IN: 123_file-manifest
      - IN: file-manifest
+     - IN: 123-params
      - TASK:
         - script: "echo true"
         - script: "echo 123_numbers path: $_NUMBERS_PATH"
