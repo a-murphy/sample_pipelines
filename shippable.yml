@@ -25,7 +25,8 @@ resources:
   - name: 123-params
     type: params
     versionTemplate:
-      123test: testing
+      params:
+        123test: testing
 
   - name: bitbucket-integration-shippable-yml
     type: integration
