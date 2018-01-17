@@ -93,6 +93,11 @@ jobs:
     type: manifest
     steps:
       - IN: file
+
+  - name: 123_file-manifest
+    type: manifest
+    steps:
+      - IN: file
  
   - name: test-deploy-gitRepo
     type: deploy
