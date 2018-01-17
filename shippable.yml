@@ -102,6 +102,16 @@ jobs:
         - script: "echo 123_numbers path: $_NUMBERS_PATH"
         - script: "echo 123_file-manifest path: $_FILEMANIFEST_PATH"
         
+  - name: 5testRename5_runCI
+    type: runCI
+    runtime:
+      architecture: x86_64		
+      os: Ubuntu_14.04
+    steps:
+     - IN: 123_numbers
+     - IN: 123_file-manifest
+     - IN: file-manifest
+        
   - name: file-manifest
     type: manifest
     steps:
