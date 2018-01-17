@@ -88,6 +88,19 @@ resources:
 #      - one
 #      - two
 jobs:
+  - name: 123-runSh-123
+    type: runSh
+    runtime:
+      architecture: x86_64		
+      os: Ubuntu_14.04
+    steps:
+     - IN: 123_numbers
+     - IN: 123_file-manifest
+     - IN: file-manifest
+     - TASK:
+        - script: "echo true"
+        - script: "echo 123_numbers path: $_NUMBERS_PATH"
+        - script: "echo 123_file-manifest path: $_FILEMANIFEST_PATH"
         
   - name: file-manifest
     type: manifest
