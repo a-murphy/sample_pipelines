@@ -22,6 +22,11 @@ resources:
       sourceName: busybox
       versionName: latest
 
+  - name: 123-params
+    type: params
+    versionTemplate:
+      123test: testing
+
   - name: bitbucket-integration-shippable-yml
     type: integration
     integration: bitbucket
