@@ -26,7 +26,7 @@ resources:
     type: image
     versionTemplate:
       versionName: $_NUMBERS_VERSIONNAME
-      versionName: $_FILEMANIFEST_NAME
+      sourceName: $_FILEMANIFEST_NAME
 
   - name: 123-params
     type: params
