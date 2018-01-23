@@ -138,6 +138,7 @@ jobs:
       - IN: 123-testing-123
  
   - name: test-deploy-gitRepo
+    maxWaitTime: 400
     type: deploy
     steps:
       - IN: rename-repo5
