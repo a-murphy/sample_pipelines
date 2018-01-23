@@ -152,7 +152,7 @@ jobs:
    
   - name: test-deploy-file
     type: deploy
-    maxWaitTime: 400
+    maxWaitTime: 300
     steps:
       - IN: file-manifest
       - IN: nodeCluster3
