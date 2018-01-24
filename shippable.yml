@@ -170,9 +170,9 @@ jobs:
         
   - name: blueGreen-deploy
     type: deploy
-    method: blueGreen
+    method: remove
     stabilityDuration: 30
-    maxWaitTime: 180
+    maxWaitTime: 3
     steps:
       - IN: nginx-manifest3
       - IN: myEcsCluster
