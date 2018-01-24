@@ -114,7 +114,8 @@ jobs:
         - script: "echo 123_numbers path: $_NUMBERS_PATH"
         - script: "echo 123_file-manifest path: $_FILEMANIFEST_PATH"
         - script: sleep 15
-        - script: az --debug
+        - script: az aks get-versions --name test --resource-group test --debug
+      #  - script: az --debug
         - script: sleep 15
         
   - name: 5testRename5_runCI
