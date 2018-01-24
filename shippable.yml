@@ -190,9 +190,8 @@ jobs:
         versionNumber: 1
         
   - name: upgrade-deploy
-    type: upgrade
-    method: blueGreen
-    stabilityDuration: 30
+    type: deploy
+    method: upgrade
     maxWaitTime: 180
     steps:
       - IN: nginx-manifest3
