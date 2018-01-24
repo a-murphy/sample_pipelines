@@ -520,7 +520,6 @@ jobs:
     steps:
       - IN: nginx-image
         switch: off
-      - IN: test-options
       - TASK: managed
 
   - name: nginx-manifest4
