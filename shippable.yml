@@ -167,6 +167,38 @@ jobs:
       - IN: nodeCluster3
       - TASK:
         - script: echo "test"
+        
+  - name: blueGreen-deploy
+    type: deploy
+    method: blueGreen
+    stabilityDuration: 30
+    maxWaitTime: 180
+    steps:
+      - IN: nginx-manifest3
+      - IN: myEcsCluster
+      - IN: zeroReplicas
+        versionNumber: 1
+
+  - name: replace-deploy
+    type: deploy
+    method: replace
+    maxWaitTime: 180
+    steps:
+      - IN: nginx-manifest3
+      - IN: myEcsCluster
+      - IN: zeroReplicas
+        versionNumber: 1
+        
+  - name: upgrade-deploy
+    type: upgrade
+    method: blueGreen
+    stabilityDuration: 30
+    maxWaitTime: 180
+    steps:
+      - IN: nginx-manifest3
+      - IN: myEcsCluster
+      - IN: zeroReplicas
+        versionNumber: 1
  
 
   - name: runSh-shippable-yml
