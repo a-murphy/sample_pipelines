@@ -176,7 +176,7 @@ jobs:
     type: deploy
     method: blueGreen
     stabilityDuration: 30
-    maxWaitTime: 5
+    maxWaitTime: 2
     steps:
       - IN: nginx-manifest3
       - IN: myDclCluster
@@ -186,7 +186,7 @@ jobs:
   - name: replace-deploy
     type: deploy
     method: replace
-    maxWaitTime: 5
+    maxWaitTime: 2
     steps:
       - IN: nginx-manifest3
       - IN: myDclCluster
@@ -196,7 +196,7 @@ jobs:
   - name: upgrade-deploy
     type: deploy
     method: upgrade
-    maxWaitTime: 5
+    maxWaitTime: 2
     steps:
       - IN: nginx-manifest3
       - IN: myDclCluster
