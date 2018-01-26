@@ -646,7 +646,7 @@ resources:
 
   - name: tritonCluster
     type: cluster
- #   integration: Triton
+    integration: Triton
     pointer:
       region: "us-east-1"
 
