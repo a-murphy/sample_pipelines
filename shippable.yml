@@ -176,30 +176,30 @@ jobs:
     type: deploy
     method: blueGreen
     stabilityDuration: 30
-    maxWaitTime: 2
+    maxWaitTime: 25
     steps:
       - IN: nginx-manifest3
-      - IN: tritonCluster
+      - IN: myAzureCluster
       - IN: zeroReplicas
         versionNumber: 1
 
   - name: replace-deploy
     type: deploy
-    method: remove
+    method: replace
     maxWaitTime: 25
     steps:
       - IN: nginx-manifest3
-      - IN: tritonCluster
+      - IN: myAzureCluster
       - IN: zeroReplicas
         versionNumber: 1
         
   - name: upgrade-deploy
     type: deploy
     method: upgrade
-    maxWaitTime: 2
+    maxWaitTime: 25
     steps:
       - IN: nginx-manifest3
-      - IN: tritonCluster
+      - IN: myAzureCluster
       - IN: zeroReplicas
         versionNumber: 1
  
