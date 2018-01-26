@@ -185,7 +185,7 @@ jobs:
 
   - name: replace-deploy
     type: deploy
-    method: replace
+    method: remove
     maxWaitTime: 2
     steps:
       - IN: nginx-manifest3
