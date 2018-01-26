@@ -176,7 +176,7 @@ jobs:
     type: deploy
     method: blueGreen
     stabilityDuration: 30
-    maxWaitTime: 25
+    maxWaitTime: 5
     steps:
       - IN: nginx-manifest3
       - IN: tritonCluster
@@ -185,8 +185,8 @@ jobs:
 
   - name: replace-deploy
     type: deploy
-    method: remove
-    maxWaitTime: 2
+    method: replace
+    maxWaitTime: 25
     steps:
       - IN: nginx-manifest3
       - IN: tritonCluster
@@ -196,7 +196,7 @@ jobs:
   - name: upgrade-deploy
     type: deploy
     method: upgrade
-    maxWaitTime: 25
+    maxWaitTime: 5
     steps:
       - IN: nginx-manifest3
       - IN: tritonCluster
