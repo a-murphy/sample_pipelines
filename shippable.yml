@@ -185,8 +185,8 @@ jobs:
 
   - name: replace-deploy
     type: deploy
-    method: remove
-    maxWaitTime: 2
+    method: replace
+    maxWaitTime: 25
     steps:
       - IN: nginx-manifest3
       - IN: tritonCluster
