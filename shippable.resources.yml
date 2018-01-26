@@ -471,7 +471,7 @@ resources:
     type: cluster
     integration: Azure
     pointer:
-      sourceName: Cluster
+      sourceName: myCluster
       groupName: resourceGroup
    #   bastionHost:
    #     address: "45.55.195.74"
