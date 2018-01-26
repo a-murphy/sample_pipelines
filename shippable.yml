@@ -186,7 +186,7 @@ jobs:
   - name: replace-deploy
     type: deploy
     method: replace
-    maxWaitTime: 25
+    maxWaitTime: 5
     steps:
       - IN: nginx-manifest3
       - IN: tritonCluster
@@ -195,7 +195,7 @@ jobs:
         
   - name: upgrade-deploy
     type: deploy
-    method: upgrade
+    method: remove
     maxWaitTime: 5
     steps:
       - IN: nginx-manifest3
