@@ -140,6 +140,11 @@ jobs:
       - IN: file
       - IN: 123_numbers
       - IN: 123-testing-123
+      
+  - name: test-manifest
+    type: manifest
+    steps:
+      - IN: test-image
  
   - name: test-deploy-gitRepo
     maxWaitTime: 40000
@@ -178,7 +183,8 @@ jobs:
     stabilityDuration: 30
     maxWaitTime: 5
     steps:
-      - IN: nginx-manifest3
+      - IN: test-manifest
+   #   - IN: nginx-manifest3
       - IN: myAzureCluster
       - IN: zeroReplicas
         versionNumber: 1
@@ -188,7 +194,8 @@ jobs:
     method: replace
     maxWaitTime: 5
     steps:
-      - IN: nginx-manifest3
+      - IN: test-manifest
+ #     - IN: nginx-manifest3
       - IN: myAzureCluster
       - IN: zeroReplicas
         versionNumber: 1
@@ -198,7 +205,8 @@ jobs:
     method: upgrade
     maxWaitTime: 5
     steps:
-      - IN: nginx-manifest3
+      - IN: test-manifest
+  #    - IN: nginx-manifest3
       - IN: myAzureCluster
       - IN: zeroReplicas
         versionNumber: 1
