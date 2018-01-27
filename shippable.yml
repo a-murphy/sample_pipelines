@@ -183,8 +183,8 @@ jobs:
     stabilityDuration: 30
     maxWaitTime: 5
     steps:
-      - IN: test-manifest
-   #   - IN: nginx-manifest3
+   #   - IN: test-manifest
+      - IN: nginx-manifest3
       - IN: myAzureCluster
       - IN: zeroReplicas
         versionNumber: 1
@@ -194,8 +194,8 @@ jobs:
     method: replace
     maxWaitTime: 5
     steps:
-      - IN: test-manifest
- #     - IN: nginx-manifest3
+ #     - IN: test-manifest
+      - IN: nginx-manifest3
       - IN: myAzureCluster
       - IN: zeroReplicas
         versionNumber: 1
@@ -205,8 +205,8 @@ jobs:
     method: upgrade
     maxWaitTime: 5
     steps:
-      - IN: test-manifest
-  #    - IN: nginx-manifest3
+  #    - IN: test-manifest
+      - IN: nginx-manifest3
       - IN: myAzureCluster
       - IN: zeroReplicas
         versionNumber: 1
