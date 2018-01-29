@@ -94,6 +94,10 @@ resources:
     type: cluster
     integration: Node
 
+  - name: dcosCluster
+    type: cluster
+    integration: azureDCOS
+
 #  - name: sample_pipelines_master
 #    type: syncRepo
 #    flags:
@@ -185,7 +189,7 @@ jobs:
     steps:
    #   - IN: test-manifest
       - IN: nginx-manifest3
-      - IN: myAzureCluster
+      - IN: dcosCluster
       - IN: zeroReplicas
         versionNumber: 1
 
@@ -196,7 +200,7 @@ jobs:
     steps:
    #   - IN: test-manifest
       - IN: nginx-manifest3
-      - IN: myAzureCluster
+      - IN: dcosCluster
       - IN: zeroReplicas
         versionNumber: 1
         
@@ -207,7 +211,7 @@ jobs:
     steps:
    #   - IN: test-manifest
       - IN: nginx-manifest3
-      - IN: myAzureCluster
+      - IN: dcosCluster
       - IN: zeroReplicas
         versionNumber: 1
  
