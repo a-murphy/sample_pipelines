@@ -181,7 +181,7 @@ jobs:
       - TASK:
         - script: echo "test"
         
-  - name: blueGreen-deploy
+  - name: bluegreen-deploy
     type: deploy
     method: blueGreen
     stabilityDuration: 30
