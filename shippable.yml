@@ -93,6 +93,14 @@ resources:
   - name: nodeCluster3
     type: cluster
     integration: Node
+    
+  - name: gcloudKeysCluster
+    type: cluster
+    integration: gcloudKeys
+    versionTemplate:
+      sourceName : "cluster-1"
+      region: "us-central1-a"
+      namespace: mynamespace
 
   - name: dcosCluster
     type: cluster
