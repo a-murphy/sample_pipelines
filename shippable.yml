@@ -193,10 +193,10 @@ jobs:
     type: deploy
     method: blueGreen
     stabilityDuration: 30
-    maxWaitTime: 1
+    maxWaitTime: 15
     steps:
-   #   - IN: test-manifest
-      - IN: nginx-manifest3
+      - IN: test-manifest
+   #   - IN: nginx-manifest3
       - IN: gcloudKeysCluster
       - IN: zeroReplicas
         versionNumber: 1
@@ -204,10 +204,10 @@ jobs:
   - name: replace-deploy
     type: deploy
     method: replace
-    maxWaitTime: 1
+    maxWaitTime: 15
     steps:
-   #   - IN: test-manifest
-      - IN: nginx-manifest3
+      - IN: test-manifest
+   #   - IN: nginx-manifest3
       - IN: gcloudKeysCluster
       - IN: zeroReplicas
         versionNumber: 1
@@ -215,10 +215,10 @@ jobs:
   - name: upgrade-deploy
     type: deploy
     method: upgrade
-    maxWaitTime: 1
+    maxWaitTime: 15
     steps:
-   #   - IN: test-manifest
-      - IN: nginx-manifest3
+      - IN: test-manifest
+   #   - IN: nginx-manifest3
       - IN: gcloudKeysCluster
       - IN: zeroReplicas
         versionNumber: 1
