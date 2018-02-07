@@ -692,7 +692,7 @@ jobs:
           - manifest: generate-manifest
             image: mongo-image
             port: 27017
-      - IN: myEcsCluster
+      - IN: awsKeysCluster
       - IN: myDockerOptions
       - IN: myOtherDockerOptions
         applyTo:
