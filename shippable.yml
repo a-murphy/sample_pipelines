@@ -12,7 +12,7 @@ resources:
   - name: test-image
     type: image
     pointer:
-      sourceName: busybox
+      sourceName: mongo
     version:
       versionName: latest
       
