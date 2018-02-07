@@ -12,9 +12,9 @@ resources:
   - name: test-image
     type: image
     pointer:
-      sourceName: amurphy/test2
+      sourceName: busybox
     version:
-      versionName: versionName
+      versionName: latest
       
   - name: 123_numbers
     type: image
