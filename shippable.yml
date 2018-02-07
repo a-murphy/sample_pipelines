@@ -89,6 +89,12 @@ resources:
       clusterName: cluster-1
       namespace: testnamespace
       region: us-central1-a
+                
+  - name: awsKeysCliConfig
+    type: cliConfig
+    integration: awsKeys
+    pointer:
+      region: us-west-2
       
   - name: nodeCluster3
     type: cluster
@@ -121,13 +127,11 @@ jobs:
      - IN: 123_numbers
      - IN: 123_file-manifest
      - IN: file-manifest
+     - IN: awsKeysCliConfig
      - TASK:
         - script: "echo true"
         - script: "echo 123_numbers path: $_NUMBERS_PATH"
         - script: "echo 123_file-manifest path: $_FILEMANIFEST_PATH"
-        - script: sleep 15
-        - script: az aks get-versions --name test --resource-group test
-      #  - script: az --debug
         - script: sleep 15
         
   - name: 5testRename5_runCI
