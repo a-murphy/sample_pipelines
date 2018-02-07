@@ -95,8 +95,8 @@ resources:
     integration: awsKeys
     pointer:
       region: us-west-2
-       scopes:
-          - ecr
+      scopes:
+        - ecr
       
   - name: nodeCluster3
     type: cluster
