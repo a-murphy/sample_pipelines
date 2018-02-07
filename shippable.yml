@@ -193,7 +193,6 @@ jobs:
     type: deploy
     method: blueGreen
     stabilityDuration: 30
-    maxWaitTime: 15
     steps:
       - IN: test-manifest
    #   - IN: nginx-manifest3
@@ -204,7 +203,6 @@ jobs:
   - name: replace-deploy
     type: deploy
     method: replace
-    maxWaitTime: 15
     steps:
       - IN: test-manifest
    #   - IN: nginx-manifest3
@@ -215,7 +213,6 @@ jobs:
   - name: upgrade-deploy
     type: deploy
     method: upgrade
-    maxWaitTime: 15
     steps:
       - IN: test-manifest
    #   - IN: nginx-manifest3
