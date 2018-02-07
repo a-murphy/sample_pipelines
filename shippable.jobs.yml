@@ -687,7 +687,7 @@ jobs:
       - IN: generate-manifest
   #    - IN: foo4
     #  - IN: busybox-manifest2
-      - IN: myLoadBalancer
+      - IN: myNewApplicationLoadBalancer
         applyTo:
           - manifest: generate-manifest
             image: mongo-image
