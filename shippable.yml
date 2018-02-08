@@ -219,7 +219,7 @@ jobs:
         
   - name: upgrade-deploy
     type: deploy
-    method: upgrade
+    method: remove
     steps:
       - IN: test-manifest
    #   - IN: nginx-manifest3
