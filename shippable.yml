@@ -84,7 +84,7 @@ resources:
           
   - name: gke_Config_Resource
     type: cliConfig
-    integration: gcloud
+    integration: gcloudKeys
     pointer:
       clusterName: cluster-1
       namespace: testnamespace
@@ -129,7 +129,7 @@ jobs:
      - IN: 123_numbers
      - IN: 123_file-manifest
      - IN: file-manifest
-     - IN: awsKeysCliConfig
+     - IN: gke_Config_Resource
      - TASK:
         - script: aws --version
         - script: "echo true"
