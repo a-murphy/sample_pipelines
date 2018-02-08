@@ -89,6 +89,8 @@ resources:
       clusterName: cluster-1
       namespace: testnamespace
       region: us-central1-a
+      scopes:
+          - gke
                 
   - name: awsKeysCliConfig
     type: cliConfig
