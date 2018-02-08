@@ -144,16 +144,16 @@ resources:
     type: loadBalancer
     integration: gcloudKeys
     pointer:
-      sourceName: "my-load-balancer"
+      sourceName: "my-load-balancer2"
       method: ClusterIP
       clusterName: cluster-1
       region: us-central1-a
       clusterIP: ""
     version:
-      ports:
-        - name: my-port
-          port: 100
-          protocol: TCP
+#      ports:
+#        - name: my-port
+#          port: 100
+#          protocol: TCP
       selector:
         shippable.manifestName: vmk-app-def
         loadBalancer: myLoadBalancer
