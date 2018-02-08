@@ -227,6 +227,11 @@ jobs:
       - IN: zeroReplicas
         versionNumber: 1
  
+  - name: provision-GKE
+    type: provision
+    steps:
+      - IN: kubernetesLoadBalancer
+ 
 
   - name: runSh-shippable-yml
     type: runSh
