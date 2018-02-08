@@ -148,6 +148,7 @@ resources:
       method: ClusterIP
       clusterName: cluster-1
       region: us-central1-a
+      clusterIP: ""
     version:
       ports:
         - name: my-port
