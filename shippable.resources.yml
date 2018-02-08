@@ -147,6 +147,7 @@ resources:
       sourceName: "my-load-balancer"
       method: LoadBalancer
       clusterName: cluster-1
+      region: us-central1-a
     version:
       ports:
         - name: my-port
