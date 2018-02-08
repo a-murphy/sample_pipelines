@@ -144,11 +144,11 @@ resources:
     type: loadBalancer
     integration: gcloudKeys
     pointer:
-      sourceName: "my-load-balancer2"
-      method: ClusterIP
+      sourceName: "my-load-balancer3"
+      method: NodePort
       clusterName: cluster-1
       region: us-central1-a
-      clusterIP: ""
+#      clusterIP: ""
     version:
       ports:
         - name: my-port
