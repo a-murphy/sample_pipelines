@@ -150,10 +150,10 @@ resources:
       region: us-central1-a
       clusterIP: ""
     version:
-#      ports:
-#        - name: my-port
-#          port: 100
-#          protocol: TCP
+      ports:
+        - name: my-port
+          port: 100
+          protocol: TCP
       selector:
         shippable.manifestName: vmk-app-def
         loadBalancer: myLoadBalancer
