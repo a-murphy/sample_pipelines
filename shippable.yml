@@ -231,6 +231,7 @@ jobs:
     type: provision
     steps:
       - IN: kubernetesLoadBalancer
+      - IN: provisionExternalName
  
 
   - name: runSh-shippable-yml
