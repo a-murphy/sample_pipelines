@@ -91,6 +91,7 @@ resources:
       region: us-central1-a
       scopes:
           - gke
+          - gcr
                 
   - name: awsKeysCliConfig
     type: cliConfig
