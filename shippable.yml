@@ -203,7 +203,7 @@ jobs:
     steps:
       - IN: test-manifest
    #   - IN: nginx-manifest3
-      - IN: awsKeysCluster
+      - IN: gcloudKeysCluster
       - IN: zeroReplicas
         versionNumber: 1
 
@@ -213,7 +213,7 @@ jobs:
     steps:
       - IN: test-manifest
    #   - IN: nginx-manifest3
-      - IN: awsKeysCluster
+      - IN: gcloudKeysCluster
       - IN: zeroReplicas
         versionNumber: 1
         
@@ -223,7 +223,7 @@ jobs:
     steps:
       - IN: test-manifest
    #   - IN: nginx-manifest3
-      - IN: awsKeysCluster
+      - IN: gcloudKeysCluster
       - IN: zeroReplicas
         versionNumber: 1
  
