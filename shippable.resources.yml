@@ -142,7 +142,7 @@ resources:
       
   - name: kubernetesLoadBalancer
     type: loadBalancer
-    integration: Kubernetes
+    integration: gcloudKeys
     pointer:
       sourceName: "my-load-balancer"
       method: LoadBalancer
