@@ -248,6 +248,30 @@ jobs:
  #      versionNumber: 5
      - TASK:
         - script: "echo true"
+        
+        
+  - name: runSh-object
+    type: runSh
+    flags: shippable-yml
+    runtime:
+      architecture: x86_64		
+      os: Ubuntu_14.04
+    steps:
+     - IN: test-repo2
+ #      versionNumber: 5
+     - TASK:
+         script:
+           - "echo true"
+        
+  - name: runSh-no-task
+    type: runSh
+    flags: shippable-yml
+    runtime:
+      architecture: x86_64		
+      os: Ubuntu_14.04
+    steps:
+     - IN: test-repo2
+ #      versionNumber: 5
 
   - name: CLI_config_test
     type: runCLI
