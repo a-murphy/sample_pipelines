@@ -809,7 +809,6 @@ jobs:
     type: runSh
     steps:
       - IN: ecr-image
-      - OUT: checkCLIs
       - TASK:
         - script: "apt-get install unzip jq"
         - script: 'curl -s "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"'
@@ -850,7 +849,6 @@ jobs:
     type: runSh
     steps:
       - IN: sample_java_mysql_runCI
-      - IN: custom6
       - TASK:
         - script: "echo two"
 
