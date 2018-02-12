@@ -32,7 +32,7 @@ resources:
     type: params
     versionTemplate:
       params:
-        123test: testing
+  #      123test: testing
         empty: ""
 
   - name: bitbucket-integration-shippable-yml
