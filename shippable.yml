@@ -149,6 +149,7 @@ jobs:
      - IN: 123_numbers
      - IN: 123_file-manifest
      - IN: file-manifest
+     - IN: 5testRename5_ciRepo
      - IN: azureConfig
         
   - name: file-manifest
