@@ -149,6 +149,16 @@ jobs:
      - IN: 123_numbers
      - IN: 5testRename5_ciRepo
      - IN: azureConfig
+     
+  - name: test_runSh
+    type: runSh
+    runtime:
+      architecture: x86_64		
+      os: Ubuntu_14.04
+    steps:
+     - IN: 123_numbers
+     - IN: azureConfig
+     - IN: 5testRename5_ciRepo
         
   - name: file-manifest
     type: manifest
