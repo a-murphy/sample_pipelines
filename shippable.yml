@@ -298,7 +298,6 @@ jobs:
       - IN: rename-repo5
    #   - IN: gitlab-repo8
    #   - IN: filenames
-      - OUT: testRename5_ciRepo
    #     replicate: gitlab-repo8
     #  - IN: file2
     #    pull: true
