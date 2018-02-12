@@ -159,6 +159,8 @@ jobs:
      - IN: 123_numbers
      - IN: azureConfig
      - IN: 5testRename5_ciRepo
+     - TASK:
+       - script: echo test
         
   - name: file-manifest
     type: manifest
