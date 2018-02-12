@@ -439,10 +439,6 @@ resources:
    #     address: "45.55.195.74"
    #     user: shippable
    #     keyIntegration: sshKey
- 
-  - name: testAzureCluster
-    type: cluster
-    integration: Azure
 
   - name: myDclCluster
     type: cluster
