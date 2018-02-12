@@ -129,22 +129,6 @@ jobs:
   #          pull: test
   #          options: options
 
-  - name: testRename5_runCI
-    type: runCI
-    steps:
-      - IN: rename-repo5
-      - IN: image-resource
-        switch: off
-  #    - IN: gitlab-repo3
-  #    - OUT: sample_pipelines_master
-  #      replicate: gitlab-repo3
-      - OUT: another-image
-        replicate: image-resource
-  #    - IN: upgrade-rails-staging
-  #    - IN: projectC2
-  #    - NOTIFY: notifyMe
-  #    - TASK: managed
-
   - name: sample_java_mongo_runCI
     type: runCI
     steps:
