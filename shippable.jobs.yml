@@ -525,7 +525,7 @@ jobs:
   - name: nginx-and-busybox-manifest
     type: manifest
     steps:
-      - IN: nginx-manifest
+      - IN: nginx-manifest3
         switch: off
       - IN: busybox-manifest2
         switch: off
