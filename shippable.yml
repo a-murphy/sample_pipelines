@@ -219,9 +219,9 @@ jobs:
     method: blueGreen
     stabilityDuration: 30
     steps:
-      - IN: test-manifest
-   #   - IN: nginx-manifest3
-      - IN: gcloudKeysCluster
+   #   - IN: test-manifest
+      - IN: nginx-manifest3
+      - IN: awsKeysCluster
       - IN: zeroReplicas
         versionNumber: 1
 
@@ -229,9 +229,9 @@ jobs:
     type: deploy
     method: replace
     steps:
-      - IN: test-manifest
-   #   - IN: nginx-manifest3
-      - IN: gcloudKeysCluster
+   #   - IN: test-manifest
+      - IN: nginx-manifest3
+      - IN: awsKeysCluster
       - IN: zeroReplicas
         versionNumber: 1
         
@@ -239,9 +239,9 @@ jobs:
     type: deploy
     method: remove
     steps:
-      - IN: test-manifest
-   #   - IN: nginx-manifest3
-      - IN: gcloudKeysCluster
+   #   - IN: test-manifest
+      - IN: nginx-manifest3
+      - IN: awsKeysCluster
       - IN: zeroReplicas
         versionNumber: 1
  
