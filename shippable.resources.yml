@@ -304,8 +304,8 @@ resources:
   - name: testDockerOptions
     type: dockerOptions
     version:
-      pod:
-        restartPolicy: testRestartPolicy
+      service:
+        healthCheckGracePeriodSeconds: 555
  
   - name: myDockerOptions
     type: dockerOptions
