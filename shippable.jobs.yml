@@ -1,13 +1,4 @@
 jobs:
- # - name: deploy-awsKeys
- #   type: deploy
- #   method: upgrade
- #   steps:
- #     - IN: nginx-manifest3
- #     - IN: awsKeysCluster
- #     - IN: zeroReplicas
- #       versionNumber: 1
-        
   - name: Test_Azure_Deploy
     type: deploy
     method: upgrade
@@ -17,16 +8,6 @@ jobs:
       - IN: sshKey
       - IN: myAzureCluster
       - IN: myReplicas
-
-#  - name: Test_Azure_Deploy_replace
-#    type: deploy
-#    method: replace
-#    steps:
-#      - IN: _Test-123
-  #      switch: off
-#      - IN: sshKey
-#      - IN: myAzureCluster
-#      - IN: myReplicas
 
   - name: _Test-123
     type: manifest
