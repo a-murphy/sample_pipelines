@@ -305,7 +305,7 @@ resources:
     type: dockerOptions
     version:
       service:
-        healthCheckGracePeriodSeconds: 555
+        healthCheckGracePeriodSeconds: 55555
  
   - name: myDockerOptions
     type: dockerOptions
@@ -318,13 +318,13 @@ resources:
     type: dockerOptions
     integration: AWS
     version:
-      service:
-        placementStrategy:
-          - field: "attribute:ecs.availability-zone"
-            type: spread
-        deploymentConfiguration: 
-          maximumPercent: 150
-          minimumHealthyPercent: 75
+    #  service:
+    #    placementStrategy:
+    #      - field: "attribute:ecs.availability-zone"
+    #        type: spread
+    #    deploymentConfiguration: 
+    #      maximumPercent: 150
+    #      minimumHealthyPercent: 75
       memory: 48
     #  cpuShares: 10
       portMappings:
