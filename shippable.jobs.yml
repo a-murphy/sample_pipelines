@@ -659,6 +659,7 @@ jobs:
             port: 27017
       - IN: awsKeysCluster
       - IN: myDockerOptions
+      - IN: testDockerOptions
       - IN: myOtherDockerOptions
         applyTo:
           - mongo-image
