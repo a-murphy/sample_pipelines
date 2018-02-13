@@ -318,7 +318,8 @@ resources:
     type: dockerOptions
     integration: AWS
     version:
-    #  service:
+      service:
+        healthCheckGracePeriodSeconds: 55555
     #    placementStrategy:
     #      - field: "attribute:ecs.availability-zone"
     #        type: spread
