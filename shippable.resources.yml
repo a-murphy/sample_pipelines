@@ -305,7 +305,7 @@ resources:
     type: dockerOptions
     version:
       service:
-        healthCheckGracePeriodSeconds: 55555
+        healthCheckGracePeriodSeconds: 555
  
   - name: myDockerOptions
     type: dockerOptions
