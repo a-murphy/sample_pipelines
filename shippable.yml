@@ -222,7 +222,6 @@ jobs:
    #   - IN: test-manifest
       - IN: nginx-manifest3
       - IN: awsKeysCluster
-      - IN: testDockerOptions
       - IN: zeroReplicas
         versionNumber: 1
 
@@ -238,7 +237,7 @@ jobs:
         
   - name: upgrade-deploy
     type: deploy
-    method: remove
+    method: upgrade
     steps:
    #   - IN: test-manifest
       - IN: nginx-manifest3
