@@ -222,6 +222,7 @@ jobs:
    #   - IN: test-manifest
       - IN: nginx-manifest3
       - IN: awsKeysCluster
+      - IN: testDockerOptions
       - IN: zeroReplicas
         versionNumber: 1
 
