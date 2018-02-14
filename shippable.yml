@@ -313,11 +313,6 @@ jobs:
    #     showBuildStatus: true
       - IN: trigger-shippable-yml
       - IN: rename-repo5
-   #   - IN: gitlab-repo8
-   #   - IN: filenames
-   #     replicate: gitlab-repo8
-    #  - IN: file2
-    #    pull: true
       - TASK:
         - script: shipctl get_resource_version_key rename-repo5 version
         - script: echo "RENAMEREPO5_POINTER_TEST $RENAMEREPO5_POINTER_TEST"
