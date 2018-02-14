@@ -79,10 +79,7 @@ resources:
     integration: github
     versionTemplate:
       sourceName: a-murphy/sample_pipelines
-      branches:
-        except:
-          - master
-          
+
   - name: gke_Config_Resource
     type: cliConfig
     integration: gcloudKeys
@@ -118,11 +115,6 @@ resources:
     type: cluster
     integration: azureDCOS
 
-#  - name: sample_pipelines_master
-#    type: syncRepo
-#    flags:
-#      - one
-#      - two
 jobs:
   - name: 123-runSh-123
     type: runSh
@@ -246,13 +238,7 @@ jobs:
       - IN: awsKeysCluster
       - IN: zeroReplicas
         versionNumber: 1
- 
-  - name: provision-GKE
-    type: provision
-    steps:
-      - IN: kubernetesLoadBalancer
-      - IN: provisionExternalName
- 
+
 
   - name: runSh-shippable-yml
     type: runSh
@@ -288,7 +274,6 @@ jobs:
       os: Ubuntu_14.04
     steps:
      - IN: test-repo2
- #      versionNumber: 5
 
   - name: CLI_config_test
     type: runCLI
@@ -309,8 +294,6 @@ jobs:
       - IN: gke_Config_Resource
    #   - IN: myAzureCluster
    #   - IN: image-resource
-   #   - IN: myLoadBalancer
-   #     showBuildStatus: true
       - IN: trigger-shippable-yml
       - IN: rename-repo5
       - TASK:
