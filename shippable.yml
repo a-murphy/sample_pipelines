@@ -134,7 +134,9 @@ jobs:
      - IN: 123_file-manifest
      - IN: file-manifest
      - IN: gke_Config_Resource
+     - IN: bitbucket-integration-shippable-yml
      - TASK:
+        - script: ls -al ~/.ssh
         - script: aws --version
         - script: "echo true"
         - script: "echo 123_numbers path: $_NUMBERS_PATH"
