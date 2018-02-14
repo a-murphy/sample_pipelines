@@ -111,10 +111,6 @@ resources:
       region: "us-central1-a"
       namespace: mynamespace
 
-  - name: dcosCluster
-    type: cluster
-    integration: azureDCOS
-
 jobs:
   - name: 123-runSh-123
     type: runSh
