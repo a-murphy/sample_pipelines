@@ -128,6 +128,7 @@ jobs:
      - TASK:
         - script: ls -al ~/.ssh
         - script: aws --version
+        - script: "echo $runId"
         - script: "echo true"
         - script: "echo 123_numbers path: $_NUMBERS_PATH"
         - script: "echo 123_file-manifest path: $_FILEMANIFEST_PATH"
