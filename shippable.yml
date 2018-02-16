@@ -118,6 +118,7 @@ jobs:
       architecture: x86_64		
       os: Ubuntu_14.04
     steps:
+     - IN: testValue
      - IN: 123_numbers
      - IN: 123_file-manifest
      - IN: 5testRename5_runCI
