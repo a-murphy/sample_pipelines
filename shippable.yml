@@ -9,6 +9,10 @@ build:
     - python --version
 
 resources:
+  - name: testValue
+    type: integration
+    integration: testValue
+      
   - name: test-image
     type: image
     pointer:
