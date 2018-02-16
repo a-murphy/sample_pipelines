@@ -120,6 +120,7 @@ jobs:
     steps:
      - IN: 123_numbers
      - IN: 123_file-manifest
+     - IN: 123-testing-123
      - IN: file-manifest
      - IN: gke_Config_Resource
      - IN: bitbucket-integration-shippable-yml
@@ -141,6 +142,7 @@ jobs:
  #    - IN: 123-params
      - IN: 5testRename5_ciRepo
      - IN: azureConfig
+     - OUT: 123-testing-123
      
   - name: test_runSh
     type: runSh
