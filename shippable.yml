@@ -120,6 +120,7 @@ jobs:
     steps:
      - IN: 123_numbers
      - IN: 123_file-manifest
+     - IN: 5testRename5_runCI
      - IN: 123-testing-123
      - IN: file-manifest
      - IN: gke_Config_Resource
