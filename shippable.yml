@@ -83,6 +83,7 @@ resources:
     integration: github
     versionTemplate:
       sourceName: a-murphy/sample_pipelines
+      buildOnPullRequest: true
 
   - name: gke_Config_Resource
     type: cliConfig
