@@ -1,22 +1,181 @@
 jobs:
+  - name: Test_Azure_Deploy
+    type: deploy
+    method: upgrade
+    steps:
+      - IN: _Test-123
+  #      switch: off
+      - IN: sshKey
+      - IN: myAzureCluster
+      - IN: myReplicas
+
+  - name: _Test-123
+    type: manifest
+    steps:
+      - IN: my-test-params
+      - IN: my-test-image
+      - IN: new-mongo-image
+      - IN: testDockerOptions
+      
+  - name: _Test123_deploy-blueGreen_
+    type: deploy
+    steps:
+      - IN: _Test-123
+        switch: off
+      - IN: sshKey
+      - IN: myGKECluster
+      - IN: myReplicas
+        
+  - name: _Test123_deploy-upgrade_
+    type: deploy 
+    method: upgrade
+    steps:
+      - IN: _Test-123
+        switch: off
+      - IN: sshKey
+      - IN: myGKECluster
+      - IN: myReplicas
+        
+  - name: _Test123_deploy-replace_
+    type: deploy
+    method: replace
+    steps:
+      - IN: _Test-123
+        switch: off
+      - IN: sshKey
+      - IN: myGKECluster
+      - IN: myReplicas
+        
+  - name: _KTest123_deploy-12345678901234567890123456789012345678901234567890123456
+    type: deploy
+    steps:
+      - IN: _Test-123
+        switch: off
+      - IN: sshKey
+      - IN: myKubernetesCluster
+      - IN: myReplicas
+      - TASK: managed
+        deployMethod: upgrade
+        
+  - name: _KTest123_deploy-blueGreen_
+    type: deploy
+    steps:
+      - IN: _Test-123
+        switch: off
+      - IN: sshKey
+      - IN: myKubernetesCluster
+      - IN: myReplicas
+      - TASK: managed
+        deployMethod: upgrade
+        
+  - name: _KTest123_deploy-upgrade_
+    type: deploy
+    steps:
+      - IN: _Test-123
+        switch: off
+      - IN: sshKey
+      - IN: myKubernetesCluster
+      - IN: myReplicas
+      - TASK: managed
+        deployMethod: upgrade
+
+  - name: runsh-job-gitlabrepo
+    type: runSh
+    allowPublicAccess: false
+    steps:
+      - IN: gitlab-repo
+        showBuildStatus: true
+      - TASK:
+        - script: echo test
+        
+  - name: runsh-job2
+    type: runSh
+    steps:
+      - TASK:
+        - script: echo test
+        - boot:
+            imageName: image
+            imageTag: tag
+            test: test
+    
+  - name: runcli-job2
+    type: runCLI
+    steps:
+      - TASK:
+        - script: echo test
+        - boot:
+            imageName: image
+            imageTag: tag
+  #      - boot:
+  #          pull: test
+  #          options: options
+
   - name: sample_java_mongo_runCI
     type: runCI
     steps:
-#      - OUT: image-resource
+      - IN: image-resource
+        switch: off
+      - IN: upgrade-rails-staging
+ #     - OUT: sample-node-rethinkdb_runCI
+ #       replicate: image-resource
+      - NOTIFY: notifyMe
+      - TASK: managed
+      
+  - name: sample-ruby-mysql-cache_runCI
+    type: runCI
+    steps:
+      - IN: file
+        switch: off
+      - TASK: managed
+
+  - name: sample-node-rethinkdb_runCI
+    type: runCI
+    steps:
+      - IN: develop-git-repo-resource-with-script
       - TASK: manged
+    flags:
+      - myTestFlag
 
   - name: upgrade-rails-staging
     type: runSh
     steps:
       - IN: image-resource
+        agentOnly: false
+      - IN: artifactoryConfig
       - IN: develop-git-repo-resource-with-script
         switch: off
+        agentOnly: true
+      - OUT: master-git-repo-resource-with-script
+        replicate: develop-git-repo-resource-with-script
+        agentOnly: true
+      - NOTIFY: notifyMe
       - TASK:
+        - script: jfrog --version
+        - script: jfrog rt search test/
+   #     - script: chmod +x $DEVELOPGITREPORESOURCEWITHSCRIPT_STATE/scripts/upgrade.sh
+   #     - script: cd $DEVELOPGITREPORESOURCEWITHSCRIPT_STATE && ./scripts/upgrade.sh
+    flags:
+      - myTestFlag
+      
+  - name: new-runCLI
+    type: runCLI
+    steps:
+      - IN: artifactoryConfig
+      - IN: develop-git-repo-resource-with-script
+        showBuildStatus: true
+        switch: off
+      - TASK:
+        - script: jfrog --version
+        - script: jfrog rt search test/
         - script: chmod +x $DEVELOPGITREPORESOURCEWITHSCRIPT_STATE/scripts/upgrade.sh
         - script: cd $DEVELOPGITREPORESOURCEWITHSCRIPT_STATE && ./scripts/upgrade.sh
+    flags:
+      - myTestFlag
 
   - name: upgrade-rails-production
     type: runSh
+    flags:
+      - myTestFlag
     steps:
       - IN: master-git-repo-resource-with-script
         switch: off
@@ -28,39 +187,27 @@ jobs:
     steps:
       - TASK:
         - script: "echo true"
-  #- name: generate-mongo-image-manifest-3
-  #  type: manifest
-  #  steps:
-  #    - GET: mongo-image
-  #    - GET: myEcsParams
-  
-  #- name: thirdExtraRelease
-  #  type: release
-  #  steps:
-  #    - IN: generate-manifest
-  #    - TASK: managed
 
-  - name: provisionJob
-    type: provision                           
-    steps:
-      - IN: provisionExternalName
-  #    - IN: projectOne
-  #    - IN: version-resource-1
-   #   - IN: myOtherEcsParams
-  #    - IN: cliJob2
-#      - IN: specialCharactersBranch
-   #   - IN: busybox-image
-  #    - IN: myOtherEcsParams
-  #    - IN: specialCharactersBranch
-  #    - IN: provisionLoadBalancer
-  #- OUT: mongo-image
-    on_success:
-      - script: echo "Success"
-      - NOTIFY: notifyMe
-    on_failure:
-      - script: echo "Failure"
-      - NOTIFY: notifyMe
+#  - name: provisionJob
+#    type: provision
+#    steps:
+#      - IN: sshKey
+#      - IN: provisionExternalName
+#      - IN: provisionLoadBalancer
+  #    - IN: kubernetesLoadBalancer 
+#    on_success:
+#      - script: echo "Success"
+#      - NOTIFY: notifyMe
+#    on_failure:
+#      - script: echo "Failure"
+#      - NOTIFY: notifyMe 
   
+#  - name: provisionAzure
+#    type: provision
+#    steps:
+#      - IN: sshKey
+#      - IN: provisionAzureExternalName
+ #     - IN: provisionAzureLoadBalancer
   
   - name: terraformTest
     type: runSh        
@@ -69,18 +216,31 @@ jobs:
     steps:
   #    - IN: provisionExternalName
   #    - IN: projectOne
-      - IN: version-resource-1
+#      - IN: version-resource-1
    #   - IN: myOtherEcsParams
    #   - IN: cliJob2
-   #   - IN: specialCharactersBranch
+#      - IN: generate-file-manifest
+#        versionNumber: 34
       - IN: busybox-image
+        versionName: "latest"
+    #    versionNumber: 1
   #    - IN: provisionLoadBalancer
-     # - IN: develop-git-repo-resource-with-script
-      - OUT: image-resource
-      - OUT: sample_java_mongo_ciRepo
+      - IN: projectC2
+#      - OUT: image-resource
+      - IN: test-state
       - OUT: test-state
+        switch: off
+#      - IN: file
+#        versionNumber: 12
       - TASK:
         - script: echo $PATH
+        - script: echo $BUSYBOXIMAGE_STATE
+        - script: ls $BUSYBOXIMAGE_STATE
+        - script: echo '-------'
+        - script: ls $BUSYBOXIMAGE_STATE/../
+        - script: cat $BUSYBOXIMAGE_STATE/../version.json
+   #     - script: echo "versionName=test4" > /build/state/test-state.env
+   #     - script: shipctl put_resource_state test-state versionName test5
    #     - script: echo $SPECIALCHARACTERSBRANCH_HTTPS_URL
    #     - script: echo $SPECIALCHARACTERSBRANCH_SSH_URL
    #     - script: "echo 'SSH: ${SPECIALCHARACTERSBRANCH_SSH_URL} HTTPS: ${SPECIALCHARACTERSBRANCH_HTTPS_URL}' > test.txt"
@@ -91,7 +251,7 @@ jobs:
  #       - script: which terraform
  #       - script: which packer
  #       - script: packer version
-        - script: echo "versionName=test10" > /build/state/image-resource.env
+#        - script: echo "versionName=test11" > /build/state/image-resource.env
   #- OUT: mongo-image
     on_success:
       - script: echo "Success"
@@ -101,9 +261,20 @@ jobs:
   #    - NOTIFY: notifyMe
     always:
       - NOTIFY: notifyMe
-  
+
+  - name: test2
+    type: runSh       
+    steps:
+      - IN: ecrConfigResource
+        scopes:
+          - ecr
+      - TASK:
+        - script: docker pull 544102397216.dkr.ecr.us-east-1.amazonaws.com/testrepository:latest
+
   - name: sample_java_mysql_runCI
-    type: runCI        
+    type: runCI
+    flags:
+      - terraform
     steps:
   #    - IN: gcrConfigResource
   #    - IN: specialCharactersBranch
@@ -135,6 +306,8 @@ jobs:
     #  - IN: myEcsParams
     #  - IN: dockerTrustedRegistryResource
     #  - IN: privateDockerRegistryResource
+      - IN: generate-file-manifest
+      - IN: sample_java_mysql_runCI
       - IN: terraformTest
       - TASK:
      #   - script: mkdir -p test
@@ -232,6 +405,7 @@ jobs:
       
   - name: foo4
     type: release
+#    bump: major
     steps:
      # - GET: version-resource-4
       - IN: generate-manifest
@@ -270,12 +444,7 @@ jobs:
       - IN: mongo-image
         switch: off
       - IN: nginx-image
-      - IN: sample_node_mongo_runCI
-      - OUT: test-state
    #   - OUT: triggerOne
-   
-   #   - GET: myReplicas
-  #    - GET: deploy-service
       - IN: myDockerOptions
       - TASK: managed
 
@@ -284,7 +453,21 @@ jobs:
     steps:
       - IN: ecr-image
         switch: off
+      - IN: nginx-manifest3
+        switch: off
+      - IN: myOtherDockerOptions
+        applyTo:
+          - ecr-image
+      - IN: myEcsParams
+        applyTo:
+          - ecr-image
+      - IN: zeroReplicas
       - IN: myDockerOptions
+        applyTo:
+          - nginx-image
+      - IN: myOtherEcsParams
+        applyTo:
+          - nginx-image
       - TASK: managed
 
   - name: nginx-manifest2
@@ -297,32 +480,45 @@ jobs:
     #  - IN: gitlabProject
       - TASK: managed
       
+  - name: nginx-manifest3
+    type: manifest
+    steps:
+      - IN: nginx-image
+        switch: off
+      - TASK: managed
+
+  - name: nginx-manifest4
+    type: manifest
+    steps:
+      - IN: nginx-image
+        switch: off
+      - IN: mongo-image
+      - TASK: managed
+         
      
   - name: busybox-manifest2
     type: manifest
     steps:
       - IN: busybox-image
         switch: off
-      - IN: sample_java_mysql_runCI
-        switch: off
       - TASK: managed
    
   - name: nginx-and-busybox-manifest
     type: manifest
     steps:
-      - IN: nginx-manifest
+      - IN: nginx-manifest3
         switch: off
       - IN: busybox-manifest2
         switch: off
     #  - IN: bitbucketProject2
       - TASK: managed
    
-  - name: new-manifest
-    type: manifest
-    steps:
-      - IN: mongo-manifest
-      - IN: busybox-manifest2
-      - TASK: managed
+#  - name: new-manifest
+#    type: manifest
+#    steps:
+#      - IN: mongo-manifest
+#      - IN: busybox-manifest2
+#      - TASK: managed
 
  # - name: deploy-service
 #    type: deploy
@@ -332,15 +528,56 @@ jobs:
 
   - name: DCL-deploy
     type: deploy
+    stabilityDuration: 30
     steps:
-  #    - IN: nginx-manifest2
-  #      switch: off
+      - IN: nginx-manifest3
+        switch: off
       - IN: myDclCluster
  #     - IN: myEcsParams
 #        applyTo:
 #          - other
-      - IN: myOtherEcsParams
-      - IN: foo4
+   #   - IN: myOtherEcsParams
+   #   - IN: foo4
+      - TASK: managed
+      
+ 
+  - name: ECS-deploy
+    type: deploy
+    method: blueGreen
+    stabilityDuration: 30
+    steps:
+      - IN: nginx-manifest3
+    #  - IN: nginx-manifest4
+      - IN: myEcsCluster
+      - IN: zeroReplicas
+        versionNumber: 1
+      - TASK: managed
+
+  - name: DDC-deploy
+    type: deploy
+    stabilityDuration: 30
+    steps:
+      - IN: nginx-manifest3
+        switch: off
+      - IN: myDDCCluster
+      - TASK: managed
+      
+  - name: Kubernetes-deploy
+    type: deploy
+    stabilityDuration: 30
+    steps:
+      - IN: nginx-manifest3
+        switch: off
+      - IN: kubernetesCluster
+      - TASK: managed
+      
+  - name: azure-deploy
+    type: deploy
+    stabilityDuration: 30
+    steps:
+      - IN: nginx-manifest4
+   #   - IN: nginx-manifest3
+      - IN: azureCluster
       - TASK: managed
 
   - name: deploy-dcl-2
@@ -394,21 +631,41 @@ jobs:
     type: deploy
     steps:
       - IN: generate-manifest
-      - IN: foo4
+  #    - IN: foo4
     #  - IN: busybox-manifest2
-  #    - IN: myLoadBalancer
-  #      applyTo:
-  #        - manifest: generate-manifest
-  #          image: mongo-image
-  #          port: 27017
+      - IN: myLoadBalancer
+        applyTo:
+          - manifest: generate-manifest
+            image: mongo-image
+            port: 27017
       - IN: myEcsCluster
       - IN: myDockerOptions
       - IN: myOtherDockerOptions
-    #    applyTo:
-    #      - mongo-image
+        applyTo:
+          - mongo-image
       - TASK: managed
         deployMethod: replace
         
+  - name: upgrade-ecs-deploy
+    type: deploy
+    steps:
+      - IN: generate-manifest
+  #    - IN: foo4
+    #  - IN: busybox-manifest2
+      - IN: myNewApplicationLoadBalancer
+        applyTo:
+          - manifest: generate-manifest
+            image: mongo-image
+            port: 27017
+      - IN: awsKeysCluster
+      - IN: myDockerOptions
+      - IN: testDockerOptions
+      - IN: myOtherDockerOptions
+        applyTo:
+          - mongo-image
+      - TASK: managed
+        deployMethod: upgrade
+   
   - name: replace-triton-deploy
     type: deploy
     steps:
@@ -419,6 +676,21 @@ jobs:
       - IN: myOtherDockerOptions
       - TASK: managed
         deployMethod: replace
+
+  - name: triton-deploy
+    type: deploy
+  #  stabilityDuration: 45
+ #   method: replace
+ #   workflow: serial
+    steps:
+      - IN: nginx-manifest3
+        switch: off
+      - IN: tritonCluster
+      - IN: myReplicas
+      - TASK: managed
+    #    deployMethod: upgrade
+    #    deployOptions:
+    #      - parallel
 
   - name: new-ecs-deploy-again
     type: deploy
@@ -435,7 +707,6 @@ jobs:
       - IN: myEcsCluster
       - IN: generate-manifest
       - IN: nginx-manifest2
-    #  - OUT: gke-deploy
       - IN: myReplicas
 #      - GET: deploy-service-7
   #    - IN: myEcsParams
@@ -463,23 +734,7 @@ jobs:
       - IN: myOtherDockerOptions
       - TASK: managed
         deployMethod: upgrade
-        
-  - name: gke-deploy2
-    type: deploy
-    steps:
-      - IN: nginx-manifest2
-  #    - IN: generate-manifest
-      - IN: myGKECluster
-  #    - IN: myReplicas
-      - IN: myOtherDockerOptions
-  #      applyTo:
-  #        - mongo-image
-  #    - IN: myThirdDockerOptions
- #       applyTo:
- #         - nginx-image
-      - TASK: managed
-        deployMethod: replace
-        
+
  # - name: empty-deploy
  #   type: deploy
  #   steps:
@@ -519,7 +774,7 @@ jobs:
     type: runSh
     steps:
       - IN: customImage
-      - IN: pipelines-dv-image
+ #     - IN: pipelines-dv-image
       - TASK:
         - script: "ls /build/IN/customImage"
       
@@ -551,6 +806,7 @@ jobs:
     type: runSh
     steps:
       - IN: ecr-image
+      - OUT: sample_c_runCI
       - TASK:
         - script: "echo DOCKER"
         - script: "docker --version"
@@ -575,7 +831,6 @@ jobs:
     type: runSh
     steps:
       - IN: sample_java_mysql_runCI
-      - IN: custom6
       - TASK:
         - script: "echo two"
 
@@ -583,7 +838,7 @@ jobs:
     type: runSh
     steps:
       - IN: privateProject3
-      - OUT: pipelines-dv-image
+  #    - OUT: pipelines-dv-image
       - TASK:
         - script: "ls -al /build/IN/privateProject3/gitRepo"
 
@@ -596,3 +851,30 @@ jobs:
  #     - TASK: managed
  #     - OUT: mongo-image
 
+  - name: generate-file-manifest
+    type: manifest
+    steps:
+      - IN: file2
+      - IN: test-state
+      - OUT: file
+    #    replicate: file2
+      - IN: new-mongo-image
+        switch: off
+      - OUT: image-resource
+        replicate: new-mongo-image
+        
+  - name: update-file-runSh
+    type: runSh
+    steps:
+      - TASK:
+        - script: echo "versionName=test" > /build/state/file.env
+      - OUT: file
+
+  - name: deploy-node
+    type: deploy
+    steps:
+      - IN: generate-file-manifest
+        switch: off
+      - IN: nodeCluster
+      - TASK:
+        - script: ls /tmp/shippable/generate-file-manifest/file
