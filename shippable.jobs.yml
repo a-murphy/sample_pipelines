@@ -13,7 +13,7 @@ jobs:
     type: manifest
     steps:
       - IN: my-test-params
-      - IN: my-test-image
+  #    - IN: my-test-image
       - IN: new-mongo-image
       - IN: testDockerOptions
       
