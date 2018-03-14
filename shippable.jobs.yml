@@ -26,25 +26,15 @@ jobs:
       - IN: myGKECluster
       - IN: myReplicas
         
-  - name: _Test123_deploy-upgrade_
-    type: deploy 
-    method: upgrade
-    steps:
-      - IN: _Test-123
-        switch: off
-      - IN: sshKey
-      - IN: myGKECluster
-      - IN: myReplicas
-        
-  - name: _Test123_deploy-replace_
-    type: deploy
-    method: replace
-    steps:
-      - IN: _Test-123
-        switch: off
-      - IN: sshKey
-      - IN: myGKECluster
-      - IN: myReplicas
+#  - name: _Test123_deploy-upgrade_
+#    type: deploy 
+#    method: upgrade
+#    steps:
+#      - IN: _Test-123
+#        switch: off
+#      - IN: sshKey
+#      - IN: myGKECluster
+#      - IN: myReplicas
         
   - name: _KTest123_deploy-12345678901234567890123456789012345678901234567890123456
     type: deploy
