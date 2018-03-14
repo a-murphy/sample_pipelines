@@ -460,6 +460,10 @@ resources:
     type: cluster
     integration: Kubernetes
     pointer:
+      bastionHost:
+        address: 159.65.81.129
+        user: root
+        keyIntegration: sshKey
       namespace: mynamespace
       
  
