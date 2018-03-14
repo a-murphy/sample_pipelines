@@ -461,7 +461,7 @@ resources:
     integration: Kubernetes
     pointer:
       bastionHost:
-        address: 159.65.81.129
+        address: 167.99.86.54
         user: root
         keyIntegration: sshKey
       namespace: mynamespace
