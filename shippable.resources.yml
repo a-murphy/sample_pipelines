@@ -464,7 +464,7 @@ resources:
         address: 167.99.86.54
         user: root
         keyIntegration: sshKey
-      namespace: mynamespace
+  #    namespace: mynamespace
       
  
   - name: azureCluster
