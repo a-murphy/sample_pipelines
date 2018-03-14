@@ -257,6 +257,7 @@ jobs:
      - IN: test-repo2
  #      versionNumber: 5
      - TASK:
+        - script: sleep 400
         - script: "echo true"
         
         
