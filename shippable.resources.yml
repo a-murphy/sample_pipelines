@@ -460,7 +460,7 @@ resources:
     type: cluster
     integration: Kubernetes
     pointer:
-      namespace: my-namespace
+      namespace: mynamespace
       
  
   - name: azureCluster
