@@ -465,7 +465,6 @@ resources:
         user: root
         keyIntegration: sshKey
   #    namespace: mynamespace
-      
  
   - name: azureCluster
     type: cluster
