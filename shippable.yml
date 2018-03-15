@@ -189,8 +189,8 @@ jobs:
     type: deploy
     steps:
       - IN: rename-repo5
-      - OUT: test-repo2
-      - IN: nodeCluster3
+  #    - OUT: test-repo2
+      - IN: nodeCluster
       - IN: 123_numbers
       - TASK:
         - script: echo "test"
@@ -211,7 +211,7 @@ jobs:
     steps:
       - IN: file-manifest
       - IN: rename-repo5
-      - IN: nodeCluster3
+      - IN: nodeCluster
       - TASK:
         - script: echo "test"
         
