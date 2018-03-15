@@ -636,9 +636,9 @@ resources:
     seed:
       versionName: test4
       
-#  - name: nodeCluster
-#    type: cluster
-#    integration: Node
+  - name: nodeCluster
+    type: cluster
+    integration: Node
       
   - name: azureConfig
     type: cliConfig
