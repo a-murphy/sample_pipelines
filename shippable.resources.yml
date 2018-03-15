@@ -459,7 +459,7 @@ resources:
   - name: myKubernetesCluster
     type: cluster
     integration: Kubernetes
-    pointer:
+    versionTemplate:
       bastionHost:
         address: 167.99.86.54
         user: root
