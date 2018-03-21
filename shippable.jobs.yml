@@ -813,12 +813,12 @@ jobs:
     steps:
       - IN: file2
       - IN: test-state
-      - OUT: file
+    #  - OUT: file
     #    replicate: file2
       - IN: new-mongo-image
         switch: off
-      - OUT: image-resource
-        replicate: new-mongo-image
+    #  - OUT: image-resource
+    #    replicate: new-mongo-image
         
   - name: update-file-runSh
     type: runSh
