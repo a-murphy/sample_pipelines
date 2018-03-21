@@ -89,6 +89,7 @@ jobs:
     type: runCI
     steps:
       - IN: develop-git-repo-resource-with-script
+        switch: off
       - TASK: manged
     flags:
       - myTestFlag
