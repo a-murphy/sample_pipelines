@@ -19,6 +19,7 @@ resources:
         a3: '"$b"="$c"'
         a4: $b=$c
         a5: $b"="$c
+        a7: '"$b=$c"'
     
   - name: paramsTest
     type: integration
