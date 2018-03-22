@@ -17,6 +17,8 @@ resources:
         a: "$b=$c"
         a2: '"$b\=$c"'
         a3: '"$b"="$c"'
+        a4: $b=$c
+        a5: $b"="$c
     
   - name: paramsTest
     type: integration
@@ -134,6 +136,8 @@ jobs:
         - script: echo $a
         - script: echo $a2
         - script: echo $a3
+        - script: echo $a4
+        - script: echo $a5
 
   - name: 123-runSh-123
     type: runSh
