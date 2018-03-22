@@ -141,6 +141,7 @@ jobs:
         - script: echo $a3
         - script: echo $a4
         - script: echo $a5
+        - script: echo $a7
 
   - name: 123-runSh-123
     type: runSh
