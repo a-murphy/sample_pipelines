@@ -813,7 +813,7 @@ jobs:
     type: manifest
     steps:
       - IN: file2
-      - IN: test-state
+    #  - IN: test-state
     #  - OUT: file
     #    replicate: file2
       - IN: new-mongo-image
@@ -830,9 +830,11 @@ jobs:
 
   - name: deploy-node
     type: deploy
+    dependencyMode: strict
     steps:
       - IN: generate-file-manifest
         switch: off
+      - IN: update-file-runSh
       - IN: nodeCluster
       - TASK:
         - script: ls /tmp/shippable/generate-file-manifest/file
