@@ -9,7 +9,7 @@ build:
     - python --version
 
 resources:
-  - name: testValue
+  - name: testParamsValue
     type: params
     versionTemplate:
       params:
@@ -129,7 +129,7 @@ jobs:
   - name: myRunSh
     type: runSh
     steps:
-     - IN: testValue
+     - IN: testParamsValue
      - TASK:
         - script: echo $a
         - script: echo $a2
