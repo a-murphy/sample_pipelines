@@ -133,6 +133,8 @@ jobs:
     steps:
      - IN: testParamsValue
      - TASK:
+        - script: export $a6="$a=$b"
+        - script: echo $a6
         - script: echo $a
         - script: echo $a2
         - script: echo $a3
