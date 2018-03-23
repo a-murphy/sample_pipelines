@@ -176,6 +176,8 @@ jobs:
  #    - IN: 123-params
      - IN: 5testRename5_ciRepo
      - IN: azureConfig
+     - IN: generate-manifest
+       switch: off
      - OUT: 123-testing-123
      
   - name: test_runSh
