@@ -538,6 +538,7 @@ jobs:
       - IN: generate-manifest
         switch: off
    #   - IN: nginx-manifest3
+      - IN: sleep
       - IN: azureCluster
       - TASK: managed
 
