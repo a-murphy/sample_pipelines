@@ -532,7 +532,7 @@ jobs:
   - name: azure-deploy
     type: deploy
     stabilityDuration: 30
-    dependencyMode: strict
+    dependencyMode: immediate
     steps:
       - IN: nginx-manifest4
       - IN: generate-manifest
