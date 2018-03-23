@@ -534,6 +534,8 @@ jobs:
     stabilityDuration: 30
     steps:
       - IN: nginx-manifest4
+      - IN: generate-manifest
+        switch: off
    #   - IN: nginx-manifest3
       - IN: azureCluster
       - TASK: managed
