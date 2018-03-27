@@ -721,7 +721,7 @@ jobs:
         - script: "echo '\x1b[33m' $MYECSPARAMS_VERSION_PARAMS '\x1b[0m'"
         - script: "mkdir -p /build/state/"
         - script: "touch /build/state/mongo-image.env"
-        - script: "echo 'versionName=latest' >>  /build/state/mongo-image.env"
+        - script: "echo 'versionName=latest2' >>  /build/state/mongo-image.env"
         - script: "echo 'anotherProperty=foo' >>  /build/state/mongo-image.env"
         - script: "echo 'anotherProperty2=foo2' >>  /build/state/mongo-image.env"
       - OUT: mongo-image
