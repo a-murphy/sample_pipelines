@@ -131,7 +131,7 @@ resources:
   - name: newReplicas
     type: replicas
     versionTemplate:
-   #   count: 0
+      count: 0
       min: 0
       max: 1
 
