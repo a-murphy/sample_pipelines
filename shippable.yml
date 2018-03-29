@@ -127,6 +127,13 @@ resources:
       sourceName : "cluster-1"
       region: "us-central1-a"
       namespace: mynamespace
+      
+  - name: newReplicas
+    type: replicas
+    versionTemplate:
+   #   count: 0
+      min: 0
+      max: 1
 
 jobs:
   - name: myRunSh
@@ -273,6 +280,7 @@ jobs:
       - IN: awsKeysCluster
       - IN: zeroReplicas
         versionNumber: 1
+      - IN: newReplicas
 
 
   - name: runSh-shippable-yml
