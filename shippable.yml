@@ -280,7 +280,7 @@ jobs:
       - IN: awsKeysCluster
       - IN: zeroReplicas
         versionNumber: 1
-      - IN: newReplicas
+#      - IN: newReplicas
 
 
   - name: runSh-shippable-yml
