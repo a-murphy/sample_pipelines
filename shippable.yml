@@ -141,14 +141,7 @@ jobs:
     steps:
      - IN: testParamsValue
      - TASK:
-        - script: export a6="$b=$c"
-        - script: echo $a6
-        - script: echo $a
-        - script: echo $a2
-        - script: echo $a3
-        - script: echo $a4
-        - script: echo $a5
-        - script: echo $a7
+       - script: docker images
 
   - name: 123-runSh-123
     type: runSh
