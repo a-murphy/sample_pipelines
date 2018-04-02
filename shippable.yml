@@ -132,8 +132,21 @@ resources:
     type: replicas
     versionTemplate:
       count: 0
-      min: 0
-      max: 2
+      minReplicas: 0
+      maxReplicas: 2
+      autoScalingRole: role
+      
+       
+  - name: invalidReplicas
+    type: replicas
+    versionTemplate:
+      count: 0
+      minReplicas: zero
+      maxReplicas: two
+      autoScalingRole:
+        - one
+        - two
+      
 
 jobs:
   - name: myRunSh
