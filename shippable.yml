@@ -142,7 +142,7 @@ resources:
     versionTemplate:
       count: 0
       minReplicas: zero
-      maxReplicas: two
+ #     maxReplicas: two
       autoScalingRole:
         - one
         - two
