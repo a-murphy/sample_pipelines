@@ -287,6 +287,8 @@ jobs:
       - IN: zeroReplicas
         versionNumber: 1
       - IN: newReplicas
+        applyTo:
+          - none
 
 
   - name: runSh-shippable-yml
