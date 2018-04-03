@@ -135,8 +135,16 @@ resources:
       minReplicas: 0
       maxReplicas: 1
   #    autoScalingRole: role
-      
-       
+      autoScalingPolicies:
+        - PolicyName: testPolicy
+          PolicyType: "StepScaling"
+          StepScalingPolicyConfiguration:
+          AdjustmentType: "PercentChangeInCapacity"
+          Cooldown: 60,
+          StepAdjustments:
+            - MetricIntervalLowerBound: 0
+              ScalingAdjustment: 200
+
   - name: invalidReplicas
     type: replicas
     versionTemplate:
@@ -146,6 +154,15 @@ resources:
       autoScalingRole:
         - one
         - two
+      autoScalingPolicies:
+        PolicyName: test
+        
+  - name: invalidAutoScalingPolicies
+    type: replicas
+    versionTemplate:
+      count: 0
+      autoScalingPolicies:
+        - NotPolicyName: test
       
 
 jobs:
