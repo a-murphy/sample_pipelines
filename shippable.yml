@@ -289,7 +289,7 @@ jobs:
       - IN: newReplicas
         applyTo:
           - none
-     #     - manifest: nginx-manifest3
+          - manifest: nginx-manifest3
 
 
   - name: runSh-shippable-yml
