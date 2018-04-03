@@ -288,7 +288,7 @@ jobs:
         versionNumber: 1
       - IN: newReplicas
         applyTo:
-          - none
+          - nginx-manifest3
 
 
   - name: runSh-shippable-yml
