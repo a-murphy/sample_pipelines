@@ -266,6 +266,10 @@ jobs:
       - IN: awsKeysCluster
       - IN: zeroReplicas
         versionNumber: 1
+      - IN: newReplicas
+        applyTo:
+          - none
+          - manifest: nginx-manifest3
 
   - name: replace-deploy
     type: deploy
