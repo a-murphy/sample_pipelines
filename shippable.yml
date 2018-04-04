@@ -326,7 +326,7 @@ jobs:
       - IN: awsKeysCluster
       - IN: zeroReplicas
         versionNumber: 1
-     # - IN: otherPolicy
+      - IN: otherPolicy
       - IN: newReplicas
         applyTo:
           - none
