@@ -140,7 +140,7 @@ resources:
           PolicyType: "StepScaling"
           StepScalingPolicyConfiguration:
             AdjustmentType: "PercentChangeInCapacity"
-            Cooldown: 60,
+            Cooldown: 60
             StepAdjustments:
               - MetricIntervalLowerBound: 0
                 ScalingAdjustment: 200
