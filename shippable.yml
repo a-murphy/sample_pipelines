@@ -144,6 +144,20 @@ resources:
             StepAdjustments:
               - MetricIntervalLowerBound: 0
                 ScalingAdjustment: 200
+                
+  - name: otherPolicy
+    type: replicas
+    versionTemplate:
+      count: 0
+      autoScalingPolicies:
+        - PolicyName: testPolicy2
+          PolicyType: "StepScaling"
+          StepScalingPolicyConfiguration:
+            AdjustmentType: "PercentChangeInCapacity"
+            Cooldown: 60
+            StepAdjustments:
+              - MetricIntervalLowerBound: 0
+                ScalingAdjustment: 200
 
   - name: invalidReplicas
     type: replicas
@@ -312,6 +326,7 @@ jobs:
       - IN: awsKeysCluster
       - IN: zeroReplicas
         versionNumber: 1
+      - IN: otherPolicy
       - IN: newReplicas
         applyTo:
           - none
