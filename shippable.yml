@@ -139,11 +139,11 @@ resources:
         - PolicyName: testPolicy
           PolicyType: "StepScaling"
           StepScalingPolicyConfiguration:
-          AdjustmentType: "PercentChangeInCapacity"
-          Cooldown: 60,
-          StepAdjustments:
-            - MetricIntervalLowerBound: 0
-              ScalingAdjustment: 200
+            AdjustmentType: "PercentChangeInCapacity"
+            Cooldown: 60,
+            StepAdjustments:
+              - MetricIntervalLowerBound: 0
+                ScalingAdjustment: 200
 
   - name: invalidReplicas
     type: replicas
