@@ -144,6 +144,25 @@ resources:
             StepAdjustments:
               - MetricIntervalLowerBound: 0
                 ScalingAdjustment: 200
+         
+        - PolicyName: testPolicy
+          PolicyType: "TargetTrackingScaling"
+          TargetTrackingScalingPolicyConfiguration:
+            TargetValue: 0.0
+            PredefinedMetricSpecification:
+              PredefinedMetricType: ECSServiceAverageCPUUtilization
+            DisableScaleIn: false
+            ScaleInCooldown: 0
+            ScaleOutCooldown: 0
+
+      alarmMetrics:
+        - AlarmName: "my-alarm"
+          ComparisonOperator: "GreaterThanThreshold"
+          EvaluationPeriods: 2
+          MetricName: "high-cpu"
+          Namespace: "test"
+          Period: 5
+          Threshold: 75.0
                 
   - name: otherPolicy
     type: replicas
