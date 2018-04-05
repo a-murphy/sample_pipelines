@@ -145,7 +145,7 @@ resources:
               - MetricIntervalLowerBound: 0
                 ScalingAdjustment: 200
          
-        - PolicyName: testPolicy
+        - PolicyName: testTargetPolicy
           PolicyType: "TargetTrackingScaling"
           TargetTrackingScalingPolicyConfiguration:
             TargetValue: 0.0
