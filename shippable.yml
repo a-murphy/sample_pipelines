@@ -189,6 +189,8 @@ resources:
         - two
       autoScalingPolicies:
         PolicyName: test
+      alarmMetrics:
+        AlarmName: "my-alarm"
         
   - name: invalidAutoScalingPolicies
     type: replicas
@@ -196,6 +198,8 @@ resources:
       count: 0
       autoScalingPolicies:
         - NotPolicyName: test
+      alarmMetrics:
+        - NotAlarmName: "my-alarm"
       
 
 jobs:
