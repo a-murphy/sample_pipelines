@@ -137,7 +137,7 @@ resources:
   #    autoScalingRole: role
       autoScalingPolicies:
         - PolicyName: testPolicy
-       #   PolicyType: "StepScaling"
+          PolicyType: "StepScaling"
           StepScalingPolicyConfiguration:
             AdjustmentType: "PercentChangeInCapacity"
             Cooldown: 60
