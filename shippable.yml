@@ -155,7 +155,7 @@ resources:
             ScaleInCooldown: 0
             ScaleOutCooldown: 0
 
-      alarmMetrics:
+      metricAlarms:
         - AlarmName: "my-alarm"
           ComparisonOperator: "GreaterThanThreshold"
           EvaluationPeriods: 2
