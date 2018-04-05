@@ -192,7 +192,7 @@ resources:
         - two
       autoScalingPolicies:
         PolicyName: test
-      alarmMetrics:
+      metricAlarms:
         AlarmName: "my-alarm"
         
   - name: invalidAutoScalingPolicies
@@ -201,7 +201,7 @@ resources:
       count: 0
       autoScalingPolicies:
         - NotPolicyName: test
-      alarmMetrics:
+      metricAlarms:
         - NotAlarmName: "my-alarm"
       
 
