@@ -164,6 +164,8 @@ resources:
           Statistic: Average 
           Period: 60
           Threshold: 75.0
+          AlarmActions:
+            - testPolicy
                 
   - name: otherPolicy
     type: replicas
