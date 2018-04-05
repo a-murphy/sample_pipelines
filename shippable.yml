@@ -148,7 +148,7 @@ resources:
         - PolicyName: testTargetPolicy
           PolicyType: "TargetTrackingScaling"
           TargetTrackingScalingPolicyConfiguration:
-            TargetValue: 0.0
+            TargetValue: 0.5
             PredefinedMetricSpecification:
               PredefinedMetricType: ECSServiceAverageCPUUtilization
             DisableScaleIn: false
