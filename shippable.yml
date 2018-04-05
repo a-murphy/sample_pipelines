@@ -162,7 +162,7 @@ resources:
           MetricName: "high-cpu"
           Namespace: "test"
           Statistic: Average 
-          Period: 5
+          Period: 60
           Threshold: 75.0
                 
   - name: otherPolicy
