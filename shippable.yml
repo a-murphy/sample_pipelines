@@ -156,7 +156,7 @@ resources:
             ScaleOutCooldown: 0
 
       metricAlarms:
-        - AlarmName: "my-alarm2"
+        - AlarmName: "my-alarm-2"
           ComparisonOperator: "GreaterThanThreshold"
           EvaluationPeriods: 2
           MetricName: "high-cpu"
