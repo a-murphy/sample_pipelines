@@ -161,7 +161,7 @@ resources:
           EvaluationPeriods: 2
           MetricName: "high-cpu"
           Namespace: "test"
-   #       Statistic: Average 
+          Statistic: Average 
           Period: 60
           Threshold: 75.0
           AlarmActions:
