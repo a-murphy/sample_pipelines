@@ -155,17 +155,17 @@ resources:
             ScaleInCooldown: 0
             ScaleOutCooldown: 0
 
-     # metricAlarms:
-     #   - AlarmName: "my-alarm-2"
-     #     ComparisonOperator: "GreaterThanThreshold"
-     #     EvaluationPeriods: 2
-     #     MetricName: "high-cpu"
-     #     Namespace: "test"
-     #     Statistic: Average 
-     #     Period: 60
-     #     Threshold: 75.0
-     #     AlarmActions:
-     #       - testPolicy
+      metricAlarms:
+        - AlarmName: "my-alarm-2"
+          ComparisonOperator: "GreaterThanThreshold"
+          EvaluationPeriods: 2
+          MetricName: "high-cpu"
+          Namespace: "test"
+          Statistic: Average 
+          Period: 60
+          Threshold: 75.0
+          AlarmActions:
+            - testPolicy
                 
   - name: otherPolicy
     type: replicas
