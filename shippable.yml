@@ -342,11 +342,11 @@ jobs:
   #          image: nginx-image
   #          port: 27017
   #    - IN: myOtherDockerOptions
-      - IN: zeroReplicas
-        versionNumber: 1
-      - IN: newReplicas
-        applyTo:
-          - none
+  #- IN: zeroReplicas
+ #       versionNumber: 1
+  #    - IN: newReplicas
+  #      applyTo:
+  #        - none
     #      - manifest: nginx-manifest3
         
   - name: upgrade-deploy
