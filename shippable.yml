@@ -143,7 +143,7 @@ resources:
             Cooldown: 60
             StepAdjustments:
               - MetricIntervalLowerBound: 0
-                ScalingAdjustment: 200
+                ScalingAdjustment: 150
          
         - PolicyName: testTargetPolicy
           PolicyType: "TargetTrackingScaling"
