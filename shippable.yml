@@ -320,13 +320,15 @@ jobs:
     steps:
    #   - IN: test-manifest
       - IN: nginx-manifest3
+      - IN: busybox-manifest2 
       - IN: awsKeysCluster
       - IN: zeroReplicas
         versionNumber: 1
       - IN: newReplicas
         applyTo:
           - none
-          - manifest: nginx-manifest3
+     #     - manifest: nginx-manifest3
+          - manifest: busybox-manifest2 
 
   - name: replace-deploy
     type: deploy
@@ -335,6 +337,7 @@ jobs:
     steps:
    #   - IN: test-manifest
       - IN: nginx-manifest3
+      - IN: busybox-manifest2 
       - IN: awsKeysCluster
   #   - IN: myLoadBalancer
   #      applyTo:
