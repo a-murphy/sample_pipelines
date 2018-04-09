@@ -337,7 +337,7 @@ jobs:
     steps:
    #   - IN: test-manifest
       - IN: nginx-manifest3
-      - IN: busybox-manifest2 
+  #    - IN: busybox-manifest2 
       - IN: awsKeysCluster
   #   - IN: myLoadBalancer
   #      applyTo:
