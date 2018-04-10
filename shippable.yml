@@ -322,8 +322,8 @@ jobs:
       - IN: nginx-manifest3
       - IN: busybox-manifest2 
       - IN: awsKeysCluster
-#      - IN: zeroReplicas
-#        versionNumber: 1
+      - IN: zeroReplicas
+        versionNumber: 1
       - IN: newReplicas
         applyTo:
           - none
