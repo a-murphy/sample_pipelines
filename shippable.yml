@@ -313,22 +313,22 @@ jobs:
       - TASK:
         - script: echo "test"
         
-  - name: bluegreen-deploy
-    type: deploy
-    method: blueGreen
-    stabilityDuration: 30
-    steps:
+#  - name: bluegreen-deploy
+#    type: deploy
+#    method: blueGreen
+#    stabilityDuration: 30
+#    steps:
    #   - IN: test-manifest
-      - IN: nginx-manifest3
+#      - IN: nginx-manifest3
    #   - IN: busybox-manifest2 
-      - IN: awsKeysCluster
-      - IN: zeroReplicas
-        versionNumber: 1
-      - IN: newReplicas
-        applyTo:
-          - none
-          - manifest: nginx-manifest3
-          - manifest: busybox-manifest2 
+#      - IN: awsKeysCluster
+#      - IN: zeroReplicas
+#        versionNumber: 1
+#      - IN: newReplicas
+#        applyTo:
+#          - none
+#          - manifest: nginx-manifest3
+#          - manifest: busybox-manifest2 
 
   - name: replace-deploy
     type: deploy
