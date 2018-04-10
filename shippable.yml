@@ -348,8 +348,8 @@ jobs:
   #- IN: zeroReplicas
  #       versionNumber: 1
       - IN: newReplicas
-        applyTo:
-          - none
+  #      applyTo:
+  #        - none
   #        - manifest: nginx-manifest3
         
   - name: upgrade-deploy
