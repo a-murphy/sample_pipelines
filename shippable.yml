@@ -327,18 +327,18 @@ jobs:
       - IN: newReplicas
         applyTo:
           - none
-     #     - manifest: nginx-manifest3
+          - manifest: nginx-manifest3
           - manifest: busybox-manifest2 
 
-#  - name: replace-deploy
-#    type: deploy
-#    method: replace
-#    maxWaitTime: 30
-#    steps:
+  - name: replace-deploy
+    type: deploy
+    method: replace
+    maxWaitTime: 30
+    steps:
    #   - IN: test-manifest
-#      - IN: nginx-manifest3
+      - IN: nginx-manifest3
   #    - IN: busybox-manifest2 
-#      - IN: awsKeysCluster
+      - IN: awsKeysCluster
   #   - IN: myLoadBalancer
   #      applyTo:
   #        - manifest: nginx-manifest3
