@@ -324,10 +324,10 @@ jobs:
       - IN: awsKeysCluster
       - IN: zeroReplicas
         versionNumber: 1
- #     - IN: newReplicas
- #       applyTo:
- #         - none
-   #       - nginx-manifest3
+      - IN: newReplicas
+        applyTo:
+          - none
+          - nginx-manifest3
    #       - busybox-manifest2 
 
   - name: replace-deploy
