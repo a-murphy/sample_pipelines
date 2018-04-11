@@ -327,7 +327,7 @@ jobs:
       - IN: newReplicas
         applyTo:
           - none
-          - nginx-manifest3
+   #       - nginx-manifest3
    #       - busybox-manifest2 
 
   - name: replace-deploy
