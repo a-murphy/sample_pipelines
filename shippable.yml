@@ -99,7 +99,7 @@ resources:
 
   - name: gke_Config_Resource
     type: cliConfig
-    integration: gcloudKeys
+    integration: gcloud
     pointer:
       clusterName: cluster-1
       namespace: testnamespace
@@ -122,7 +122,7 @@ resources:
     
   - name: gcloudKeysCluster
     type: cluster
-    integration: gcloudKeys
+    integration: gcloud
     versionTemplate:
       sourceName : "cluster-1"
       region: "us-central1-a"
@@ -180,29 +180,6 @@ resources:
             StepAdjustments:
               - MetricIntervalLowerBound: 0
                 ScalingAdjustment: 200
-
-  - name: invalidReplicas
-    type: replicas
-    versionTemplate:
-      count: 0
-      minReplicas: zero
- #     maxReplicas: two
-      autoScalingRole:
-        - one
-        - two
-      autoScalingPolicies:
-        PolicyName: test
-      metricAlarms:
-        AlarmName: "my-alarm"
-        
-  - name: invalidAutoScalingPolicies
-    type: replicas
-    versionTemplate:
-      count: 0
-      autoScalingPolicies:
-        - NotPolicyName: test
-      metricAlarms:
-        - NotAlarmName: "my-alarm"
       
 
 jobs:
