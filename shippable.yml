@@ -192,16 +192,17 @@ jobs:
        - script: fail
     on_success:
       - NOTIFY: emailMe
-        sendFailingSnippet: true
+   #     sendFailingSnippet: true
     on_failure:
       - NOTIFY: emailMe
-        sendFailingSnippet: true
+   #     sendFailingSnippet: true
     on_start:
       - NOTIFY: emailMe
         sendFailingSnippet: true
+      - NOTIFY: notifyMe
     on_cancel:
       - NOTIFY: emailMe
-        sendFailingSnippet: true
+   #     sendFailingSnippet: true
 
   - name: 123-runSh-123
     type: runSh
