@@ -198,9 +198,9 @@ jobs:
       - NOTIFY: emailMeTwo
         sendFailingSnippet: true
     on_start:
-      - NOTIFY: emailMe
-        sendFailingSnippet: true
-      - NOTIFY: notifyMe
+       NOTIFY: emailMe
+       sendFailingSnippet: true
+   #   - NOTIFY: notifyMe
     on_cancel:
       - NOTIFY: emailMe
    #     sendFailingSnippet: true
