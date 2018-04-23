@@ -264,6 +264,13 @@ resources:
       method: email
       recipients:
         - "aidan@shippable.com"
+        
+  - name: emailMeTwo
+    type: notification
+    pointer:
+      method: email
+      recipients:
+        - "aidan@shippable.com"
 
   - name: myLoadBalancer
     type: loadBalancer
