@@ -189,6 +189,7 @@ jobs:
      - IN: testParamsValue
      - TASK:
        - script: docker images
+       - script: return 1
     on_success:
       - NOTIFY: emailMe
         sendFailingSnippet: true
