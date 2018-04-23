@@ -188,7 +188,7 @@ jobs:
     steps:
      - IN: testParamsValue
      - TASK:
-       - script: docker images
+       - script: docker images && fail
        - script: fail
     on_success:
       - NOTIFY: emailMe
