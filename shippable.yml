@@ -198,6 +198,9 @@ jobs:
     on_start:
       - NOTIFY: emailMe
         sendFailingSnippet: true
+    on_cancel:
+      - NOTIFY: emailMe
+        sendFailingSnippet: true
 
   - name: 123-runSh-123
     type: runSh
