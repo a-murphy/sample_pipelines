@@ -194,6 +194,8 @@ jobs:
       - NOTIFY: emailMe
    #     sendFailingSnippet: true
     on_failure:
+      script:
+        - echo "FAILED"
       NOTIFY: emailMe
     #  - NOTIFY: emailMeTwo
     #    sendFailingSnippet: true
