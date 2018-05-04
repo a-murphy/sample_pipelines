@@ -189,7 +189,7 @@ jobs:
      - IN: testParamsValue
      - TASK:
          script:
-           - docker images && fail
+           - echo $SHIPPABLE_AMI_VERSION
            - fail
     on_success:
       - NOTIFY: emailMe
