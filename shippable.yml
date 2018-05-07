@@ -189,6 +189,7 @@ jobs:
      - IN: testParamsValue
      - TASK:
          script:
+           - echo $SHIPPABLE_RELEASE_VERSION
            - echo $SHIPPABLE_AMI_VERSION
            - fail
     on_success:
