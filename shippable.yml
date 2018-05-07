@@ -14,8 +14,7 @@ resources:
     versionTemplate:
       params:
    #     secure: AYgkVcr+hwoqDnHDCzHrkePBCTyDx249LqX+3XO6w4pVi54QBDO9PneuDBA2Py9fbjB7q2JwzJZy3zsfY1eNO5DjSaAnXBl3CJVrMySJPXhaXHaWAhVXZ3G7agz0Y3hyByAeIJx3ozvZlq1Ky3WH5k08rkrUP9zMYxxH8tNOCT/wUnFwFSn64axuWfzoDWpfhzfM86UhspW8/4FgYuAirSmLyYYvUfELh9zUNrNkP0aBGLMgTMb97unqVqaLEWoOzu4p1q/EMa4kJ3541Wqa24EtSN/b+FRRuOZWFb4JlK5WyHtvuc1juOheVoEzXdLMWsdJeGO8HfO/8GBx0o8fNg== 
-        secure: SsrSeFIVjnTrGYre3nkbRPsJIyWoCYSQQMslI4WprM/voJN76tLk0shR9DoUPpRl5WlLifvfOHvMgq5KgXR/2EmnZHNdBneO6iGfuRmjsIMB9fZmGFK2LCDBil2uKfQwvrXYqweQD8SlP2RfsWfMFz2GFR1cgxyy5xB/AZL27hSU8TcClhaW6lg7+LqI2yRPI3Sst87VM7ecSfUHgnCRlWXEkAR9D6fDtcl3Gej5UNMAYx9KLJ22CT+Bh8KDr2+Ip1Qq2XrCDAwbeMYH0HjKFP11p1FxDmnRPEJDRbMVChz2uocKWk9yi+XO9ifnPX+RETfGJctyFzHO6m29QAkOYg== 
-
+        secure: gyDsdCq7/1gW9vWgu9+S2d8ZKi6oA/szQkh52DYKRge4tN1kO3nL9/5HTIrGCPMaRMMha2vjOKBDYx8ZAmeXBCmLE+fdxrQ+eEestKwOSHfKV5JGPKuNEYx9SbGIKXDJP8ALeuK1CglqcafwoxdIsup2GNDu2kFixR3KyX9F8BLLBtQJF6VxszCcWWhnS5tAZuUSpRF+mnSR4c0DRpr+IxKpEyW20mlT2DqljFaM1m2nKUEfThQ21iEnOQzHpSEP09MhptZH+ghRY+8J3fXPdnOJUqkn3Z61mrhzX3xH+stV8HFUD72eyqLGLHIZxl7ckhLAaE2ZnosOxxlxu8uEpQ==
   - name: paramsTest
     type: integration
     integration: testValue
