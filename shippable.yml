@@ -192,6 +192,9 @@ jobs:
            - echo $TESTPARAMSVALUE_PARAMS_TEST_ONE
            - echo $TESTPARAMSVALUE_PARAMS_TEST_TWO
            - echo $TESTPARAMSVALUE_PARAMS_TEST_THREE
+           - echo (get-item env:$TEST_ONE).Value
+           - echo (get-item env:$TEST_TWO).Value
+           - echo (get-item env:$TEST_THREE).Value
     on_success:
       - NOTIFY: emailMe
    #     sendFailingSnippet: true
