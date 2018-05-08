@@ -188,6 +188,9 @@ jobs:
            - echo $TEST_ONE
            - echo $TEST_TWO
            - echo $TEST_THREE
+           - echo $TESTPARAMSVALUE_PARAMS_TEST_ONE
+           - echo $TESTPARAMSVALUE_PARAMS_TEST_TWO
+           - echo $TESTPARAMSVALUE_PARAMS_TEST_THREE
     on_success:
       - NOTIFY: emailMe
    #     sendFailingSnippet: true
