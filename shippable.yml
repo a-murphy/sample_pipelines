@@ -193,9 +193,9 @@ jobs:
            - echo $TESTPARAMSVALUE_PARAMS_TEST_ONE
            - echo $TESTPARAMSVALUE_PARAMS_TEST_TWO
            - echo $TESTPARAMSVALUE_PARAMS_TEST_THREE
-           - '"env:$TEST_ONE"'
-           - '"env:$TEST_TWO"'
-           - '"env:$TEST_THREE"'
+           - "env:$TEST_ONE"
+           - "env:$TEST_TWO"
+           - "env:$TEST_THREE"
     on_success:
       - NOTIFY: emailMe
    #     sendFailingSnippet: true
