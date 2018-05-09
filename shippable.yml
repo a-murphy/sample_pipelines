@@ -243,7 +243,7 @@ jobs:
       architecture: x86_64		
       os: Ubuntu_14.04
     steps:
-     - IN: testParamsValue
+  #   - IN: testParamsValue
      - IN: 123_numbers
  #    - IN: 123-params
      - IN: 5testRename5_ciRepo
