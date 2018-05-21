@@ -188,10 +188,10 @@ jobs:
          script:
            - echo $SHIPPABLE_RELEASE_VERSION
            - echo $SHIPPABLE_AMI_VERSION
-           - shipctl bump_version v1.0.0-rc.1.beta.3 beta
-           - shipctl bump_version v1.0.0-rc.1.beta.3 rc
-           - shipctl bump_version v1.0.0-rc.1.beta.3 major
-           - shipctl bump_version v1.0.0-rc.1.beta.3 final
+           - shipctl bump_version v1.0.0-alpha.1.beta.3 beta
+           - shipctl bump_version v1.0.0-alpha.1.beta.3 rc
+           - shipctl bump_version v1.0.0-alpha.1.beta.3 major
+           - shipctl bump_version v1.0.0-alpha.1.beta.3 final
            - shipctl bump_version v1.0.0 beta
            - shipctl bump_version v1.0.0 rc
            - shipctl bump_version v1.0.0 major
