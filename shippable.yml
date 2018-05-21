@@ -188,30 +188,40 @@ jobs:
          script:
            - echo $SHIPPABLE_RELEASE_VERSION
            - echo $SHIPPABLE_AMI_VERSION
-           - echo $TEST_ONE
-           - echo $TEST_TWO
-           - echo $TEST_THREE
-           - echo $TESTPARAMSVALUE_PARAMS_TEST_ONE
-           - echo $TESTPARAMSVALUE_PARAMS_TEST_TWO
-           - echo $TESTPARAMSVALUE_PARAMS_TEST_THREE
-           - Get-Item "env:$TEST_ONE"
-           - Get-Item "env:$TEST_TWO"
-           - Get-Item "env:$TEST_THREE"
-    on_success:
-      - NOTIFY: emailMe
+           - shipctl bump_version v1.0.0-rc.1.beta.3 beta
+           - shipctl bump_version v1.0.0-rc.1.beta.3 rc
+           - shipctl bump_version v1.0.0-rc.1.beta.3 major
+           - shipctl bump_version v1.0.0-rc.1.beta.3 final
+           - shipctl bump_version v1.0.0 beta
+           - shipctl bump_version v1.0.0 rc
+           - shipctl bump_version v1.0.0 major
+           - shipctl bump_version v1.0.0 patch
+           - shipctl bump_version v1.0.0 final
+           
+        #   - echo $TEST_ONE
+        #   - echo $TEST_TWO
+        #   - echo $TEST_THREE
+        #   - echo $TESTPARAMSVALUE_PARAMS_TEST_ONE
+        #   - echo $TESTPARAMSVALUE_PARAMS_TEST_TWO
+        #   - echo $TESTPARAMSVALUE_PARAMS_TEST_THREE
+        #   - Get-Item "env:$TEST_ONE"
+        #   - Get-Item "env:$TEST_TWO"
+        #   - Get-Item "env:$TEST_THREE"
+   # on_success:
+   #   - NOTIFY: emailMe
    #     sendFailingSnippet: true
     on_failure:
       script:
         - echo "FAILED"
-      NOTIFY: emailMe
+   #   NOTIFY: emailMe
     #  - NOTIFY: emailMeTwo
     #    sendFailingSnippet: true
-    on_start:
-       NOTIFY: emailMe
+   # on_start:
+   #    NOTIFY: emailMe
    #    sendFailingSnippet: true
    #   - NOTIFY: notifyMe
-    on_cancel:
-      - NOTIFY: emailMe
+   # on_cancel:
+   #   - NOTIFY: emailMe
    #     sendFailingSnippet: true
 
   - name: 123-runSh-123
