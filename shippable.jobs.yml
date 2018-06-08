@@ -36,14 +36,14 @@ jobs:
 #      - IN: myGKECluster
 #      - IN: myReplicas
         
-  - name: runsh-job-gitlabrepo
-    type: runSh
-    allowPublicAccess: false
-    steps:
-      - IN: gitlab-repo
-        showBuildStatus: true
-      - TASK:
-        - script: echo test
+#  - name: runsh-job-gitlabrepo
+#    type: runSh
+#    allowPublicAccess: false
+#    steps:
+#      - IN: gitlab-repo
+#        showBuildStatus: true
+#      - TASK:
+#        - script: echo test
         
   - name: runsh-job2
     type: runSh
