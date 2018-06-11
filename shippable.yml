@@ -339,16 +339,6 @@ jobs:
           - none
           - nginx-manifest3
    #       - busybox-manifest2 
-   
-  - name: test-deploy
-    type: deploy
-    method: blueGreen
-    stabilityDuration: 30
-    steps:
-      - IN: nginx-manifest3
-      - IN: awsKeysCluster
-      - IN: zeroReplicas
-        versionNumber: 1
 
   - name: replace-deploy
     type: deploy
