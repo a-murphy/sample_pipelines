@@ -390,7 +390,7 @@ resources:
   - name: zeroReplicas
     type: replicas
     version:
-      count: 1
+      count: 0
 
   - name: myReplicas
     type: replicas
