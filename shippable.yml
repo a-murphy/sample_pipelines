@@ -291,6 +291,12 @@ jobs:
     steps:
       - IN: test-image
       - IN: testParamsValue
+  
+   - name: test-manifest2
+    type: manifest
+    steps:
+      - IN: test-image
+      - IN: testParamsValue
  
   - name: test-deploy-gitRepo
     maxWaitTime: 40000
