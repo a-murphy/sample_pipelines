@@ -292,7 +292,7 @@ jobs:
       - IN: test-image
       - IN: testParamsValue
   
-   - name: test-manifest2
+  - name: test-manifest2
     type: manifest
     steps:
       - IN: test-image
