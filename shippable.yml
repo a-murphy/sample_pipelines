@@ -291,6 +291,7 @@ jobs:
     steps:
       - IN: test-image
       - IN: testParamsValue
+      - OUT: test-state
  
   - name: test-deploy-gitRepo
     maxWaitTime: 40000
