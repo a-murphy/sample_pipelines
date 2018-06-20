@@ -349,6 +349,7 @@ jobs:
    #   - IN: nginx-manifest3
   #    - IN: busybox-manifest2 
       - IN: awsKeysCluster
+      - OUT: test-state
   #   - IN: myLoadBalancer
   #      applyTo:
   #        - manifest: nginx-manifest3
