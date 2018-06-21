@@ -491,15 +491,6 @@ jobs:
       - IN: zeroReplicas
         versionNumber: 1
       - TASK: managed
-
-  - name: DDC-deploy
-    type: deploy
-    stabilityDuration: 30
-    steps:
-      - IN: nginx-manifest3
-        switch: off
-      - IN: myDDCCluster
-      - TASK: managed
       
   - name: Kubernetes-deploy
     type: deploy
