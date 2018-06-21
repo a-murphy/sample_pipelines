@@ -16,25 +16,6 @@ jobs:
   #    - IN: my-test-image
       - IN: new-mongo-image
       - IN: testDockerOptions
-      
-  - name: _Test123_deploy-blueGreen_
-    type: deploy
-    steps:
-      - IN: _Test-123
-        switch: off
-      - IN: sshKey
-      - IN: myGKECluster
-      - IN: myReplicas
-        
-#  - name: _Test123_deploy-upgrade_
-#    type: deploy 
-#    method: upgrade
-#    steps:
-#      - IN: _Test-123
-#        switch: off
-#      - IN: sshKey
-#      - IN: myGKECluster
-#      - IN: myReplicas
         
 #  - name: runsh-job-gitlabrepo
 #    type: runSh
