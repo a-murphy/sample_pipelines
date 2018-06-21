@@ -364,28 +364,6 @@ jobs:
   #        - none
   #        - manifest: nginx-manifest3
         
-  - name: upgrade-deploy
-    type: deploy
-    method: upgrade
-    steps:
-   #   - IN: test-manifest
-      - IN: nginx-manifest3
-      - IN: awsKeysCluster
-#      - IN: myLoadBalancer
-#        applyTo:
-#          - manifest: nginx-manifest3
-#            image: nginx-image
-#            port: 27017
-      - IN: myOtherDockerOptions
-      - IN: zeroReplicas
-        versionNumber: 1
-  #    - IN: otherPolicy
-      - IN: newReplicas
-        applyTo:
-          - none
-   #       - manifest: nginx-manifest3
-
-
   - name: runSh-shippable-yml
     type: runSh
     flags: shippable-yml
