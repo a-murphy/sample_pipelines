@@ -224,7 +224,7 @@ jobs:
    #   - NOTIFY: emailMe
    #     sendFailingSnippet: true
 
-- name: mySecondRunSh
+  - name: mySecondRunSh
     type: runSh
     steps:
      - IN: myRunSh
