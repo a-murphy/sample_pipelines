@@ -224,6 +224,14 @@ jobs:
    #   - NOTIFY: emailMe
    #     sendFailingSnippet: true
 
+- name: mySecondRunSh
+    type: runSh
+    steps:
+     - IN: myRunSh
+     - TASK:
+         script:
+           - ls -R
+
   - name: 123-runSh-123
     type: runSh
     runtime:
