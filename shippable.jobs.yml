@@ -16,7 +16,13 @@ jobs:
   #    - IN: my-test-image
       - IN: new-mongo-image
       - IN: testDockerOptions
-        
+
+  - name: eoc_packages_runCI
+    type: runCI
+    steps:
+      IN: eoc_manifest_gitRepo
+      switch: off
+
 #  - name: runsh-job-gitlabrepo
 #    type: runSh
 #    allowPublicAccess: false
