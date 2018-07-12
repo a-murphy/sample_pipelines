@@ -58,8 +58,8 @@ jobs:
     type: runCI
     steps:
       IN: image-resource
-        switch: off
-      IN: upgrade-rails-staging
+      switch: off
+  #    IN: upgrade-rails-staging
  #     - OUT: sample-node-rethinkdb_runCI
  #       replicate: image-resource
       NOTIFY: notifyMe
