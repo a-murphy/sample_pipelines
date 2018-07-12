@@ -57,13 +57,13 @@ jobs:
   - name: sample_java_mongo_runCI
     type: runCI
     steps:
-      - IN: image-resource
+      IN: image-resource
         switch: off
-      - IN: upgrade-rails-staging
+      IN: upgrade-rails-staging
  #     - OUT: sample-node-rethinkdb_runCI
  #       replicate: image-resource
-      - NOTIFY: notifyMe
-      - TASK: managed
+      NOTIFY: notifyMe
+      TASK: managed
       
   - name: sample-ruby-mysql-cache_runCI
     type: runCI
