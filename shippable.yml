@@ -128,7 +128,7 @@ resources:
   - name: newReplicas
     type: replicas
     versionTemplate:
-      count: 0
+      count: 1
       minReplicas: 0
       maxReplicas: 1
   #    autoScalingRole: role
