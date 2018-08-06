@@ -156,7 +156,7 @@ resources:
         - AlarmName: "my-alarm"
           ComparisonOperator: "GreaterThanThreshold"
           EvaluationPeriods: 3
-          MetricName: "high-cpu"
+          MetricName: "CPUUtilization"
           Namespace: "AWS/ECS"
           Statistic: Average 
           Period: 60
