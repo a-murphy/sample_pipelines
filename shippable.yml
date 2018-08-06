@@ -162,8 +162,10 @@ resources:
           Period: 60
           Threshold: 75.0
           Dimensions:
-            - ClusterName: test-cluster
-              ServiceName: replace-deploy-nginx-manifest3
+            - Name: ClusterName
+              Value: test-cluster
+            - Name: ServiceName
+              Value: replace-deploy-nginx-manifest3
           AlarmActions:
             - testPolicy
                 
