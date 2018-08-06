@@ -155,7 +155,7 @@ resources:
       metricAlarms:
         - AlarmName: "my-alarm"
           ComparisonOperator: "GreaterThanThreshold"
-          EvaluationPeriods: 2
+          EvaluationPeriods: 3
           MetricName: "high-cpu"
           Namespace: "AWS/ECS"
           Statistic: Average 
