@@ -157,7 +157,7 @@ resources:
           ComparisonOperator: "GreaterThanThreshold"
           EvaluationPeriods: 2
           MetricName: "high-cpu"
-    #      Namespace: "test"
+          Namespace: "AWS/ECS"
           Statistic: Average 
           Period: 60
           Threshold: 75.0
