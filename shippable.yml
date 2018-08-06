@@ -129,8 +129,8 @@ resources:
     type: replicas
     versionTemplate:
       count: 1
-      minReplicas: 0
-      maxReplicas: 1
+      minReplicas: 1
+      maxReplicas: 2
   #    autoScalingRole: role
       autoScalingPolicies:
         - PolicyName: testPolicy
