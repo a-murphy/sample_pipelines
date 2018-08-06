@@ -354,8 +354,8 @@ jobs:
     method: upgrade # replace
     maxWaitTime: 30
     steps:
-      - IN: test-manifest
-   #   - IN: nginx-manifest3
+     # - IN: test-manifest
+      - IN: nginx-manifest3
   #    - IN: busybox-manifest2 
       - IN: awsKeysCluster
       - OUT: test-state
