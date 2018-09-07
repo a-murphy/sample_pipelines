@@ -325,14 +325,6 @@ resources:
     type: dockerOptions
     integration: AWS
     version:
-      healthCheck:
-        command:
-          - 'CMD-SHELL'
-          - 'curl -f http://localhost/ || exit 1'
-        interval: 60
-        timeout: 20
-        startPeriod: 15
-        retries: 5
     #  service:
     #    placementStrategy:
     #      - field: "attribute:ecs.availability-zone"
