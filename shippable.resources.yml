@@ -320,8 +320,8 @@ resources:
     version:
       memory: 36
       cpuShares: 4
-      service:
-        schedulingStrategy: DAEMON
+ #     service:
+ #       schedulingStrategy: DAEMON
 
   - name: myOtherDockerOptions
     type: dockerOptions
