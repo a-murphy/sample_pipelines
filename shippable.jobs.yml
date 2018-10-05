@@ -675,6 +675,11 @@ jobs:
       - IN: myOtherDockerOptions
         applyTo:
           - mongo-image
+      - IN: myLoadBalancer
+        applyTo:
+          - manifest: generate-manifest
+            image: mongo-image
+            port: 27017
       - TASK: managed
         deployMethod: upgrade
         
