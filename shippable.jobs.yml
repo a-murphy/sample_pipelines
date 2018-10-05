@@ -664,7 +664,7 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
         
-  - name: ecs-deploy31
+  - name: ecs-deploy33
     type: deploy
     steps:
       - IN: myEcsCluster
@@ -681,9 +681,9 @@ jobs:
             image: mongo-image
             port: 27017
       - TASK: managed
-        deployMethod: upgrade
+        deployMethod: replace
         
-  - name: ecs-deploy32
+  - name: ecs-deploy34
     type: deploy
     steps:
       - IN: myEcsCluster
@@ -695,7 +695,7 @@ jobs:
         applyTo:
           - mongo-image
       - TASK: managed
-        deployMethod: upgrade
+        deployMethod: replace
         
   - name: ecs-deploy6
     type: deploy
