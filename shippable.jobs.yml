@@ -666,6 +666,7 @@ jobs:
         
   - name: ecs-deploy35
     type: deploy
+    stabilityDuration: 300
     steps:
       - IN: myEcsCluster
       - IN: generate-manifest
@@ -680,6 +681,7 @@ jobs:
         
   - name: ecs-deploy36
     type: deploy
+    stabilityDuration: 300
     steps:
       - IN: myEcsCluster
       - IN: generate-manifest
