@@ -664,7 +664,7 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
         
-  - name: ecs-deploy33
+  - name: ecs-deploy35
     type: deploy
     steps:
       - IN: myEcsCluster
@@ -676,9 +676,9 @@ jobs:
         applyTo:
           - mongo-image
       - TASK: managed
-        deployMethod: replace
+        deployMethod: blueGreen
         
-  - name: ecs-deploy34
+  - name: ecs-deploy36
     type: deploy
     steps:
       - IN: myEcsCluster
@@ -690,7 +690,7 @@ jobs:
         applyTo:
           - mongo-image
       - TASK: managed
-        deployMethod: replace
+        deployMethod: blueGreen
         
   - name: ecs-deploy6
     type: deploy
