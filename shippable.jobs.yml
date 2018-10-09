@@ -678,7 +678,7 @@ jobs:
         applyTo:
           - mongo-image
       - TASK: managed
-        deployMethod: remove
+        deployMethod: blueGreen
         
   - name: ecs-deploy36
     type: deploy
@@ -692,7 +692,7 @@ jobs:
         applyTo:
           - mongo-image
       - TASK: managed
-        deployMethod: remove
+        deployMethod: blueGreen
         
   - name: ecs-deploy6
     type: deploy
