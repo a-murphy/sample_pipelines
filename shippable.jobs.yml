@@ -666,7 +666,7 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
         
-  - name: ecs-deploy35
+  - name: ecs-deploy37
     type: deploy
     stabilityDuration: 300
     steps:
@@ -680,7 +680,7 @@ jobs:
       - TASK: managed
         deployMethod: blueGreen
         
-  - name: ecs-deploy36
+  - name: ecs-deploy38
     type: deploy
     stabilityDuration: 300
     steps:
