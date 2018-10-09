@@ -672,7 +672,7 @@ jobs:
     steps:
       - IN: myEcsCluster
       - IN: nginx-manifest2
-      - IN: myReplicas
+      - IN: threeReplicas
       - IN: myDockerOptions
       - IN: myOtherDockerOptions
         applyTo:
@@ -686,7 +686,7 @@ jobs:
     steps:
       - IN: myEcsCluster
       - IN: nginx-manifest2
-      - IN: myReplicas
+      - IN: threeReplicas
       - IN: myDockerOptions
       - IN: myOtherDockerOptions
         applyTo:
