@@ -334,6 +334,7 @@ jobs:
       - IN: version-resource-1
       - IN: generate-manifest
       - IN: nginx-manifest2
+        switch: off
       - TASK: managed
       
   - name: foo5
@@ -647,6 +648,7 @@ jobs:
       - IN: myEcsCluster
       - IN: generate-manifest
       - IN: nginx-manifest2
+        switch: off
       - IN: myReplicas
 #      - GET: deploy-service-7
   #    - IN: myEcsParams
@@ -669,7 +671,6 @@ jobs:
     stabilityDuration: 300
     steps:
       - IN: myEcsCluster
-      - IN: generate-manifest
       - IN: nginx-manifest2
       - IN: myReplicas
       - IN: myDockerOptions
@@ -684,7 +685,6 @@ jobs:
     stabilityDuration: 300
     steps:
       - IN: myEcsCluster
-      - IN: generate-manifest
       - IN: nginx-manifest2
       - IN: myReplicas
       - IN: myDockerOptions
