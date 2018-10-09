@@ -671,7 +671,7 @@ jobs:
       - IN: myEcsCluster
       - IN: generate-manifest
       - IN: nginx-manifest2
-      - IN: threeReplicas
+      - IN: myReplicas
       - IN: myDockerOptions
       - IN: myOtherDockerOptions
         applyTo:
@@ -686,7 +686,7 @@ jobs:
       - IN: myEcsCluster
       - IN: generate-manifest
       - IN: nginx-manifest2
-      - IN: threeReplicas
+      - IN: myReplicas
       - IN: myDockerOptions
       - IN: myOtherDockerOptions
         applyTo:
