@@ -49,7 +49,7 @@ jobs:
       - TASK:
     #    - script: gcloud config set compute/zone us-central1-a
         - script: gcloud config set container/use_client_certificate True
-    #    - script: gcloud config set container/cluster standard-cluster-1
+        - script: gcloud config set container/cluster standard-cluster-1
         - script: gcloud container clusters get-credentials standard-cluster-1 
     
   - name: runcli-job2
