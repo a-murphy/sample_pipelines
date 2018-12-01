@@ -41,6 +41,13 @@ jobs:
             imageName: image
             imageTag: tag
             test: test
+            
+  - name: runsh-gke
+    type: runSh
+    steps:
+      - IN: gke_Config_Resource
+      - TASK:
+        - script: echo test
     
   - name: runcli-job2
     type: runCLI
