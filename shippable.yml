@@ -99,7 +99,7 @@ resources:
     integration: gcloud
     pointer:
       clusterName: standard-cluster-1
-      namespace: testnamespace
+  #    namespace: testnamespace
       region: us-central1-a
       scopes:
           - gke
