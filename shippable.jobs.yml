@@ -46,8 +46,8 @@ jobs:
     type: runSh
     steps:
       - IN: gke_Config_Resource
-        scopes:
-          - gke
+     #   scopes:
+     #     - gke
       - TASK:
     #    - script: gcloud config set compute/zone us-central1-a
         - script: gcloud config set container/use_client_certificate True
