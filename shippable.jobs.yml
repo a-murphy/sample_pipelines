@@ -47,6 +47,7 @@ jobs:
     steps:
       - IN: gke_Config_Resource
       - TASK:
+        - script: gcloud config set container/use_client_certificate True
         - script: gcloud container clusters get-credentials --zone us-central1-a  standard-cluster-1 
     
   - name: runcli-job2
