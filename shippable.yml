@@ -19,3 +19,4 @@ jobs:
           script:
             - shipctl put_resource_state winParamsA "paramsA_foo" "bar"
             - shipctl put_resource_state winParamsA "paramsA_hello" "world"
+            - docker images
