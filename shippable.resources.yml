@@ -11,10 +11,6 @@ resources:
     versionTemplate:
       sourceName: busybox
       versionName: $testKey
-  
-  - name: sshKey
-    type: integration
-    integration: sshKey
  
   - name: gitlab-repo2
     type: gitRepo
@@ -69,15 +65,6 @@ resources:
       clusterName: cluster-1
       namespace: testnamespace
       region: us-central1-a
- 
- # - name: jFrogResource
- #   type: cliConfig
- #   integration: JFrog
- 
-  
-  - name: artifactoryConfig
-    type: cliConfig
-    integration: Artifactory
     
   - name: awsConfigResource
     type: cliConfig
@@ -93,14 +80,6 @@ resources:
  #     clusterName: cluster-1
       region: us-west-2
  
-  - name: gcrConfigResource
-    type: cliConfig
-    integration: GCR
- ##   pointer:
- #     clusterName: cluster-1
-
- #     region: us-west-2
- 
   - name: dockerHubConfigResource
     type: cliConfig
     integration: DockerHub
@@ -108,86 +87,6 @@ resources:
  #     clusterName: cluster-1
  #     region: us-west-2
  
-  - name: provisionLoadBalancer
-    type: loadBalancer
-    integration: gcloud
-    pointer:
-      sourceName: "my-load-balancer"
-      method: LoadBalancer
-      namespace: my-namespace-2
-      clusterName: cluster-1
-      region: us-central1-a
-    version:
-      ports:
-        - name: my-port
-          port: 100 
-      #    targetPort: 30100
-      #    nodePort: 31000
-   #     - name: my-other-port
-   #       port: 101
-   #       targetPort: 30101
-      selector:
-        shippable.manifestName: vmk-app-def
-        loadBalancer: myLoadBalancer
-        otherSelector: value
-  #    clusterIP: test.1.2.3
-    #  externalIPs:
-    #    - test.1.2.3.4
-  #    sessionAffinity: "testAffinity"
-  #    loadBalancerIP: "loadBalancerIP2"
-  #    loadBalancerSourceRanges:
-  #      - 127.0.0.1
-  #    externalName: "myName"
-      
-      
-  - name: kubernetesLoadBalancer
-    type: loadBalancer
-    integration: gcloudKeys
-    pointer:
-      sourceName: "my-load-balancer3"
-      method: NodePort
-      clusterName: cluster-1
-      region: us-central1-a
-#      clusterIP: ""
-    version:
-      ports:
-        - name: my-port
-          port: 100
-          protocol: TCP
-      selector:
-        shippable.manifestName: vmk-app-def
-        loadBalancer: myLoadBalancer
-        otherSelector: value
-      
-  - name: provisionExternalName
-    type: loadBalancer
-    integration: gcloudKeys
-    pointer:
-      sourceName: "my-external-name"
-      method: ExternalName
-      namespace: my-namespace
-      clusterName: cluster-1
-      region: us-central1-a
-    #  bastionHost:
-    #    address: "138.197.25.111"
-    #    user: shippable
-    #    keyIntegration: sshKey
-    version:
-      ports:
-        - port: 102
-      selector:
-        loadBalancer: myLoadBalancer
-        otherSelector: value
-      loadBalancerIP: "loadBalancerIP"
-      externalName: "my-name"
-
-  - name: test-state
-    type: state
-    pointer:
-      sourceName: sourceName
-    seed:
-      versionName: "latest"
-
   - name: mongo-image
     type: image
     pointer:
@@ -249,28 +148,6 @@ resources:
       sourceName: 544102397216.dkr.ecr.us-west-2.amazonaws.com/test/repository
     seed:
       versionName: "latest"
-
-  - name: notifyMe
-    type: notification
-    integration: slack
-    pointer:
-      recipients:
-        - "aidans-test-channel"
-
-  - name: emailMe
-    type: notification
-  #  integration: email
-    pointer:
-      method: email
-      recipients:
-        - "aidan@shippable.com"
-        
-  - name: emailMeTwo
-    type: notification
-    pointer:
-      method: email
-      recipients:
-        - "aidan@shippable.com"
 
   - name: myLoadBalancer
     type: loadBalancer
@@ -426,75 +303,6 @@ resources:
       region: "us-west-2"
       test: test
 
-  - name: myGKECluster
-    type: cluster
-    integration: gcloud
-    pointer:
-    #  bastionHost:
-    #    address: "138.197.25.111"
-    #    user: shippable
-    #    keyIntegration: sshKey
-      sourceName : "cluster-1"
-      region: "us-central1-a"
-      namespace: mynamespace
-      
-  - name: myAzureCluster
-    type: cluster
-    integration: Azure
-    pointer:
-      sourceName: myCluster
-      groupName: resourceGroup
-   #   bastionHost:
-   #     address: "45.55.195.74"
-   #     user: shippable
-   #     keyIntegration: sshKey
-
-  - name: myDclCluster
-    type: cluster
-    integration: DockerCloud
-    pointer:
-      sourceName : "DockerCloudCluster"
-      
-  - name: myDDCCluster
-    type: cluster
-    integration: DDC
-    
-  - name: kubernetesCluster
-    type: cluster
-    integration: Kubernetes
-    pointer:
-      namespace: my-namespace
-      
-  - name: myKubernetesCluster
-    type: cluster
-    integration: Kubernetes
-    versionTemplate:
-      bastionHost:
-        address: 167.99.86.54
-        user: root
-        keyIntegration: sshKey
-  #    namespace: mynamespace
- 
-  - name: azureCluster
-    type: cluster
-    integration: DC/OS
-      
-#  - name: projectToTrigger
-#    type: gitRepo
-#    integration: github
-#    pointer:
-#      sourceName : "a-murphy/sample_node_postgres"
-#      branch: "master"
-#    seed:
-#      three: 3
-
-#  - name: projectToSync
-#    type: syncRepo
-#    integration: github
-#    pointer:
-#      sourceName : "a-murphy/sample_pipelines"
-#      branch: "upstream"
-
   - name: projectOne
     type: gitRepo
     integration: github
@@ -526,110 +334,13 @@ resources:
           - other
         only:
           - test
-          
-  - name: projectC
-    type: gitRepo
-    integration: github
-    pointer:
-      sourceName: "a-murphy/sample_c"
-      
-  - name: projectC2
-    type: gitRepo
-    integration: github
-    pointer:
-      sourceName: "a-murphy/sample_c"
-      
-  - name: projectC-master
-    type: gitRepo
-    integration: github
-    pointer:
-      sourceName: "a-murphy/sample_c"
-      branch: master
-
-  - name: branchlessProject2
-    type: gitRepo
-    integration: github
-    pointer:
-      sourceName: "a-murphy/sample_node_postgres"
-      buildOnCommit: false
-      buildOnPullRequest: true
-      buildOnTagPush: true
-      buildOnRelease: true
-      branches:
-        except:
-          - test
-          
-  - name: specialCharactersBranch
-    type: gitRepo
-    integration: github
-    pointer:
-      sourceName: "a-murphy/sample_pipelines"
-      branch: "test$special`characters"
-      
-  - name: branchlessProject3
-    type: gitRepo
-    integration: github
-    pointer:
-      sourceName: "a-murphy/sample_node_postgres"
-          
-  - name: bitbucketProject2
-    type: gitRepo
-    integration: bitbucket
-    pointer:
-      sourceName: "a-murphy/sample_ubuntu1204_go"
-      buildOnPullRequest: true
-                  
- # - name: gitlabProject
- #   type: gitRepo
- #   integration: gitlab
- #   pointer:
- #     sourceName: "a-murphy/sample_ubuntu1204_go"
- #     buildOnPullRequest: true
-   
- # - name: projectTwo
-#    type: gitRepo
-#    integration: github
-#    pointer:
-#      sourceName : "a-murphy/testprivate"
-#      branch: "master"
-
-  - name: privateProject3
-    type: gitRepo
-    integration: bitbucket
-    pointer:
-      sourceName : "a-murphy/sample_ubuntu1204_go"
-      branch: "master"
-      
-  #- name: projectThree
-  #  type: gitRepo
-  #  integration: github
-  #  pointer:
-  #    sourceName: "a-murphy/sample-node-rethinkdb" #"a-murphy-testing/sample_php"
-  #    branch: "master"
-
+           
   - name: version-resource-1
     type: version
     seed:
       versionName: "1.0.5-alpha.beta"
     pointer: 
       base: "1.0.2-alpha.beta"
-
-  - name: tritonCluster
-    type: cluster
-    integration: Triton
-    pointer:
-      region: "us-east-1"
-
-#  - name: kickstart
-#    type: kickStart
-#    version: 
-#      count: 1
-      
-  - name: time
-    type: time
-    seed:
-      interval: "/2 * * * *"
-
 
   - name: file
     type: file
@@ -644,11 +355,3 @@ resources:
       sourceName: https://raw.githubusercontent.com/a-murphy/sample_pipelines/testfailure/README.md
     seed:
       versionName: test4
-      
-  - name: nodeCluster
-    type: cluster
-    integration: Node
-      
-  - name: azureConfig
-    type: cliConfig
-    integration: Azure
