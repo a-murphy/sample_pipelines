@@ -131,7 +131,7 @@ jobs:
    #   - IN: test-manifest
       - IN: nginx-manifest3
    #   - IN: busybox-manifest2 
-      - IN: awsCluster
+      - IN: myEcsCluster
       - IN: zeroReplicas
         versionNumber: 1
       - IN: newReplicas
@@ -148,7 +148,7 @@ jobs:
      # - IN: test-manifest
       - IN: nginx-manifest3
   #    - IN: busybox-manifest2 
-      - IN: awsCluster
+      - IN: myEcsCluster
       - IN: myLoadBalancer
         applyTo:
           - manifest: nginx-manifest3
