@@ -186,17 +186,4 @@ jobs:
       #    - mongo-image
       - TASK: managed
         deployMethod: upgrade
-  
-  - name: ecs-deploy38
-    type: deploy
-    stabilityDuration: 300
-    steps:
-      - IN: myEcsCluster
-      - IN: nginx-manifest2
-      - IN: threeReplicas
-      - IN: myDockerOptions
-      - IN: myOtherDockerOptions
-        applyTo:
-          - mongo-image
-      - TASK: managed
-        deployMethod: blueGreen
+ 
