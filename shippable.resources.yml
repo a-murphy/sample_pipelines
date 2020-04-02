@@ -12,24 +12,6 @@ resources:
       sourceName: busybox
       versionName: $testKey
  
-  - name: gitlab-repo2
-    type: gitRepo
-    integration: gitlab
-    pointer:
-      sourceName: a-murphy/sample_ubuntu1204_go
-      branch: master
-   #   buildOnPullRequest: true
-      buildOnPullRequestClose: true
-      
-  - name: gitlab-repo3
-    type: gitRepo
-    integration: gitlab
-    pointer:
-      sourceName: a-murphy/sample_ubuntu1204_go
-      branch: master
-   #   buildOnPullRequest: true
-      buildOnPullRequestClose: true
-
   - name: image-resource
     type: image
     flags:
@@ -57,14 +39,6 @@ resources:
       branch: "test2"
     flags:
       - myTestFlag
-
-  - name: gkeConfigResource
-    type: cliConfig
-    integration: gcloud
-    pointer:
-      clusterName: cluster-1
-      namespace: testnamespace
-      region: us-central1-a
     
   - name: awsConfigResource
     type: cliConfig
@@ -72,13 +46,6 @@ resources:
     pointer:
  #     clusterName: cluster-1
       region: us-east-1
- 
-  - name: ecrConfigResource
-    type: cliConfig
-    integration: ECR
-    pointer:
- #     clusterName: cluster-1
-      region: us-west-2
  
   - name: dockerHubConfigResource
     type: cliConfig
@@ -286,13 +253,6 @@ resources:
     integration: AWS
     pointer:
       sourceName : "test-cluster" #name of the cluster to which we are deploying
-      region: "us-west-2"
-      
-  - name: awsKeysCluster
-    type: cluster
-    integration: awsKeys
-    pointer:
-      sourceName : "test-cluster"
       region: "us-west-2"
 
   - name: myOtherEcsCluster
