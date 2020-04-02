@@ -91,17 +91,17 @@ jobs:
     #  - IN: bitbucketProject2
       - TASK: managed
  
-  - name: ECS-deploy
-    type: deploy
-    method: blueGreen
-    stabilityDuration: 30
-    steps:
-      - IN: nginx-manifest3
-    #  - IN: nginx-manifest4
-      - IN: myEcsCluster
-      - IN: zeroReplicas
-        versionNumber: 1
-      - TASK: managed
+#  - name: ECS-deploy
+#    type: deploy
+#    method: blueGreen
+#    stabilityDuration: 30
+#    steps:
+#      - IN: nginx-manifest3
+#    #  - IN: nginx-manifest4
+#      - IN: myEcsCluster
+#      - IN: zeroReplicas
+#        versionNumber: 1
+#      - TASK: managed
  
   - name: new-ecs-deploy
     type: deploy
@@ -185,5 +185,5 @@ jobs:
      #   applyTo:
       #    - mongo-image
       - TASK: managed
-        deployMethod: upgrade
+        deployMethod: blueGreen
  
