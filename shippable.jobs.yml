@@ -188,7 +188,7 @@ jobs:
           - manifest: generate-manifest
             image: mongo-image
             port: 27017
-      - IN: awsKeysCluster
+      - IN: myEcsCluster
       - IN: myDockerOptions
       - IN: testDockerOptions
       - IN: myOtherDockerOptions
