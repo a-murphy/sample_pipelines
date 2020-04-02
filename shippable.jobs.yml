@@ -18,30 +18,6 @@ jobs:
         switch: off
       - TASK: managed
 
-  - name: generate-mongo-image-manifest-6
-    type: manifest
-    steps:
-    #  - IN: myOtherDockerOptions
-    #  - IN: customImage
-    #    switch: off
- #     - IN: triggerOne
-      - IN: new-mongo-image
-        pull: false
-        switch: off
-      - IN: generate-manifest
-        switch: off
-  #    - GET: generate-manifest
-  #    - GET: myEcsParams
-  #      applyTo:
-  #        - image
-      
-  #    - GET: myOtherEcsParams
-#      - GET: deploy-service
-  #    - GET: myOtherDockerOptions
-  #      applyTo:
-  #        - mongo-image
-      - TASK: managed
-
   - name: generate-manifest
     type: manifest
     steps:
@@ -130,7 +106,6 @@ jobs:
   - name: new-ecs-deploy
     type: deploy
     steps:
-     # - IN: generate-mongo-image-manifest-6
       - IN: test-release
      # - IN: nginx-and-busybox-manifest
      # - IN: new-manifest
@@ -150,15 +125,6 @@ jobs:
      #     - nginx-image
       - TASK: managed
         deployMethod: upgrade
-     
-  - name: replace-ecs-deploy2-2
-    type: deploy
-    steps:
-      - IN: generate-manifest
-      - IN: nginx-image
-      - IN: myEcsCluster
-      - TASK: managed
-        deployMethod: replace
 
   - name: replace-ecs-deploy
     type: deploy
@@ -197,15 +163,6 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
 
-  - name: new-ecs-deploy-again
-    type: deploy
-    steps:
-      - IN: new-ecs-deploy
-        switch: off
-      - IN: myEcsCluster
-      - TASK: managed
-        deployMethod: upgrade
-
   - name: ecs-deploy3
     type: deploy
     steps:
@@ -229,21 +186,7 @@ jobs:
       #    - mongo-image
       - TASK: managed
         deployMethod: upgrade
-        
-  - name: ecs-deploy37
-    type: deploy
-    stabilityDuration: 300
-    steps:
-      - IN: myEcsCluster
-      - IN: nginx-manifest2
-      - IN: threeReplicas
-      - IN: myDockerOptions
-      - IN: myOtherDockerOptions
-        applyTo:
-          - mongo-image
-      - TASK: managed
-        deployMethod: blueGreen
-        
+  
   - name: ecs-deploy38
     type: deploy
     stabilityDuration: 300
