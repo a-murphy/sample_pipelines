@@ -48,17 +48,6 @@ resources:
   #      123test: testing
         empty: ""
 
-  - name: bitbucket-integration-shippable-yml
-    type: integration
-    integration: bitbucket
-    flags: shippable-yml
-
-  - name: trigger-shippable-yml
-    type: trigger
-    flags: shippable-yml
-    version:
-      count: I
-
   - name: rename-repo5
     type: gitRepo
     integration: github
@@ -74,57 +63,6 @@ resources:
     version:
       version: $TRIGGERSHIPPABLEYML_VERSIONID
 
-
-  - name: gitlab-repo8
-    type: gitRepo
-    integration: gitlab
-    pointer:
-      sourceName: a-murphy/sample_ubuntu1204_go # a-murphy-gitlab-group/group-project # 
-  #    sourceUrl: notarealurl
-      buildOnPullRequest: true
-      buildOnPullRequestClose: true
-      branches:
-        except:
-          - master
-          
-  - name: test-repo2
-    type: gitRepo
-    integration: github
-    versionTemplate:
-      sourceName: a-murphy/sample_pipelines
-      buildOnPullRequest: true
-
-  - name: gke_Config_Resource
-    type: cliConfig
-    integration: gcloud
-    pointer:
-      clusterName: standard-cluster-1
-  #    namespace: testnamespace
-      region: us-central1-a
-      scopes:
-          - gke
-  #        - gcr
-                
-  - name: awsKeysCliConfig
-    type: cliConfig
-    integration: awsKeys
-    pointer:
-      region: us-west-2
-      scopes:
-        - ecr
-      
-  - name: nodeCluster3
-    type: cluster
-    integration: Node
-    
-  - name: gcloudKeysCluster
-    type: cluster
-    integration: gcloud
-    versionTemplate:
-      sourceName : "cluster-1"
-      region: "us-central1-a"
-      namespace: mynamespace
-      
   - name: newReplicas
     type: replicas
     versionTemplate:
@@ -185,158 +123,6 @@ resources:
       
 
 jobs:
-  - name: myRunSh
-    type: runSh
-    steps:
-     - IN: testParamsValue
-     - TASK:
-         script:
-           - echo $SHIPPABLE_RELEASE_VERSION
-           - echo $SHIPPABLE_AMI_VERSION
-           - shipctl bump_version v1.0.0-alpha.1.beta.3 beta
-           - shipctl bump_version v1.0.0-alpha.1.beta.3 rc
-           - shipctl bump_version v1.0.0-alpha.1.beta.3 major
-           - shipctl bump_version v1.0.0-alpha.1.beta.3 final
-           - shipctl bump_version v1.0.0 beta
-           - shipctl bump_version v1.0.0 rc
-           - shipctl bump_version v1.0.0 major
-           - shipctl bump_version v1.0.0 patch
-           - shipctl bump_version v1.0.0 final
-           
-        #   - echo $TEST_ONE
-        #   - echo $TEST_TWO
-        #   - echo $TEST_THREE
-        #   - echo $TESTPARAMSVALUE_PARAMS_TEST_ONE
-        #   - echo $TESTPARAMSVALUE_PARAMS_TEST_TWO
-        #   - echo $TESTPARAMSVALUE_PARAMS_TEST_THREE
-        #   - Get-Item "env:$TEST_ONE"
-        #   - Get-Item "env:$TEST_TWO"
-        #   - Get-Item "env:$TEST_THREE"
-   # on_success:
-   #   - NOTIFY: emailMe
-   #     sendFailingSnippet: true
-    on_failure:
-      script:
-        - echo "FAILED"
-   #   NOTIFY: emailMe
-    #  - NOTIFY: emailMeTwo
-    #    sendFailingSnippet: true
-   # on_start:
-   #    NOTIFY: emailMe
-   #    sendFailingSnippet: true
-   #   - NOTIFY: notifyMe
-   # on_cancel:
-   #   - NOTIFY: emailMe
-   #     sendFailingSnippet: true
-
-  - name: mySecondRunSh
-    type: runSh
-    steps:
-     - IN: myRunSh
-     - TASK:
-         script:
-           - ls -R
-
-  - name: 123-runSh-123
-    type: runSh
-    runtime:
-      architecture: x86_64		
-      os: Ubuntu_14.04
-    steps:
-     - IN: testValue
-     - IN: 123_numbers
-     - IN: 123_file-manifest
-     - IN: 5testRename5_runCI
-     - IN: 123-testing-123
-     - IN: file-manifest
-     - IN: gke_Config_Resource
-     - IN: bitbucket-integration-shippable-yml
-     - TASK:
-        - script: ls -al ~/.ssh
-        - script: aws --version
-        - script: "echo $runId"
-        - script: "echo true"
-        - script: "echo 123_numbers path: $_NUMBERS_PATH"
-        - script: "echo 123_file-manifest path: $_FILEMANIFEST_PATH"
-        - script: sleep 15
-        
-  - name: 5testRename5_runCI
-    type: runCI
-    runtime:
-      architecture: x86_64		
-      os: Ubuntu_14.04
-    steps:
-  #   - IN: testParamsValue
-     - IN: 123_numbers
- #    - IN: 123-params
-     - IN: 5testRename5_ciRepo
-     - OUT: 123-testing-123
-     
-  - name: test_runSh
-    type: runSh
-    runtime:
-      - nodePool: aidans-test-pool 
-#      architecture: x86_64		
-#      os: Ubuntu_14.04
-    steps:
-     - IN: 123_numbers
-     - IN: 123-params
-     - IN: azureConfig
-     - IN: 5testRename5_ciRepo
-     - TASK:
-       - script: echo test
-        
-  - name: file-manifest
-    type: manifest
-    steps:
-      - IN: file
-
-  - name: 123_file-manifest
-    type: manifest
-    steps:
-      - IN: 123-params
-      - IN: file
-      - IN: 123_numbers
-      - IN: 123-testing-123
-      
-  - name: test-manifest
-    type: manifest
-    steps:
-      - IN: test-image
-      - IN: testParamsValue
-      - OUT: test-state
- 
-  - name: test-deploy-gitRepo
-    maxWaitTime: 40000
-    type: deploy
-    steps:
-      - IN: rename-repo5
-  #    - OUT: test-repo2
-      - IN: nodeCluster
-      - IN: 123_numbers
-      - TASK:
-        - script: echo "test"
-        - script: ls /tmp/shippable
-        - script: cat /tmp/shippable/rename-repo5/gitRepo/shippable.yml
-   
-  - name: test-deploy-file
-    type: deploy
-    maxWaitTime: 300
-    steps:
-      - IN: file-manifest
-      - IN: nodeCluster3
-      - TASK:
-        - script: echo "test"
-        
-  - name: test-deploy-both
-    type: deploy
-    steps:
-      - IN: file-manifest
-      - IN: rename-repo5
-      - IN: nodeCluster
-      - TASK:
-        - script: echo "test"
-        
   - name: bluegreen-deploy
     type: deploy
     method: blueGreen
@@ -345,7 +131,7 @@ jobs:
    #   - IN: test-manifest
       - IN: nginx-manifest3
    #   - IN: busybox-manifest2 
-      - IN: awsKeysCluster
+      - IN: awsCluster
       - IN: zeroReplicas
         versionNumber: 1
       - IN: newReplicas
@@ -362,13 +148,12 @@ jobs:
      # - IN: test-manifest
       - IN: nginx-manifest3
   #    - IN: busybox-manifest2 
-      - IN: awsKeysCluster
-      - OUT: test-state
-  #   - IN: myLoadBalancer
-  #      applyTo:
-  #        - manifest: nginx-manifest3
-  #          image: nginx-image
-  #          port: 27017
+      - IN: awsCluster
+      - IN: myLoadBalancer
+        applyTo:
+          - manifest: nginx-manifest3
+            image: nginx-image
+            port: 27017
   #    - IN: myOtherDockerOptions
   #- IN: zeroReplicas
  #       versionNumber: 1
@@ -377,65 +162,3 @@ jobs:
   #        - none
   #        - manifest: nginx-manifest3
         
-  - name: runSh-shippable-yml
-    type: runSh
-    flags: shippable-yml
-    runtime:
-      architecture: x86_64		
-      os: Ubuntu_14.04
-    steps:
-     - IN: test-repo2
- #      versionNumber: 5
-     - TASK:
-        - script: sleep 400
-        - script: "echo true"
-        
-        
-  - name: runSh-object
-    type: runSh
-    flags: shippable-yml
-    runtime:
-      architecture: x86_64		
-      os: Ubuntu_14.04
-    steps:
-     - IN: test-repo2
- #      versionNumber: 5
-     - TASK:
-         script:
-           - "echo true"
-        
-  - name: runSh-no-task
-    type: runSh
-    flags: shippable-yml
-    runtime:
-      architecture: x86_64		
-      os: Ubuntu_14.04
-    steps:
-     - IN: test-repo2
-
-  - name: CLI_config_test
-    type: runCLI
-    runtime:
-      architecture: x86_64		
-      os: CentOS_7
-    steps:
-      - IN: gke_Config_Resource
-      - TASK:
-        - script: echo "test"
- 
-  - name: azure_test
-    type: runSh
-    runtime:
-      architecture: x86_64		
-      os: CentOS_7
-    steps:
-      - IN: gke_Config_Resource
-   #   - IN: myAzureCluster
-   #   - IN: image-resource
-      - IN: trigger-shippable-yml
-      - IN: rename-repo5
-      - TASK:
-        - script: shipctl get_resource_version_key rename-repo5 version
-        - script: echo "RENAMEREPO5_POINTER_TEST $RENAMEREPO5_POINTER_TEST"
-        - script: echo "RENAMEREPO5_POINTER_TEST2 $RENAMEREPO5_POINTER_TEST2"
-        - script: echo "RENAMEREPO5_POINTER_TEST3 $RENAMEREPO5_POINTER_TEST3"
