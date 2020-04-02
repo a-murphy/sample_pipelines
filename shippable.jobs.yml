@@ -177,11 +177,11 @@ jobs:
       - IN: myOtherDockerOptions
         applyTo:
           - mongo-image
-   #   - IN: myLoadBalancer
-   #     applyTo:
-   #       - manifest: generate-manifest
-   #         image: mongo-image
-   #         port: 8000
+      - IN: myLoadBalancer
+        applyTo:
+          - manifest: generate-manifest
+            image: mongo-image
+    #        port: 8000
      #   applyTo:
       #    - mongo-image
       - TASK: managed
@@ -200,14 +200,3 @@ jobs:
           - mongo-image
       - TASK: managed
         deployMethod: blueGreen
-        
-  - name: ecs-deploy6
-    type: deploy
-    steps:
-      - IN: myEcsCluster
-      - IN: generate-manifest
-      - IN: nginx-manifest2
-      - IN: myReplicas
-      - IN: myOtherDockerOptions
-      - TASK: managed
-        deployMethod: upgrade
