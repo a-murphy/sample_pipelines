@@ -38,7 +38,7 @@ jobs:
     type: manifest
     steps:
     #  - IN: myOtherDockerOptions
-      - IN: customImage
+    #  - IN: customImage
         switch: off
  #     - IN: triggerOne
       - IN: new-mongo-image
@@ -285,40 +285,3 @@ jobs:
       - IN: myOtherDockerOptions
       - TASK: managed
         deployMethod: upgrade
-
-  - name: customImage
-    type: runSh
-    steps:
-      - IN: nginx-image
-      - IN: busybox-image
-      - IN: version-resource-1
-      - IN: myReplicas
-#      - IN: myEcsParams
-      - IN: myOtherDockerOptions
-      - IN: projectOne
-      - TASK:
-        - script: mkdir testdirectory && cd testdirectory && pwd
-        - script: pwd
-        - script: "echo '\x1b[34m' $MYECSPARAMS_PARAMS_EIGHT '\x1b[0m'"
-        - script: "echo '\x1b[33m' $MYECSPARAMS_VERSION_PARAMS '\x1b[0m'"
-        - script: "mkdir -p /build/state/"
-        - script: "touch /build/state/mongo-image.env"
-        - script: "echo 'versionName=latest2' >>  /build/state/mongo-image.env"
-        - script: "echo 'anotherProperty=foo' >>  /build/state/mongo-image.env"
-        - script: "echo 'anotherProperty2=foo2' >>  /build/state/mongo-image.env"
-      - OUT: mongo-image
-    on_success:
-      - script: echo "Success"
-      - NOTIFY: notifyMe
-    on_failure:
-      - script: echo "Failure"
-      - NOTIFY: notifyMe
-     
-  - name: generate-file-manifest
-    type: manifest
-    steps:
-      - IN: file2
-      - IN: new-mongo-image
-        switch: off
-    #  - OUT: image-resource
-    #    replicate: new-mongo-image
