@@ -1,0 +1,15 @@
+pipelines:
+  - name: sample_pipelines
+    configuration:
+      runtime:
+        type: host
+    steps:
+      - name: bash_host_step
+        type: Bash
+        execution:
+          onStart:
+            - echo "Prepping build environment"
+          onExecute:
+            - 'echo "step_node_name: $step_node_name"'
+            - 'echo "step_node_id: $step_node_id"'
+            - 'echo "step_node_pool_name: $step_node_pool_name"'
